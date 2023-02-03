@@ -3097,6 +3097,147 @@
           },
           {
             "kind": "Var",
+            "name": "x_sl_studio_os_version",
+            "printedName": "x_sl_studio_os_version",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ShopliveSDKCommon10CommonKeysV22x_sl_studio_os_versionSSvpZ",
+            "mangledName": "$s17ShopliveSDKCommon10CommonKeysV22x_sl_studio_os_versionSSvpZ",
+            "moduleName": "ShopliveSDKCommon",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ShopliveSDKCommon10CommonKeysV22x_sl_studio_os_versionSSvgZ",
+                "mangledName": "$s17ShopliveSDKCommon10CommonKeysV22x_sl_studio_os_versionSSvgZ",
+                "moduleName": "ShopliveSDKCommon",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "x_sl_studio_app_version",
+            "printedName": "x_sl_studio_app_version",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ShopliveSDKCommon10CommonKeysV23x_sl_studio_app_versionSSvpZ",
+            "mangledName": "$s17ShopliveSDKCommon10CommonKeysV23x_sl_studio_app_versionSSvpZ",
+            "moduleName": "ShopliveSDKCommon",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ShopliveSDKCommon10CommonKeysV23x_sl_studio_app_versionSSvgZ",
+                "mangledName": "$s17ShopliveSDKCommon10CommonKeysV23x_sl_studio_app_versionSSvgZ",
+                "moduleName": "ShopliveSDKCommon",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "x_sl_studio_sdk_version",
+            "printedName": "x_sl_studio_sdk_version",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ShopliveSDKCommon10CommonKeysV23x_sl_studio_sdk_versionSSvpZ",
+            "mangledName": "$s17ShopliveSDKCommon10CommonKeysV23x_sl_studio_sdk_versionSSvpZ",
+            "moduleName": "ShopliveSDKCommon",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ShopliveSDKCommon10CommonKeysV23x_sl_studio_sdk_versionSSvgZ",
+                "mangledName": "$s17ShopliveSDKCommon10CommonKeysV23x_sl_studio_sdk_versionSSvgZ",
+                "moduleName": "ShopliveSDKCommon",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "Bearer",
             "printedName": "Bearer",
             "children": [
@@ -8721,6 +8862,34 @@
               "Final",
               "Custom",
               "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "load",
+            "printedName": "load(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ShopliveSDKCommon9SLWebViewC4loadyy10Foundation10URLRequestVF",
+            "mangledName": "$s17ShopliveSDKCommon9SLWebViewC4loadyy10Foundation10URLRequestVF",
+            "moduleName": "ShopliveSDKCommon",
+            "declAttributes": [
+              "Custom",
+              "Final",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -23648,224 +23817,245 @@
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 429,
+      "offset": 445,
+      "length": 24,
+      "value": "\"x-sl-studio-os-version\""
+    },
+    {
+      "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 518,
+      "length": 25,
+      "value": "\"x-sl-studio-app-version\""
+    },
+    {
+      "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 592,
+      "length": 25,
+      "value": "\"x-sl-studio-sdk-version\""
+    },
+    {
+      "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 649,
       "length": 8,
       "value": "\"Bearer\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 467,
+      "offset": 687,
       "length": 6,
       "value": "\"code\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 524,
+      "offset": 744,
       "length": 27,
       "value": "\"ON_CHANGED_VIDEO_EXPANDED\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 595,
+      "offset": 815,
       "length": 20,
       "value": "\"SET_VIDEO_POSITION\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 654,
+      "offset": 874,
       "length": 15,
       "value": "\"videoExpanded\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 706,
+      "offset": 926,
       "length": 13,
       "value": "\"endCampaign\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 758,
+      "offset": 978,
       "length": 15,
       "value": "\"startCampaign\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 808,
+      "offset": 1028,
       "length": 11,
       "value": "\"rehearsal\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 852,
+      "offset": 1072,
       "length": 9,
       "value": "\"keyword\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 897,
+      "offset": 1117,
       "length": 12,
       "value": "\"deviceUuid\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 940,
+      "offset": 1160,
       "length": 7,
       "value": "\"retry\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 983,
+      "offset": 1203,
       "length": 12,
       "value": "\"resolution\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1028,
+      "offset": 1248,
       "length": 9,
       "value": "\"bitRate\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1069,
+      "offset": 1289,
       "length": 8,
       "value": "\"normal\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1114,
+      "offset": 1334,
       "length": 13,
       "value": "\"description\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1163,
+      "offset": 1383,
       "length": 12,
       "value": "\"currentFPS\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1211,
+      "offset": 1431,
       "length": 12,
       "value": "\"customerId\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1253,
+      "offset": 1473,
       "length": 6,
       "value": "\"page\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1290,
+      "offset": 1510,
       "length": 7,
       "value": "\"count\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1329,
+      "offset": 1549,
       "length": 8,
       "value": "\"height\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1368,
+      "offset": 1588,
       "length": 7,
       "value": "\"width\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1411,
+      "offset": 1631,
       "length": 12,
       "value": "\"centerCrop\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1450,
+      "offset": 1670,
       "length": 3,
       "value": "\"x\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1480,
+      "offset": 1700,
       "length": 3,
       "value": "\"y\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1517,
+      "offset": 1737,
       "length": 10,
       "value": "\"pushType\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1563,
+      "offset": 1783,
       "length": 12,
       "value": "\"campaignId\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1615,
+      "offset": 1835,
       "length": 16,
       "value": "\"campaignStatus\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1659,
+      "offset": 1879,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1697,
+      "offset": 1917,
       "length": 10,
       "value": "\"password\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1742,
+      "offset": 1962,
       "length": 12,
       "value": "\"STREAM_APP\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1786,
+      "offset": 2006,
       "length": 8,
       "value": "\"source\""
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/common\/CommonKeys.swift",
       "kind": "StringLiteral",
-      "offset": 1828,
+      "offset": 2048,
       "length": 10,
       "value": "\"duration\""
     },
@@ -24061,14 +24251,14 @@
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/webview\/SLWebview.swift",
       "kind": "BooleanLiteral",
-      "offset": 2871,
+      "offset": 2958,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/james\/Desktop\/projects\/ios\/StudioSDK\/matrix-common-ios\/sources\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 4423,
+      "offset": 4510,
       "length": 11,
       "value": "\"ShopliveSDKCommon.LeakAvoider\""
     },

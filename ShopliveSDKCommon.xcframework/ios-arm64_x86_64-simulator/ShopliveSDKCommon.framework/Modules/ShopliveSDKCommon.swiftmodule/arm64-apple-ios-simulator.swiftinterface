@@ -235,6 +235,9 @@ public struct CommonKeys {
   public static let Content_Type: Swift.String
   public static let application_x_www_form_urlencdoed: Swift.String
   public static let x_sl_ebay_username: Swift.String
+  public static let x_sl_studio_os_version: Swift.String
+  public static let x_sl_studio_app_version: Swift.String
+  public static let x_sl_studio_sdk_version: Swift.String
   public static let Bearer: Swift.String
   public static let code: Swift.String
   public static let ON_CHANGED_VIDEO_EXPANDED: Swift.String
@@ -578,6 +581,7 @@ extension UIKit.UIScreen {
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class SLWebView : ShopliveSDKCommon.SLBaseView {
   @_Concurrency.MainActor(unsafe) override final public func layout()
+  @_Concurrency.MainActor(unsafe) final public func load(_ request: Foundation.URLRequest)
   @_Concurrency.MainActor(unsafe) override final public func attributes()
   @_Concurrency.MainActor(unsafe) override final public func bindView()
   @_Concurrency.MainActor(unsafe) final public func configure(url: Swift.String)

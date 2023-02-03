@@ -9,12 +9,12 @@ Pod::Spec.new do |spec|
                  Copyright 2021
                  Permission is granted to...
                  LICENSE
-              }
+                 }
 
   spec.author             = { "Shoplive" => "shoplive-eng@shoplive.cloud" }
   spec.platform     = :ios
   spec.ios.deployment_target = '11.0'
   spec.swift_version = "5"
-  spec.vendored_frameworks = 'Frameworks/ShopliveSDKCommon.xcframework'
-  spec.dependency "Alamofire", "~> 5.0"
+  spec.vendored_frameworks = 'ShopliveSDKCommon.xcframework'
+  spec.dependency "Alamofire", "~> 5.0.0"
 end
