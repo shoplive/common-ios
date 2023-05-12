@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ShopliveSDKCommon"
-  spec.version      = "1.0.0"
+  spec.version      = "1.4.0"
   spec.summary      = "ShopLive Common Framework for iOS"
 
   spec.homepage     = "http://shoplive.cloud"
@@ -15,6 +15,5 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios
   spec.ios.deployment_target = '11.0'
   spec.swift_version = "5"
-  spec.vendored_frameworks = 'ShopliveSDKCommon.xcframework'
-  spec.dependency "Alamofire", "~> 5.0.0"
+  spec.vendored_frameworks = './Frameworks/ShopliveSDKCommon.xcframework'
 end
