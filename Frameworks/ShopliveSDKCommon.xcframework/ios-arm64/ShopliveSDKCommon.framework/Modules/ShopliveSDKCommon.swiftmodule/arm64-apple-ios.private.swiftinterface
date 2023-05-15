@@ -598,6 +598,9 @@ extension UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) public func showToastAlert(messgae: Swift.String)
   @_Concurrency.MainActor(unsafe) public func showToast(message: Swift.String, duration: ShopliveSDKCommon.SLToastDuration = .middle)
 }
+extension UIKit.UIWindow {
+  @_Concurrency.MainActor(unsafe) public func showToast(message: Swift.String, duration: ShopliveSDKCommon.SLToastDuration = .middle)
+}
 extension UIKit.UIInterfaceOrientation {
   public var angle: CoreFoundation.CGFloat {
     get

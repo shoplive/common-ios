@@ -653,6 +653,7 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon13ShopLiveError")
 
 
 
+
 #endif
 #if defined(__cplusplus)
 #endif
@@ -1310,6 +1311,7 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon13ShopLiveError")
 @interface UIViewController (SWIFT_EXTENSION(ShopliveSDKCommon))
 - (void)shopliveHideKeyboard;
 @end
+
 
 
 

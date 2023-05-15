@@ -653,6 +653,7 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon13ShopLiveError")
 
 
 
+
 #endif
 #if defined(__cplusplus)
 #endif
