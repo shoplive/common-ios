@@ -2941,7 +2941,6 @@ extension UIKit.UIApplication {
   @_Concurrency.MainActor(unsafe) public static var windowList: [UIKit.UIWindow]? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public class func topViewController(base: UIKit.UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIKit.UIViewController?
 }
 public protocol Placeholder {
   func add(to imageView: ShopliveSDKCommon.KFCrossPlatformImageView)
