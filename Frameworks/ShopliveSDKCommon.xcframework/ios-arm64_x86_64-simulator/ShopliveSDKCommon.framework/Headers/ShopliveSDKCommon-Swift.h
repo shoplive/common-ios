@@ -306,7 +306,6 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon17AFSessionDelegate")
 @end
 
 
-
 @class UIImage;
 @class CALayer;
 @class NSCoder;
@@ -346,15 +345,6 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon17AnimatedImageView")
 
 
 
-@class NSNotification;
-
-SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon28KeyboardNotificationProtocol_")
-@protocol KeyboardNotificationProtocol
-- (void)keyboardWillShowWithNotification:(NSNotification * _Nonnull)notification;
-- (void)keyboardWillHideWithNotification:(NSNotification * _Nonnull)notification;
-- (void)keyboardWillChangeFrameWithNotification:(NSNotification * _Nonnull)notification;
-@end
-
 @class WKUserContentController;
 @class WKScriptMessage;
 
@@ -386,12 +376,12 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon20LoadingIndicatorView")
 
 
 
+
 typedef SWIFT_ENUM(NSInteger, PermissionStatus, open) {
   PermissionStatusAuthorized = 0,
   PermissionStatusDenied = 1,
   PermissionStatusNotDetermined = 2,
   PermissionStatusNotSupported = 3,
-  PermissionStatusLimited = 4,
 };
 
 typedef SWIFT_ENUM(NSInteger, PermissionType, open) {
@@ -399,6 +389,16 @@ typedef SWIFT_ENUM(NSInteger, PermissionType, open) {
   PermissionTypeMicrophone = 1,
   PermissionTypeIdfa = 2,
 };
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon29SLBackspaceDetectingTextField")
+@interface SLBackspaceDetectingTextField : UITextField
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)deleteBackward;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
 
 @class UITouch;
 @class UIEvent;
@@ -415,7 +415,6 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon10SLBaseView")
 
 SWIFT_CLASS("_TtC17ShopliveSDKCommon24SLLoadingAlertController")
 @interface SLLoadingAlertController : UIViewController <UIGestureRecognizerDelegate>
-- (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
@@ -465,6 +464,97 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon22SLTextFieldWithPadding")
 @end
 
 
+SWIFT_CLASS("_TtC17ShopliveSDKCommon11SLWSTagView")
+@interface SLWSTagView : UIView <UITextInputTraits>
+@property (nonatomic, strong) UIColor * _Null_unspecified tintColor;
+@property (nonatomic) UITextAutocapitalizationType autocapitalizationType;
+@property (nonatomic) UITextAutocorrectionType autocorrectionType;
+@property (nonatomic) UITextSpellCheckingType spellCheckingType;
+@property (nonatomic) UIKeyboardType keyboardType;
+@property (nonatomic) UIKeyboardAppearance keyboardAppearance;
+@property (nonatomic) UIReturnKeyType returnKeyType;
+@property (nonatomic) BOOL enablesReturnKeyAutomatically;
+@property (nonatomic, getter=isSecureTextEntry) BOOL secureTextEntry;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
+- (CGSize)sizeThatFits:(CGSize)size SWIFT_WARN_UNUSED_RESULT;
+- (void)layoutSubviews;
+@property (nonatomic, readonly) BOOL canBecomeFirstResponder;
+- (BOOL)becomeFirstResponder SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)resignFirstResponder SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+@interface SLWSTagView (SWIFT_EXTENSION(ShopliveSDKCommon)) <UIKeyInput>
+@property (nonatomic, readonly) BOOL hasText;
+- (void)insertText:(NSString * _Nonnull)text;
+- (void)deleteBackward;
+@end
+
+@class UIFont;
+
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC17ShopliveSDKCommon13SLWSTagsField")
+@interface SLWSTagsField : UIScrollView
+/// Background color for tag view in normal (non-selected) state.
+@property (nonatomic, strong) IBInspectable UIColor * _Null_unspecified tintColor;
+/// Text color for tag view in normal (non-selected) state.
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable textColor;
+/// Background color for tag view in normal (selected) state.
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable selectedColor;
+/// Text color for tag view in normal (selected) state.
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable selectedTextColor;
+@property (nonatomic, copy) IBInspectable NSString * _Nonnull delimiter;
+@property (nonatomic) IBInspectable BOOL isDelimiterVisible;
+/// Whether the text field should tokenize strings automatically when the keyboard is dismissed.
+@property (nonatomic) IBInspectable BOOL shouldTokenizeAfterResigningFirstResponder;
+@property (nonatomic) IBInspectable CGFloat maxHeight;
+/// Max number of lines of tags can display in SLWSTagsField before its contents become scrollable. Default value is 0, which means SLWSTagsField always resize to fit all tags.
+@property (nonatomic) IBInspectable NSInteger numberOfLines;
+/// Whether or not the SLWSTagsField should become scrollable
+@property (nonatomic) IBInspectable BOOL enableScrolling;
+@property (nonatomic) IBInspectable CGFloat cornerRadius;
+@property (nonatomic) IBInspectable CGFloat borderWidth;
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable borderColor;
+@property (nonatomic) UIEdgeInsets layoutMargins;
+@property (nonatomic, copy) IBInspectable NSString * _Nonnull placeholder;
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable placeholderColor;
+@property (nonatomic, strong) IBInspectable UIFont * _Nullable placeholderFont;
+@property (nonatomic) IBInspectable BOOL placeholderAlwaysVisible;
+@property (nonatomic) IBInspectable BOOL readOnly;
+@property (nonatomic) UIEdgeInsets contentInset;
+@property (nonatomic) IBInspectable CGFloat spaceBetweenTags;
+@property (nonatomic) IBInspectable CGFloat spaceBetweenLines;
+@property (nonatomic, readonly) BOOL isFirstResponder;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
+- (CGSize)sizeThatFits:(CGSize)size SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)willMoveToSuperview:(UIView * _Nullable)newSuperview;
+- (void)layoutSubviews;
+- (void)reloadInputViews;
+- (void)onTextFieldDidChange:(id _Nonnull)sender;
+@end
+
+
+
+@interface SLWSTagsField (SWIFT_EXTENSION(ShopliveSDKCommon)) <UITextFieldDelegate>
+- (BOOL)textFieldShouldBeginEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
+- (BOOL)textFieldShouldEndEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+
+@interface SLWSTagsField (SWIFT_EXTENSION(ShopliveSDKCommon))
+@property (nonatomic, readonly, strong) UIView * _Nullable inputAccessoryView SWIFT_DEPRECATED_MSG("Use 'inputFieldAccessoryView' instead");
+@end
+
+
 SWIFT_CLASS("_TtC17ShopliveSDKCommon9SLWebView")
 @interface SLWebView : SLBaseView
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
@@ -476,7 +566,6 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon9SLWebView")
 - (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 @end
 
-@class UIScrollView;
 
 @interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
@@ -519,16 +608,6 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon13ShopLiveError")
 @interface ShopLiveError : NSError
 - (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain code:(NSInteger)code userInfo:(NSDictionary<NSString *, id> * _Nullable)dict OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon25ShopLivePermissionHandler_")
-@protocol ShopLivePermissionHandler
-@optional
-- (void)handleCameraPermissionWithStatus:(enum PermissionStatus)status;
-- (void)handleMicroPhonePermissionWithStatus:(enum PermissionStatus)status;
-- (void)handleMediaLibraryUsagePermissionWithStatus:(enum PermissionStatus)status;
-- (void)handlePhotoLibraryUsagePermissionWithStatus:(enum PermissionStatus)status;
 @end
 
 
@@ -891,7 +970,6 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon17AFSessionDelegate")
 @end
 
 
-
 @class UIImage;
 @class CALayer;
 @class NSCoder;
@@ -931,15 +1009,6 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon17AnimatedImageView")
 
 
 
-@class NSNotification;
-
-SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon28KeyboardNotificationProtocol_")
-@protocol KeyboardNotificationProtocol
-- (void)keyboardWillShowWithNotification:(NSNotification * _Nonnull)notification;
-- (void)keyboardWillHideWithNotification:(NSNotification * _Nonnull)notification;
-- (void)keyboardWillChangeFrameWithNotification:(NSNotification * _Nonnull)notification;
-@end
-
 @class WKUserContentController;
 @class WKScriptMessage;
 
@@ -971,12 +1040,12 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon20LoadingIndicatorView")
 
 
 
+
 typedef SWIFT_ENUM(NSInteger, PermissionStatus, open) {
   PermissionStatusAuthorized = 0,
   PermissionStatusDenied = 1,
   PermissionStatusNotDetermined = 2,
   PermissionStatusNotSupported = 3,
-  PermissionStatusLimited = 4,
 };
 
 typedef SWIFT_ENUM(NSInteger, PermissionType, open) {
@@ -984,6 +1053,16 @@ typedef SWIFT_ENUM(NSInteger, PermissionType, open) {
   PermissionTypeMicrophone = 1,
   PermissionTypeIdfa = 2,
 };
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon29SLBackspaceDetectingTextField")
+@interface SLBackspaceDetectingTextField : UITextField
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)deleteBackward;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
 
 @class UITouch;
 @class UIEvent;
@@ -1000,7 +1079,6 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon10SLBaseView")
 
 SWIFT_CLASS("_TtC17ShopliveSDKCommon24SLLoadingAlertController")
 @interface SLLoadingAlertController : UIViewController <UIGestureRecognizerDelegate>
-- (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
@@ -1050,6 +1128,97 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon22SLTextFieldWithPadding")
 @end
 
 
+SWIFT_CLASS("_TtC17ShopliveSDKCommon11SLWSTagView")
+@interface SLWSTagView : UIView <UITextInputTraits>
+@property (nonatomic, strong) UIColor * _Null_unspecified tintColor;
+@property (nonatomic) UITextAutocapitalizationType autocapitalizationType;
+@property (nonatomic) UITextAutocorrectionType autocorrectionType;
+@property (nonatomic) UITextSpellCheckingType spellCheckingType;
+@property (nonatomic) UIKeyboardType keyboardType;
+@property (nonatomic) UIKeyboardAppearance keyboardAppearance;
+@property (nonatomic) UIReturnKeyType returnKeyType;
+@property (nonatomic) BOOL enablesReturnKeyAutomatically;
+@property (nonatomic, getter=isSecureTextEntry) BOOL secureTextEntry;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
+- (CGSize)sizeThatFits:(CGSize)size SWIFT_WARN_UNUSED_RESULT;
+- (void)layoutSubviews;
+@property (nonatomic, readonly) BOOL canBecomeFirstResponder;
+- (BOOL)becomeFirstResponder SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)resignFirstResponder SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+@interface SLWSTagView (SWIFT_EXTENSION(ShopliveSDKCommon)) <UIKeyInput>
+@property (nonatomic, readonly) BOOL hasText;
+- (void)insertText:(NSString * _Nonnull)text;
+- (void)deleteBackward;
+@end
+
+@class UIFont;
+
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC17ShopliveSDKCommon13SLWSTagsField")
+@interface SLWSTagsField : UIScrollView
+/// Background color for tag view in normal (non-selected) state.
+@property (nonatomic, strong) IBInspectable UIColor * _Null_unspecified tintColor;
+/// Text color for tag view in normal (non-selected) state.
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable textColor;
+/// Background color for tag view in normal (selected) state.
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable selectedColor;
+/// Text color for tag view in normal (selected) state.
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable selectedTextColor;
+@property (nonatomic, copy) IBInspectable NSString * _Nonnull delimiter;
+@property (nonatomic) IBInspectable BOOL isDelimiterVisible;
+/// Whether the text field should tokenize strings automatically when the keyboard is dismissed.
+@property (nonatomic) IBInspectable BOOL shouldTokenizeAfterResigningFirstResponder;
+@property (nonatomic) IBInspectable CGFloat maxHeight;
+/// Max number of lines of tags can display in SLWSTagsField before its contents become scrollable. Default value is 0, which means SLWSTagsField always resize to fit all tags.
+@property (nonatomic) IBInspectable NSInteger numberOfLines;
+/// Whether or not the SLWSTagsField should become scrollable
+@property (nonatomic) IBInspectable BOOL enableScrolling;
+@property (nonatomic) IBInspectable CGFloat cornerRadius;
+@property (nonatomic) IBInspectable CGFloat borderWidth;
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable borderColor;
+@property (nonatomic) UIEdgeInsets layoutMargins;
+@property (nonatomic, copy) IBInspectable NSString * _Nonnull placeholder;
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable placeholderColor;
+@property (nonatomic, strong) IBInspectable UIFont * _Nullable placeholderFont;
+@property (nonatomic) IBInspectable BOOL placeholderAlwaysVisible;
+@property (nonatomic) IBInspectable BOOL readOnly;
+@property (nonatomic) UIEdgeInsets contentInset;
+@property (nonatomic) IBInspectable CGFloat spaceBetweenTags;
+@property (nonatomic) IBInspectable CGFloat spaceBetweenLines;
+@property (nonatomic, readonly) BOOL isFirstResponder;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
+- (CGSize)sizeThatFits:(CGSize)size SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)willMoveToSuperview:(UIView * _Nullable)newSuperview;
+- (void)layoutSubviews;
+- (void)reloadInputViews;
+- (void)onTextFieldDidChange:(id _Nonnull)sender;
+@end
+
+
+
+@interface SLWSTagsField (SWIFT_EXTENSION(ShopliveSDKCommon)) <UITextFieldDelegate>
+- (BOOL)textFieldShouldBeginEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
+- (BOOL)textFieldShouldEndEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+
+@interface SLWSTagsField (SWIFT_EXTENSION(ShopliveSDKCommon))
+@property (nonatomic, readonly, strong) UIView * _Nullable inputAccessoryView SWIFT_DEPRECATED_MSG("Use 'inputFieldAccessoryView' instead");
+@end
+
+
 SWIFT_CLASS("_TtC17ShopliveSDKCommon9SLWebView")
 @interface SLWebView : SLBaseView
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
@@ -1061,7 +1230,6 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon9SLWebView")
 - (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 @end
 
-@class UIScrollView;
 
 @interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
@@ -1104,16 +1272,6 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon13ShopLiveError")
 @interface ShopLiveError : NSError
 - (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain code:(NSInteger)code userInfo:(NSDictionary<NSString *, id> * _Nullable)dict OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon25ShopLivePermissionHandler_")
-@protocol ShopLivePermissionHandler
-@optional
-- (void)handleCameraPermissionWithStatus:(enum PermissionStatus)status;
-- (void)handleMicroPhonePermissionWithStatus:(enum PermissionStatus)status;
-- (void)handleMediaLibraryUsagePermissionWithStatus:(enum PermissionStatus)status;
-- (void)handlePhotoLibraryUsagePermissionWithStatus:(enum PermissionStatus)status;
 @end
 
 
