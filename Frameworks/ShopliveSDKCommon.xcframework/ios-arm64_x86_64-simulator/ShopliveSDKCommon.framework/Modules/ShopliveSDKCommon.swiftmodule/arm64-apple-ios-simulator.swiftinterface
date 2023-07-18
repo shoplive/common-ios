@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopliveSDKCommon
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
@@ -22,14 +22,30 @@ import Swift
 import SwiftUI
 import SystemConfiguration
 import UIKit
+import UIKit/*.UIKit*/
+import UIKit
+import UIKit/*.UIKit*/
+import UIKit
+import UIKit/*.UIKit*/
+import UIKit
+import UIKit/*.UIKit*/
+import UIKit
+import UIKit/*.UIKit*/
+import UIKit
+import UIKit/*.UIKit*/
+import UIKit
+import UIKit/*.UIKit*/
+import UIKit
 import UniformTypeIdentifiers
 import WebKit
 import _Concurrency
 import _StringProcessing
+import os.log
+import os
 import zlib
 public typealias Parameters = [Swift.String : Any]
 public protocol ParameterEncoding {
-  func encode(_ urlRequest: ShopliveSDKCommon.URLRequestConvertible, with parameters: ShopliveSDKCommon.Parameters?) throws -> Foundation.URLRequest
+  func encode(_ urlRequest: any ShopliveSDKCommon.URLRequestConvertible, with parameters: ShopliveSDKCommon.Parameters?) throws -> Foundation.URLRequest
 }
 public struct URLEncoding : ShopliveSDKCommon.ParameterEncoding {
   public enum Destination {
@@ -70,7 +86,7 @@ public struct URLEncoding : ShopliveSDKCommon.ParameterEncoding {
   public let arrayEncoding: ShopliveSDKCommon.URLEncoding.ArrayEncoding
   public let boolEncoding: ShopliveSDKCommon.URLEncoding.BoolEncoding
   public init(destination: ShopliveSDKCommon.URLEncoding.Destination = .methodDependent, arrayEncoding: ShopliveSDKCommon.URLEncoding.ArrayEncoding = .brackets, boolEncoding: ShopliveSDKCommon.URLEncoding.BoolEncoding = .numeric)
-  public func encode(_ urlRequest: ShopliveSDKCommon.URLRequestConvertible, with parameters: ShopliveSDKCommon.Parameters?) throws -> Foundation.URLRequest
+  public func encode(_ urlRequest: any ShopliveSDKCommon.URLRequestConvertible, with parameters: ShopliveSDKCommon.Parameters?) throws -> Foundation.URLRequest
   public func queryComponents(fromKey key: Swift.String, value: Any) -> [(Swift.String, Swift.String)]
   public func escape(_ string: Swift.String) -> Swift.String
 }
@@ -91,8 +107,8 @@ public struct JSONEncoding : ShopliveSDKCommon.ParameterEncoding {
   }
   public let options: Foundation.JSONSerialization.WritingOptions
   public init(options: Foundation.JSONSerialization.WritingOptions = [])
-  public func encode(_ urlRequest: ShopliveSDKCommon.URLRequestConvertible, with parameters: ShopliveSDKCommon.Parameters?) throws -> Foundation.URLRequest
-  public func encode(_ urlRequest: ShopliveSDKCommon.URLRequestConvertible, withJSONObject jsonObject: Any? = nil) throws -> Foundation.URLRequest
+  public func encode(_ urlRequest: any ShopliveSDKCommon.URLRequestConvertible, with parameters: ShopliveSDKCommon.Parameters?) throws -> Foundation.URLRequest
+  public func encode(_ urlRequest: any ShopliveSDKCommon.URLRequestConvertible, withJSONObject jsonObject: Any? = nil) throws -> Foundation.URLRequest
 }
 extension ShopliveSDKCommon.JSONEncoding.Error {
   public var localizedDescription: Swift.String {
@@ -133,16 +149,27 @@ extension ShopliveSDKCommon.SLKingfisherWrapper where Base == Foundation.Data {
 extension UIKit.UIImageView {
   @_Concurrency.MainActor(unsafe) public func loadImage(from url: Foundation.URL?, placeHolderImage: UIKit.UIImage? = nil, completion: ((UIKit.UIImage?) -> ())? = nil)
 }
+public enum UIScreenDirection {
+  case top
+  case left
+  case right
+  case bottom
+  public static func == (a: ShopliveSDKCommon.UIScreenDirection, b: ShopliveSDKCommon.UIScreenDirection) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public protocol DataResponseSerializerProtocol {
   associatedtype SerializedObject
-  func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: Swift.Error?) throws -> Self.SerializedObject
+  func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> Self.SerializedObject
 }
 public protocol DownloadResponseSerializerProtocol {
   associatedtype SerializedObject
-  func serializeDownload(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, fileURL: Foundation.URL?, error: Swift.Error?) throws -> Self.SerializedObject
+  func serializeDownload(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, fileURL: Foundation.URL?, error: (any Swift.Error)?) throws -> Self.SerializedObject
 }
 public protocol ResponseSerializer : ShopliveSDKCommon.DataResponseSerializerProtocol, ShopliveSDKCommon.DownloadResponseSerializerProtocol {
-  var dataPreprocessor: ShopliveSDKCommon.DataPreprocessor { get }
+  var dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor { get }
   var emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> { get }
   var emptyResponseCodes: Swift.Set<Swift.Int> { get }
 }
@@ -168,7 +195,7 @@ extension ShopliveSDKCommon.DataPreprocessor where Self == ShopliveSDKCommon.Goo
   }
 }
 extension ShopliveSDKCommon.ResponseSerializer {
-  public static var defaultDataPreprocessor: ShopliveSDKCommon.DataPreprocessor {
+  public static var defaultDataPreprocessor: any ShopliveSDKCommon.DataPreprocessor {
     get
   }
   public static var defaultEmptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> {
@@ -177,7 +204,7 @@ extension ShopliveSDKCommon.ResponseSerializer {
   public static var defaultEmptyResponseCodes: Swift.Set<Swift.Int> {
     get
   }
-  public var dataPreprocessor: ShopliveSDKCommon.DataPreprocessor {
+  public var dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor {
     get
   }
   public var emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> {
@@ -191,7 +218,7 @@ extension ShopliveSDKCommon.ResponseSerializer {
   public func emptyResponseAllowed(forRequest request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?) -> Swift.Bool
 }
 extension ShopliveSDKCommon.DownloadResponseSerializerProtocol where Self : ShopliveSDKCommon.DataResponseSerializerProtocol {
-  public func serializeDownload(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, fileURL: Foundation.URL?, error: Swift.Error?) throws -> Self.SerializedObject
+  public func serializeDownload(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, fileURL: Foundation.URL?, error: (any Swift.Error)?) throws -> Self.SerializedObject
 }
 extension ShopliveSDKCommon.DataRequest {
   @discardableResult
@@ -211,7 +238,7 @@ extension ShopliveSDKCommon.DownloadRequest {
 }
 public struct URLResponseSerializer : ShopliveSDKCommon.DownloadResponseSerializerProtocol {
   public init()
-  public func serializeDownload(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, fileURL: Foundation.URL?, error: Swift.Error?) throws -> Foundation.URL
+  public func serializeDownload(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, fileURL: Foundation.URL?, error: (any Swift.Error)?) throws -> Foundation.URL
   public typealias SerializedObject = Foundation.URL
 }
 extension ShopliveSDKCommon.DownloadResponseSerializerProtocol where Self == ShopliveSDKCommon.URLResponseSerializer {
@@ -224,11 +251,11 @@ extension ShopliveSDKCommon.DownloadRequest {
   public func responseURL(queue: Dispatch.DispatchQueue = .main, completionHandler: @escaping (ShopliveSDKCommon.AFDownloadResponse<Foundation.URL>) -> Swift.Void) -> Self
 }
 final public class DataResponseSerializer : ShopliveSDKCommon.ResponseSerializer {
-  final public let dataPreprocessor: ShopliveSDKCommon.DataPreprocessor
+  final public let dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor
   final public let emptyResponseCodes: Swift.Set<Swift.Int>
   final public let emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod>
-  public init(dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods)
-  final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: Swift.Error?) throws -> Foundation.Data
+  public init(dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods)
+  final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> Foundation.Data
   public typealias SerializedObject = Foundation.Data
   @objc deinit
 }
@@ -236,23 +263,23 @@ extension ShopliveSDKCommon.ResponseSerializer where Self == ShopliveSDKCommon.D
   public static var data: ShopliveSDKCommon.DataResponseSerializer {
     get
   }
-  public static func data(dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DataResponseSerializer
+  public static func data(dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DataResponseSerializer
 }
 extension ShopliveSDKCommon.DataRequest {
   @discardableResult
-  public func responseData(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods, completionHandler: @escaping (ShopliveSDKCommon.AFDataResponse<Foundation.Data>) -> Swift.Void) -> Self
+  public func responseData(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods, completionHandler: @escaping (ShopliveSDKCommon.AFDataResponse<Foundation.Data>) -> Swift.Void) -> Self
 }
 extension ShopliveSDKCommon.DownloadRequest {
   @discardableResult
-  public func responseData(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods, completionHandler: @escaping (ShopliveSDKCommon.AFDownloadResponse<Foundation.Data>) -> Swift.Void) -> Self
+  public func responseData(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods, completionHandler: @escaping (ShopliveSDKCommon.AFDownloadResponse<Foundation.Data>) -> Swift.Void) -> Self
 }
 final public class StringResponseSerializer : ShopliveSDKCommon.ResponseSerializer {
-  final public let dataPreprocessor: ShopliveSDKCommon.DataPreprocessor
+  final public let dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor
   final public let encoding: Swift.String.Encoding?
   final public let emptyResponseCodes: Swift.Set<Swift.Int>
   final public let emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod>
-  public init(dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods)
-  final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: Swift.Error?) throws -> Swift.String
+  public init(dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods)
+  final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> Swift.String
   public typealias SerializedObject = Swift.String
   @objc deinit
 }
@@ -260,44 +287,44 @@ extension ShopliveSDKCommon.ResponseSerializer where Self == ShopliveSDKCommon.S
   public static var string: ShopliveSDKCommon.StringResponseSerializer {
     get
   }
-  public static func string(dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.StringResponseSerializer
+  public static func string(dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.StringResponseSerializer
 }
 extension ShopliveSDKCommon.DataRequest {
   @discardableResult
-  public func responseString(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods, completionHandler: @escaping (ShopliveSDKCommon.AFDataResponse<Swift.String>) -> Swift.Void) -> Self
+  public func responseString(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods, completionHandler: @escaping (ShopliveSDKCommon.AFDataResponse<Swift.String>) -> Swift.Void) -> Self
 }
 extension ShopliveSDKCommon.DownloadRequest {
   @discardableResult
-  public func responseString(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods, completionHandler: @escaping (ShopliveSDKCommon.AFDownloadResponse<Swift.String>) -> Swift.Void) -> Self
+  public func responseString(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods, completionHandler: @escaping (ShopliveSDKCommon.AFDownloadResponse<Swift.String>) -> Swift.Void) -> Self
 }
 @available(*, deprecated, message: "JSONResponseSerializer deprecated and will be removed in Alamofire 6. Use DecodableResponseSerializer instead.")
 final public class JSONResponseSerializer : ShopliveSDKCommon.ResponseSerializer {
-  final public let dataPreprocessor: ShopliveSDKCommon.DataPreprocessor
+  final public let dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor
   final public let emptyResponseCodes: Swift.Set<Swift.Int>
   final public let emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod>
   final public let options: Foundation.JSONSerialization.ReadingOptions
-  public init(dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = JSONResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = JSONResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = JSONResponseSerializer.defaultEmptyRequestMethods, options: Foundation.JSONSerialization.ReadingOptions = .allowFragments)
-  final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: Swift.Error?) throws -> Any
+  public init(dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = JSONResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = JSONResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = JSONResponseSerializer.defaultEmptyRequestMethods, options: Foundation.JSONSerialization.ReadingOptions = .allowFragments)
+  final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> Any
   public typealias SerializedObject = Any
   @objc deinit
 }
 extension ShopliveSDKCommon.DataRequest {
   @available(*, deprecated, message: "responseJSON deprecated and will be removed in Alamofire 6. Use responseDecodable instead.")
   @discardableResult
-  public func responseJSON(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = JSONResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = JSONResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = JSONResponseSerializer.defaultEmptyRequestMethods, options: Foundation.JSONSerialization.ReadingOptions = .allowFragments, completionHandler: @escaping (ShopliveSDKCommon.AFDataResponse<Any>) -> Swift.Void) -> Self
+  public func responseJSON(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = JSONResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = JSONResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = JSONResponseSerializer.defaultEmptyRequestMethods, options: Foundation.JSONSerialization.ReadingOptions = .allowFragments, completionHandler: @escaping (ShopliveSDKCommon.AFDataResponse<Any>) -> Swift.Void) -> Self
 }
 extension ShopliveSDKCommon.DownloadRequest {
   @available(*, deprecated, message: "responseJSON deprecated and will be removed in Alamofire 6. Use responseDecodable instead.")
   @discardableResult
-  public func responseJSON(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = JSONResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = JSONResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = JSONResponseSerializer.defaultEmptyRequestMethods, options: Foundation.JSONSerialization.ReadingOptions = .allowFragments, completionHandler: @escaping (ShopliveSDKCommon.AFDownloadResponse<Any>) -> Swift.Void) -> Self
+  public func responseJSON(queue: Dispatch.DispatchQueue = .main, dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = JSONResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = JSONResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = JSONResponseSerializer.defaultEmptyRequestMethods, options: Foundation.JSONSerialization.ReadingOptions = .allowFragments, completionHandler: @escaping (ShopliveSDKCommon.AFDownloadResponse<Any>) -> Swift.Void) -> Self
 }
 public protocol EmptyResponse {
   static func emptyValue() -> Self
 }
 public struct Empty : Swift.Codable {
   public static let value: ShopliveSDKCommon.Empty
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension ShopliveSDKCommon.Empty : ShopliveSDKCommon.EmptyResponse {
   public static func emptyValue() -> ShopliveSDKCommon.Empty
@@ -310,34 +337,34 @@ extension Foundation.JSONDecoder : ShopliveSDKCommon.DataDecoder {
 extension Foundation.PropertyListDecoder : ShopliveSDKCommon.DataDecoder {
 }
 final public class DecodableResponseSerializer<T> : ShopliveSDKCommon.ResponseSerializer where T : Swift.Decodable {
-  final public let dataPreprocessor: ShopliveSDKCommon.DataPreprocessor
-  final public let decoder: ShopliveSDKCommon.DataDecoder
+  final public let dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor
+  final public let decoder: any ShopliveSDKCommon.DataDecoder
   final public let emptyResponseCodes: Swift.Set<Swift.Int>
   final public let emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod>
-  public init(dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer.defaultDataPreprocessor, decoder: ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer.defaultEmptyRequestMethods)
-  final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: Swift.Error?) throws -> T
+  public init(dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer.defaultDataPreprocessor, decoder: any ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer.defaultEmptyRequestMethods)
+  final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> T
   public typealias SerializedObject = T
   @objc deinit
 }
 extension ShopliveSDKCommon.ResponseSerializer {
-  public static func decodable<T>(of type: T.Type, dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DecodableResponseSerializer<T> where Self == ShopliveSDKCommon.DecodableResponseSerializer<T>, T : Swift.Decodable
+  public static func decodable<T>(of type: T.Type, dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: any ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DecodableResponseSerializer<T> where Self == ShopliveSDKCommon.DecodableResponseSerializer<T>, T : Swift.Decodable
 }
 extension ShopliveSDKCommon.DataRequest {
   @discardableResult
-  public func responseDecodable<T>(of type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods, completionHandler: @escaping (ShopliveSDKCommon.AFDataResponse<T>) -> Swift.Void) -> Self where T : Swift.Decodable
+  public func responseDecodable<T>(of type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: any ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods, completionHandler: @escaping (ShopliveSDKCommon.AFDataResponse<T>) -> Swift.Void) -> Self where T : Swift.Decodable
 }
 extension ShopliveSDKCommon.DownloadRequest {
   @discardableResult
-  public func responseDecodable<T>(of type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods, completionHandler: @escaping (ShopliveSDKCommon.AFDownloadResponse<T>) -> Swift.Void) -> Self where T : Swift.Decodable
+  public func responseDecodable<T>(of type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: any ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods, completionHandler: @escaping (ShopliveSDKCommon.AFDownloadResponse<T>) -> Swift.Void) -> Self where T : Swift.Decodable
 }
 public protocol DataStreamSerializer {
   associatedtype SerializedObject
   func serialize(_ data: Foundation.Data) throws -> Self.SerializedObject
 }
 public struct DecodableStreamSerializer<T> : ShopliveSDKCommon.DataStreamSerializer where T : Swift.Decodable {
-  public let decoder: ShopliveSDKCommon.DataDecoder
-  public let dataPreprocessor: ShopliveSDKCommon.DataPreprocessor
-  public init(decoder: ShopliveSDKCommon.DataDecoder = JSONDecoder(), dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = PassthroughPreprocessor())
+  public let decoder: any ShopliveSDKCommon.DataDecoder
+  public let dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor
+  public init(decoder: any ShopliveSDKCommon.DataDecoder = JSONDecoder(), dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = PassthroughPreprocessor())
   public func serialize(_ data: Foundation.Data) throws -> T
   public typealias SerializedObject = T
 }
@@ -352,7 +379,7 @@ public struct StringStreamSerializer : ShopliveSDKCommon.DataStreamSerializer {
   public typealias SerializedObject = Swift.String
 }
 extension ShopliveSDKCommon.DataStreamSerializer {
-  public static func decodable<T>(of type: T.Type, decoder: ShopliveSDKCommon.DataDecoder = JSONDecoder(), dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = PassthroughPreprocessor()) -> Self where Self == ShopliveSDKCommon.DecodableStreamSerializer<T>, T : Swift.Decodable
+  public static func decodable<T>(of type: T.Type, decoder: any ShopliveSDKCommon.DataDecoder = JSONDecoder(), dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = PassthroughPreprocessor()) -> Self where Self == ShopliveSDKCommon.DecodableStreamSerializer<T>, T : Swift.Decodable
 }
 extension ShopliveSDKCommon.DataStreamSerializer where Self == ShopliveSDKCommon.PassthroughStreamSerializer {
   public static var passthrough: ShopliveSDKCommon.PassthroughStreamSerializer {
@@ -372,7 +399,7 @@ extension ShopliveSDKCommon.DataStreamRequest {
   @discardableResult
   final public func responseStreamString(on queue: Dispatch.DispatchQueue = .main, stream: @escaping ShopliveSDKCommon.DataStreamRequest.Handler<Swift.String, Swift.Never>) -> Self
   @discardableResult
-  final public func responseStreamDecodable<T>(of type: T.Type = T.self, on queue: Dispatch.DispatchQueue = .main, using decoder: ShopliveSDKCommon.DataDecoder = JSONDecoder(), preprocessor: ShopliveSDKCommon.DataPreprocessor = PassthroughPreprocessor(), stream: @escaping ShopliveSDKCommon.DataStreamRequest.Handler<T, ShopliveSDKCommon.AFError>) -> Self where T : Swift.Decodable
+  final public func responseStreamDecodable<T>(of type: T.Type = T.self, on queue: Dispatch.DispatchQueue = .main, using decoder: any ShopliveSDKCommon.DataDecoder = JSONDecoder(), preprocessor: any ShopliveSDKCommon.DataPreprocessor = PassthroughPreprocessor(), stream: @escaping ShopliveSDKCommon.DataStreamRequest.Handler<T, ShopliveSDKCommon.AFError>) -> Self where T : Swift.Decodable
 }
 extension ShopliveSDKCommon.SLKingfisherWrapper where Base : UIKit.UIImage {
   public func image(withBlendMode blendMode: CoreGraphics.CGBlendMode, alpha: CoreFoundation.CGFloat = 1.0, backgroundColor: ShopliveSDKCommon.KFCrossPlatformColor? = nil) -> ShopliveSDKCommon.KFCrossPlatformImage
@@ -408,7 +435,7 @@ public struct AVAssetImageDataProvider : ShopliveSDKCommon.ImageDataProvider {
   public init(assetImageGenerator: AVFoundation.AVAssetImageGenerator, time: CoreMedia.CMTime)
   public init(assetURL: Foundation.URL, time: CoreMedia.CMTime)
   public init(assetURL: Foundation.URL, seconds: Foundation.TimeInterval)
-  public func data(handler: @escaping (Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void)
+  public func data(handler: @escaping (Swift.Result<Foundation.Data, any Swift.Error>) -> Swift.Void)
 }
 extension UIKit.UIStackView {
   @_Concurrency.MainActor(unsafe) public func addArrangedSubviews(_ views: UIKit.UIView...)
@@ -511,8 +538,8 @@ public protocol AuthenticationCredential {
 public protocol Authenticator : AnyObject {
   associatedtype Credential : ShopliveSDKCommon.AuthenticationCredential
   func apply(_ credential: Self.Credential, to urlRequest: inout Foundation.URLRequest)
-  func refresh(_ credential: Self.Credential, for session: ShopliveSDKCommon.Session, completion: @escaping (Swift.Result<Self.Credential, Swift.Error>) -> Swift.Void)
-  func didRequest(_ urlRequest: Foundation.URLRequest, with response: Foundation.HTTPURLResponse, failDueToAuthenticationError error: Swift.Error) -> Swift.Bool
+  func refresh(_ credential: Self.Credential, for session: ShopliveSDKCommon.Session, completion: @escaping (Swift.Result<Self.Credential, any Swift.Error>) -> Swift.Void)
+  func didRequest(_ urlRequest: Foundation.URLRequest, with response: Foundation.HTTPURLResponse, failDueToAuthenticationError error: any Swift.Error) -> Swift.Bool
   func isRequest(_ urlRequest: Foundation.URLRequest, authenticatedWith credential: Self.Credential) -> Swift.Bool
 }
 public enum AuthenticationError : Swift.Error {
@@ -536,8 +563,8 @@ public class AuthenticationInterceptor<AuthenticatorType> : ShopliveSDKCommon.Re
     set
   }
   public init(authenticator: AuthenticatorType, credential: ShopliveSDKCommon.AuthenticationInterceptor<AuthenticatorType>.Credential? = nil, refreshWindow: ShopliveSDKCommon.AuthenticationInterceptor<AuthenticatorType>.RefreshWindow? = RefreshWindow())
-  public func adapt(_ urlRequest: Foundation.URLRequest, for session: ShopliveSDKCommon.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, Swift.Error>) -> Swift.Void)
-  public func retry(_ request: ShopliveSDKCommon.Request, for session: ShopliveSDKCommon.Session, dueTo error: Swift.Error, completion: @escaping (ShopliveSDKCommon.RetryResult) -> Swift.Void)
+  public func adapt(_ urlRequest: Foundation.URLRequest, for session: ShopliveSDKCommon.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
+  public func retry(_ request: ShopliveSDKCommon.Request, for session: ShopliveSDKCommon.Session, dueTo error: any Swift.Error, completion: @escaping (ShopliveSDKCommon.RetryResult) -> Swift.Void)
   @objc deinit
 }
 extension Swift.Int {
@@ -547,7 +574,7 @@ extension Swift.Int {
   }
 }
 extension ShopliveSDKCommon.Request {
-  public typealias ValidationResult = Swift.Result<Swift.Void, Swift.Error>
+  public typealias ValidationResult = Swift.Result<Swift.Void, any Swift.Error>
 }
 extension ShopliveSDKCommon.DataRequest {
   public typealias Validation = (Foundation.URLRequest?, Foundation.HTTPURLResponse, Foundation.Data?) -> ShopliveSDKCommon.DataRequest.ValidationResult
@@ -578,9 +605,10 @@ extension ShopliveSDKCommon.DownloadRequest {
 }
 extension UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) public func transition(with window: UIKit.UIWindow)
-  @objc @_Concurrency.MainActor(unsafe) dynamic public func shopliveHideKeyboard()
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func shopliveHideKeyboard()
   @_Concurrency.MainActor(unsafe) public func hideKeyboard()
   @_Concurrency.MainActor(unsafe) public func showShareSheet(url: Swift.String?)
+  @_Concurrency.MainActor(unsafe) public func didChangeOrientation() -> UIKit.UIInterfaceOrientationMask
 }
 extension Swift.String : ShopliveSDKCommon.SLKingfisherCompatibleValue {
 }
@@ -635,7 +663,7 @@ public enum ShopliveErrorType : Swift.Int, Swift.CaseIterable {
   case CLIENT_IP_BLOCK
   case STREAM_REMAINED
   case DUPLICATE_STREAM_KEY_MANUAL
-  public var convertedToError: Swift.Error {
+  public var convertedToError: any Swift.Error {
     get
   }
   public var code: Swift.Int {
@@ -671,11 +699,11 @@ public enum SLKingfisherOptionsInfoItem {
   case callbackQueue(ShopliveSDKCommon.CallbackQueue)
   case scaleFactor(CoreFoundation.CGFloat)
   case preloadAllAnimationData
-  case requestModifier(ShopliveSDKCommon.AsyncImageDownloadRequestModifier)
-  case redirectHandler(ShopliveSDKCommon.ImageDownloadRedirectHandler)
-  case processor(ShopliveSDKCommon.ImageProcessor)
-  case cacheSerializer(ShopliveSDKCommon.CacheSerializer)
-  case imageModifier(ShopliveSDKCommon.ImageModifier)
+  case requestModifier(any ShopliveSDKCommon.AsyncImageDownloadRequestModifier)
+  case redirectHandler(any ShopliveSDKCommon.ImageDownloadRedirectHandler)
+  case processor(any ShopliveSDKCommon.ImageProcessor)
+  case cacheSerializer(any ShopliveSDKCommon.CacheSerializer)
+  case imageModifier(any ShopliveSDKCommon.ImageModifier)
   case keepCurrentImageWhileLoading
   case onlyLoadFirstFrame
   case cacheOriginalImage
@@ -690,7 +718,7 @@ public enum SLKingfisherOptionsInfoItem {
   case processingQueue(ShopliveSDKCommon.CallbackQueue)
   case progressiveJPEG(ShopliveSDKCommon.ImageProgressive)
   case alternativeSources([ShopliveSDKCommon.Source])
-  case retryStrategy(ShopliveSDKCommon.RetryStrategy)
+  case retryStrategy(any ShopliveSDKCommon.RetryStrategy)
   case lowDataMode(ShopliveSDKCommon.Source?)
 }
 public struct SLKingfisherParsedOptionsInfo {
@@ -709,11 +737,11 @@ public struct SLKingfisherParsedOptionsInfo {
   public var preloadAllAnimationData: Swift.Bool
   public var callbackQueue: ShopliveSDKCommon.CallbackQueue
   public var scaleFactor: CoreFoundation.CGFloat
-  public var requestModifier: ShopliveSDKCommon.AsyncImageDownloadRequestModifier?
-  public var redirectHandler: ShopliveSDKCommon.ImageDownloadRedirectHandler?
-  public var processor: ShopliveSDKCommon.ImageProcessor
-  public var imageModifier: ShopliveSDKCommon.ImageModifier?
-  public var cacheSerializer: ShopliveSDKCommon.CacheSerializer
+  public var requestModifier: (any ShopliveSDKCommon.AsyncImageDownloadRequestModifier)?
+  public var redirectHandler: (any ShopliveSDKCommon.ImageDownloadRedirectHandler)?
+  public var processor: any ShopliveSDKCommon.ImageProcessor
+  public var imageModifier: (any ShopliveSDKCommon.ImageModifier)?
+  public var cacheSerializer: any ShopliveSDKCommon.CacheSerializer
   public var keepCurrentImageWhileLoading: Swift.Bool
   public var onlyLoadFirstFrame: Swift.Bool
   public var cacheOriginalImage: Swift.Bool
@@ -728,7 +756,7 @@ public struct SLKingfisherParsedOptionsInfo {
   public var processingQueue: ShopliveSDKCommon.CallbackQueue?
   public var progressiveJPEG: ShopliveSDKCommon.ImageProgressive?
   public var alternativeSources: [ShopliveSDKCommon.Source]?
-  public var retryStrategy: ShopliveSDKCommon.RetryStrategy?
+  public var retryStrategy: (any ShopliveSDKCommon.RetryStrategy)?
   public var lowDataModeSource: ShopliveSDKCommon.Source?
   public init(_ info: ShopliveSDKCommon.SLKingfisherOptionsInfo?)
 }
@@ -783,6 +811,9 @@ extension Swift.Dictionary {
   }
   public func toJSONString() -> Swift.String?
 }
+extension Foundation.URL {
+  public func withScheme(_ scheme: Swift.String) -> Foundation.URL?
+}
 extension UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public func fit()
   @_Concurrency.MainActor(unsafe) public func fitTop30()
@@ -811,6 +842,7 @@ extension UIKit.UIView {
   }
   @_Concurrency.MainActor(unsafe) public func addAndFitToParent(view: UIKit.UIView, belowSubview: UIKit.UIView)
   @_Concurrency.MainActor(unsafe) public func fitToParent()
+  @_Concurrency.MainActor(unsafe) public func clearConstraints()
   @_Concurrency.MainActor(unsafe) public func roundCorners(corners: UIKit.UIRectCorner, radius: CoreFoundation.CGFloat)
   @_Concurrency.MainActor(unsafe) public func asImage() -> UIKit.UIImage
   @_Concurrency.MainActor(unsafe) public class func fromNib<T>() -> T where T : UIKit.UIView
@@ -860,7 +892,7 @@ public class SLKingfisherManager {
   public var defaultOptions: ShopliveSDKCommon.SLKingfisherOptionsInfo
   public init(downloader: ShopliveSDKCommon.ImageDownloader, cache: ShopliveSDKCommon.ImageCache)
   @discardableResult
-  public func retrieveImage(with resource: ShopliveSDKCommon.Resource, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, downloadTaskUpdated: ShopliveSDKCommon.SLDownloadTaskUpdatedBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)?) -> ShopliveSDKCommon.SLDownloadTask?
+  public func retrieveImage(with resource: any ShopliveSDKCommon.Resource, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, downloadTaskUpdated: ShopliveSDKCommon.SLDownloadTaskUpdatedBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)?) -> ShopliveSDKCommon.SLDownloadTask?
   @discardableResult
   public func retrieveImage(with source: ShopliveSDKCommon.Source, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, downloadTaskUpdated: ShopliveSDKCommon.SLDownloadTaskUpdatedBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)?) -> ShopliveSDKCommon.SLDownloadTask?
   @objc deinit
@@ -873,30 +905,26 @@ extension ShopliveSDKCommon.SLKingfisherWrapper where Base == CoreFoundation.CGS
   public func filling(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
   public func constrainedRect(for size: CoreFoundation.CGSize, anchor: CoreFoundation.CGPoint) -> CoreFoundation.CGRect
 }
-@_hasMissingDesignatedInitializers final public class ShopliveCommon {
-  public enum Request {
-    case setBaseURL(closure: (ShopliveSDKCommon.HTTPVersion) -> Swift.String)
-    case setAccessToken(Swift.String)
-    case setGuestUid(Swift.String)
-    case setAdId(Swift.String)
-    case setAccessKey(Swift.String)
-  }
-  public static let shared: ShopliveSDKCommon.ShopliveCommon
-  final public func request(_ request: ShopliveSDKCommon.ShopliveCommon.Request)
-  final public var accessToken: Swift.String?
-  final public var guestUid: Swift.String?
-  final public var adId: Swift.String?
-  final public var accessKey: Swift.String?
+@_hasMissingDesignatedInitializers final public class ShopLiveCommon {
+  public static func setUserJWT(userJWT: Swift.String?)
+  public static func getUserJWT() -> Swift.String?
+  public static func setAdId(adId: Swift.String?)
+  public static func getAdId() -> Swift.String?
+  public static func setAccessKey(accessKey: Swift.String?)
+  public static func getAccessKey() -> Swift.String?
+  public static func setGuestUid(guestUid: Swift.String?)
+  public static func getGuestUid() -> Swift.String?
+  public static func clearAuth()
   @objc deinit
 }
-extension ShopliveSDKCommon.ShopliveCommon {
+extension ShopliveSDKCommon.ShopLiveCommon {
   final public var sdkVersion: Swift.String {
     get
   }
 }
 public protocol ImageDownloaderDelegate : AnyObject {
   func imageDownloader(_ downloader: ShopliveSDKCommon.ImageDownloader, willDownloadImageForURL url: Foundation.URL, with request: Foundation.URLRequest?)
-  func imageDownloader(_ downloader: ShopliveSDKCommon.ImageDownloader, didFinishDownloadingImageForURL url: Foundation.URL, with response: Foundation.URLResponse?, error: Swift.Error?)
+  func imageDownloader(_ downloader: ShopliveSDKCommon.ImageDownloader, didFinishDownloadingImageForURL url: Foundation.URL, with response: Foundation.URLResponse?, error: (any Swift.Error)?)
   func imageDownloader(_ downloader: ShopliveSDKCommon.ImageDownloader, didDownload data: Foundation.Data, with dataTask: ShopliveSDKCommon.SessionDataTask) -> Foundation.Data?
   func imageDownloader(_ downloader: ShopliveSDKCommon.ImageDownloader, didDownload data: Foundation.Data, for url: Foundation.URL) -> Foundation.Data?
   func imageDownloader(_ downloader: ShopliveSDKCommon.ImageDownloader, didDownload image: ShopliveSDKCommon.KFCrossPlatformImage, for url: Foundation.URL, with response: Foundation.URLResponse?)
@@ -905,7 +933,7 @@ public protocol ImageDownloaderDelegate : AnyObject {
 }
 extension ShopliveSDKCommon.ImageDownloaderDelegate {
   public func imageDownloader(_ downloader: ShopliveSDKCommon.ImageDownloader, willDownloadImageForURL url: Foundation.URL, with request: Foundation.URLRequest?)
-  public func imageDownloader(_ downloader: ShopliveSDKCommon.ImageDownloader, didFinishDownloadingImageForURL url: Foundation.URL, with response: Foundation.URLResponse?, error: Swift.Error?)
+  public func imageDownloader(_ downloader: ShopliveSDKCommon.ImageDownloader, didFinishDownloadingImageForURL url: Foundation.URL, with response: Foundation.URLResponse?, error: (any Swift.Error)?)
   public func imageDownloader(_ downloader: ShopliveSDKCommon.ImageDownloader, didDownload image: ShopliveSDKCommon.KFCrossPlatformImage, for url: Foundation.URL, with response: Foundation.URLResponse?)
   public func isValidStatusCode(_ code: Swift.Int, for downloader: ShopliveSDKCommon.ImageDownloader) -> Swift.Bool
   public func imageDownloader(_ downloader: ShopliveSDKCommon.ImageDownloader, didDownload data: Foundation.Data, with task: ShopliveSDKCommon.SessionDataTask) -> Foundation.Data?
@@ -919,13 +947,13 @@ extension ShopliveSDKCommon.ImageDownloaderDelegate {
 extension ShopliveSDKCommon.SessionDelegate : Foundation.URLSessionDataDelegate {
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse, completionHandler: @escaping (Foundation.URLSession.ResponseDisposition) -> Swift.Void)
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
-  @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest, completionHandler: @escaping (Foundation.URLRequest?) -> Swift.Void)
 }
 extension UIKit.UINavigationController {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var childForStatusBarStyle: UIKit.UIViewController? {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var childForStatusBarStyle: UIKit.UIViewController? {
     @objc get
   }
 }
@@ -1003,7 +1031,7 @@ extension ShopliveSDKCommon.AnimatedImageViewDelegate {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) weak public var delegate: ShopliveSDKCommon.AnimatedImageViewDelegate?
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any ShopliveSDKCommon.AnimatedImageViewDelegate)?
   @_Concurrency.MainActor(unsafe) public var animator: ShopliveSDKCommon.AnimatedImageView.Animator? {
     get
   }
@@ -1082,10 +1110,14 @@ extension ShopliveSDKCommon.SLSLNVActivityIndicatorViewable where Self : UIKit.U
   @objc func finishLoading()
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLLoadingAlertController : UIKit.UIViewController, UIKit.UIGestureRecognizerDelegate {
-  @_Concurrency.MainActor(unsafe) weak public var delegate: ShopliveSDKCommon.SLLoadingAlertControllerDelegate?
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any ShopliveSDKCommon.SLLoadingAlertControllerDelegate)?
   @_Concurrency.MainActor(unsafe) public var cancelLoading: Swift.Bool
   @_Concurrency.MainActor(unsafe) public func setLoadingText(_ text: Swift.String)
+  @_Concurrency.MainActor(unsafe) public var useProgress: Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func resetProgress()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) public func setProgress(_ progress: CoreFoundation.CGFloat)
   @_Concurrency.MainActor(unsafe) public func finishLoading()
   @_Concurrency.MainActor(unsafe) public func cancal()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
@@ -1097,16 +1129,16 @@ public enum AFError : Swift.Error {
     case bodyPartURLInvalid(url: Foundation.URL)
     case bodyPartFilenameInvalid(in: Foundation.URL)
     case bodyPartFileNotReachable(at: Foundation.URL)
-    case bodyPartFileNotReachableWithError(atURL: Foundation.URL, error: Swift.Error)
+    case bodyPartFileNotReachableWithError(atURL: Foundation.URL, error: any Swift.Error)
     case bodyPartFileIsDirectory(at: Foundation.URL)
     case bodyPartFileSizeNotAvailable(at: Foundation.URL)
-    case bodyPartFileSizeQueryFailedWithError(forURL: Foundation.URL, error: Swift.Error)
+    case bodyPartFileSizeQueryFailedWithError(forURL: Foundation.URL, error: any Swift.Error)
     case bodyPartInputStreamCreationFailed(for: Foundation.URL)
     case outputStreamCreationFailed(for: Foundation.URL)
     case outputStreamFileAlreadyExists(at: Foundation.URL)
     case outputStreamURLInvalid(url: Foundation.URL)
-    case outputStreamWriteFailed(error: Swift.Error)
-    case inputStreamReadFailed(error: Swift.Error)
+    case outputStreamWriteFailed(error: any Swift.Error)
+    case inputStreamReadFailed(error: any Swift.Error)
   }
   public struct UnexpectedInputStreamLength : Swift.Error {
     public var bytesExpected: Swift.UInt64
@@ -1114,8 +1146,8 @@ public enum AFError : Swift.Error {
   }
   public enum ParameterEncodingFailureReason {
     case missingURL
-    case jsonEncodingFailed(error: Swift.Error)
-    case customEncodingFailed(error: Swift.Error)
+    case jsonEncodingFailed(error: any Swift.Error)
+    case customEncodingFailed(error: any Swift.Error)
   }
   public enum ParameterEncoderFailureReason {
     public enum RequiredComponent {
@@ -1123,7 +1155,7 @@ public enum AFError : Swift.Error {
       case httpMethod(rawValue: Swift.String)
     }
     case missingRequiredComponent(ShopliveSDKCommon.AFError.ParameterEncoderFailureReason.RequiredComponent)
-    case encoderFailed(error: Swift.Error)
+    case encoderFailed(error: any Swift.Error)
   }
   public enum ResponseValidationFailureReason {
     case dataFileNil
@@ -1131,16 +1163,16 @@ public enum AFError : Swift.Error {
     case missingContentType(acceptableContentTypes: [Swift.String])
     case unacceptableContentType(acceptableContentTypes: [Swift.String], responseContentType: Swift.String)
     case unacceptableStatusCode(code: Swift.Int)
-    case customValidationFailed(error: Swift.Error)
+    case customValidationFailed(error: any Swift.Error)
   }
   public enum ResponseSerializationFailureReason {
     case inputDataNilOrZeroLength
     case inputFileNil
     case inputFileReadFailed(at: Foundation.URL)
     case stringSerializationFailed(encoding: Swift.String.Encoding)
-    case jsonSerializationFailed(error: Swift.Error)
-    case decodingFailed(error: Swift.Error)
-    case customSerializationFailed(error: Swift.Error)
+    case jsonSerializationFailed(error: any Swift.Error)
+    case decodingFailed(error: any Swift.Error)
+    case customSerializationFailed(error: any Swift.Error)
     case invalidEmptyResponse(type: Swift.String)
   }
   public enum ServerTrustFailureReason {
@@ -1156,33 +1188,33 @@ public enum AFError : Swift.Error {
     case policyApplicationFailed(trust: Security.SecTrust, policy: Security.SecPolicy, status: Darwin.OSStatus)
     case settingAnchorCertificatesFailed(status: Darwin.OSStatus, certificates: [Security.SecCertificate])
     case revocationPolicyCreationFailed
-    case trustEvaluationFailed(error: Swift.Error?)
+    case trustEvaluationFailed(error: (any Swift.Error)?)
     case defaultEvaluationFailed(output: ShopliveSDKCommon.AFError.ServerTrustFailureReason.Output)
     case hostValidationFailed(output: ShopliveSDKCommon.AFError.ServerTrustFailureReason.Output)
     case revocationCheckFailed(output: ShopliveSDKCommon.AFError.ServerTrustFailureReason.Output, options: ShopliveSDKCommon.RevocationTrustEvaluator.Options)
     case certificatePinningFailed(host: Swift.String, trust: Security.SecTrust, pinnedCertificates: [Security.SecCertificate], serverCertificates: [Security.SecCertificate])
     case publicKeyPinningFailed(host: Swift.String, trust: Security.SecTrust, pinnedKeys: [Security.SecKey], serverKeys: [Security.SecKey])
-    case customEvaluationFailed(error: Swift.Error)
+    case customEvaluationFailed(error: any Swift.Error)
   }
   public enum URLRequestValidationFailureReason {
     case bodyDataInGETRequest(Foundation.Data)
   }
-  case createUploadableFailed(error: Swift.Error)
-  case createURLRequestFailed(error: Swift.Error)
-  case downloadedFileMoveFailed(error: Swift.Error, source: Foundation.URL, destination: Foundation.URL)
+  case createUploadableFailed(error: any Swift.Error)
+  case createURLRequestFailed(error: any Swift.Error)
+  case downloadedFileMoveFailed(error: any Swift.Error, source: Foundation.URL, destination: Foundation.URL)
   case explicitlyCancelled
-  case invalidURL(url: ShopliveSDKCommon.URLConvertible)
+  case invalidURL(url: any ShopliveSDKCommon.URLConvertible)
   case multipartEncodingFailed(reason: ShopliveSDKCommon.AFError.MultipartEncodingFailureReason)
   case parameterEncodingFailed(reason: ShopliveSDKCommon.AFError.ParameterEncodingFailureReason)
   case parameterEncoderFailed(reason: ShopliveSDKCommon.AFError.ParameterEncoderFailureReason)
-  case requestAdaptationFailed(error: Swift.Error)
-  case requestRetryFailed(retryError: Swift.Error, originalError: Swift.Error)
+  case requestAdaptationFailed(error: any Swift.Error)
+  case requestRetryFailed(retryError: any Swift.Error, originalError: any Swift.Error)
   case responseValidationFailed(reason: ShopliveSDKCommon.AFError.ResponseValidationFailureReason)
   case responseSerializationFailed(reason: ShopliveSDKCommon.AFError.ResponseSerializationFailureReason)
   case serverTrustEvaluationFailed(reason: ShopliveSDKCommon.AFError.ServerTrustFailureReason)
   case sessionDeinitialized
-  case sessionInvalidated(error: Swift.Error?)
-  case sessionTaskFailed(error: Swift.Error)
+  case sessionInvalidated(error: (any Swift.Error)?)
+  case sessionTaskFailed(error: any Swift.Error)
   case urlRequestValidationFailed(reason: ShopliveSDKCommon.AFError.URLRequestValidationFailureReason)
 }
 extension Swift.Error {
@@ -1242,13 +1274,13 @@ extension ShopliveSDKCommon.AFError {
   }
 }
 extension ShopliveSDKCommon.AFError {
-  public var urlConvertible: ShopliveSDKCommon.URLConvertible? {
+  public var urlConvertible: (any ShopliveSDKCommon.URLConvertible)? {
     get
   }
   public var url: Foundation.URL? {
     get
   }
-  public var underlyingError: Swift.Error? {
+  public var underlyingError: (any Swift.Error)? {
     get
   }
   public var acceptableContentTypes: [Swift.String]? {
@@ -1328,6 +1360,10 @@ extension ShopliveSDKCommon.ImageDownloadRequestModifier {
 public struct AnyModifier : ShopliveSDKCommon.ImageDownloadRequestModifier {
   public func modified(for request: Foundation.URLRequest) -> Foundation.URLRequest?
   public init(modify: @escaping (Foundation.URLRequest) -> Foundation.URLRequest?)
+}
+extension UIKit.NSLayoutConstraint {
+  @_Concurrency.MainActor(unsafe) public func updateConstraint(value: UIKit.NSLayoutConstraint?)
+  @_Concurrency.MainActor(unsafe) public func setMultiplier(multiplier: CoreFoundation.CGFloat) -> UIKit.NSLayoutConstraint
 }
 public enum DiskStorage {
   @_hasMissingDesignatedInitializers public class Backend<T> where T : ShopliveSDKCommon.DataTransformable {
@@ -1418,7 +1454,7 @@ public enum SLKingfisherError : Swift.Error {
   public enum ResponseErrorReason {
     case invalidURLResponse(response: Foundation.URLResponse)
     case invalidHTTPStatusCode(response: Foundation.HTTPURLResponse)
-    case URLSessionError(error: Swift.Error)
+    case URLSessionError(error: any Swift.Error)
     case dataModifyingFailed(task: ShopliveSDKCommon.SessionDataTask)
     case noURLResponse(task: ShopliveSDKCommon.SessionDataTask)
     case cancelledByDelegate(response: Foundation.URLResponse)
@@ -1426,23 +1462,23 @@ public enum SLKingfisherError : Swift.Error {
   public enum CacheErrorReason {
     case fileEnumeratorCreationFailed(url: Foundation.URL)
     case invalidFileEnumeratorContent(url: Foundation.URL)
-    case invalidURLResource(error: Swift.Error, key: Swift.String, url: Foundation.URL)
-    case cannotLoadDataFromDisk(url: Foundation.URL, error: Swift.Error)
-    case cannotCreateDirectory(path: Swift.String, error: Swift.Error)
+    case invalidURLResource(error: any Swift.Error, key: Swift.String, url: Foundation.URL)
+    case cannotLoadDataFromDisk(url: Foundation.URL, error: any Swift.Error)
+    case cannotCreateDirectory(path: Swift.String, error: any Swift.Error)
     case imageNotExisting(key: Swift.String)
-    case cannotConvertToData(object: Any, error: Swift.Error)
-    case cannotSerializeImage(image: ShopliveSDKCommon.KFCrossPlatformImage?, original: Foundation.Data?, serializer: ShopliveSDKCommon.CacheSerializer)
-    case cannotCreateCacheFile(fileURL: Foundation.URL, key: Swift.String, data: Foundation.Data, error: Swift.Error)
-    case cannotSetCacheFileAttribute(filePath: Swift.String, attributes: [Foundation.FileAttributeKey : Any], error: Swift.Error)
+    case cannotConvertToData(object: Any, error: any Swift.Error)
+    case cannotSerializeImage(image: ShopliveSDKCommon.KFCrossPlatformImage?, original: Foundation.Data?, serializer: any ShopliveSDKCommon.CacheSerializer)
+    case cannotCreateCacheFile(fileURL: Foundation.URL, key: Swift.String, data: Foundation.Data, error: any Swift.Error)
+    case cannotSetCacheFileAttribute(filePath: Swift.String, attributes: [Foundation.FileAttributeKey : Any], error: any Swift.Error)
     case diskStorageIsNotReady(cacheURL: Foundation.URL)
   }
   public enum ProcessorErrorReason {
-    case processingFailed(processor: ShopliveSDKCommon.ImageProcessor, item: ShopliveSDKCommon.ImageProcessItem)
+    case processingFailed(processor: any ShopliveSDKCommon.ImageProcessor, item: ShopliveSDKCommon.ImageProcessItem)
   }
   public enum ImageSettingErrorReason {
     case emptySource
-    case notCurrentSourceTask(result: ShopliveSDKCommon.RetrieveImageResult?, error: Swift.Error?, source: ShopliveSDKCommon.Source)
-    case dataProviderError(provider: ShopliveSDKCommon.ImageDataProvider, error: Swift.Error)
+    case notCurrentSourceTask(result: ShopliveSDKCommon.RetrieveImageResult?, error: (any Swift.Error)?, source: ShopliveSDKCommon.Source)
+    case dataProviderError(provider: any ShopliveSDKCommon.ImageDataProvider, error: any Swift.Error)
     case alternativeSourcesExhausted([ShopliveSDKCommon.PropagationError])
   }
   case requestError(reason: ShopliveSDKCommon.SLKingfisherError.RequestErrorReason)
@@ -1477,7 +1513,7 @@ extension ShopliveSDKCommon.SLKingfisherError : Foundation.CustomNSError {
   @objc deinit
 }
 extension ShopliveSDKCommon.AFSessionDelegate : Foundation.URLSessionDelegate {
-  @objc dynamic open func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: Swift.Error?)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: (any Swift.Error)?)
 }
 extension ShopliveSDKCommon.AFSessionDelegate : Foundation.URLSessionTaskDelegate {
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
@@ -1485,7 +1521,7 @@ extension ShopliveSDKCommon.AFSessionDelegate : Foundation.URLSessionTaskDelegat
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, needNewBodyStream completionHandler: @escaping (Foundation.InputStream?) -> Swift.Void)
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest, completionHandler: @escaping (Foundation.URLRequest?) -> Swift.Void)
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
-  @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
   @available(macOS 10.13, iOS 11.0, tvOS 11.0, watchOS 4.0, *)
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, taskIsWaitingForConnectivity task: Foundation.URLSessionTask)
 }
@@ -1500,7 +1536,7 @@ extension ShopliveSDKCommon.AFSessionDelegate : Foundation.URLSessionDownloadDel
 }
 public protocol ImageDataProvider {
   var cacheKey: Swift.String { get }
-  func data(handler: @escaping (Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void)
+  func data(handler: @escaping (Swift.Result<Foundation.Data, any Swift.Error>) -> Swift.Void)
   var contentURL: Foundation.URL? { get }
 }
 extension ShopliveSDKCommon.ImageDataProvider {
@@ -1513,7 +1549,7 @@ public struct LocalFileImageDataProvider : ShopliveSDKCommon.ImageDataProvider {
   public let fileURL: Foundation.URL
   public init(fileURL: Foundation.URL, cacheKey: Swift.String? = nil, loadingQueue: ShopliveSDKCommon.ExecutionQueue = .dispatch(DispatchQueue.global(qos: .userInitiated)))
   public var cacheKey: Swift.String
-  public func data(handler: @escaping (Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void)
+  public func data(handler: @escaping (Swift.Result<Foundation.Data, any Swift.Error>) -> Swift.Void)
   #if compiler(>=5.3) && $EffectfulProp
   @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
   public var data: Foundation.Data {
@@ -1528,23 +1564,23 @@ public struct Base64ImageDataProvider : ShopliveSDKCommon.ImageDataProvider {
   public let base64String: Swift.String
   public init(base64String: Swift.String, cacheKey: Swift.String)
   public var cacheKey: Swift.String
-  public func data(handler: (Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void)
+  public func data(handler: (Swift.Result<Foundation.Data, any Swift.Error>) -> Swift.Void)
 }
 public struct RawImageDataProvider : ShopliveSDKCommon.ImageDataProvider {
   public let data: Foundation.Data
   public init(data: Foundation.Data, cacheKey: Swift.String)
   public var cacheKey: Swift.String
-  public func data(handler: @escaping (Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void)
+  public func data(handler: @escaping (Swift.Result<Foundation.Data, any Swift.Error>) -> Swift.Void)
 }
 public protocol EventMonitor {
   var queue: Dispatch.DispatchQueue { get }
-  func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: Swift.Error?)
+  func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: (any Swift.Error)?)
   func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge)
   func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
   func urlSession(_ session: Foundation.URLSession, taskNeedsNewBodyStream task: Foundation.URLSessionTask)
   func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest)
   func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
-  func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+  func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
   @available(macOS 10.13, iOS 11.0, tvOS 11.0, watchOS 4.0, *)
   func urlSession(_ session: Foundation.URLSession, taskIsWaitingForConnectivity task: Foundation.URLSessionTask)
   func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
@@ -1587,13 +1623,13 @@ extension ShopliveSDKCommon.EventMonitor {
   public var queue: Dispatch.DispatchQueue {
     get
   }
-  public func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: Swift.Error?)
+  public func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: (any Swift.Error)?)
   public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge)
   public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
   public func urlSession(_ session: Foundation.URLSession, taskNeedsNewBodyStream task: Foundation.URLSessionTask)
   public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest)
   public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
-  public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+  public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
   public func urlSession(_ session: Foundation.URLSession, taskIsWaitingForConnectivity task: Foundation.URLSessionTask)
   public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
   public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, willCacheResponse proposedResponse: Foundation.CachedURLResponse)
@@ -1633,13 +1669,13 @@ extension ShopliveSDKCommon.EventMonitor {
 }
 @_hasMissingDesignatedInitializers final public class CompositeEventMonitor : ShopliveSDKCommon.EventMonitor {
   final public let queue: Dispatch.DispatchQueue
-  final public func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: Swift.Error?)
+  final public func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: (any Swift.Error)?)
   final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge)
   final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
   final public func urlSession(_ session: Foundation.URLSession, taskNeedsNewBodyStream task: Foundation.URLSessionTask)
   final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest)
   final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
-  final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+  final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
   @available(macOS 10.13, iOS 11.0, tvOS 11.0, watchOS 4.0, *)
   final public func urlSession(_ session: Foundation.URLSession, taskIsWaitingForConnectivity task: Foundation.URLSessionTask)
   final public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
@@ -1680,13 +1716,13 @@ extension ShopliveSDKCommon.EventMonitor {
   @objc deinit
 }
 open class ClosureEventMonitor : ShopliveSDKCommon.EventMonitor {
-  open var sessionDidBecomeInvalidWithError: ((Foundation.URLSession, Swift.Error?) -> Swift.Void)?
+  open var sessionDidBecomeInvalidWithError: ((Foundation.URLSession, (any Swift.Error)?) -> Swift.Void)?
   open var taskDidReceiveChallenge: ((Foundation.URLSession, Foundation.URLSessionTask, Foundation.URLAuthenticationChallenge) -> Swift.Void)?
   open var taskDidSendBodyData: ((Foundation.URLSession, Foundation.URLSessionTask, Swift.Int64, Swift.Int64, Swift.Int64) -> Swift.Void)?
   open var taskNeedNewBodyStream: ((Foundation.URLSession, Foundation.URLSessionTask) -> Swift.Void)?
   open var taskWillPerformHTTPRedirection: ((Foundation.URLSession, Foundation.URLSessionTask, Foundation.HTTPURLResponse, Foundation.URLRequest) -> Swift.Void)?
   open var taskDidFinishCollectingMetrics: ((Foundation.URLSession, Foundation.URLSessionTask, Foundation.URLSessionTaskMetrics) -> Swift.Void)?
-  open var taskDidComplete: ((Foundation.URLSession, Foundation.URLSessionTask, Swift.Error?) -> Swift.Void)?
+  open var taskDidComplete: ((Foundation.URLSession, Foundation.URLSessionTask, (any Swift.Error)?) -> Swift.Void)?
   open var taskIsWaitingForConnectivity: ((Foundation.URLSession, Foundation.URLSessionTask) -> Swift.Void)?
   open var dataTaskDidReceiveData: ((Foundation.URLSession, Foundation.URLSessionDataTask, Foundation.Data) -> Swift.Void)?
   open var dataTaskWillCacheResponse: ((Foundation.URLSession, Foundation.URLSessionDataTask, Foundation.CachedURLResponse) -> Swift.Void)?
@@ -1722,13 +1758,13 @@ open class ClosureEventMonitor : ShopliveSDKCommon.EventMonitor {
   open var requestDidParseDownloadResponse: ((ShopliveSDKCommon.DownloadRequest, ShopliveSDKCommon.DownloadResponse<Foundation.URL?, ShopliveSDKCommon.AFError>) -> Swift.Void)?
   final public let queue: Dispatch.DispatchQueue
   public init(queue: Dispatch.DispatchQueue = .main)
-  open func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: Swift.Error?)
+  open func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: (any Swift.Error)?)
   open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge)
   open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
   open func urlSession(_ session: Foundation.URLSession, taskNeedsNewBodyStream task: Foundation.URLSessionTask)
   open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest)
   open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
-  open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+  open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
   open func urlSession(_ session: Foundation.URLSession, taskIsWaitingForConnectivity task: Foundation.URLSessionTask)
   open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
   open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, willCacheResponse proposedResponse: Foundation.CachedURLResponse)
@@ -1830,8 +1866,12 @@ extension ShopliveSDKCommon.KeychainWrapper {
   @objc optional func handleEventMessage(message: WebKit.WKScriptMessage)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class SLWebView : ShopliveSDKCommon.SLBaseView {
-  @_Concurrency.MainActor(unsafe) weak final public var slWebResponseDelegate: ShopliveSDKCommon.SLWebviewResponseDelegate?
-  @_Concurrency.MainActor(unsafe) weak final public var slWebScrollDelegate: ShopliveSDKCommon.SLWebviewScrollDelegate?
+  @_Concurrency.MainActor(unsafe) weak final public var slWebResponseDelegate: (any ShopliveSDKCommon.SLWebviewResponseDelegate)?
+  @_Concurrency.MainActor(unsafe) weak final public var slWebScrollDelegate: (any ShopliveSDKCommon.SLWebviewScrollDelegate)?
+  @_Concurrency.MainActor(unsafe) weak final public var webViewNavigationDelegate: (any WebKit.WKNavigationDelegate)? {
+    get
+    set
+  }
   @_Concurrency.MainActor(unsafe) override final public func layout()
   @_Concurrency.MainActor(unsafe) final public func load(_ request: Foundation.URLRequest)
   @_Concurrency.MainActor(unsafe) final public func reload()
@@ -1857,11 +1897,19 @@ extension ShopliveSDKCommon.SLWebView : UIKit.UIScrollViewDelegate {
   @_Concurrency.MainActor(unsafe) @objc final public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
 }
 @objc public class LeakAvoider : ObjectiveC.NSObject, WebKit.WKScriptMessageHandler {
-  public init(delegate: WebKit.WKScriptMessageHandler)
+  public init(delegate: any WebKit.WKScriptMessageHandler)
   @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
   @objc deinit
 }
+public struct HexEncodingOptions : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public typealias ArrayLiteralElement = ShopliveSDKCommon.HexEncodingOptions
+  public typealias Element = ShopliveSDKCommon.HexEncodingOptions
+  public typealias RawValue = Swift.Int
+}
 extension Foundation.Data {
+  public func hexEncodedString(options: ShopliveSDKCommon.HexEncodingOptions = []) -> Swift.String
   public func convert<T>(to type: T.Type) -> T? where T : Swift.Decodable, T : Swift.Encodable
 }
 final public class NetworkMonitor : ShopliveSDKCommon.SLResultObservable {
@@ -1892,9 +1940,14 @@ final public class NetworkMonitor : ShopliveSDKCommon.SLResultObservable {
     get
   }
 }
-public typealias PrefetcherProgressBlock = ((_ skippedResources: [ShopliveSDKCommon.Resource], _ failedResources: [ShopliveSDKCommon.Resource], _ completedResources: [ShopliveSDKCommon.Resource]) -> Swift.Void)
+public class ShopLiveThrottle {
+  public init(queue: Dispatch.DispatchQueue, delay: Swift.Double)
+  public func callAsFunction(action: @escaping () -> Swift.Void, onCancel: @escaping () -> Swift.Void)
+  @objc deinit
+}
+public typealias PrefetcherProgressBlock = ((_ skippedResources: [any ShopliveSDKCommon.Resource], _ failedResources: [any ShopliveSDKCommon.Resource], _ completedResources: [any ShopliveSDKCommon.Resource]) -> Swift.Void)
 public typealias PrefetcherSourceProgressBlock = ((_ skippedSources: [ShopliveSDKCommon.Source], _ failedSources: [ShopliveSDKCommon.Source], _ completedSources: [ShopliveSDKCommon.Source]) -> Swift.Void)
-public typealias PrefetcherCompletionHandler = ((_ skippedResources: [ShopliveSDKCommon.Resource], _ failedResources: [ShopliveSDKCommon.Resource], _ completedResources: [ShopliveSDKCommon.Resource]) -> Swift.Void)
+public typealias PrefetcherCompletionHandler = ((_ skippedResources: [any ShopliveSDKCommon.Resource], _ failedResources: [any ShopliveSDKCommon.Resource], _ completedResources: [any ShopliveSDKCommon.Resource]) -> Swift.Void)
 public typealias PrefetcherSourceCompletionHandler = ((_ skippedSources: [ShopliveSDKCommon.Source], _ failedSources: [ShopliveSDKCommon.Source], _ completedSources: [ShopliveSDKCommon.Source]) -> Swift.Void)
 @_hasMissingDesignatedInitializers public class ImagePrefetcher : Swift.CustomStringConvertible {
   public var description: Swift.String {
@@ -1903,8 +1956,8 @@ public typealias PrefetcherSourceCompletionHandler = ((_ skippedSources: [Shopli
   public var maxConcurrentDownloads: Swift.Int
   convenience public init(urls: [Foundation.URL], options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.PrefetcherProgressBlock? = nil, completionHandler: ShopliveSDKCommon.PrefetcherCompletionHandler? = nil)
   convenience public init(urls: [Foundation.URL], options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, completionHandler: ShopliveSDKCommon.PrefetcherCompletionHandler? = nil)
-  convenience public init(resources: [ShopliveSDKCommon.Resource], options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.PrefetcherProgressBlock? = nil, completionHandler: ShopliveSDKCommon.PrefetcherCompletionHandler? = nil)
-  convenience public init(resources: [ShopliveSDKCommon.Resource], options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, completionHandler: ShopliveSDKCommon.PrefetcherCompletionHandler? = nil)
+  convenience public init(resources: [any ShopliveSDKCommon.Resource], options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.PrefetcherProgressBlock? = nil, completionHandler: ShopliveSDKCommon.PrefetcherCompletionHandler? = nil)
+  convenience public init(resources: [any ShopliveSDKCommon.Resource], options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, completionHandler: ShopliveSDKCommon.PrefetcherCompletionHandler? = nil)
   convenience public init(sources: [ShopliveSDKCommon.Source], options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.PrefetcherSourceProgressBlock? = nil, completionHandler: ShopliveSDKCommon.PrefetcherSourceCompletionHandler? = nil)
   convenience public init(sources: [ShopliveSDKCommon.Source], options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, completionHandler: ShopliveSDKCommon.PrefetcherSourceCompletionHandler? = nil)
   public func start()
@@ -1926,13 +1979,16 @@ public struct ImageCreatingOptions {
 extension Photos.PHAsset {
   public func getURL(completionHandler: @escaping ((_ responseURL: Foundation.URL?) -> Swift.Void))
 }
+extension AVFAudio.AVAudioSession {
+  public func safeRemoveObserver(_ observer: Any, forKeyPath keyPath: Swift.String, observeInfo: Swift.UnsafeMutableRawPointer?, completion: @escaping (Swift.Bool) -> Swift.Void)
+}
 public struct BaseError : Swift.Codable {
   public let status: Swift.Int
   public let error: Swift.String, message: Swift.String
   public let timestamp: Swift.Int?
   public let path: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers public class ShopLiveError : Foundation.NSError {
   public var message: Swift.String
@@ -1940,6 +1996,10 @@ public struct BaseError : Swift.Codable {
   @objc override dynamic public init(domain: Swift.String, code: Swift.Int, userInfo dict: [Swift.String : Any]? = nil)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
+}
+extension Foundation.UserDefaults {
+  public func set(_ value: UIKit.UIEdgeInsets, forKey key: Swift.String)
+  public func cgRect(forKey key: Swift.String) -> UIKit.UIEdgeInsets?
 }
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 public struct DeflateRequestCompressor : ShopliveSDKCommon.RequestInterceptor {
@@ -1958,7 +2018,7 @@ public struct DeflateRequestCompressor : ShopliveSDKCommon.RequestInterceptor {
   public let duplicateHeaderBehavior: ShopliveSDKCommon.DeflateRequestCompressor.DuplicateHeaderBehavior
   public let shouldCompressBodyData: (_ bodyData: Foundation.Data) -> Swift.Bool
   public init(duplicateHeaderBehavior: ShopliveSDKCommon.DeflateRequestCompressor.DuplicateHeaderBehavior = .error, shouldCompressBodyData: @escaping (_ bodyData: Foundation.Data) -> Swift.Bool = { _ in true })
-  public func adapt(_ urlRequest: Foundation.URLRequest, for session: ShopliveSDKCommon.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, Swift.Error>) -> Swift.Void)
+  public func adapt(_ urlRequest: Foundation.URLRequest, for session: ShopliveSDKCommon.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
 }
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension ShopliveSDKCommon.RequestInterceptor where Self == ShopliveSDKCommon.DeflateRequestCompressor {
@@ -1966,6 +2026,33 @@ extension ShopliveSDKCommon.RequestInterceptor where Self == ShopliveSDKCommon.D
     get
   }
   public static func deflateCompressor(duplicateHeaderBehavior: ShopliveSDKCommon.DeflateRequestCompressor.DuplicateHeaderBehavior = .error, shouldCompressBodyData: @escaping (_ bodyData: Foundation.Data) -> Swift.Bool = { _ in true }) -> ShopliveSDKCommon.DeflateRequestCompressor
+}
+extension QuartzCore.CALayer {
+  public func fitToSuperView(superview: UIKit.UIView)
+}
+@_hasMissingDesignatedInitializers final public class ShopLiveViewLogger {
+  public static var shared: ShopliveSDKCommon.ShopLiveViewLogger
+  final public func setVisible(show: Swift.Bool)
+  final public func isVisible() -> Swift.Bool
+  final public func addLog(log: ShopliveSDKCommon.ShopLiveViewLog)
+  final public func clearLog()
+  @objc deinit
+}
+final public class ShopLiveViewLog {
+  public enum LogType {
+    case callback
+    case interface
+    case applog
+    case normal
+    case inbound
+    public static func == (a: ShopliveSDKCommon.ShopLiveViewLog.LogType, b: ShopliveSDKCommon.ShopLiveViewLog.LogType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(logType: ShopliveSDKCommon.ShopLiveViewLog.LogType, log: Swift.String)
+  @objc deinit
 }
 @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
 public struct DataResponsePublisher<Value> : Combine.Publisher {
@@ -1986,14 +2073,14 @@ extension ShopliveSDKCommon.DataRequest {
   @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
   public func publishResponse<Serializer, T>(using serializer: Serializer, on queue: Dispatch.DispatchQueue = .main) -> ShopliveSDKCommon.DataResponsePublisher<T> where Serializer : ShopliveSDKCommon.ResponseSerializer, T == Serializer.SerializedObject
   @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
-  public func publishData(queue: Dispatch.DispatchQueue = .main, preprocessor: ShopliveSDKCommon.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DataResponsePublisher<Foundation.Data>
+  public func publishData(queue: Dispatch.DispatchQueue = .main, preprocessor: any ShopliveSDKCommon.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DataResponsePublisher<Foundation.Data>
   @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
-  public func publishString(queue: Dispatch.DispatchQueue = .main, preprocessor: ShopliveSDKCommon.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DataResponsePublisher<Swift.String>
+  public func publishString(queue: Dispatch.DispatchQueue = .main, preprocessor: any ShopliveSDKCommon.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DataResponsePublisher<Swift.String>
   @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
   @available(*, deprecated, message: "Renamed publishDecodable(type:queue:preprocessor:decoder:emptyResponseCodes:emptyRequestMethods).")
-  @_disfavoredOverload public func publishDecodable<T>(type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, preprocessor: ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyResponseMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DataResponsePublisher<T> where T : Swift.Decodable
+  @_disfavoredOverload public func publishDecodable<T>(type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, preprocessor: any ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: any ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyResponseMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DataResponsePublisher<T> where T : Swift.Decodable
   @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
-  public func publishDecodable<T>(type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, preprocessor: ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DataResponsePublisher<T> where T : Swift.Decodable
+  public func publishDecodable<T>(type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, preprocessor: any ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: any ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DataResponsePublisher<T> where T : Swift.Decodable
   @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
   public func publishUnserialized(queue: Dispatch.DispatchQueue = .main) -> ShopliveSDKCommon.DataResponsePublisher<Foundation.Data?>
 }
@@ -2014,7 +2101,7 @@ extension ShopliveSDKCommon.DataStreamRequest {
   @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
   final public func publishString(queue: Dispatch.DispatchQueue = .main) -> ShopliveSDKCommon.DataStreamPublisher<Swift.String>
   @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
-  final public func publishDecodable<T>(type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, decoder: ShopliveSDKCommon.DataDecoder = JSONDecoder(), preprocessor: ShopliveSDKCommon.DataPreprocessor = PassthroughPreprocessor()) -> ShopliveSDKCommon.DataStreamPublisher<T> where T : Swift.Decodable
+  final public func publishDecodable<T>(type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, decoder: any ShopliveSDKCommon.DataDecoder = JSONDecoder(), preprocessor: any ShopliveSDKCommon.DataPreprocessor = PassthroughPreprocessor()) -> ShopliveSDKCommon.DataStreamPublisher<T> where T : Swift.Decodable
 }
 @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
 public struct DownloadResponsePublisher<Value> : Combine.Publisher {
@@ -2035,14 +2122,14 @@ extension ShopliveSDKCommon.DownloadRequest {
   @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
   public func publishURL(queue: Dispatch.DispatchQueue = .main) -> ShopliveSDKCommon.DownloadResponsePublisher<Foundation.URL>
   @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
-  public func publishData(queue: Dispatch.DispatchQueue = .main, preprocessor: ShopliveSDKCommon.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DownloadResponsePublisher<Foundation.Data>
+  public func publishData(queue: Dispatch.DispatchQueue = .main, preprocessor: any ShopliveSDKCommon.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DownloadResponsePublisher<Foundation.Data>
   @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
-  public func publishString(queue: Dispatch.DispatchQueue = .main, preprocessor: ShopliveSDKCommon.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DownloadResponsePublisher<Swift.String>
+  public func publishString(queue: Dispatch.DispatchQueue = .main, preprocessor: any ShopliveSDKCommon.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DownloadResponsePublisher<Swift.String>
   @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
   @available(*, deprecated, message: "Renamed publishDecodable(type:queue:preprocessor:decoder:emptyResponseCodes:emptyRequestMethods).")
-  @_disfavoredOverload public func publishDecodable<T>(type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, preprocessor: ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyResponseMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DownloadResponsePublisher<T> where T : Swift.Decodable
+  @_disfavoredOverload public func publishDecodable<T>(type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, preprocessor: any ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: any ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyResponseMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DownloadResponsePublisher<T> where T : Swift.Decodable
   @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
-  public func publishDecodable<T>(type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, preprocessor: ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DownloadResponsePublisher<T> where T : Swift.Decodable
+  public func publishDecodable<T>(type: T.Type = T.self, queue: Dispatch.DispatchQueue = .main, preprocessor: any ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<T>.defaultDataPreprocessor, decoder: any ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<T>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<T>.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DownloadResponsePublisher<T> where T : Swift.Decodable
 }
 @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
 extension ShopliveSDKCommon.DownloadResponsePublisher where Value == Foundation.URL? {
@@ -2084,7 +2171,7 @@ extension ShopliveSDKCommon.SLKingfisherWrapper where Base : UIKit.NSTextAttachm
   @discardableResult
   public func setImage(with source: ShopliveSDKCommon.Source?, attributedView: @autoclosure @escaping () -> ShopliveSDKCommon.KFCrossPlatformView, placeholder: ShopliveSDKCommon.KFCrossPlatformImage? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
   @discardableResult
-  public func setImage(with resource: ShopliveSDKCommon.Resource?, attributedView: @autoclosure @escaping () -> ShopliveSDKCommon.KFCrossPlatformView, placeholder: ShopliveSDKCommon.KFCrossPlatformImage? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
+  public func setImage(with resource: (any ShopliveSDKCommon.Resource)?, attributedView: @autoclosure @escaping () -> ShopliveSDKCommon.KFCrossPlatformView, placeholder: ShopliveSDKCommon.KFCrossPlatformImage? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
   public func cancelDownloadTask()
 }
 extension ShopliveSDKCommon.SLKingfisherWrapper where Base : UIKit.NSTextAttachment {
@@ -2194,6 +2281,9 @@ extension Swift.Encodable {
     get
   }
 }
+extension Swift.Decodable {
+  public static func decode<T>(dictionary: [Swift.String : Any]) throws -> T where T : Swift.Decodable
+}
 extension ObjectiveC.NSObject {
   public func safeRemoveObserver(_ observer: Any, forKeyPath keyPath: Swift.String)
 }
@@ -2269,8 +2359,8 @@ public class JSONNull : Swift.Codable, Swift.Hashable {
     get
   }
   public init()
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 open class Session {
@@ -2281,38 +2371,38 @@ open class Session {
   final public let startRequestsImmediately: Swift.Bool
   final public let requestQueue: Dispatch.DispatchQueue
   final public let serializationQueue: Dispatch.DispatchQueue
-  final public let interceptor: ShopliveSDKCommon.RequestInterceptor?
+  final public let interceptor: (any ShopliveSDKCommon.RequestInterceptor)?
   final public let serverTrustManager: ShopliveSDKCommon.ServerTrustManager?
-  final public let redirectHandler: ShopliveSDKCommon.RedirectHandler?
-  final public let cachedResponseHandler: ShopliveSDKCommon.CachedResponseHandler?
+  final public let redirectHandler: (any ShopliveSDKCommon.RedirectHandler)?
+  final public let cachedResponseHandler: (any ShopliveSDKCommon.CachedResponseHandler)?
   final public let eventMonitor: ShopliveSDKCommon.CompositeEventMonitor
-  final public let defaultEventMonitors: [ShopliveSDKCommon.EventMonitor]
-  public init(session: Foundation.URLSession, delegate: ShopliveSDKCommon.AFSessionDelegate, rootQueue: Dispatch.DispatchQueue, startRequestsImmediately: Swift.Bool = true, requestQueue: Dispatch.DispatchQueue? = nil, serializationQueue: Dispatch.DispatchQueue? = nil, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, serverTrustManager: ShopliveSDKCommon.ServerTrustManager? = nil, redirectHandler: ShopliveSDKCommon.RedirectHandler? = nil, cachedResponseHandler: ShopliveSDKCommon.CachedResponseHandler? = nil, eventMonitors: [ShopliveSDKCommon.EventMonitor] = [])
-  convenience public init(configuration: Foundation.URLSessionConfiguration = URLSessionConfiguration.af.default, delegate: ShopliveSDKCommon.AFSessionDelegate = AFSessionDelegate(), rootQueue: Dispatch.DispatchQueue = DispatchQueue(label: "org.alamofire.session.rootQueue"), startRequestsImmediately: Swift.Bool = true, requestQueue: Dispatch.DispatchQueue? = nil, serializationQueue: Dispatch.DispatchQueue? = nil, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, serverTrustManager: ShopliveSDKCommon.ServerTrustManager? = nil, redirectHandler: ShopliveSDKCommon.RedirectHandler? = nil, cachedResponseHandler: ShopliveSDKCommon.CachedResponseHandler? = nil, eventMonitors: [ShopliveSDKCommon.EventMonitor] = [])
+  final public let defaultEventMonitors: [any ShopliveSDKCommon.EventMonitor]
+  public init(session: Foundation.URLSession, delegate: ShopliveSDKCommon.AFSessionDelegate, rootQueue: Dispatch.DispatchQueue, startRequestsImmediately: Swift.Bool = true, requestQueue: Dispatch.DispatchQueue? = nil, serializationQueue: Dispatch.DispatchQueue? = nil, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, serverTrustManager: ShopliveSDKCommon.ServerTrustManager? = nil, redirectHandler: (any ShopliveSDKCommon.RedirectHandler)? = nil, cachedResponseHandler: (any ShopliveSDKCommon.CachedResponseHandler)? = nil, eventMonitors: [any ShopliveSDKCommon.EventMonitor] = [])
+  convenience public init(configuration: Foundation.URLSessionConfiguration = URLSessionConfiguration.af.default, delegate: ShopliveSDKCommon.AFSessionDelegate = AFSessionDelegate(), rootQueue: Dispatch.DispatchQueue = DispatchQueue(label: "org.alamofire.session.rootQueue"), startRequestsImmediately: Swift.Bool = true, requestQueue: Dispatch.DispatchQueue? = nil, serializationQueue: Dispatch.DispatchQueue? = nil, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, serverTrustManager: ShopliveSDKCommon.ServerTrustManager? = nil, redirectHandler: (any ShopliveSDKCommon.RedirectHandler)? = nil, cachedResponseHandler: (any ShopliveSDKCommon.CachedResponseHandler)? = nil, eventMonitors: [any ShopliveSDKCommon.EventMonitor] = [])
   @objc deinit
   public func withAllRequests(perform action: @escaping (Swift.Set<ShopliveSDKCommon.Request>) -> Swift.Void)
   public func cancelAllRequests(completingOnQueue queue: Dispatch.DispatchQueue = .main, completion: (() -> Swift.Void)? = nil)
   public typealias RequestModifier = (inout Foundation.URLRequest) throws -> Swift.Void
-  open func request(_ convertible: ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .get, parameters: ShopliveSDKCommon.Parameters? = nil, encoding: ShopliveSDKCommon.ParameterEncoding = URLEncoding.default, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.DataRequest
-  open func request<Parameters>(_ convertible: ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .get, parameters: Parameters? = nil, encoder: ShopliveSDKCommon.ParameterEncoder = URLEncodedFormParameterEncoder.default, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.DataRequest where Parameters : Swift.Encodable
-  open func request(_ convertible: ShopliveSDKCommon.URLRequestConvertible, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil) -> ShopliveSDKCommon.DataRequest
-  open func streamRequest<Parameters>(_ convertible: ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .get, parameters: Parameters? = nil, encoder: ShopliveSDKCommon.ParameterEncoder = URLEncodedFormParameterEncoder.default, headers: ShopliveSDKCommon.HTTPHeaders? = nil, automaticallyCancelOnStreamError: Swift.Bool = false, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.DataStreamRequest where Parameters : Swift.Encodable
-  open func streamRequest(_ convertible: ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .get, headers: ShopliveSDKCommon.HTTPHeaders? = nil, automaticallyCancelOnStreamError: Swift.Bool = false, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.DataStreamRequest
-  open func streamRequest(_ convertible: ShopliveSDKCommon.URLRequestConvertible, automaticallyCancelOnStreamError: Swift.Bool = false, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil) -> ShopliveSDKCommon.DataStreamRequest
-  open func download(_ convertible: ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .get, parameters: ShopliveSDKCommon.Parameters? = nil, encoding: ShopliveSDKCommon.ParameterEncoding = URLEncoding.default, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil, to destination: ShopliveSDKCommon.DownloadRequest.Destination? = nil) -> ShopliveSDKCommon.DownloadRequest
-  open func download<Parameters>(_ convertible: ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .get, parameters: Parameters? = nil, encoder: ShopliveSDKCommon.ParameterEncoder = URLEncodedFormParameterEncoder.default, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil, to destination: ShopliveSDKCommon.DownloadRequest.Destination? = nil) -> ShopliveSDKCommon.DownloadRequest where Parameters : Swift.Encodable
-  open func download(_ convertible: ShopliveSDKCommon.URLRequestConvertible, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, to destination: ShopliveSDKCommon.DownloadRequest.Destination? = nil) -> ShopliveSDKCommon.DownloadRequest
-  open func download(resumingWith data: Foundation.Data, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, to destination: ShopliveSDKCommon.DownloadRequest.Destination? = nil) -> ShopliveSDKCommon.DownloadRequest
-  open func upload(_ data: Foundation.Data, to convertible: ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .post, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, fileManager: Foundation.FileManager = .default, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.UploadRequest
-  open func upload(_ data: Foundation.Data, with convertible: ShopliveSDKCommon.URLRequestConvertible, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, fileManager: Foundation.FileManager = .default) -> ShopliveSDKCommon.UploadRequest
-  open func upload(_ fileURL: Foundation.URL, to convertible: ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .post, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, fileManager: Foundation.FileManager = .default, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.UploadRequest
-  open func upload(_ fileURL: Foundation.URL, with convertible: ShopliveSDKCommon.URLRequestConvertible, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, fileManager: Foundation.FileManager = .default) -> ShopliveSDKCommon.UploadRequest
-  open func upload(_ stream: Foundation.InputStream, to convertible: ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .post, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, fileManager: Foundation.FileManager = .default, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.UploadRequest
-  open func upload(_ stream: Foundation.InputStream, with convertible: ShopliveSDKCommon.URLRequestConvertible, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, fileManager: Foundation.FileManager = .default) -> ShopliveSDKCommon.UploadRequest
-  open func upload(multipartFormData: @escaping (ShopliveSDKCommon.MultipartFormData) -> Swift.Void, to url: ShopliveSDKCommon.URLConvertible, usingThreshold encodingMemoryThreshold: Swift.UInt64 = MultipartFormData.encodingMemoryThreshold, method: ShopliveSDKCommon.HTTPMethod = .post, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, fileManager: Foundation.FileManager = .default, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.UploadRequest
-  open func upload(multipartFormData: @escaping (ShopliveSDKCommon.MultipartFormData) -> Swift.Void, with request: ShopliveSDKCommon.URLRequestConvertible, usingThreshold encodingMemoryThreshold: Swift.UInt64 = MultipartFormData.encodingMemoryThreshold, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, fileManager: Foundation.FileManager = .default) -> ShopliveSDKCommon.UploadRequest
-  open func upload(multipartFormData: ShopliveSDKCommon.MultipartFormData, to url: ShopliveSDKCommon.URLConvertible, usingThreshold encodingMemoryThreshold: Swift.UInt64 = MultipartFormData.encodingMemoryThreshold, method: ShopliveSDKCommon.HTTPMethod = .post, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, fileManager: Foundation.FileManager = .default, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.UploadRequest
-  open func upload(multipartFormData: ShopliveSDKCommon.MultipartFormData, with request: ShopliveSDKCommon.URLRequestConvertible, usingThreshold encodingMemoryThreshold: Swift.UInt64 = MultipartFormData.encodingMemoryThreshold, interceptor: ShopliveSDKCommon.RequestInterceptor? = nil, fileManager: Foundation.FileManager = .default) -> ShopliveSDKCommon.UploadRequest
+  open func request(_ convertible: any ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .get, parameters: ShopliveSDKCommon.Parameters? = nil, encoding: any ShopliveSDKCommon.ParameterEncoding = URLEncoding.default, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.DataRequest
+  open func request<Parameters>(_ convertible: any ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .get, parameters: Parameters? = nil, encoder: any ShopliveSDKCommon.ParameterEncoder = URLEncodedFormParameterEncoder.default, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.DataRequest where Parameters : Swift.Encodable
+  open func request(_ convertible: any ShopliveSDKCommon.URLRequestConvertible, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil) -> ShopliveSDKCommon.DataRequest
+  open func streamRequest<Parameters>(_ convertible: any ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .get, parameters: Parameters? = nil, encoder: any ShopliveSDKCommon.ParameterEncoder = URLEncodedFormParameterEncoder.default, headers: ShopliveSDKCommon.HTTPHeaders? = nil, automaticallyCancelOnStreamError: Swift.Bool = false, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.DataStreamRequest where Parameters : Swift.Encodable
+  open func streamRequest(_ convertible: any ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .get, headers: ShopliveSDKCommon.HTTPHeaders? = nil, automaticallyCancelOnStreamError: Swift.Bool = false, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.DataStreamRequest
+  open func streamRequest(_ convertible: any ShopliveSDKCommon.URLRequestConvertible, automaticallyCancelOnStreamError: Swift.Bool = false, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil) -> ShopliveSDKCommon.DataStreamRequest
+  open func download(_ convertible: any ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .get, parameters: ShopliveSDKCommon.Parameters? = nil, encoding: any ShopliveSDKCommon.ParameterEncoding = URLEncoding.default, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil, to destination: ShopliveSDKCommon.DownloadRequest.Destination? = nil) -> ShopliveSDKCommon.DownloadRequest
+  open func download<Parameters>(_ convertible: any ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .get, parameters: Parameters? = nil, encoder: any ShopliveSDKCommon.ParameterEncoder = URLEncodedFormParameterEncoder.default, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil, to destination: ShopliveSDKCommon.DownloadRequest.Destination? = nil) -> ShopliveSDKCommon.DownloadRequest where Parameters : Swift.Encodable
+  open func download(_ convertible: any ShopliveSDKCommon.URLRequestConvertible, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, to destination: ShopliveSDKCommon.DownloadRequest.Destination? = nil) -> ShopliveSDKCommon.DownloadRequest
+  open func download(resumingWith data: Foundation.Data, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, to destination: ShopliveSDKCommon.DownloadRequest.Destination? = nil) -> ShopliveSDKCommon.DownloadRequest
+  open func upload(_ data: Foundation.Data, to convertible: any ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .post, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.UploadRequest
+  open func upload(_ data: Foundation.Data, with convertible: any ShopliveSDKCommon.URLRequestConvertible, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default) -> ShopliveSDKCommon.UploadRequest
+  open func upload(_ fileURL: Foundation.URL, to convertible: any ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .post, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.UploadRequest
+  open func upload(_ fileURL: Foundation.URL, with convertible: any ShopliveSDKCommon.URLRequestConvertible, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default) -> ShopliveSDKCommon.UploadRequest
+  open func upload(_ stream: Foundation.InputStream, to convertible: any ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod = .post, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.UploadRequest
+  open func upload(_ stream: Foundation.InputStream, with convertible: any ShopliveSDKCommon.URLRequestConvertible, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default) -> ShopliveSDKCommon.UploadRequest
+  open func upload(multipartFormData: @escaping (ShopliveSDKCommon.MultipartFormData) -> Swift.Void, to url: any ShopliveSDKCommon.URLConvertible, usingThreshold encodingMemoryThreshold: Swift.UInt64 = MultipartFormData.encodingMemoryThreshold, method: ShopliveSDKCommon.HTTPMethod = .post, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.UploadRequest
+  open func upload(multipartFormData: @escaping (ShopliveSDKCommon.MultipartFormData) -> Swift.Void, with request: any ShopliveSDKCommon.URLRequestConvertible, usingThreshold encodingMemoryThreshold: Swift.UInt64 = MultipartFormData.encodingMemoryThreshold, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default) -> ShopliveSDKCommon.UploadRequest
+  open func upload(multipartFormData: ShopliveSDKCommon.MultipartFormData, to url: any ShopliveSDKCommon.URLConvertible, usingThreshold encodingMemoryThreshold: Swift.UInt64 = MultipartFormData.encodingMemoryThreshold, method: ShopliveSDKCommon.HTTPMethod = .post, headers: ShopliveSDKCommon.HTTPHeaders? = nil, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default, requestModifier: ShopliveSDKCommon.Session.RequestModifier? = nil) -> ShopliveSDKCommon.UploadRequest
+  open func upload(multipartFormData: ShopliveSDKCommon.MultipartFormData, with request: any ShopliveSDKCommon.URLRequestConvertible, usingThreshold encodingMemoryThreshold: Swift.UInt64 = MultipartFormData.encodingMemoryThreshold, interceptor: (any ShopliveSDKCommon.RequestInterceptor)? = nil, fileManager: Foundation.FileManager = .default) -> ShopliveSDKCommon.UploadRequest
 }
 extension ShopliveSDKCommon.Session : ShopliveSDKCommon.RequestDelegate {
   public var sessionConfiguration: Foundation.URLSessionConfiguration {
@@ -2324,6 +2414,13 @@ extension ShopliveSDKCommon.Session : ShopliveSDKCommon.RequestDelegate {
   public func cleanup(after request: ShopliveSDKCommon.Request)
   public func retryResult(for request: ShopliveSDKCommon.Request, dueTo error: ShopliveSDKCommon.AFError, completion: @escaping (ShopliveSDKCommon.RetryResult) -> Swift.Void)
   public func retryRequest(_ request: ShopliveSDKCommon.Request, withDelay timeDelay: Foundation.TimeInterval?)
+}
+public protocol AssociatedObjectStore {
+}
+extension ShopliveSDKCommon.AssociatedObjectStore {
+  public func associatedObject<T>(forKey key: Swift.UnsafeRawPointer) -> T?
+  public func associatedObject<T>(forKey key: Swift.UnsafeRawPointer, default: @autoclosure () -> T) -> T
+  public func setAssociatedObject<T>(_ object: T?, forKey key: Swift.UnsafeRawPointer)
 }
 @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
 public protocol KFImageProtocol : ShopliveSDKCommon.KFOptionSetter, SwiftUI.View {
@@ -2370,6 +2467,11 @@ extension Swift.Collection {
     get
   }
   public var isNotEmpty: Swift.Bool {
+    get
+  }
+}
+extension UIKit.UIEdgeInsets {
+  public static var leastMargin: UIKit.UIEdgeInsets {
     get
   }
 }
@@ -2435,24 +2537,24 @@ extension ShopliveSDKCommon.KFOptionSetter {
   public func loadDiskFileSynchronously(_ enabled: Swift.Bool = true) -> Self
   public func processingQueue(_ queue: ShopliveSDKCommon.CallbackQueue?) -> Self
   public func alternativeSources(_ sources: [ShopliveSDKCommon.Source]?) -> Self
-  public func retry(_ strategy: ShopliveSDKCommon.RetryStrategy?) -> Self
+  public func retry(_ strategy: (any ShopliveSDKCommon.RetryStrategy)?) -> Self
   public func retry(maxCount: Swift.Int, interval: ShopliveSDKCommon.DelayRetryStrategy.Interval = .seconds(3)) -> Self
   public func lowDataModeSource(_ source: ShopliveSDKCommon.Source?) -> Self
   public func forceTransition(_ enabled: Swift.Bool = true) -> Self
   public func onFailureImage(_ image: ShopliveSDKCommon.KFCrossPlatformImage?) -> Self
 }
 extension ShopliveSDKCommon.KFOptionSetter {
-  public func requestModifier(_ modifier: ShopliveSDKCommon.AsyncImageDownloadRequestModifier) -> Self
+  public func requestModifier(_ modifier: any ShopliveSDKCommon.AsyncImageDownloadRequestModifier) -> Self
   public func requestModifier(_ modifyBlock: @escaping (inout Foundation.URLRequest) -> Swift.Void) -> Self
 }
 extension ShopliveSDKCommon.KFOptionSetter {
-  public func redirectHandler(_ handler: ShopliveSDKCommon.ImageDownloadRedirectHandler) -> Self
+  public func redirectHandler(_ handler: any ShopliveSDKCommon.ImageDownloadRedirectHandler) -> Self
   public func redirectHandler(_ block: @escaping (ShopliveSDKCommon.KF.RedirectPayload) -> Swift.Void) -> Self
 }
 extension ShopliveSDKCommon.KFOptionSetter {
-  public func setProcessor(_ processor: ShopliveSDKCommon.ImageProcessor) -> Self
-  public func setProcessors(_ processors: [ShopliveSDKCommon.ImageProcessor]) -> Self
-  public func appendProcessor(_ processor: ShopliveSDKCommon.ImageProcessor) -> Self
+  public func setProcessor(_ processor: any ShopliveSDKCommon.ImageProcessor) -> Self
+  public func setProcessors(_ processors: [any ShopliveSDKCommon.ImageProcessor]) -> Self
+  public func appendProcessor(_ processor: any ShopliveSDKCommon.ImageProcessor) -> Self
   public func roundCorner(radius: ShopliveSDKCommon.Radius, targetSize: CoreFoundation.CGSize? = nil, roundingCorners corners: ShopliveSDKCommon.RectCorner = .all, backgroundColor: ShopliveSDKCommon.KFCrossPlatformColor? = nil) -> Self
   public func blur(radius: CoreFoundation.CGFloat) -> Self
   public func overlay(color: ShopliveSDKCommon.KFCrossPlatformColor, fraction: CoreFoundation.CGFloat = 0.5) -> Self
@@ -2463,11 +2565,11 @@ extension ShopliveSDKCommon.KFOptionSetter {
   public func resizing(referenceSize: CoreFoundation.CGSize, mode: ShopliveSDKCommon.ContentMode = .none) -> Self
 }
 extension ShopliveSDKCommon.KFOptionSetter {
-  public func serialize(by cacheSerializer: ShopliveSDKCommon.CacheSerializer) -> Self
+  public func serialize(by cacheSerializer: any ShopliveSDKCommon.CacheSerializer) -> Self
   public func serialize(as format: ShopliveSDKCommon.ImageFormat, jpegCompressionQuality: CoreFoundation.CGFloat? = nil) -> Self
 }
 extension ShopliveSDKCommon.KFOptionSetter {
-  public func imageModifier(_ modifier: ShopliveSDKCommon.ImageModifier?) -> Self
+  public func imageModifier(_ modifier: (any ShopliveSDKCommon.ImageModifier)?) -> Self
   public func imageModifier(_ block: @escaping (inout ShopliveSDKCommon.KFCrossPlatformImage) throws -> Swift.Void) -> Self
 }
 extension ShopliveSDKCommon.KFOptionSetter {
@@ -2534,7 +2636,7 @@ open class ImageCache {
   convenience public init(name: Swift.String, cacheDirectoryURL: Foundation.URL?, diskCachePathClosure: ShopliveSDKCommon.ImageCache.DiskCachePathClosure? = nil) throws
   @objc deinit
   open func store(_ image: ShopliveSDKCommon.KFCrossPlatformImage, original: Foundation.Data? = nil, forKey key: Swift.String, options: ShopliveSDKCommon.SLKingfisherParsedOptionsInfo, toDisk: Swift.Bool = true, completionHandler: ((ShopliveSDKCommon.CacheStoreResult) -> Swift.Void)? = nil)
-  open func store(_ image: ShopliveSDKCommon.KFCrossPlatformImage, original: Foundation.Data? = nil, forKey key: Swift.String, processorIdentifier identifier: Swift.String = "", cacheSerializer serializer: ShopliveSDKCommon.CacheSerializer = DefaultCacheSerializer.default, toDisk: Swift.Bool = true, callbackQueue: ShopliveSDKCommon.CallbackQueue = .untouch, completionHandler: ((ShopliveSDKCommon.CacheStoreResult) -> Swift.Void)? = nil)
+  open func store(_ image: ShopliveSDKCommon.KFCrossPlatformImage, original: Foundation.Data? = nil, forKey key: Swift.String, processorIdentifier identifier: Swift.String = "", cacheSerializer serializer: any ShopliveSDKCommon.CacheSerializer = DefaultCacheSerializer.default, toDisk: Swift.Bool = true, callbackQueue: ShopliveSDKCommon.CallbackQueue = .untouch, completionHandler: ((ShopliveSDKCommon.CacheStoreResult) -> Swift.Void)? = nil)
   open func storeToDisk(_ data: Foundation.Data, forKey key: Swift.String, processorIdentifier identifier: Swift.String = "", expiration: ShopliveSDKCommon.StorageExpiration? = nil, callbackQueue: ShopliveSDKCommon.CallbackQueue = .untouch, completionHandler: ((ShopliveSDKCommon.CacheStoreResult) -> Swift.Void)? = nil)
   open func removeImage(forKey key: Swift.String, processorIdentifier identifier: Swift.String = "", fromMemory: Swift.Bool = true, fromDisk: Swift.Bool = true, callbackQueue: ShopliveSDKCommon.CallbackQueue = .untouch, completionHandler: (() -> Swift.Void)? = nil)
   open func retrieveImage(forKey key: Swift.String, options: ShopliveSDKCommon.SLKingfisherParsedOptionsInfo, callbackQueue: ShopliveSDKCommon.CallbackQueue = .mainCurrentOrAsync, completionHandler: ((Swift.Result<ShopliveSDKCommon.ImageCacheResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)?)
@@ -2568,6 +2670,10 @@ extension ShopliveSDKCommon.SLKingfisherWrapper where Base : UIKit.UIApplication
     get
   }
 }
+extension UIKit.UITextField {
+  @_Concurrency.MainActor(unsafe) public func setPlaceholderColor(_ placeholderColor: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) public func addUnderLine()
+}
 extension CoreMedia.CMTime {
   public var timeSeconds: Swift.Float64? {
     get
@@ -2578,6 +2684,21 @@ extension CoreMedia.CMTime {
   public var roundedSeconds: Foundation.TimeInterval {
     get
   }
+  public var hours: Swift.Int {
+    get
+  }
+  public var minute: Swift.Int {
+    get
+  }
+  public var second: Swift.Int {
+    get
+  }
+  public var positionalTime: Swift.String {
+    get
+  }
+}
+@objc public protocol ShopLiveAppDelegateHandler {
+  @objc optional func application(_ application: UIKit.UIApplication, _ window: UIKit.UIWindow?, _ orientation: UIKit.UIInterfaceOrientationMask)
 }
 extension UIKit.UIFont {
   public func findAvailableFont() -> UIKit.UIFont
@@ -2681,8 +2802,8 @@ final public class URLEncodedFormEncoder {
   final public let spaceEncoding: ShopliveSDKCommon.URLEncodedFormEncoder.SpaceEncoding
   final public var allowedCharacters: Foundation.CharacterSet
   public init(alphabetizeKeyValuePairs: Swift.Bool = true, arrayEncoding: ShopliveSDKCommon.URLEncodedFormEncoder.ArrayEncoding = .brackets, boolEncoding: ShopliveSDKCommon.URLEncodedFormEncoder.BoolEncoding = .numeric, dataEncoding: ShopliveSDKCommon.URLEncodedFormEncoder.DataEncoding = .base64, dateEncoding: ShopliveSDKCommon.URLEncodedFormEncoder.DateEncoding = .deferredToDate, keyEncoding: ShopliveSDKCommon.URLEncodedFormEncoder.KeyEncoding = .useDefaultKeys, keyPathEncoding: ShopliveSDKCommon.URLEncodedFormEncoder.KeyPathEncoding = .brackets, nilEncoding: ShopliveSDKCommon.URLEncodedFormEncoder.NilEncoding = .dropKey, spaceEncoding: ShopliveSDKCommon.URLEncodedFormEncoder.SpaceEncoding = .percentEscaped, allowedCharacters: Foundation.CharacterSet = .afURLQueryAllowed)
-  final public func encode(_ value: Swift.Encodable) throws -> Swift.String
-  final public func encode(_ value: Swift.Encodable) throws -> Foundation.Data
+  final public func encode(_ value: any Swift.Encodable) throws -> Swift.String
+  final public func encode(_ value: any Swift.Encodable) throws -> Foundation.Data
   @objc deinit
 }
 extension Foundation.CharacterSet {
@@ -2754,8 +2875,8 @@ extension ShopliveSDKCommon.BaseResponsable {
 public struct BaseResponse : ShopliveSDKCommon.BaseResponsable {
   public var _s: Swift.Int?
   public var _e: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum HTTPVersion : Swift.String {
   case v1, v2
@@ -2820,11 +2941,11 @@ extension ShopliveSDKCommon.APIDefinition {
 }
 extension ShopliveSDKCommon.APIDefinition {
   @discardableResult
-  public func rawRequest(handler: ((Swift.Result<Self.ResultType, Swift.Error>) -> ())? = nil) -> ShopliveSDKCommon.APIDefinitionCancellable
+  public func rawRequest(handler: ((Swift.Result<Self.ResultType, any Swift.Error>) -> ())? = nil) -> ShopliveSDKCommon.APIDefinitionCancellable
   @discardableResult
-  public func request(handler: ((Swift.Result<Self.ResultType, Swift.Error>) -> ())? = nil) -> ShopliveSDKCommon.APIDefinitionCancellable
+  public func request(handler: ((Swift.Result<Self.ResultType, any Swift.Error>) -> ())? = nil) -> ShopliveSDKCommon.APIDefinitionCancellable
   @discardableResult
-  public func upload(handler: ((Swift.Result<Self.ResultType, Swift.Error>) -> ())? = nil) -> ShopliveSDKCommon.APIDefinitionCancellable
+  public func upload(handler: ((Swift.Result<Self.ResultType, any Swift.Error>) -> ())? = nil) -> ShopliveSDKCommon.APIDefinitionCancellable
 }
 extension UIKit.UIApplication {
   @_Concurrency.MainActor(unsafe) public static var isLandscape: Swift.Bool {
@@ -2900,9 +3021,6 @@ public protocol DataTransformable {
   static var empty: Self { get }
 }
 extension UIKit.UIScreen {
-  @_Concurrency.MainActor(unsafe) public static var safeArea: UIKit.UIEdgeInsets {
-    get
-  }
   @_Concurrency.MainActor(unsafe) public static var currentOrientation: UIKit.UIInterfaceOrientation {
     get
   }
@@ -2940,6 +3058,9 @@ extension UIKit.UIScreen {
     get
   }
   @_Concurrency.MainActor(unsafe) public static var bottomSafeArea: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public static var safeArea: UIKit.UIEdgeInsets {
     get
   }
 }
@@ -2994,9 +3115,9 @@ extension ShopliveSDKCommon.DataResponse : Swift.CustomStringConvertible, Swift.
 }
 extension ShopliveSDKCommon.DataResponse {
   public func map<NewSuccess>(_ transform: (Success) -> NewSuccess) -> ShopliveSDKCommon.DataResponse<NewSuccess, Failure>
-  public func tryMap<NewSuccess>(_ transform: (Success) throws -> NewSuccess) -> ShopliveSDKCommon.DataResponse<NewSuccess, Swift.Error>
+  public func tryMap<NewSuccess>(_ transform: (Success) throws -> NewSuccess) -> ShopliveSDKCommon.DataResponse<NewSuccess, any Swift.Error>
   public func mapError<NewFailure>(_ transform: (Failure) -> NewFailure) -> ShopliveSDKCommon.DataResponse<Success, NewFailure> where NewFailure : Swift.Error
-  public func tryMapError<NewFailure>(_ transform: (Failure) throws -> NewFailure) -> ShopliveSDKCommon.DataResponse<Success, Swift.Error> where NewFailure : Swift.Error
+  public func tryMapError<NewFailure>(_ transform: (Failure) throws -> NewFailure) -> ShopliveSDKCommon.DataResponse<Success, any Swift.Error> where NewFailure : Swift.Error
 }
 public struct DownloadResponse<Success, Failure> where Failure : Swift.Error {
   public let request: Foundation.URLRequest?
@@ -3024,23 +3145,31 @@ extension ShopliveSDKCommon.DownloadResponse : Swift.CustomStringConvertible, Sw
 }
 extension ShopliveSDKCommon.DownloadResponse {
   public func map<NewSuccess>(_ transform: (Success) -> NewSuccess) -> ShopliveSDKCommon.DownloadResponse<NewSuccess, Failure>
-  public func tryMap<NewSuccess>(_ transform: (Success) throws -> NewSuccess) -> ShopliveSDKCommon.DownloadResponse<NewSuccess, Swift.Error>
+  public func tryMap<NewSuccess>(_ transform: (Success) throws -> NewSuccess) -> ShopliveSDKCommon.DownloadResponse<NewSuccess, any Swift.Error>
   public func mapError<NewFailure>(_ transform: (Failure) -> NewFailure) -> ShopliveSDKCommon.DownloadResponse<Success, NewFailure> where NewFailure : Swift.Error
-  public func tryMapError<NewFailure>(_ transform: (Failure) throws -> NewFailure) -> ShopliveSDKCommon.DownloadResponse<Success, Swift.Error> where NewFailure : Swift.Error
+  public func tryMapError<NewFailure>(_ transform: (Failure) throws -> NewFailure) -> ShopliveSDKCommon.DownloadResponse<Success, any Swift.Error> where NewFailure : Swift.Error
 }
 public typealias AFResult<Success> = Swift.Result<Success, ShopliveSDKCommon.AFError>
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SLBaseViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var useOrientationLock: Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
 extension ShopliveSDKCommon.SLKingfisherWrapper where Base : UIKit.UIButton {
   @discardableResult
   public func setImage(with source: ShopliveSDKCommon.Source?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
   @discardableResult
-  public func setImage(with resource: ShopliveSDKCommon.Resource?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
+  public func setImage(with resource: (any ShopliveSDKCommon.Resource)?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
   @discardableResult
   public func setImage(with source: ShopliveSDKCommon.Source?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, parsedOptions: ShopliveSDKCommon.SLKingfisherParsedOptionsInfo, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
   public func cancelImageDownloadTask()
   @discardableResult
   public func setBackgroundImage(with source: ShopliveSDKCommon.Source?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
   @discardableResult
-  public func setBackgroundImage(with resource: ShopliveSDKCommon.Resource?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
+  public func setBackgroundImage(with resource: (any ShopliveSDKCommon.Resource)?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
   public func cancelBackgroundImageDownloadTask()
 }
 extension ShopliveSDKCommon.SLKingfisherWrapper where Base : UIKit.UIButton {
@@ -3054,6 +3183,15 @@ public protocol ActionReceivable {
   func action(_ action: Self.Action)
 }
 public protocol SLReactor : ShopliveSDKCommon.ActionReceivable, ShopliveSDKCommon.SLResultObservable {
+}
+@objc public protocol KeyboardNotificationProtocol {
+  @objc func keyboardWillShow(notification: Foundation.Notification)
+  @objc func keyboardWillHide(notification: Foundation.Notification)
+  @objc func keyboardWillChangeFrame(notification: Foundation.Notification)
+}
+extension ShopliveSDKCommon.KeyboardNotificationProtocol {
+  public func registerKeyboardNoti()
+  public func removeKeyboardNoti()
 }
 public let AF: ShopliveSDKCommon.Session
 public struct HTTPMethod : Swift.RawRepresentable, Swift.Equatable, Swift.Hashable {
@@ -3095,7 +3233,7 @@ extension Foundation.URLRequest : ShopliveSDKCommon.URLRequestConvertible {
   public func asURLRequest() throws -> Foundation.URLRequest
 }
 extension Foundation.URLRequest {
-  public init(url: ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod, headers: ShopliveSDKCommon.HTTPHeaders? = nil) throws
+  public init(url: any ShopliveSDKCommon.URLConvertible, method: ShopliveSDKCommon.HTTPMethod, headers: ShopliveSDKCommon.HTTPHeaders? = nil) throws
 }
 public struct ImageLoadingResult {
   public let image: ShopliveSDKCommon.KFCrossPlatformImage
@@ -3120,8 +3258,8 @@ open class ImageDownloader {
     set
   }
   open var requestsUsePipelining: Swift.Bool
-  weak open var delegate: ShopliveSDKCommon.ImageDownloaderDelegate?
-  weak open var authenticationChallengeResponder: ShopliveSDKCommon.AuthenticationChallengeResponsible?
+  weak open var delegate: (any ShopliveSDKCommon.ImageDownloaderDelegate)?
+  weak open var authenticationChallengeResponder: (any ShopliveSDKCommon.AuthenticationChallengeResponsible)?
   public init(name: Swift.String)
   @objc deinit
   @discardableResult
@@ -3201,10 +3339,27 @@ extension Swift.Double {
     get
   }
   public func elapsedTimeString() -> Swift.String
+  public func elapsedTimeString(with date: Foundation.Date) -> Swift.String
   public var numberOfDigit: Swift.Int {
     get
   }
-  public func elapsedTimeString(with date: Foundation.Date) -> Swift.String
+}
+@_hasMissingDesignatedInitializers public class ShopLiveHapticManager {
+  public static func impact(style: UIKit.UIImpactFeedbackGenerator.FeedbackStyle)
+  @objc deinit
+}
+public enum ShopLiveHapticStyle : Swift.String {
+  case LIGHT
+  case MEDIUM
+  case HEAVY
+  public var style: UIKit.UIImpactFeedbackGenerator.FeedbackStyle {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public protocol SLRequestable {
   associatedtype Request
@@ -3219,7 +3374,7 @@ public protocol ImageProcessor {
   func process(item: ShopliveSDKCommon.ImageProcessItem, options: ShopliveSDKCommon.SLKingfisherParsedOptionsInfo) -> ShopliveSDKCommon.KFCrossPlatformImage?
 }
 extension ShopliveSDKCommon.ImageProcessor {
-  public func append(another: ShopliveSDKCommon.ImageProcessor) -> ShopliveSDKCommon.ImageProcessor
+  public func append(another: any ShopliveSDKCommon.ImageProcessor) -> any ShopliveSDKCommon.ImageProcessor
 }
 public struct DefaultImageProcessor : ShopliveSDKCommon.ImageProcessor {
   public static let `default`: ShopliveSDKCommon.DefaultImageProcessor
@@ -3342,7 +3497,7 @@ public struct DownsamplingImageProcessor : ShopliveSDKCommon.ImageProcessor {
   public func process(item: ShopliveSDKCommon.ImageProcessItem, options: ShopliveSDKCommon.SLKingfisherParsedOptionsInfo) -> ShopliveSDKCommon.KFCrossPlatformImage?
 }
 infix operator |> : AdditionPrecedence
-public func |> (left: ShopliveSDKCommon.ImageProcessor, right: ShopliveSDKCommon.ImageProcessor) -> ShopliveSDKCommon.ImageProcessor
+public func |> (left: any ShopliveSDKCommon.ImageProcessor, right: any ShopliveSDKCommon.ImageProcessor) -> any ShopliveSDKCommon.ImageProcessor
 public typealias Transformer = (CoreImage.CIImage) -> CoreImage.CIImage?
 public protocol CIImageProcessor : ShopliveSDKCommon.ImageProcessor {
   var filter: ShopliveSDKCommon.Filter { get }
@@ -3378,17 +3533,17 @@ extension UIKit.UIColor {
 }
 extension ShopliveSDKCommon.SLKingfisherWrapper where Base : UIKit.UIImageView {
   @discardableResult
-  public func setImage(with source: ShopliveSDKCommon.Source?, placeholder: ShopliveSDKCommon.Placeholder? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
+  public func setImage(with source: ShopliveSDKCommon.Source?, placeholder: (any ShopliveSDKCommon.Placeholder)? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
   @discardableResult
-  public func setImage(with source: ShopliveSDKCommon.Source?, placeholder: ShopliveSDKCommon.Placeholder? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
+  public func setImage(with source: ShopliveSDKCommon.Source?, placeholder: (any ShopliveSDKCommon.Placeholder)? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
   @discardableResult
-  public func setImage(with resource: ShopliveSDKCommon.Resource?, placeholder: ShopliveSDKCommon.Placeholder? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
+  public func setImage(with resource: (any ShopliveSDKCommon.Resource)?, placeholder: (any ShopliveSDKCommon.Placeholder)? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
   @discardableResult
-  public func setImage(with resource: ShopliveSDKCommon.Resource?, placeholder: ShopliveSDKCommon.Placeholder? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
+  public func setImage(with resource: (any ShopliveSDKCommon.Resource)?, placeholder: (any ShopliveSDKCommon.Placeholder)? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
   @discardableResult
-  public func setImage(with provider: ShopliveSDKCommon.ImageDataProvider?, placeholder: ShopliveSDKCommon.Placeholder? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
+  public func setImage(with provider: (any ShopliveSDKCommon.ImageDataProvider)?, placeholder: (any ShopliveSDKCommon.Placeholder)? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
   @discardableResult
-  public func setImage(with provider: ShopliveSDKCommon.ImageDataProvider?, placeholder: ShopliveSDKCommon.Placeholder? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
+  public func setImage(with provider: (any ShopliveSDKCommon.ImageDataProvider)?, placeholder: (any ShopliveSDKCommon.Placeholder)? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
   public func cancelDownloadTask()
 }
 extension ShopliveSDKCommon.SLKingfisherWrapper where Base : UIKit.UIImageView {
@@ -3399,18 +3554,18 @@ extension ShopliveSDKCommon.SLKingfisherWrapper where Base : UIKit.UIImageView {
     get
     set
   }
-  public var indicator: ShopliveSDKCommon.Indicator? {
+  public var indicator: (any ShopliveSDKCommon.Indicator)? {
     get
   }
-  public var placeholder: ShopliveSDKCommon.Placeholder? {
+  public var placeholder: (any ShopliveSDKCommon.Placeholder)? {
     get
   }
 }
 open class ServerTrustManager {
   final public let allHostsMustBeEvaluated: Swift.Bool
-  final public let evaluators: [Swift.String : ShopliveSDKCommon.ServerTrustEvaluating]
-  public init(allHostsMustBeEvaluated: Swift.Bool = true, evaluators: [Swift.String : ShopliveSDKCommon.ServerTrustEvaluating])
-  open func serverTrustEvaluator(forHost host: Swift.String) throws -> ShopliveSDKCommon.ServerTrustEvaluating?
+  final public let evaluators: [Swift.String : any ShopliveSDKCommon.ServerTrustEvaluating]
+  public init(allHostsMustBeEvaluated: Swift.Bool = true, evaluators: [Swift.String : any ShopliveSDKCommon.ServerTrustEvaluating])
+  open func serverTrustEvaluator(forHost host: Swift.String) throws -> (any ShopliveSDKCommon.ServerTrustEvaluating)?
   @objc deinit
 }
 public protocol ServerTrustEvaluating {
@@ -3468,12 +3623,12 @@ extension ShopliveSDKCommon.ServerTrustEvaluating where Self == ShopliveSDKCommo
   public static func publicKeys(keys: [Security.SecKey] = Bundle.main.af.publicKeys, performDefaultValidation: Swift.Bool = true, validateHost: Swift.Bool = true) -> ShopliveSDKCommon.PublicKeysTrustEvaluator
 }
 final public class CompositeTrustEvaluator : ShopliveSDKCommon.ServerTrustEvaluating {
-  public init(evaluators: [ShopliveSDKCommon.ServerTrustEvaluating])
+  public init(evaluators: [any ShopliveSDKCommon.ServerTrustEvaluating])
   final public func evaluate(_ trust: Security.SecTrust, forHost host: Swift.String) throws
   @objc deinit
 }
 extension ShopliveSDKCommon.ServerTrustEvaluating where Self == ShopliveSDKCommon.CompositeTrustEvaluator {
-  public static func composite(evaluators: [ShopliveSDKCommon.ServerTrustEvaluating]) -> ShopliveSDKCommon.CompositeTrustEvaluator
+  public static func composite(evaluators: [any ShopliveSDKCommon.ServerTrustEvaluating]) -> ShopliveSDKCommon.CompositeTrustEvaluator
 }
 @available(*, deprecated, renamed: "DisabledTrustEvaluator", message: "DisabledEvaluator has been renamed DisabledTrustEvaluator.")
 public typealias DisabledEvaluator = ShopliveSDKCommon.DisabledTrustEvaluator
@@ -3482,7 +3637,7 @@ final public class DisabledTrustEvaluator : ShopliveSDKCommon.ServerTrustEvaluat
   final public func evaluate(_ trust: Security.SecTrust, forHost host: Swift.String) throws
   @objc deinit
 }
-extension Swift.Array where Element == ShopliveSDKCommon.ServerTrustEvaluating {
+extension Swift.Array where Element == any ShopliveSDKCommon.ServerTrustEvaluating {
   public func evaluate(_ trust: Security.SecTrust, forHost host: Swift.String) throws
 }
 extension Foundation.Bundle : ShopliveSDKCommon.AlamofireExtended {
@@ -3507,7 +3662,7 @@ extension ShopliveSDKCommon.AlamofireExtension where ExtendedType == Security.Se
   @available(macOS, introduced: 10.12, deprecated: 10.14, renamed: "evaluate(afterApplying:)")
   @available(tvOS, introduced: 10, deprecated: 12, renamed: "evaluate(afterApplying:)")
   @available(watchOS, introduced: 3, deprecated: 5, renamed: "evaluate(afterApplying:)")
-  public func validate(policy: Security.SecPolicy, errorProducer: (_ status: Darwin.OSStatus, _ result: Security.SecTrustResultType) -> Swift.Error) throws
+  public func validate(policy: Security.SecPolicy, errorProducer: (_ status: Darwin.OSStatus, _ result: Security.SecTrustResultType) -> any Swift.Error) throws
   public func apply(policy: Security.SecPolicy) throws -> Security.SecTrust
   @available(iOS 12, macOS 10.14, tvOS 12, watchOS 5, *)
   public func evaluate() throws
@@ -3515,7 +3670,7 @@ extension ShopliveSDKCommon.AlamofireExtension where ExtendedType == Security.Se
   @available(macOS, introduced: 10.12, deprecated: 10.14, renamed: "evaluate()")
   @available(tvOS, introduced: 10, deprecated: 12, renamed: "evaluate()")
   @available(watchOS, introduced: 3, deprecated: 5, renamed: "evaluate()")
-  public func validate(errorProducer: (_ status: Darwin.OSStatus, _ result: Security.SecTrustResultType) -> Swift.Error) throws
+  public func validate(errorProducer: (_ status: Darwin.OSStatus, _ result: Security.SecTrustResultType) -> any Swift.Error) throws
   public func setAnchorCertificates(_ certificates: [Security.SecCertificate]) throws
   public var publicKeys: [Security.SecKey] {
     get
@@ -3613,9 +3768,9 @@ public struct DataTask<Value> {
 }
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension ShopliveSDKCommon.DataRequest {
-  public func serializingData(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false, dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DataTask<Foundation.Data>
-  public func serializingDecodable<Value>(_ type: Value.Type = Value.self, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false, dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<Value>.defaultDataPreprocessor, decoder: ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<Value>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<Value>.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DataTask<Value> where Value : Swift.Decodable
-  public func serializingString(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false, dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DataTask<Swift.String>
+  public func serializingData(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false, dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DataTask<Foundation.Data>
+  public func serializingDecodable<Value>(_ type: Value.Type = Value.self, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false, dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<Value>.defaultDataPreprocessor, decoder: any ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<Value>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<Value>.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DataTask<Value> where Value : Swift.Decodable
+  public func serializingString(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false, dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.DataTask<Swift.String>
   public func serializingResponse<Serializer>(using serializer: Serializer, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false) -> ShopliveSDKCommon.DataTask<Serializer.SerializedObject> where Serializer : ShopliveSDKCommon.ResponseSerializer
   public func serializingResponse<Serializer>(using serializer: Serializer, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false) -> ShopliveSDKCommon.DataTask<Serializer.SerializedObject> where Serializer : ShopliveSDKCommon.DataResponseSerializerProtocol
 }
@@ -3642,10 +3797,10 @@ public struct AFDownloadTask<Value> {
 }
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension ShopliveSDKCommon.DownloadRequest {
-  public func serializingData(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false, dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.AFDownloadTask<Foundation.Data>
-  public func serializingDecodable<Value>(_ type: Value.Type = Value.self, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false, dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<Value>.defaultDataPreprocessor, decoder: ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<Value>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<Value>.defaultEmptyRequestMethods) -> ShopliveSDKCommon.AFDownloadTask<Value> where Value : Swift.Decodable
+  public func serializingData(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false, dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = DataResponseSerializer.defaultDataPreprocessor, emptyResponseCodes: Swift.Set<Swift.Int> = DataResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DataResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.AFDownloadTask<Foundation.Data>
+  public func serializingDecodable<Value>(_ type: Value.Type = Value.self, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false, dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = DecodableResponseSerializer<Value>.defaultDataPreprocessor, decoder: any ShopliveSDKCommon.DataDecoder = JSONDecoder(), emptyResponseCodes: Swift.Set<Swift.Int> = DecodableResponseSerializer<Value>.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = DecodableResponseSerializer<Value>.defaultEmptyRequestMethods) -> ShopliveSDKCommon.AFDownloadTask<Value> where Value : Swift.Decodable
   public func serializingDownloadedFileURL(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false) -> ShopliveSDKCommon.AFDownloadTask<Foundation.URL>
-  public func serializingString(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false, dataPreprocessor: ShopliveSDKCommon.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.AFDownloadTask<Swift.String>
+  public func serializingString(automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false, dataPreprocessor: any ShopliveSDKCommon.DataPreprocessor = StringResponseSerializer.defaultDataPreprocessor, encoding: Swift.String.Encoding? = nil, emptyResponseCodes: Swift.Set<Swift.Int> = StringResponseSerializer.defaultEmptyResponseCodes, emptyRequestMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = StringResponseSerializer.defaultEmptyRequestMethods) -> ShopliveSDKCommon.AFDownloadTask<Swift.String>
   public func serializingDownload<Serializer>(using serializer: Serializer, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false) -> ShopliveSDKCommon.AFDownloadTask<Serializer.SerializedObject> where Serializer : ShopliveSDKCommon.ResponseSerializer
   public func serializingDownload<Serializer>(using serializer: Serializer, automaticallyCancelling shouldAutomaticallyCancel: Swift.Bool = false) -> ShopliveSDKCommon.AFDownloadTask<Serializer.SerializedObject> where Serializer : ShopliveSDKCommon.DownloadResponseSerializerProtocol
 }
@@ -3751,9 +3906,9 @@ public enum ImageTransition {
   final public let id: Foundation.UUID
   final public let underlyingQueue: Dispatch.DispatchQueue
   final public let serializationQueue: Dispatch.DispatchQueue
-  final public let eventMonitor: ShopliveSDKCommon.EventMonitor?
-  final public let interceptor: ShopliveSDKCommon.RequestInterceptor?
-  weak public var delegate: ShopliveSDKCommon.RequestDelegate? {
+  final public let eventMonitor: (any ShopliveSDKCommon.EventMonitor)?
+  final public let interceptor: (any ShopliveSDKCommon.RequestInterceptor)?
+  weak public var delegate: (any ShopliveSDKCommon.RequestDelegate)? {
     get
   }
   public var state: ShopliveSDKCommon.Request.State {
@@ -3777,10 +3932,10 @@ public enum ImageTransition {
   public typealias ProgressHandler = (Foundation.Progress) -> Swift.Void
   final public let uploadProgress: Foundation.Progress
   final public let downloadProgress: Foundation.Progress
-  public var redirectHandler: ShopliveSDKCommon.RedirectHandler? {
+  public var redirectHandler: (any ShopliveSDKCommon.RedirectHandler)? {
     get
   }
-  public var cachedResponseHandler: ShopliveSDKCommon.CachedResponseHandler? {
+  public var cachedResponseHandler: (any ShopliveSDKCommon.CachedResponseHandler)? {
     get
   }
   public var credential: Foundation.URLCredential? {
@@ -3849,9 +4004,9 @@ public enum ImageTransition {
   @discardableResult
   public func uploadProgress(queue: Dispatch.DispatchQueue = .main, closure: @escaping ShopliveSDKCommon.Request.ProgressHandler) -> Self
   @discardableResult
-  public func redirect(using handler: ShopliveSDKCommon.RedirectHandler) -> Self
+  public func redirect(using handler: any ShopliveSDKCommon.RedirectHandler) -> Self
   @discardableResult
-  public func cacheResponse(using handler: ShopliveSDKCommon.CachedResponseHandler) -> Self
+  public func cacheResponse(using handler: any ShopliveSDKCommon.CachedResponseHandler) -> Self
   @discardableResult
   public func cURLDescription(on queue: Dispatch.DispatchQueue, calling handler: @escaping (Swift.String) -> Swift.Void) -> Self
   @discardableResult
@@ -3887,7 +4042,7 @@ public protocol RequestDelegate : AnyObject {
   func retryRequest(_ request: ShopliveSDKCommon.Request, withDelay timeDelay: Foundation.TimeInterval?)
 }
 @_hasMissingDesignatedInitializers public class DataRequest : ShopliveSDKCommon.Request {
-  final public let convertible: ShopliveSDKCommon.URLRequestConvertible
+  final public let convertible: any ShopliveSDKCommon.URLRequestConvertible
   public var data: Foundation.Data? {
     get
   }
@@ -3915,7 +4070,7 @@ public protocol RequestDelegate : AnyObject {
   public struct CancellationToken {
     public func cancel()
   }
-  final public let convertible: ShopliveSDKCommon.URLRequestConvertible
+  final public let convertible: any ShopliveSDKCommon.URLRequestConvertible
   final public let automaticallyCancelOnStreamError: Swift.Bool
   @discardableResult
   final public func validate(_ validation: @escaping ShopliveSDKCommon.DataStreamRequest.Validation) -> Self
@@ -3949,7 +4104,7 @@ extension ShopliveSDKCommon.DataStreamRequest.Stream {
   public typealias Destination = (_ temporaryURL: Foundation.URL, _ response: Foundation.HTTPURLResponse) -> (destinationURL: Foundation.URL, options: ShopliveSDKCommon.DownloadRequest.Options)
   public class func suggestedDownloadDestination(for directory: Foundation.FileManager.SearchPathDirectory = .documentDirectory, in domain: Foundation.FileManager.SearchPathDomainMask = .userDomainMask, options: ShopliveSDKCommon.DownloadRequest.Options = []) -> ShopliveSDKCommon.DownloadRequest.Destination
   public enum Downloadable {
-    case request(ShopliveSDKCommon.URLRequestConvertible)
+    case request(any ShopliveSDKCommon.URLRequestConvertible)
     case resumeData(Foundation.Data)
   }
   public var resumeData: Foundation.Data? {
@@ -3976,7 +4131,7 @@ extension ShopliveSDKCommon.DataStreamRequest.Stream {
     case file(Foundation.URL, shouldRemove: Swift.Bool)
     case stream(Foundation.InputStream)
   }
-  final public let upload: ShopliveSDKCommon.UploadableConvertible
+  final public let upload: any ShopliveSDKCommon.UploadableConvertible
   final public let fileManager: Foundation.FileManager
   public var uploadable: ShopliveSDKCommon.UploadRequest.Uploadable?
   public func cleanup()
@@ -3999,80 +4154,31 @@ public protocol UploadConvertible : ShopliveSDKCommon.URLRequestConvertible, Sho
 extension Foundation.NotificationCenter {
   public func safeRemoveObserver(_ observer: Any, name aName: Foundation.NSNotification.Name?, object anObject: Any?)
 }
-@objc @_Concurrency.MainActor(unsafe) open class SLWSTagView : UIKit.UIView, UIKit.UITextInputTraits {
-  @_Concurrency.MainActor(unsafe) open var displayText: Swift.String {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) open var displayDelimiter: Swift.String {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) open var font: UIKit.UIFont? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) open var cornerRadius: CoreFoundation.CGFloat {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) open var borderWidth: CoreFoundation.CGFloat {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) open var borderColor: UIKit.UIColor? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var tintColor: UIKit.UIColor! {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) open var selectedColor: UIKit.UIColor? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) open var textColor: UIKit.UIColor? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) open var selectedTextColor: UIKit.UIColor? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) open var selected: Swift.Bool {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) @objc public var autocapitalizationType: UIKit.UITextAutocapitalizationType
-  @_Concurrency.MainActor(unsafe) @objc public var autocorrectionType: UIKit.UITextAutocorrectionType
-  @_Concurrency.MainActor(unsafe) @objc public var spellCheckingType: UIKit.UITextSpellCheckingType
-  @_Concurrency.MainActor(unsafe) @objc public var keyboardType: UIKit.UIKeyboardType
-  @_Concurrency.MainActor(unsafe) @objc public var keyboardAppearance: UIKit.UIKeyboardAppearance
-  @_Concurrency.MainActor(unsafe) @objc public var returnKeyType: UIKit.UIReturnKeyType
-  @_Concurrency.MainActor(unsafe) @objc public var enablesReturnKeyAutomatically: Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc public var isSecureTextEntry: Swift.Bool
-  @_Concurrency.MainActor(unsafe) public init(tag: ShopliveSDKCommon.SLWSTag)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
-  @_Concurrency.MainActor(unsafe) open func sizeToFit(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var canBecomeFirstResponder: Swift.Bool {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func becomeFirstResponder() -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func resignFirstResponder() -> Swift.Bool
+public class ShopLiveDebouncer {
+  public typealias Handler = () -> Swift.Void
+  public var handler: ShopliveSDKCommon.ShopLiveDebouncer.Handler?
+  public init(timeInterval: Foundation.TimeInterval)
+  public func renewInterval()
   @objc deinit
 }
-extension ShopliveSDKCommon.SLWSTagView : UIKit.UIKeyInput {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public var hasText: Swift.Bool {
-    @objc get
+extension AVFoundation.AVPlayer.TimeControlStatus {
+  public var name: Swift.String {
+    get
   }
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func insertText(_ text: Swift.String)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func deleteBackward()
+}
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor(unsafe) public static var isIpad: Swift.Bool {
+    get
+  }
+}
+extension ShopliveSDKCommon.ShopLiveCommon {
+  public static func setShopLiveOrientation(orientation: UIKit.UIInterfaceOrientationMask)
+  public static func setEnabledShopLiveOrientationLock(enable: Swift.Bool)
+  public static func getEnabledShopLiveOrientationLock() -> Swift.Bool
+  public static func setShopLiveAppDelegateHandler(handler: (any ShopliveSDKCommon.ShopLiveAppDelegateHandler)?)
+}
+extension MediaPlayer.MPVolumeView {
+  @_Concurrency.MainActor(unsafe) public static func setVolume(_ volume: Swift.Float)
 }
 extension Foundation.URLSessionConfiguration : ShopliveSDKCommon.AlamofireExtended {
   public typealias ExtendedType = Foundation.URLSessionConfiguration
@@ -4192,12 +4298,6 @@ extension Foundation.URLSessionConfiguration {
     set
   }
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) open class SLBackspaceDetectingTextField : UIKit.UITextField {
-  @_Concurrency.MainActor(unsafe) open var onDeleteBackwards: (() -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func deleteBackward()
-  @objc deinit
-}
 public enum MemoryStorage {
   public class Backend<T> where T : ShopliveSDKCommon.CacheCostCalculable {
     public var config: ShopliveSDKCommon.MemoryStorage.Config {
@@ -4229,7 +4329,7 @@ extension ShopliveSDKCommon.SLKingfisherWrapper where Base : CarPlay.CPListItem 
   @discardableResult
   public func setImage(with source: ShopliveSDKCommon.Source?, placeholder: ShopliveSDKCommon.KFCrossPlatformImage? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
   @discardableResult
-  public func setImage(with resource: ShopliveSDKCommon.Resource?, placeholder: ShopliveSDKCommon.KFCrossPlatformImage? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
+  public func setImage(with resource: (any ShopliveSDKCommon.Resource)?, placeholder: ShopliveSDKCommon.KFCrossPlatformImage? = nil, options: ShopliveSDKCommon.SLKingfisherOptionsInfo? = nil, progressBlock: ShopliveSDKCommon.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<ShopliveSDKCommon.RetrieveImageResult, ShopliveSDKCommon.SLKingfisherError>) -> Swift.Void)? = nil) -> ShopliveSDKCommon.SLDownloadTask?
   public func cancelDownloadTask()
 }
 @available(iOS 12.0, *)
@@ -4243,33 +4343,33 @@ public struct RequestAdapterState {
   public let session: ShopliveSDKCommon.Session
 }
 public protocol RequestAdapter {
-  func adapt(_ urlRequest: Foundation.URLRequest, for session: ShopliveSDKCommon.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, Swift.Error>) -> Swift.Void)
-  func adapt(_ urlRequest: Foundation.URLRequest, using state: ShopliveSDKCommon.RequestAdapterState, completion: @escaping (Swift.Result<Foundation.URLRequest, Swift.Error>) -> Swift.Void)
+  func adapt(_ urlRequest: Foundation.URLRequest, for session: ShopliveSDKCommon.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
+  func adapt(_ urlRequest: Foundation.URLRequest, using state: ShopliveSDKCommon.RequestAdapterState, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
 }
 extension ShopliveSDKCommon.RequestAdapter {
-  public func adapt(_ urlRequest: Foundation.URLRequest, using state: ShopliveSDKCommon.RequestAdapterState, completion: @escaping (Swift.Result<Foundation.URLRequest, Swift.Error>) -> Swift.Void)
+  public func adapt(_ urlRequest: Foundation.URLRequest, using state: ShopliveSDKCommon.RequestAdapterState, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
 }
 public enum RetryResult {
   case retry
   case retryWithDelay(Foundation.TimeInterval)
   case doNotRetry
-  case doNotRetryWithError(Swift.Error)
+  case doNotRetryWithError(any Swift.Error)
 }
 public protocol RequestRetrier {
-  func retry(_ request: ShopliveSDKCommon.Request, for session: ShopliveSDKCommon.Session, dueTo error: Swift.Error, completion: @escaping (ShopliveSDKCommon.RetryResult) -> Swift.Void)
+  func retry(_ request: ShopliveSDKCommon.Request, for session: ShopliveSDKCommon.Session, dueTo error: any Swift.Error, completion: @escaping (ShopliveSDKCommon.RetryResult) -> Swift.Void)
 }
 public protocol RequestInterceptor : ShopliveSDKCommon.RequestAdapter, ShopliveSDKCommon.RequestRetrier {
 }
 extension ShopliveSDKCommon.RequestInterceptor {
-  public func adapt(_ urlRequest: Foundation.URLRequest, for session: ShopliveSDKCommon.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, Swift.Error>) -> Swift.Void)
-  public func retry(_ request: ShopliveSDKCommon.Request, for session: ShopliveSDKCommon.Session, dueTo error: Swift.Error, completion: @escaping (ShopliveSDKCommon.RetryResult) -> Swift.Void)
+  public func adapt(_ urlRequest: Foundation.URLRequest, for session: ShopliveSDKCommon.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
+  public func retry(_ request: ShopliveSDKCommon.Request, for session: ShopliveSDKCommon.Session, dueTo error: any Swift.Error, completion: @escaping (ShopliveSDKCommon.RetryResult) -> Swift.Void)
 }
-public typealias AdaptHandler = (Foundation.URLRequest, ShopliveSDKCommon.Session, _ completion: @escaping (Swift.Result<Foundation.URLRequest, Swift.Error>) -> Swift.Void) -> Swift.Void
-public typealias RetryHandler = (ShopliveSDKCommon.Request, ShopliveSDKCommon.Session, Swift.Error, _ completion: @escaping (ShopliveSDKCommon.RetryResult) -> Swift.Void) -> Swift.Void
+public typealias AdaptHandler = (Foundation.URLRequest, ShopliveSDKCommon.Session, _ completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void) -> Swift.Void
+public typealias RetryHandler = (ShopliveSDKCommon.Request, ShopliveSDKCommon.Session, any Swift.Error, _ completion: @escaping (ShopliveSDKCommon.RetryResult) -> Swift.Void) -> Swift.Void
 open class Adapter : ShopliveSDKCommon.RequestInterceptor {
   public init(_ adaptHandler: @escaping ShopliveSDKCommon.AdaptHandler)
-  open func adapt(_ urlRequest: Foundation.URLRequest, for session: ShopliveSDKCommon.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, Swift.Error>) -> Swift.Void)
-  open func adapt(_ urlRequest: Foundation.URLRequest, using state: ShopliveSDKCommon.RequestAdapterState, completion: @escaping (Swift.Result<Foundation.URLRequest, Swift.Error>) -> Swift.Void)
+  open func adapt(_ urlRequest: Foundation.URLRequest, for session: ShopliveSDKCommon.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
+  open func adapt(_ urlRequest: Foundation.URLRequest, using state: ShopliveSDKCommon.RequestAdapterState, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
   @objc deinit
 }
 extension ShopliveSDKCommon.RequestAdapter where Self == ShopliveSDKCommon.Adapter {
@@ -4277,27 +4377,27 @@ extension ShopliveSDKCommon.RequestAdapter where Self == ShopliveSDKCommon.Adapt
 }
 open class Retrier : ShopliveSDKCommon.RequestInterceptor {
   public init(_ retryHandler: @escaping ShopliveSDKCommon.RetryHandler)
-  open func retry(_ request: ShopliveSDKCommon.Request, for session: ShopliveSDKCommon.Session, dueTo error: Swift.Error, completion: @escaping (ShopliveSDKCommon.RetryResult) -> Swift.Void)
+  open func retry(_ request: ShopliveSDKCommon.Request, for session: ShopliveSDKCommon.Session, dueTo error: any Swift.Error, completion: @escaping (ShopliveSDKCommon.RetryResult) -> Swift.Void)
   @objc deinit
 }
 extension ShopliveSDKCommon.RequestRetrier where Self == ShopliveSDKCommon.Retrier {
   public static func retrier(using closure: @escaping ShopliveSDKCommon.RetryHandler) -> ShopliveSDKCommon.Retrier
 }
 open class Interceptor : ShopliveSDKCommon.RequestInterceptor {
-  final public let adapters: [ShopliveSDKCommon.RequestAdapter]
-  final public let retriers: [ShopliveSDKCommon.RequestRetrier]
+  final public let adapters: [any ShopliveSDKCommon.RequestAdapter]
+  final public let retriers: [any ShopliveSDKCommon.RequestRetrier]
   public init(adaptHandler: @escaping ShopliveSDKCommon.AdaptHandler, retryHandler: @escaping ShopliveSDKCommon.RetryHandler)
-  public init(adapter: ShopliveSDKCommon.RequestAdapter, retrier: ShopliveSDKCommon.RequestRetrier)
-  public init(adapters: [ShopliveSDKCommon.RequestAdapter] = [], retriers: [ShopliveSDKCommon.RequestRetrier] = [], interceptors: [ShopliveSDKCommon.RequestInterceptor] = [])
-  open func adapt(_ urlRequest: Foundation.URLRequest, for session: ShopliveSDKCommon.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, Swift.Error>) -> Swift.Void)
-  open func adapt(_ urlRequest: Foundation.URLRequest, using state: ShopliveSDKCommon.RequestAdapterState, completion: @escaping (Swift.Result<Foundation.URLRequest, Swift.Error>) -> Swift.Void)
-  open func retry(_ request: ShopliveSDKCommon.Request, for session: ShopliveSDKCommon.Session, dueTo error: Swift.Error, completion: @escaping (ShopliveSDKCommon.RetryResult) -> Swift.Void)
+  public init(adapter: any ShopliveSDKCommon.RequestAdapter, retrier: any ShopliveSDKCommon.RequestRetrier)
+  public init(adapters: [any ShopliveSDKCommon.RequestAdapter] = [], retriers: [any ShopliveSDKCommon.RequestRetrier] = [], interceptors: [any ShopliveSDKCommon.RequestInterceptor] = [])
+  open func adapt(_ urlRequest: Foundation.URLRequest, for session: ShopliveSDKCommon.Session, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
+  open func adapt(_ urlRequest: Foundation.URLRequest, using state: ShopliveSDKCommon.RequestAdapterState, completion: @escaping (Swift.Result<Foundation.URLRequest, any Swift.Error>) -> Swift.Void)
+  open func retry(_ request: ShopliveSDKCommon.Request, for session: ShopliveSDKCommon.Session, dueTo error: any Swift.Error, completion: @escaping (ShopliveSDKCommon.RetryResult) -> Swift.Void)
   @objc deinit
 }
 extension ShopliveSDKCommon.RequestInterceptor where Self == ShopliveSDKCommon.Interceptor {
   public static func interceptor(adapter: @escaping ShopliveSDKCommon.AdaptHandler, retrier: @escaping ShopliveSDKCommon.RetryHandler) -> ShopliveSDKCommon.Interceptor
-  public static func interceptor(adapter: ShopliveSDKCommon.RequestAdapter, retrier: ShopliveSDKCommon.RequestRetrier) -> ShopliveSDKCommon.Interceptor
-  public static func interceptor(adapters: [ShopliveSDKCommon.RequestAdapter] = [], retriers: [ShopliveSDKCommon.RequestRetrier] = [], interceptors: [ShopliveSDKCommon.RequestInterceptor] = []) -> ShopliveSDKCommon.Interceptor
+  public static func interceptor(adapter: any ShopliveSDKCommon.RequestAdapter, retrier: any ShopliveSDKCommon.RequestRetrier) -> ShopliveSDKCommon.Interceptor
+  public static func interceptor(adapters: [any ShopliveSDKCommon.RequestAdapter] = [], retriers: [any ShopliveSDKCommon.RequestRetrier] = [], interceptors: [any ShopliveSDKCommon.RequestInterceptor] = []) -> ShopliveSDKCommon.Interceptor
 }
 @objc public enum PermissionType : Swift.Int {
   case camera
@@ -4314,6 +4414,7 @@ extension ShopliveSDKCommon.RequestInterceptor where Self == ShopliveSDKCommon.I
   case denied
   case notDetermined
   case notSupported
+  case limited
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -4361,17 +4462,6 @@ final public class PermissionManager : ShopliveSDKCommon.SLRequestable, Shoplive
 extension UIKit.UIButton {
   @_Concurrency.MainActor(unsafe) public func setBackgroundColor(_ color: UIKit.UIColor, for state: UIKit.UIControl.State)
 }
-public struct SLWSTag : Swift.Hashable {
-  public let text: Swift.String
-  public let context: Swift.AnyHashable?
-  public init(_ text: Swift.String, context: Swift.AnyHashable? = nil)
-  public func equals(_ other: ShopliveSDKCommon.SLWSTag) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public func == (lhs: ShopliveSDKCommon.SLWSTag, rhs: ShopliveSDKCommon.SLWSTag) -> Swift.Bool
 open class RetryPolicy : ShopliveSDKCommon.RequestInterceptor {
   public static let defaultRetryLimit: Swift.UInt
   public static let defaultExponentialBackoffBase: Swift.UInt
@@ -4386,8 +4476,8 @@ open class RetryPolicy : ShopliveSDKCommon.RequestInterceptor {
   final public let retryableHTTPStatusCodes: Swift.Set<Swift.Int>
   final public let retryableURLErrorCodes: Swift.Set<Foundation.URLError.Code>
   public init(retryLimit: Swift.UInt = RetryPolicy.defaultRetryLimit, exponentialBackoffBase: Swift.UInt = RetryPolicy.defaultExponentialBackoffBase, exponentialBackoffScale: Swift.Double = RetryPolicy.defaultExponentialBackoffScale, retryableHTTPMethods: Swift.Set<ShopliveSDKCommon.HTTPMethod> = RetryPolicy.defaultRetryableHTTPMethods, retryableHTTPStatusCodes: Swift.Set<Swift.Int> = RetryPolicy.defaultRetryableHTTPStatusCodes, retryableURLErrorCodes: Swift.Set<Foundation.URLError.Code> = RetryPolicy.defaultRetryableURLErrorCodes)
-  open func retry(_ request: ShopliveSDKCommon.Request, for session: ShopliveSDKCommon.Session, dueTo error: Swift.Error, completion: @escaping (ShopliveSDKCommon.RetryResult) -> Swift.Void)
-  open func shouldRetry(request: ShopliveSDKCommon.Request, dueTo error: Swift.Error) -> Swift.Bool
+  open func retry(_ request: ShopliveSDKCommon.Request, for session: ShopliveSDKCommon.Session, dueTo error: any Swift.Error, completion: @escaping (ShopliveSDKCommon.RetryResult) -> Swift.Void)
+  open func shouldRetry(request: ShopliveSDKCommon.Request, dueTo error: any Swift.Error) -> Swift.Bool
   @objc deinit
 }
 extension ShopliveSDKCommon.RequestInterceptor where Self == ShopliveSDKCommon.RetryPolicy {
@@ -4409,9 +4499,9 @@ extension ShopliveSDKCommon.RequestInterceptor where Self == ShopliveSDKCommon.C
 @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
 extension ShopliveSDKCommon.KFImageProtocol {
   public static func source(_ source: ShopliveSDKCommon.Source?) -> Self
-  public static func resource(_ resource: ShopliveSDKCommon.Resource?) -> Self
+  public static func resource(_ resource: (any ShopliveSDKCommon.Resource)?) -> Self
   public static func url(_ url: Foundation.URL?, cacheKey: Swift.String? = nil) -> Self
-  public static func dataProvider(_ provider: ShopliveSDKCommon.ImageDataProvider?) -> Self
+  public static func dataProvider(_ provider: (any ShopliveSDKCommon.ImageDataProvider)?) -> Self
   public static func data(_ data: Foundation.Data?, cacheKey: Swift.String) -> Self
 }
 @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
@@ -4425,6 +4515,19 @@ extension ShopliveSDKCommon.KFImageProtocol {
 @_hasMissingDesignatedInitializers final public class URLUtil {
   public static func query(_ params: [Foundation.URLQueryItem]?) -> Swift.String?
   @objc deinit
+}
+extension Foundation.Date {
+  public static var expiredTime: Swift.Int {
+    get
+  }
+  public static var createdTime: Swift.Int {
+    get
+  }
+}
+extension CoreFoundation.CGSize {
+  public var transpolate: CoreFoundation.CGSize {
+    get
+  }
 }
 extension Foundation.NSAttributedString {
   public var fullRange: Foundation.NSRange {
@@ -4471,7 +4574,7 @@ open class KeychainWrapper {
   @discardableResult
   open func set(_ value: Swift.String, forKey key: Swift.String, withAccessibility accessibility: ShopliveSDKCommon.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
   @discardableResult
-  open func set(_ value: Foundation.NSCoding, forKey key: Swift.String, withAccessibility accessibility: ShopliveSDKCommon.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
+  open func set(_ value: any Foundation.NSCoding, forKey key: Swift.String, withAccessibility accessibility: ShopliveSDKCommon.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
   @discardableResult
   open func set(_ value: Foundation.Data, forKey key: Swift.String, withAccessibility accessibility: ShopliveSDKCommon.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
   @available(*, deprecated, message: "remove is deprecated since version 2.2.1, use removeObject instead")
@@ -4486,9 +4589,9 @@ open class KeychainWrapper {
 }
 public enum KF {
   public static func source(_ source: ShopliveSDKCommon.Source?) -> ShopliveSDKCommon.KF.Builder
-  public static func resource(_ resource: ShopliveSDKCommon.Resource?) -> ShopliveSDKCommon.KF.Builder
+  public static func resource(_ resource: (any ShopliveSDKCommon.Resource)?) -> ShopliveSDKCommon.KF.Builder
   public static func url(_ url: Foundation.URL?, cacheKey: Swift.String? = nil) -> ShopliveSDKCommon.KF.Builder
-  public static func dataProvider(_ provider: ShopliveSDKCommon.ImageDataProvider?) -> ShopliveSDKCommon.KF.Builder
+  public static func dataProvider(_ provider: (any ShopliveSDKCommon.ImageDataProvider)?) -> ShopliveSDKCommon.KF.Builder
   public static func data(_ data: Foundation.Data?, cacheKey: Swift.String) -> ShopliveSDKCommon.KF.Builder
 }
 extension ShopliveSDKCommon.KF {
@@ -4514,7 +4617,7 @@ extension ShopliveSDKCommon.KF.Builder {
   public func set(to listItem: CarPlay.CPListItem) -> ShopliveSDKCommon.SLDownloadTask?
 }
 extension ShopliveSDKCommon.KF.Builder {
-  public func placeholder(_ placeholder: ShopliveSDKCommon.Placeholder?) -> Self
+  public func placeholder(_ placeholder: (any ShopliveSDKCommon.Placeholder)?) -> Self
   public func placeholder(_ image: ShopliveSDKCommon.KFCrossPlatformImage?) -> Self
 }
 extension ShopliveSDKCommon.KF.Builder {
@@ -4535,231 +4638,6 @@ extension ShopliveSDKCommon.KF {
     public let newRequest: Foundation.URLRequest
     public let completionHandler: (Foundation.URLRequest?) -> Swift.Void
   }
-}
-public struct SLWSTagAcceptOption : Swift.OptionSet {
-  public let rawValue: Swift.Int
-  public init(rawValue: Swift.Int)
-  public static let `return`: ShopliveSDKCommon.SLWSTagAcceptOption
-  public static let comma: ShopliveSDKCommon.SLWSTagAcceptOption
-  public static let space: ShopliveSDKCommon.SLWSTagAcceptOption
-  public typealias ArrayLiteralElement = ShopliveSDKCommon.SLWSTagAcceptOption
-  public typealias Element = ShopliveSDKCommon.SLWSTagAcceptOption
-  public typealias RawValue = Swift.Int
-}
-@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class SLWSTagsField : UIKit.UIScrollView {
-  @_Concurrency.MainActor(unsafe) final public let textField: ShopliveSDKCommon.SLBackspaceDetectingTextField
-  @_Concurrency.MainActor(unsafe) weak open var textDelegate: UIKit.UITextFieldDelegate?
-  @IBInspectable @_Concurrency.MainActor(unsafe) @objc override dynamic open var tintColor: UIKit.UIColor! {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var textColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var selectedColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var selectedTextColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var delimiter: Swift.String {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var isDelimiterVisible: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var shouldTokenizeAfterResigningFirstResponder: Swift.Bool
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var maxHeight: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var numberOfLines: Swift.Int {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var enableScrolling: Swift.Bool
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var cornerRadius: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var borderWidth: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var borderColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var layoutMargins: UIKit.UIEdgeInsets {
-    @objc get
-    @objc set
-  }
-  @available(*, deprecated, message: "use 'textField.textColor' directly.")
-  @_Concurrency.MainActor(unsafe) open var fieldTextColor: UIKit.UIColor? {
-    get
-    set
-  }
-  @available(iOS 10.0, *)
-  @available(*, deprecated, message: "use 'textField.fieldTextContentType' directly.")
-  @_Concurrency.MainActor(unsafe) open var fieldTextContentType: UIKit.UITextContentType! {
-    get
-    set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholder: Swift.String {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderFont: UIKit.UIFont? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderAlwaysVisible: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) open var font: UIKit.UIFont? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) open var keyboardAppearance: UIKit.UIKeyboardAppearance {
-    get
-    set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var readOnly: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) open var acceptTagOption: ShopliveSDKCommon.SLWSTagAcceptOption
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var contentInset: UIKit.UIEdgeInsets {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var spaceBetweenTags: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var spaceBetweenLines: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isFirstResponder: Swift.Bool {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) open var tags: [ShopliveSDKCommon.SLWSTag] {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) open var tagViews: [ShopliveSDKCommon.SLWSTagView]
-  @_Concurrency.MainActor(unsafe) open var onShouldAcceptTag: ((ShopliveSDKCommon.SLWSTagsField) -> Swift.Bool)?
-  @_Concurrency.MainActor(unsafe) open var onDidChangeText: ((ShopliveSDKCommon.SLWSTagsField, _ text: Swift.String?) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) open var onDidAddTag: ((ShopliveSDKCommon.SLWSTagsField, _ tag: ShopliveSDKCommon.SLWSTag) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) open var onDidRemoveTag: ((ShopliveSDKCommon.SLWSTagsField, _ tag: ShopliveSDKCommon.SLWSTag) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) open var onDidSelectTagView: ((ShopliveSDKCommon.SLWSTagsField, _ tag: ShopliveSDKCommon.SLWSTagView) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) open var onDidUnselectTagView: ((ShopliveSDKCommon.SLWSTagsField, _ tag: ShopliveSDKCommon.SLWSTagView) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) open var onValidateTag: ((ShopliveSDKCommon.SLWSTag, [ShopliveSDKCommon.SLWSTag]) -> Swift.Bool)?
-  @_Concurrency.MainActor(unsafe) open var onVerifyTag: ((ShopliveSDKCommon.SLWSTagsField, _ text: Swift.String) -> Swift.Bool)?
-  @_Concurrency.MainActor(unsafe) open var onDidChangeHeightTo: ((ShopliveSDKCommon.SLWSTagsField, _ height: CoreFoundation.CGFloat) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) open var useCloseButton: Swift.Bool
-  @_Concurrency.MainActor(unsafe) open var preferredMaxLayoutWidth: CoreFoundation.CGFloat {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
-  @_Concurrency.MainActor(unsafe) open var suggestions: [Swift.String]
-  @_Concurrency.MainActor(unsafe) open var caseSensitiveSuggestions: Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc deinit
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func willMove(toSuperview newSuperview: UIKit.UIView?)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) open func setCornerRadius(to cornerRadius: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) open func acceptCurrentTextAsTag()
-  @_Concurrency.MainActor(unsafe) open var isEditing: Swift.Bool {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) open func beginEditing()
-  @_Concurrency.MainActor(unsafe) open func endEditing()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func reloadInputViews()
-  @_Concurrency.MainActor(unsafe) open func addTags(_ tags: [Swift.String])
-  @_Concurrency.MainActor(unsafe) open func addTags(_ tags: [ShopliveSDKCommon.SLWSTag])
-  @_Concurrency.MainActor(unsafe) open func addTag(_ tag: Swift.String)
-  @_Concurrency.MainActor(unsafe) open func addTag(_ tag: ShopliveSDKCommon.SLWSTag)
-  @_Concurrency.MainActor(unsafe) open func removeTag(_ tag: Swift.String)
-  @_Concurrency.MainActor(unsafe) open func removeTag(_ tag: ShopliveSDKCommon.SLWSTag)
-  @_Concurrency.MainActor(unsafe) open func removeTagAtIndex(_ index: Swift.Int)
-  @_Concurrency.MainActor(unsafe) open func removeTags()
-  @discardableResult
-  @_Concurrency.MainActor(unsafe) open func tokenizeTextFieldText() -> ShopliveSDKCommon.SLWSTag?
-  @objc @_Concurrency.MainActor(unsafe) open func onTextFieldDidChange(_ sender: Swift.AnyObject)
-  @_Concurrency.MainActor(unsafe) open func selectNextTag()
-  @_Concurrency.MainActor(unsafe) open func selectPrevTag()
-  @_Concurrency.MainActor(unsafe) open func selectTagView(_ tagView: ShopliveSDKCommon.SLWSTagView, animated: Swift.Bool = false)
-  @_Concurrency.MainActor(unsafe) open func unselectAllTagViewsAnimated(_ animated: Swift.Bool = false)
-}
-extension ShopliveSDKCommon.SLWSTagsField {
-  @available(*, deprecated, message: "use 'textField.keyboardType' directly.")
-  @_Concurrency.MainActor(unsafe) public var keyboardType: UIKit.UIKeyboardType {
-    get
-    set
-  }
-  @available(*, deprecated, message: "use 'textField.returnKeyType' directly.")
-  @_Concurrency.MainActor(unsafe) public var returnKeyType: UIKit.UIReturnKeyType {
-    get
-    set
-  }
-  @available(*, deprecated, message: "use 'textField.spellCheckingType' directly.")
-  @_Concurrency.MainActor(unsafe) public var spellCheckingType: UIKit.UITextSpellCheckingType {
-    get
-    set
-  }
-  @available(*, deprecated, message: "use 'textField.autocapitalizationType' directly.")
-  @_Concurrency.MainActor(unsafe) public var autocapitalizationType: UIKit.UITextAutocapitalizationType {
-    get
-    set
-  }
-  @available(*, deprecated, message: "use 'textField.autocorrectionType' directly.")
-  @_Concurrency.MainActor(unsafe) public var autocorrectionType: UIKit.UITextAutocorrectionType {
-    get
-    set
-  }
-  @available(*, deprecated, message: "use 'textField.enablesReturnKeyAutomatically' directly.")
-  @_Concurrency.MainActor(unsafe) public var enablesReturnKeyAutomatically: Swift.Bool {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var text: Swift.String? {
-    get
-    set
-  }
-  @available(*, deprecated, message: "Use 'inputFieldAccessoryView' instead")
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var inputAccessoryView: UIKit.UIView? {
-    @objc get
-  }
-  @_Concurrency.MainActor(unsafe) open var inputFieldAccessoryView: UIKit.UIView? {
-    get
-    set
-  }
-}
-extension ShopliveSDKCommon.SLWSTagsField : UIKit.UITextFieldDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func textFieldShouldBeginEditing(_ textField: UIKit.UITextField) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func textFieldShouldEndEditing(_ textField: UIKit.UITextField) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
-}
-extension ShopliveSDKCommon.SLWSTagsField {
-  @_Concurrency.MainActor(unsafe) public static func == (lhs: UIKit.UITextField, rhs: ShopliveSDKCommon.SLWSTagsField) -> Swift.Bool
 }
 public enum NVActivityIndicatorType : Swift.CaseIterable {
   case blank
@@ -4865,6 +4743,9 @@ extension Foundation.URL : ShopliveSDKCommon.Resource {
     get
   }
 }
+extension Foundation.NSMutableDictionary {
+  public func toJson() -> Swift.String?
+}
 extension CoreFoundation.CGFloat {
   public var toInt: Swift.Int {
     get
@@ -4944,7 +4825,7 @@ public enum IndicatorType {
   case none
   case activity
   case image(imageData: Foundation.Data)
-  case custom(indicator: ShopliveSDKCommon.Indicator)
+  case custom(indicator: any ShopliveSDKCommon.Indicator)
 }
 public protocol Indicator {
   func startAnimatingView()
@@ -4964,25 +4845,6 @@ extension ShopliveSDKCommon.Indicator {
   }
   public func sizeStrategy(in imageView: ShopliveSDKCommon.KFCrossPlatformImageView) -> ShopliveSDKCommon.IndicatorSizeStrategy
 }
-public protocol Then {
-}
-extension ShopliveSDKCommon.Then {
-  @inlinable public func `do`(_ block: (Self) throws -> Swift.Void) rethrows {
-    try block(self)
-  }
-}
-extension ObjectiveC.NSObject : ShopliveSDKCommon.Then {
-}
-extension Swift.Array : ShopliveSDKCommon.Then {
-}
-extension Swift.Dictionary : ShopliveSDKCommon.Then {
-}
-extension Swift.Set : ShopliveSDKCommon.Then {
-}
-extension Foundation.JSONDecoder : ShopliveSDKCommon.Then {
-}
-extension Foundation.JSONEncoder : ShopliveSDKCommon.Then {
-}
 public typealias ExecutionQueue = ShopliveSDKCommon.CallbackQueue
 public enum CallbackQueue {
   case mainAsync
@@ -4995,8 +4857,8 @@ public enum Source {
   public enum Identifier {
     public typealias Value = Swift.UInt
   }
-  case network(ShopliveSDKCommon.Resource)
-  case provider(ShopliveSDKCommon.ImageDataProvider)
+  case network(any ShopliveSDKCommon.Resource)
+  case provider(any ShopliveSDKCommon.ImageDataProvider)
   public var cacheKey: Swift.String {
     get
   }
@@ -5048,6 +4910,10 @@ extension Swift.Optional : ShopliveSDKCommon.OptionalProtocol {
     get
   }
 }
+@_hasMissingDesignatedInitializers public class ShopLiveLogger {
+  public static func debugLog(_ log: Swift.String)
+  @objc deinit
+}
 public struct ImageProgressive {
   public enum UpdatingStrategy {
     case `default`
@@ -5068,6 +4934,22 @@ extension UIKit.UIDeviceOrientation {
     get
   }
 }
+extension CoreFoundation.CGPoint {
+  public var transpolate: CoreFoundation.CGPoint {
+    get
+  }
+}
+extension UIKit.UIWindow {
+  @_Concurrency.MainActor(unsafe) public static var mainWindowFrame: UIKit.UIWindow {
+    get
+  }
+}
+@objc public protocol ShopLivePermissionHandler {
+  @objc optional func handleCameraPermission(status: ShopliveSDKCommon.PermissionStatus)
+  @objc optional func handleMicroPhonePermission(status: ShopliveSDKCommon.PermissionStatus)
+  @objc optional func handleMediaLibraryUsagePermission(status: ShopliveSDKCommon.PermissionStatus)
+  @objc optional func handlePhotoLibraryUsagePermission(status: ShopliveSDKCommon.PermissionStatus)
+}
 extension ShopliveSDKCommon.URLEncoding.Destination : Swift.Equatable {}
 extension ShopliveSDKCommon.URLEncoding.Destination : Swift.Hashable {}
 extension ShopliveSDKCommon.URLEncoding.BoolEncoding : Swift.Equatable {}
@@ -5076,6 +4958,8 @@ extension ShopliveSDKCommon.JSONEncoding.Error : Swift.Equatable {}
 extension ShopliveSDKCommon.JSONEncoding.Error : Swift.Hashable {}
 extension ShopliveSDKCommon.ImageFormat : Swift.Equatable {}
 extension ShopliveSDKCommon.ImageFormat : Swift.Hashable {}
+extension ShopliveSDKCommon.UIScreenDirection : Swift.Equatable {}
+extension ShopliveSDKCommon.UIScreenDirection : Swift.Hashable {}
 @available(*, unavailable, renamed: "Connection")
 extension ShopliveSDKCommon.SLReachability.NetworkStatus : Swift.Equatable {}
 @available(*, unavailable, renamed: "Connection")
@@ -5099,6 +4983,8 @@ extension ShopliveSDKCommon.NetworkMonitor.ConnectionType : Swift.Hashable {}
 extension ShopliveSDKCommon.DeflateRequestCompressor.DuplicateHeaderBehavior : Swift.Equatable {}
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension ShopliveSDKCommon.DeflateRequestCompressor.DuplicateHeaderBehavior : Swift.Hashable {}
+extension ShopliveSDKCommon.ShopLiveViewLog.LogType : Swift.Equatable {}
+extension ShopliveSDKCommon.ShopLiveViewLog.LogType : Swift.Hashable {}
 extension ShopliveSDKCommon.PanDirection : Swift.Equatable {}
 extension ShopliveSDKCommon.PanDirection : Swift.Hashable {}
 extension ShopliveSDKCommon.PanDirection : Swift.RawRepresentable {}
@@ -5117,6 +5003,9 @@ extension ShopliveSDKCommon.KeychainItemAccessibility : Swift.Equatable {}
 extension ShopliveSDKCommon.KeychainItemAccessibility : Swift.Hashable {}
 extension ShopliveSDKCommon.NetworkReachabilityManager.NetworkReachabilityStatus.ConnectionType : Swift.Equatable {}
 extension ShopliveSDKCommon.NetworkReachabilityManager.NetworkReachabilityStatus.ConnectionType : Swift.Hashable {}
+extension ShopliveSDKCommon.ShopLiveHapticStyle : Swift.Equatable {}
+extension ShopliveSDKCommon.ShopLiveHapticStyle : Swift.Hashable {}
+extension ShopliveSDKCommon.ShopLiveHapticStyle : Swift.RawRepresentable {}
 extension ShopliveSDKCommon.ContentMode : Swift.Equatable {}
 extension ShopliveSDKCommon.ContentMode : Swift.Hashable {}
 extension ShopliveSDKCommon.Request.State : Swift.Equatable {}
