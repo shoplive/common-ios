@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ShopliveSDKCommon-Swift.h</key>
 		<data>
-		Yu3qsg75EUVawrF7SFirHDNLOiE=
+		Of5/5RXVAtYjH23bkHV6KqYRMKk=
 		</data>
 		<key>Headers/matrix_common_ios.h</key>
 		<data>
@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		KL/+ISJ3yFSYvKdbYxbh6Jau+zI=
+		50bSyjbFMkr89EuJykXaGJZdA74=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		MJODATiXPZnfjNYBq5dWUtY5UOc=
+		geIOWPLZ89A225beVnBRdX09nP0=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		xVdPUskSxUxOivZ6dksk08Y0KW4=
+		jc7QUpvfm0/MNSF0j1RPc6mwTac=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		MarAeQ5/MjEa+uKWSKrGxTDan60=
+		oGISFdgAgHdWaOXrVP2bNULF1wk=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		xVdPUskSxUxOivZ6dksk08Y0KW4=
+		jc7QUpvfm0/MNSF0j1RPc6mwTac=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		bKuzS8Y/kbff3KEDDO7REncTjEQ=
+		60h3jk6Dr94ZntKjYLXDbMoGO2Y=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jHns/taIRqsCipnKWE7j3W9nK+gCv8hswf2g4q7SrCI=
+			yop/QdlbzVoIKEc7cka3jINjboRbS715mxZji3A6FIs=
 			</data>
 		</dict>
 		<key>Headers/matrix_common_ios.h</key>
@@ -61,35 +61,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wy57byNjkwuXVlYIWFlM6mqy9WKX0ENYW2jdgdlYPC8=
+			w0qFJv63hiNAvIhoBOvNUdDodRn+OKBD5Hflbsz5grQ=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HGnXHJJqLz5yq2dgoSqba/mjMi9WMpU/ytUgLXfPQRA=
+			NmtSHbssCLkRyNzXfSHBtfPp3U1M9m8ik6T2VmEu3UU=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RoOWfguIw7NlH7myrI8ugfxXAjd6n5r76QSp08B7o80=
+			1OeKMfkhxIFXInuo2WSKZTxLLCPEC/hXiPNU2E0NcLU=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HGnXHJJqLz5yq2dgoSqba/mjMi9WMpU/ytUgLXfPQRA=
+			NmtSHbssCLkRyNzXfSHBtfPp3U1M9m8ik6T2VmEu3UU=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+lciFv7eEyN4w60wIEOsuncidLDr9TlTzFuI38QolKc=
+			eWN46kRBY+ZXZqwrSeRawjIOAmX3eymUt5XEKurEKPA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
