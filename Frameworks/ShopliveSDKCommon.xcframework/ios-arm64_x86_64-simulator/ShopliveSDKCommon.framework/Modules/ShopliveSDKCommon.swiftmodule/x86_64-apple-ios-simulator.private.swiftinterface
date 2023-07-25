@@ -918,7 +918,7 @@ extension ShopliveSDKCommon.SLKingfisherWrapper where Base == CoreFoundation.CGS
   @objc deinit
 }
 extension ShopliveSDKCommon.ShopLiveCommon {
-  final public var sdkVersion: Swift.String {
+  public static var sdkVersion: Swift.String {
     get
   }
 }
@@ -1410,6 +1410,8 @@ public struct CommonKeys {
   public static let x_sl_studio_os_version: Swift.String
   public static let x_sl_studio_app_version: Swift.String
   public static let x_sl_studio_sdk_version: Swift.String
+  public static let x_sl_player_app_version: Swift.String
+  public static let x_sl_player_sdk_version: Swift.String
   public static let x_sl_guest_uid: Swift.String
   public static let x_sl_ad_id: Swift.String
   public static let Bearer: Swift.String
@@ -2944,6 +2946,8 @@ extension ShopliveSDKCommon.APIDefinition {
   public func rawRequest(handler: ((Swift.Result<Self.ResultType, any Swift.Error>) -> ())? = nil) -> ShopliveSDKCommon.APIDefinitionCancellable
   @discardableResult
   public func request(handler: ((Swift.Result<Self.ResultType, any Swift.Error>) -> ())? = nil) -> ShopliveSDKCommon.APIDefinitionCancellable
+  @discardableResult
+  public func requestWithOutSDKPath(handler: ((Swift.Result<Self.ResultType, any Swift.Error>) -> ())? = nil) -> ShopliveSDKCommon.APIDefinitionCancellable
   @discardableResult
   public func upload(handler: ((Swift.Result<Self.ResultType, any Swift.Error>) -> ())? = nil) -> ShopliveSDKCommon.APIDefinitionCancellable
 }
