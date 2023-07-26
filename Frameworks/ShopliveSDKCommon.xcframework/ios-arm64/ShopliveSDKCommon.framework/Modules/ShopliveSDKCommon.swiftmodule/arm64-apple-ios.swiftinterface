@@ -906,6 +906,9 @@ extension ShopliveSDKCommon.SLKingfisherWrapper where Base == CoreFoundation.CGS
   public func constrainedRect(for size: CoreFoundation.CGSize, anchor: CoreFoundation.CGPoint) -> CoreFoundation.CGRect
 }
 @_hasMissingDesignatedInitializers final public class ShopLiveCommon {
+  @objc deinit
+}
+extension ShopliveSDKCommon.ShopLiveCommon {
   public static func setUserJWT(userJWT: Swift.String?)
   public static func getUserJWT() -> Swift.String?
   public static func setAdId(adId: Swift.String?)
@@ -915,7 +918,20 @@ extension ShopliveSDKCommon.SLKingfisherWrapper where Base == CoreFoundation.CGS
   public static func setGuestUid(guestUid: Swift.String?)
   public static func getGuestUid() -> Swift.String?
   public static func clearAuth()
-  @objc deinit
+}
+extension ShopliveSDKCommon.ShopLiveCommon {
+  public static func setUserId(userId: Swift.String?)
+  public static func getUserId() -> Swift.String?
+  public static func setName(name: Swift.String?)
+  public static func getName() -> Swift.String?
+  public static func setAge(age: Swift.Int?)
+  public static func getAge() -> Swift.Int?
+  public static func setGender(gender: ShopliveSDKCommon.ShopliveCommonUserGender?)
+  public static func getGender() -> ShopliveSDKCommon.ShopliveCommonUserGender?
+  public static func setUserScore(userScore: Swift.Int?)
+  public static func getUserScore() -> Swift.Int?
+  public static func setCustom(custom: [Swift.String : Any]?)
+  public static func getCustom() -> [Swift.String : Any]?
 }
 extension ShopliveSDKCommon.ShopLiveCommon {
   public static var sdkVersion: Swift.String {
@@ -4302,6 +4318,8 @@ extension Foundation.URLSessionConfiguration {
     set
   }
 }
+public struct ShopLiveCommonAuth {
+}
 public enum MemoryStorage {
   public class Backend<T> where T : ShopliveSDKCommon.CacheCostCalculable {
     public var config: ShopliveSDKCommon.MemoryStorage.Config {
@@ -4590,6 +4608,18 @@ open class KeychainWrapper {
   open func removeAllKeys() -> Swift.Bool
   open class func wipeKeychain()
   @objc deinit
+}
+public struct ShopLiveCommonUser {
+}
+public enum ShopliveCommonUserGender : Swift.String {
+  case male
+  case female
+  case netural
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public enum KF {
   public static func source(_ source: ShopliveSDKCommon.Source?) -> ShopliveSDKCommon.KF.Builder
@@ -5024,6 +5054,9 @@ extension ShopliveSDKCommon.PermissionError : Swift.Equatable {}
 extension ShopliveSDKCommon.PermissionError : Swift.Hashable {}
 extension ShopliveSDKCommon.PermissionManager.Request : Swift.Equatable {}
 extension ShopliveSDKCommon.PermissionManager.Request : Swift.Hashable {}
+extension ShopliveSDKCommon.ShopliveCommonUserGender : Swift.Equatable {}
+extension ShopliveSDKCommon.ShopliveCommonUserGender : Swift.Hashable {}
+extension ShopliveSDKCommon.ShopliveCommonUserGender : Swift.RawRepresentable {}
 extension ShopliveSDKCommon.NVActivityIndicatorType : Swift.Equatable {}
 extension ShopliveSDKCommon.NVActivityIndicatorType : Swift.Hashable {}
 extension ShopliveSDKCommon.URLEncodedFormParameterEncoder.Destination : Swift.Equatable {}
