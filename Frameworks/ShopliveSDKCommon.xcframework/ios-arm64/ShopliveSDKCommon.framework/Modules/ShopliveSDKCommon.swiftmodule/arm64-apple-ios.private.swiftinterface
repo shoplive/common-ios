@@ -910,6 +910,7 @@ extension ShopliveSDKCommon.SLKingfisherWrapper where Base == CoreFoundation.CGS
 }
 extension ShopliveSDKCommon.ShopLiveCommon {
   public static func setUserJWT(userJWT: Swift.String?)
+  public static func setUserJWT(accessKey: Swift.String, user: ShopliveSDKCommon.ShopLiveCommonUser)
   public static func getUserJWT() -> Swift.String?
   public static func setAdId(adId: Swift.String?)
   public static func getAdId() -> Swift.String?
@@ -917,21 +918,8 @@ extension ShopliveSDKCommon.ShopLiveCommon {
   public static func getAccessKey() -> Swift.String?
   public static func setGuestUid(guestUid: Swift.String?)
   public static func getGuestUid() -> Swift.String?
+  public static func getUser() -> ShopliveSDKCommon.ShopLiveCommonUser?
   public static func clearAuth()
-}
-extension ShopliveSDKCommon.ShopLiveCommon {
-  public static func setUserId(userId: Swift.String?)
-  public static func getUserId() -> Swift.String?
-  public static func setName(name: Swift.String?)
-  public static func getName() -> Swift.String?
-  public static func setAge(age: Swift.Int?)
-  public static func getAge() -> Swift.Int?
-  public static func setGender(gender: ShopliveSDKCommon.ShopliveCommonUserGender?)
-  public static func getGender() -> ShopliveSDKCommon.ShopliveCommonUserGender?
-  public static func setUserScore(userScore: Swift.Int?)
-  public static func getUserScore() -> Swift.Int?
-  public static func setCustom(custom: [Swift.String : Any]?)
-  public static func getCustom() -> [Swift.String : Any]?
 }
 extension ShopliveSDKCommon.ShopLiveCommon {
   public static var sdkVersion: Swift.String {
@@ -4610,6 +4598,13 @@ open class KeychainWrapper {
   @objc deinit
 }
 public struct ShopLiveCommonUser {
+  public var userId: Swift.String
+  public var name: Swift.String?
+  public var age: Swift.Int?
+  public var gender: ShopliveSDKCommon.ShopliveCommonUserGender?
+  public var userScore: Swift.Int?
+  public var custom: [Swift.String : Any]?
+  public init(userId: Swift.String, name: Swift.String? = nil, age: Swift.Int? = nil, gender: ShopliveSDKCommon.ShopliveCommonUserGender? = nil, userScore: Swift.Int? = nil, custom: [Swift.String : Any]? = nil)
 }
 public enum ShopliveCommonUserGender : Swift.String {
   case male
