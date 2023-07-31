@@ -286,94 +286,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
-/// Class which implements the various <code>URLSessionDelegate</code> methods to connect various Alamofire features.
-SWIFT_CLASS("_TtC17ShopliveSDKCommon17AFSessionDelegate")
-@interface AFSessionDelegate : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@class NSURLSession;
-
-@interface AFSessionDelegate (SWIFT_EXTENSION(ShopliveSDKCommon)) <NSURLSessionDelegate>
-- (void)URLSession:(NSURLSession * _Nonnull)session didBecomeInvalidWithError:(NSError * _Nullable)error;
-@end
-
-@class NSURLSessionDataTask;
-@class NSData;
-@class NSCachedURLResponse;
-
-@interface AFSessionDelegate (SWIFT_EXTENSION(ShopliveSDKCommon)) <NSURLSessionDataDelegate>
-- (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask didReceiveData:(NSData * _Nonnull)data;
-- (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask willCacheResponse:(NSCachedURLResponse * _Nonnull)proposedResponse completionHandler:(void (^ _Nonnull)(NSCachedURLResponse * _Nullable))completionHandler;
-@end
-
-@class NSURLSessionDownloadTask;
-@class NSURL;
-
-@interface AFSessionDelegate (SWIFT_EXTENSION(ShopliveSDKCommon)) <NSURLSessionDownloadDelegate>
-- (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes;
-- (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite;
-- (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didFinishDownloadingToURL:(NSURL * _Nonnull)location;
-@end
-
-@class NSURLSessionTask;
-@class NSURLAuthenticationChallenge;
-@class NSURLCredential;
-@class NSInputStream;
-@class NSHTTPURLResponse;
-@class NSURLRequest;
-@class NSURLSessionTaskMetrics;
-
-@interface AFSessionDelegate (SWIFT_EXTENSION(ShopliveSDKCommon)) <NSURLSessionTaskDelegate>
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task needNewBodyStream:(void (^ _Nonnull)(NSInputStream * _Nullable))completionHandler;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task willPerformHTTPRedirection:(NSHTTPURLResponse * _Nonnull)response newRequest:(NSURLRequest * _Nonnull)request completionHandler:(void (^ _Nonnull)(NSURLRequest * _Nullable))completionHandler;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didFinishCollectingMetrics:(NSURLSessionTaskMetrics * _Nonnull)metrics;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
-- (void)URLSession:(NSURLSession * _Nonnull)session taskIsWaitingForConnectivity:(NSURLSessionTask * _Nonnull)task SWIFT_AVAILABILITY(watchos,introduced=4.0) SWIFT_AVAILABILITY(tvos,introduced=11.0) SWIFT_AVAILABILITY(ios,introduced=11.0) SWIFT_AVAILABILITY(macos,introduced=10.13);
-@end
-
-
-
-@class UIImage;
-@class CALayer;
-@class NSCoder;
-
-/// Represents a subclass of <code>UIImageView</code> for displaying animated image.
-/// Different from showing animated image in a normal <code>UIImageView</code> (which load all frames at one time),
-/// <code>AnimatedImageView</code> only tries to load several frames (defined by <code>framePreloadCount</code>) to reduce memory usage.
-/// It provides a tradeoff between memory usage and CPU time. If you have a memory issue when using a normal image
-/// view to load GIF data, you could give this class a try.
-/// SLKingfisher supports setting GIF animated data to either <code>UIImageView</code> and <code>AnimatedImageView</code> out of box. So
-/// it would be fairly easy to switch between them.
-SWIFT_CLASS("_TtC17ShopliveSDKCommon17AnimatedImageView")
-@interface AnimatedImageView : UIImageView
-@property (nonatomic, strong) UIImage * _Nullable image;
-@property (nonatomic, getter=isHighlighted) BOOL highlighted;
-@property (nonatomic, readonly, getter=isAnimating) BOOL animating;
-/// Starts the animation.
-- (void)startAnimating;
-/// Stops the animation.
-- (void)stopAnimating;
-- (void)displayLayer:(CALayer * _Nonnull)layer;
-- (void)didMoveToWindow;
-- (void)didMoveToSuperview;
-- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-
-
-
-
-
-
 
 
 @class NSNotification;
@@ -395,6 +307,7 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon11LeakAvoider")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class NSCoder;
 
 SWIFT_CLASS("_TtC17ShopliveSDKCommon20LoadingIndicatorView")
 @interface LoadingIndicatorView : UIView
@@ -403,10 +316,6 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon20LoadingIndicatorView")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
-
-
-
-
 
 
 
@@ -536,23 +445,6 @@ SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon23SLWebviewScrollDelegate_")
 - (void)scrollViewDidScroll;
 @end
 
-
-SWIFT_CLASS_NAMED("SessionDelegate")
-@interface KFSessionDelegate : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class NSURLResponse;
-
-@interface KFSessionDelegate (SWIFT_EXTENSION(ShopliveSDKCommon)) <NSURLSessionDataDelegate>
-- (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask didReceiveResponse:(NSURLResponse * _Nonnull)response completionHandler:(void (^ _Nonnull)(NSURLSessionResponseDisposition))completionHandler;
-- (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask didReceiveData:(NSData * _Nonnull)data;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
-- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task willPerformHTTPRedirection:(NSHTTPURLResponse * _Nonnull)response newRequest:(NSURLRequest * _Nonnull)request completionHandler:(void (^ _Nonnull)(NSURLRequest * _Nullable))completionHandler;
-@end
-
 @class UIApplication;
 @class UIWindow;
 
@@ -587,14 +479,6 @@ SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon25ShopLivePermissionHandler_")
 
 
 
-
-
-
-
-
-
-
-
 @interface UINavigationController (SWIFT_EXTENSION(ShopliveSDKCommon))
 @property (nonatomic, readonly, strong) UIViewController * _Nullable childViewControllerForStatusBarStyle;
 @end
@@ -616,8 +500,6 @@ SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon25ShopLivePermissionHandler_")
 @interface UIViewController (SWIFT_EXTENSION(ShopliveSDKCommon))
 - (void)shopliveHideKeyboard;
 @end
-
-
 
 
 
