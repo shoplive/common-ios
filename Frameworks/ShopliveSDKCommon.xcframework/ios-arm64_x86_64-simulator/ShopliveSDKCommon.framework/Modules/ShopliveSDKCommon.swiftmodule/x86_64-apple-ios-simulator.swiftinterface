@@ -860,10 +860,11 @@ extension UIKit.UIFont {
   public func lineHeightMultiple(_ lineHeight: CoreFoundation.CGFloat = 20) -> CoreFoundation.CGFloat
 }
 public enum ShopLiveNetworkError : Swift.Error {
-  case urlComonentError(Swift.String)
+  case urlComponentError(Swift.String)
   case validateFailedError(Swift.Int)
   case jsonDecodeFailed
   case invalidUrl
+  public func getDescription() -> Swift.String
 }
 public protocol BaseResponsable : Swift.Decodable, Swift.Encodable {
   var _s: Swift.Int? { get set }

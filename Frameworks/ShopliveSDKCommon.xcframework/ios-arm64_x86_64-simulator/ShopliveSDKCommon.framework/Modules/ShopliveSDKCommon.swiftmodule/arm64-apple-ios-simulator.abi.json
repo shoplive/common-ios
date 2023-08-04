@@ -14742,8 +14742,8 @@
         "children": [
           {
             "kind": "Var",
-            "name": "urlComonentError",
-            "printedName": "urlComonentError",
+            "name": "urlComponentError",
+            "printedName": "urlComponentError",
             "children": [
               {
                 "kind": "TypeFunc",
@@ -14786,8 +14786,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:17ShopliveSDKCommon20ShopLiveNetworkErrorO011urlComonentF0yACSScACmF",
-            "mangledName": "$s17ShopliveSDKCommon20ShopLiveNetworkErrorO011urlComonentF0yACSScACmF",
+            "usr": "s:17ShopliveSDKCommon20ShopLiveNetworkErrorO012urlComponentF0yACSScACmF",
+            "mangledName": "$s17ShopliveSDKCommon20ShopLiveNetworkErrorO012urlComponentF0yACSScACmF",
             "moduleName": "ShopliveSDKCommon"
           },
           {
@@ -14913,6 +14913,27 @@
             "usr": "s:17ShopliveSDKCommon20ShopLiveNetworkErrorO10invalidUrlyA2CmF",
             "mangledName": "$s17ShopliveSDKCommon20ShopLiveNetworkErrorO10invalidUrlyA2CmF",
             "moduleName": "ShopliveSDKCommon"
+          },
+          {
+            "kind": "Function",
+            "name": "getDescription",
+            "printedName": "getDescription()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ShopliveSDKCommon20ShopLiveNetworkErrorO14getDescriptionSSyF",
+            "mangledName": "$s17ShopliveSDKCommon20ShopLiveNetworkErrorO14getDescriptionSSyF",
+            "moduleName": "ShopliveSDKCommon",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Enum",
@@ -51520,540 +51541,582 @@
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
+      "kind": "StringLiteral",
+      "offset": 408,
+      "length": 28,
+      "value": "\"urlComponentError : \""
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
+      "kind": "StringLiteral",
+      "offset": 435,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
+      "kind": "StringLiteral",
+      "offset": 500,
+      "length": 41,
+      "value": "\"validateFailedError : statusCode \""
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
+      "kind": "StringLiteral",
+      "offset": 540,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
+      "kind": "StringLiteral",
+      "offset": 593,
+      "length": 23,
+      "value": "\"jsonDecodeFailedError\""
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
+      "kind": "StringLiteral",
+      "offset": 662,
+      "length": 17,
+      "value": "\"invalidUrlError\""
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "IntegerLiteral",
-      "offset": 547,
+      "offset": 964,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 875,
+      "offset": 1292,
       "length": 5,
       "value": "\"GET\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 908,
+      "offset": 1325,
       "length": 6,
       "value": "\"POST\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 941,
+      "offset": 1358,
       "length": 5,
       "value": "\"PUT\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 976,
+      "offset": 1393,
       "length": 7,
       "value": "\"DELTE\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 1640,
+      "offset": 2057,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "IntegerLiteral",
-      "offset": 1805,
+      "offset": 2222,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "Dictionary",
-      "offset": 1868,
+      "offset": 2285,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "BooleanLiteral",
-      "offset": 2002,
+      "offset": 2419,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "Dictionary",
-      "offset": 2076,
+      "offset": 2493,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "BooleanLiteral",
-      "offset": 2410,
+      "offset": 2827,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 2724,
+      "offset": 3141,
       "length": 26,
       "value": "\"\/sdk\/\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 2749,
+      "offset": 3166,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 2813,
+      "offset": 3230,
       "length": 22,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 2834,
+      "offset": 3251,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 2977,
+      "offset": 3394,
       "length": 15,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 2991,
+      "offset": 3408,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 3056,
+      "offset": 3473,
       "length": 3,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 3150,
+      "offset": 3567,
       "length": 13,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 3162,
+      "offset": 3579,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 3376,
+      "offset": 3794,
       "length": 30,
       "value": "\"failed to make urlComponents\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "Array",
-      "offset": 3561,
+      "offset": 3979,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "Dictionary",
-      "offset": 3610,
+      "offset": 4028,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "Array",
-      "offset": 4582,
+      "offset": 5000,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "IntegerLiteral",
-      "offset": 5120,
+      "offset": 5538,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "IntegerLiteral",
-      "offset": 5126,
+      "offset": 5544,
       "length": 3,
       "value": "299"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "IntegerLiteral",
-      "offset": 5336,
+      "offset": 5754,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 6385,
+      "offset": 6803,
       "length": 31,
       "value": "\"Boundary-\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 6415,
+      "offset": 6833,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 6438,
+      "offset": 6856,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 6456,
+      "offset": 6874,
       "length": 43,
       "value": "\"multipart\/form-data; boundary=\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 6498,
+      "offset": 6916,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 6641,
+      "offset": 7059,
       "length": 6,
       "value": "\"POST\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "IntegerLiteral",
-      "offset": 7180,
+      "offset": 7598,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "IntegerLiteral",
-      "offset": 7186,
+      "offset": 7604,
       "length": 3,
       "value": "299"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "IntegerLiteral",
-      "offset": 7396,
+      "offset": 7814,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 8175,
+      "offset": 8593,
       "length": 6,
       "value": "\"\r\n\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 8211,
+      "offset": 8629,
       "length": 19,
       "value": "\"--\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 8225,
+      "offset": 8643,
       "length": 1,
       "value": "\"\r\n\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "Dictionary",
-      "offset": 8282,
+      "offset": 8700,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 8372,
+      "offset": 8790,
       "length": 73,
       "value": "\"Content-Disposition: form-data; name=\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 8418,
+      "offset": 8836,
       "length": 1,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 8444,
+      "offset": 8862,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 8491,
+      "offset": 8909,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 8500,
+      "offset": 8918,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 8512,
+      "offset": 8930,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 8607,
+      "offset": 9025,
       "length": 15,
       "value": "\"sessionSecret\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 8721,
+      "offset": 9139,
       "length": 80,
       "value": "\"Content-Disposition: form-data; name=\"sessionSecret\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 8800,
+      "offset": 9218,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 8847,
+      "offset": 9265,
       "length": 30,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 8864,
+      "offset": 9282,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 8876,
+      "offset": 9294,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 8972,
+      "offset": 9390,
       "length": 7,
       "value": "\"video\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 9187,
+      "offset": 9605,
       "length": 86,
       "value": "\"Content-Disposition: form-data; name=\"video\"; filename=\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 9258,
+      "offset": 9676,
       "length": 1,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 9272,
+      "offset": 9690,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 9319,
+      "offset": 9737,
       "length": 49,
       "value": "\"Content-Type: video\/mp4\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 9367,
+      "offset": 9785,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 9740,
+      "offset": 10158,
       "length": 7,
       "value": "\"image\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 9843,
+      "offset": 10261,
       "length": 83,
       "value": "\"Content-Disposition: form-data; name=\"image\"; filename=\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 9911,
+      "offset": 10329,
       "length": 1,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 9925,
+      "offset": 10343,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 9972,
+      "offset": 10390,
       "length": 50,
       "value": "\"Content-Type: image\/jpeg\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10021,
+      "offset": 10439,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10373,
+      "offset": 10791,
       "length": 29,
       "value": "\"--\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10387,
+      "offset": 10805,
       "length": 2,
       "value": "\"--\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10401,
+      "offset": 10819,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "Dictionary",
-      "offset": 10562,
+      "offset": 10980,
       "length": 58,
       "value": "[(\"Content-Type\", \"application\/json\")]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10749,
+      "offset": 11167,
       "length": 17,
       "value": "\"Bearer \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10765,
+      "offset": 11183,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "Dictionary",
-      "offset": 11205,
+      "offset": 11623,
       "length": 58,
       "value": "[(\"Content-Type\", \"application\/json\")]"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 11392,
+      "offset": 11810,
       "length": 17,
       "value": "\"Bearer \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 11408,
+      "offset": 11826,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 11919,
+      "offset": 12337,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 12012,
+      "offset": 12430,
       "length": 8,
       "value": "\"Bearer\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 12028,
+      "offset": 12446,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 12151,
+      "offset": 12569,
       "length": 16,
       "value": "\"x-sl-guest-uid\""
     },
