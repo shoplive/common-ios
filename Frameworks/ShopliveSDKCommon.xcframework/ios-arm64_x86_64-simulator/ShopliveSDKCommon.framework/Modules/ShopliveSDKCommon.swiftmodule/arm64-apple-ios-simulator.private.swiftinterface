@@ -338,6 +338,7 @@ extension ShopliveSDKCommon.ShopLiveCommon {
   public static func getGuestUid() -> Swift.String?
   public static func getUser() -> ShopliveSDKCommon.ShopLiveCommonUser?
   public static func clearAuth()
+  public static func isLoggedIn() -> Swift.Bool
 }
 extension ShopliveSDKCommon.ShopLiveCommon {
   public static var sdkVersion: Swift.String {

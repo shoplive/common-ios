@@ -4570,6 +4570,30 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "isLoggedIn",
+            "printedName": "isLoggedIn()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ShopliveSDKCommon14ShopLiveCommonC10isLoggedInSbyFZ",
+            "mangledName": "$s17ShopliveSDKCommon14ShopLiveCommonC10isLoggedInSbyFZ",
+            "moduleName": "ShopliveSDKCommon",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Var",
             "name": "sdkVersion",
             "printedName": "sdkVersion",
@@ -46081,8 +46105,22 @@
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/ShopliveSDKCommon.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1993,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/ShopliveSDKCommon.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2001,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1987,
+      "offset": 2099,
       "length": 7,
       "value": "\"1.4.5\""
     },
