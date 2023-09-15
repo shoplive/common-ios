@@ -323,20 +323,28 @@ extension UIKit.UIView {
   }
   @_Concurrency.MainActor(unsafe) public func addBorder(toSide side: UIKit.UIView.ViewSide, withColor color: CoreGraphics.CGColor, andThickness thickness: CoreFoundation.CGFloat)
 }
+public protocol ShopLiveCommonDelegate : ObjectiveC.NSObject {
+  var identifier: Swift.String { get }
+  func onChangedShopLiveUserJWT(to: Swift.String?)
+  func onChangeShopLiveUser(to: ShopliveSDKCommon.ShopLiveCommonUser?)
+}
 @_hasMissingDesignatedInitializers final public class ShopLiveCommon {
+  public static func setDelegate(delegate: any ShopliveSDKCommon.ShopLiveCommonDelegate)
+  public static func removeDelegate(delegate: any ShopliveSDKCommon.ShopLiveCommonDelegate)
   @objc deinit
 }
 extension ShopliveSDKCommon.ShopLiveCommon {
   public static func setUserJWT(userJWT: Swift.String?)
   public static func setUserJWT(accessKey: Swift.String, user: ShopliveSDKCommon.ShopLiveCommonUser)
   public static func getUserJWT() -> Swift.String?
+  public static func getUser() -> ShopliveSDKCommon.ShopLiveCommonUser?
+  public static func setUser(user: ShopliveSDKCommon.ShopLiveCommonUser?)
   public static func setAdId(adId: Swift.String?)
   public static func getAdId() -> Swift.String?
   public static func setAccessKey(accessKey: Swift.String?)
   public static func getAccessKey() -> Swift.String?
   public static func setGuestUid(guestUid: Swift.String?)
   public static func getGuestUid() -> Swift.String?
-  public static func getUser() -> ShopliveSDKCommon.ShopLiveCommonUser?
   public static func clearAuth()
   public static func isLoggedIn() -> Swift.Bool
 }
@@ -1301,12 +1309,16 @@ public struct ShopLiveCommonUser {
   public var custom: [Swift.String : Any]?
   public init(userId: Swift.String, name: Swift.String? = nil, age: Swift.Int? = nil, gender: ShopliveSDKCommon.ShopliveCommonUserGender? = nil, userScore: Swift.Int? = nil, custom: [Swift.String : Any]? = nil)
 }
-public enum ShopliveCommonUserGender : Swift.String {
+public enum ShopliveCommonUserGender : Swift.String, Swift.CaseIterable {
   case male
   case female
   case netural
   public init?(rawValue: Swift.String)
+  public typealias AllCases = [ShopliveSDKCommon.ShopliveCommonUserGender]
   public typealias RawValue = Swift.String
+  public static var allCases: [ShopliveSDKCommon.ShopliveCommonUserGender] {
+    get
+  }
   public var rawValue: Swift.String {
     get
   }

@@ -4200,9 +4200,193 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "ShopLiveCommonDelegate",
+        "printedName": "ShopLiveCommonDelegate",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "identifier",
+            "printedName": "identifier",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ShopliveSDKCommon22ShopLiveCommonDelegateP10identifierSSvp",
+            "mangledName": "$s17ShopliveSDKCommon22ShopLiveCommonDelegateP10identifierSSvp",
+            "moduleName": "ShopliveSDKCommon",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ShopliveSDKCommon22ShopLiveCommonDelegateP10identifierSSvg",
+                "mangledName": "$s17ShopliveSDKCommon22ShopLiveCommonDelegateP10identifierSSvg",
+                "moduleName": "ShopliveSDKCommon",
+                "genericSig": "<τ_0_0 where τ_0_0 : ShopliveSDKCommon.ShopLiveCommonDelegate>",
+                "sugared_genericSig": "<Self where Self : ShopliveSDKCommon.ShopLiveCommonDelegate>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "onChangedShopLiveUserJWT",
+            "printedName": "onChangedShopLiveUserJWT(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ShopliveSDKCommon22ShopLiveCommonDelegateP09onChangedcD7UserJWT2toySSSg_tF",
+            "mangledName": "$s17ShopliveSDKCommon22ShopLiveCommonDelegateP09onChangedcD7UserJWT2toySSSg_tF",
+            "moduleName": "ShopliveSDKCommon",
+            "genericSig": "<τ_0_0 where τ_0_0 : ShopliveSDKCommon.ShopLiveCommonDelegate>",
+            "sugared_genericSig": "<Self where Self : ShopliveSDKCommon.ShopLiveCommonDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onChangeShopLiveUser",
+            "printedName": "onChangeShopLiveUser(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ShopliveSDKCommon.ShopLiveCommonUser?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ShopLiveCommonUser",
+                    "printedName": "ShopliveSDKCommon.ShopLiveCommonUser",
+                    "usr": "s:17ShopliveSDKCommon18ShopLiveCommonUserV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ShopliveSDKCommon22ShopLiveCommonDelegateP08onChangecD4User2toyAA0cdeI0VSg_tF",
+            "mangledName": "$s17ShopliveSDKCommon22ShopLiveCommonDelegateP08onChangecD4User2toyAA0cdeI0VSg_tF",
+            "moduleName": "ShopliveSDKCommon",
+            "genericSig": "<τ_0_0 where τ_0_0 : ShopliveSDKCommon.ShopLiveCommonDelegate>",
+            "sugared_genericSig": "<Self where Self : ShopliveSDKCommon.ShopLiveCommonDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17ShopliveSDKCommon22ShopLiveCommonDelegateP",
+        "mangledName": "$s17ShopliveSDKCommon22ShopLiveCommonDelegateP",
+        "moduleName": "ShopliveSDKCommon",
+        "genericSig": "<τ_0_0 : ObjectiveC.NSObject>",
+        "sugared_genericSig": "<Self : ObjectiveC.NSObject>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "ShopLiveCommon",
         "printedName": "ShopLiveCommon",
         "children": [
+          {
+            "kind": "Function",
+            "name": "setDelegate",
+            "printedName": "setDelegate(delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ShopLiveCommonDelegate",
+                "printedName": "ShopliveSDKCommon.ShopLiveCommonDelegate",
+                "usr": "s:17ShopliveSDKCommon22ShopLiveCommonDelegateP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ShopliveSDKCommon14ShopLiveCommonC11setDelegate8delegateyAA0cdeG0_p_tFZ",
+            "mangledName": "$s17ShopliveSDKCommon14ShopLiveCommonC11setDelegate8delegateyAA0cdeG0_p_tFZ",
+            "moduleName": "ShopliveSDKCommon",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeDelegate",
+            "printedName": "removeDelegate(delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ShopLiveCommonDelegate",
+                "printedName": "ShopliveSDKCommon.ShopLiveCommonDelegate",
+                "usr": "s:17ShopliveSDKCommon22ShopLiveCommonDelegateP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ShopliveSDKCommon14ShopLiveCommonC14removeDelegate8delegateyAA0cdeG0_p_tFZ",
+            "mangledName": "$s17ShopliveSDKCommon14ShopLiveCommonC14removeDelegate8delegateyAA0cdeG0_p_tFZ",
+            "moduleName": "ShopliveSDKCommon",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
           {
             "kind": "Function",
             "name": "setUserJWT",
@@ -4298,6 +4482,75 @@
             "declKind": "Func",
             "usr": "s:17ShopliveSDKCommon14ShopLiveCommonC10getUserJWTSSSgyFZ",
             "mangledName": "$s17ShopliveSDKCommon14ShopLiveCommonC10getUserJWTSSSgyFZ",
+            "moduleName": "ShopliveSDKCommon",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getUser",
+            "printedName": "getUser()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ShopliveSDKCommon.ShopLiveCommonUser?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ShopLiveCommonUser",
+                    "printedName": "ShopliveSDKCommon.ShopLiveCommonUser",
+                    "usr": "s:17ShopliveSDKCommon18ShopLiveCommonUserV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ShopliveSDKCommon14ShopLiveCommonC7getUserAA0cdeG0VSgyFZ",
+            "mangledName": "$s17ShopliveSDKCommon14ShopLiveCommonC7getUserAA0cdeG0VSgyFZ",
+            "moduleName": "ShopliveSDKCommon",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setUser",
+            "printedName": "setUser(user:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ShopliveSDKCommon.ShopLiveCommonUser?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ShopLiveCommonUser",
+                    "printedName": "ShopliveSDKCommon.ShopLiveCommonUser",
+                    "usr": "s:17ShopliveSDKCommon18ShopLiveCommonUserV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ShopliveSDKCommon14ShopLiveCommonC7setUser4useryAA0cdeG0VSg_tFZ",
+            "mangledName": "$s17ShopliveSDKCommon14ShopLiveCommonC7setUser4useryAA0cdeG0VSg_tFZ",
             "moduleName": "ShopliveSDKCommon",
             "static": true,
             "declAttributes": [
@@ -4505,38 +4758,6 @@
             "declKind": "Func",
             "usr": "s:17ShopliveSDKCommon14ShopLiveCommonC11getGuestUidSSSgyFZ",
             "mangledName": "$s17ShopliveSDKCommon14ShopLiveCommonC11getGuestUidSSSgyFZ",
-            "moduleName": "ShopliveSDKCommon",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getUser",
-            "printedName": "getUser()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "ShopliveSDKCommon.ShopLiveCommonUser?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ShopLiveCommonUser",
-                    "printedName": "ShopliveSDKCommon.ShopLiveCommonUser",
-                    "usr": "s:17ShopliveSDKCommon18ShopLiveCommonUserV"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17ShopliveSDKCommon14ShopLiveCommonC7getUserAA0cdeG0VSgyFZ",
-            "mangledName": "$s17ShopliveSDKCommon14ShopLiveCommonC7getUserAA0cdeG0VSgyFZ",
             "moduleName": "ShopliveSDKCommon",
             "static": true,
             "declAttributes": [
@@ -24977,6 +25198,63 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[ShopliveSDKCommon.ShopliveCommonUserGender]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ShopliveCommonUserGender",
+                    "printedName": "ShopliveSDKCommon.ShopliveCommonUserGender",
+                    "usr": "s:17ShopliveSDKCommon0A16CommonUserGenderO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ShopliveSDKCommon0A16CommonUserGenderO8allCasesSayACGvpZ",
+            "mangledName": "$s17ShopliveSDKCommon0A16CommonUserGenderO8allCasesSayACGvpZ",
+            "moduleName": "ShopliveSDKCommon",
+            "static": true,
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ShopliveSDKCommon.ShopliveCommonUserGender]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ShopliveCommonUserGender",
+                        "printedName": "ShopliveSDKCommon.ShopliveCommonUserGender",
+                        "usr": "s:17ShopliveSDKCommon0A16CommonUserGenderO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ShopliveSDKCommon0A16CommonUserGenderO8allCasesSayACGvgZ",
+                "mangledName": "$s17ShopliveSDKCommon0A16CommonUserGenderO8allCasesSayACGvgZ",
+                "moduleName": "ShopliveSDKCommon",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
         "declKind": "Enum",
@@ -25023,6 +25301,36 @@
             ],
             "usr": "s:SY",
             "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ShopliveSDKCommon.ShopliveCommonUserGender]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ShopliveCommonUserGender",
+                        "printedName": "ShopliveSDKCommon.ShopliveCommonUserGender",
+                        "usr": "s:17ShopliveSDKCommon0A16CommonUserGenderO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
           }
         ]
       },
@@ -46105,22 +46413,43 @@
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/ShopliveSDKCommon.swift",
+      "kind": "Array",
+      "offset": 472,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/ShopliveSDKCommon.swift",
       "kind": "BooleanLiteral",
-      "offset": 1993,
+      "offset": 1133,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/ShopliveSDKCommon.swift",
+      "kind": "StringLiteral",
+      "offset": 1525,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/ShopliveSDKCommon.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2939,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/ShopliveSDKCommon.swift",
       "kind": "BooleanLiteral",
-      "offset": 2001,
+      "offset": 2947,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
-      "offset": 2099,
+      "offset": 3045,
       "length": 7,
       "value": "\"1.4.7\""
     },
@@ -56865,42 +57194,42 @@
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/Auth\/ShopLiveCommonUser.swift",
       "kind": "StringLiteral",
-      "offset": 1399,
+      "offset": 1413,
       "length": 3,
       "value": "\"m\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/Auth\/ShopLiveCommonUser.swift",
       "kind": "StringLiteral",
-      "offset": 1421,
+      "offset": 1435,
       "length": 3,
       "value": "\"f\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/Auth\/ShopLiveCommonUser.swift",
       "kind": "StringLiteral",
-      "offset": 1444,
+      "offset": 1458,
       "length": 3,
       "value": "\"n\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/Auth\/ShopLiveCommonUser.swift",
       "kind": "StringLiteral",
-      "offset": 1399,
+      "offset": 1413,
       "length": 3,
       "value": "\"m\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/Auth\/ShopLiveCommonUser.swift",
       "kind": "StringLiteral",
-      "offset": 1421,
+      "offset": 1435,
       "length": 3,
       "value": "\"f\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-shortform-ios\/matrix-common-ios\/sources\/Auth\/ShopLiveCommonUser.swift",
       "kind": "StringLiteral",
-      "offset": 1444,
+      "offset": 1458,
       "length": 3,
       "value": "\"n\""
     },
