@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ShopliveSDKCommon-Swift.h</key>
 		<data>
-		8tO8IJ8w5BbQKet6b7rVvKjjXy0=
+		rhkHHjIKa4vRSQgsrRWTlTg9z1U=
 		</data>
 		<key>Headers/matrix_common_ios.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		9GEOKJvLRpxnI1kC9ea7yVxit0I=
+		Sz/NhXePB2T50J7d5c3OTEhz6mQ=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		xNQh+AlUuvFLyeFczg4nOp4cTFM=
+		YwBy/Dys/dQmOx4FLtJN4XjSlE4=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		xNQh+AlUuvFLyeFczg4nOp4cTFM=
+		YwBy/Dys/dQmOx4FLtJN4XjSlE4=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		Q4ahO/8SaqtWLWnToxXiWvq5OiE=
+		BSljE0XZ6HVobLkiSzRQpI9yOGI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BmYfTVJaBoVr9+vQbNXrRaUsikyraArqYAaxCzHTFOM=
+			9GdCUmyYP01mqPatYbEyx4D0ZY99pJHeH5yVJeX0FkQ=
 			</data>
 		</dict>
 		<key>Headers/matrix_common_ios.h</key>
@@ -61,14 +61,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EI7VtSgo3yy5I5rX+jPB+32ExZ/oEWFF0wA87YvrRiM=
+			0ixdiswLUK2VgGwH1S2W8bs79Cq5vs84IJNqxmzt8cM=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D7oNeMR7IxlyGY5G5B2TU4uauddbfZKf0eHsPrV0XAk=
+			NZ/IRWhlQwNDhs+vQF1ruzpPujxtHpQoJftH2kQLMhU=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			D7oNeMR7IxlyGY5G5B2TU4uauddbfZKf0eHsPrV0XAk=
+			NZ/IRWhlQwNDhs+vQF1ruzpPujxtHpQoJftH2kQLMhU=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ypEEXdIRiQ+8plVsR6UhsAaWke6ek1pBx46v8bpK7fw=
+			gVE4beyFkhOwv3NvAUmxiEXO0QCX4h1YQXKMIHBpU9s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

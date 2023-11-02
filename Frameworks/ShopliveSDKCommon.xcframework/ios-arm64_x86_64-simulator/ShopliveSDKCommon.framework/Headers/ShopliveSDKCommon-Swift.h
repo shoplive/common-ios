@@ -455,6 +455,13 @@ SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon26ShopLiveAppDelegateHandler_")
 @end
 
 
+SWIFT_CLASS("_TtC17ShopliveSDKCommon18ShopLiveCommonUser")
+@interface ShopLiveCommonUser : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC17ShopliveSDKCommon13ShopLiveError")
 @interface ShopLiveError : NSError
 - (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain code:(NSInteger)code userInfo:(NSDictionary<NSString *, id> * _Nullable)dict OBJC_DESIGNATED_INITIALIZER;
@@ -967,6 +974,13 @@ SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon26ShopLiveAppDelegateHandler_")
 @protocol ShopLiveAppDelegateHandler
 @optional
 - (void)application:(UIApplication * _Nonnull)application :(UIWindow * _Nullable)window :(UIInterfaceOrientationMask)orientation;
+@end
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon18ShopLiveCommonUser")
+@interface ShopLiveCommonUser : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 

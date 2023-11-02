@@ -4,6 +4,8 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
+import AdSupport
+import AppTrackingTransparency
 import Combine
 import CoreGraphics
 import Foundation
@@ -339,8 +341,19 @@ extension ShopliveSDKCommon.ShopLiveCommon {
   public static func getUserJWT() -> Swift.String?
   public static func getUser() -> ShopliveSDKCommon.ShopLiveCommonUser?
   public static func setUser(user: ShopliveSDKCommon.ShopLiveCommonUser?)
+  @available(iOS, deprecated, message: "Enable AppTrackingTransparency instead")
   public static func setAdId(adId: Swift.String?)
+  @available(iOS, deprecated, message: "nable AppTrackingTransparency instead")
   public static func getAdId() -> Swift.String?
+  public static func getAdIdentifier() -> Swift.String?
+  public static func setUtmSource(utmSource: Swift.String?)
+  public static func setUtmMedium(utmMedium: Swift.String?)
+  public static func setUtmCampaign(utmCampaign: Swift.String?)
+  public static func setUtmContent(utmContent: Swift.String?)
+  public static func getUtmSource() -> Swift.String?
+  public static func getUtmMedium() -> Swift.String?
+  public static func getUtmCampaign() -> Swift.String?
+  public static func getUtmContent() -> Swift.String?
   public static func setAccessKey(accessKey: Swift.String?)
   public static func getAccessKey() -> Swift.String?
   public static func setGuestUid(guestUid: Swift.String?)
@@ -462,7 +475,11 @@ public struct CommonKeys {
   public static let x_sl_player_app_version: Swift.String
   public static let x_sl_player_sdk_version: Swift.String
   public static let x_sl_guest_uid: Swift.String
-  public static let x_sl_ad_id: Swift.String
+  public static let x_sl_ad_identifier: Swift.String
+  public static let x_sl_utm_source: Swift.String
+  public static let x_sl_utm_content: Swift.String
+  public static let x_sl_utm_campaign: Swift.String
+  public static let x_sl_utm_medium: Swift.String
   public static let Bearer: Swift.String
   public static let code: Swift.String
   public static let ON_CHANGED_VIDEO_EXPANDED: Swift.String
@@ -955,7 +972,7 @@ extension ShopliveSDKCommon.APIDefinition {
   @objc deinit
 }
 extension ShopliveSDKCommon.APIDefinition {
-  public func request(useSDKPath: Swift.Bool = true, handler: ((Swift.Result<Self.ResultType, any Swift.Error>) -> ())? = nil)
+  public func request(handler: ((Swift.Result<Self.ResultType, any Swift.Error>) -> ())? = nil)
   public func upload(handler: ((Swift.Result<Self.ResultType, any Swift.Error>) -> ())? = nil)
   public func createBody(boundary: Swift.String) -> Foundation.Data
 }
@@ -1300,7 +1317,7 @@ open class KeychainWrapper {
   open class func wipeKeychain()
   @objc deinit
 }
-public struct ShopLiveCommonUser {
+@objc public class ShopLiveCommonUser : ObjectiveC.NSObject {
   public var userId: Swift.String
   public var name: Swift.String?
   public var age: Swift.Int?
@@ -1308,6 +1325,7 @@ public struct ShopLiveCommonUser {
   public var userScore: Swift.Int?
   public var custom: [Swift.String : Any]?
   public init(userId: Swift.String, name: Swift.String? = nil, age: Swift.Int? = nil, gender: ShopliveSDKCommon.ShopliveCommonUserGender? = nil, userScore: Swift.Int? = nil, custom: [Swift.String : Any]? = nil)
+  @objc deinit
 }
 public enum ShopliveCommonUserGender : Swift.String, Swift.CaseIterable {
   case male
