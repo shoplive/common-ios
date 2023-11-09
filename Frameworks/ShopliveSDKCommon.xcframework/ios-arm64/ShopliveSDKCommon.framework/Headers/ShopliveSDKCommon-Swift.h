@@ -497,15 +497,15 @@ SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon25ShopLivePermissionHandler_")
 
 
 @interface UIView (SWIFT_EXTENSION(ShopliveSDKCommon))
-@property (nonatomic) IBInspectable CGFloat cornerRadiusV;
-@property (nonatomic) IBInspectable CGFloat borderWidthV;
-@property (nonatomic, strong) IBInspectable UIColor * _Nullable borderColorV;
+@property (nonatomic) IBInspectable CGFloat cornerRadiusV_SL;
+@property (nonatomic) IBInspectable CGFloat borderWidthV_SL;
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable borderColorV_SL;
 @end
 
 
 
 @interface UIViewController (SWIFT_EXTENSION(ShopliveSDKCommon))
-- (void)shopliveHideKeyboard;
+- (void)shopliveHideKeyboard_SL;
 @end
 
 

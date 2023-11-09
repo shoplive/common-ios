@@ -22,7 +22,7 @@ import _StringProcessing
 import os.log
 import os
 extension UIKit.UIImageView {
-  @_Concurrency.MainActor(unsafe) public func loadImage(from url: Foundation.URL?, placeHolderImage: UIKit.UIImage? = nil, completion: ((UIKit.UIImage?) -> ())? = nil)
+  @_Concurrency.MainActor(unsafe) public func loadImage_SL(from url: Foundation.URL?, placeHolderImage: UIKit.UIImage? = nil, completion: ((UIKit.UIImage?) -> ())? = nil)
 }
 public enum UIScreenDirection {
   case top
@@ -36,7 +36,7 @@ public enum UIScreenDirection {
   }
 }
 extension UIKit.UIStackView {
-  @_Concurrency.MainActor(unsafe) public func addArrangedSubviews(_ views: UIKit.UIView...)
+  @_Concurrency.MainActor(unsafe) public func addArrangedSubviews_SL(_ views: UIKit.UIView...)
 }
 public enum SLReachabilityError : Swift.Error {
   case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
@@ -131,17 +131,17 @@ extension ShopliveSDKCommon.SLReachability {
   @objc deinit
 }
 extension Swift.Int {
-  public func addCommas() -> Swift.String
-  public var toJsonValue: Swift.String {
+  public func addCommas_SL() -> Swift.String
+  public var toJsonValue_SL: Swift.String {
     get
   }
 }
 extension UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) public func transition(with window: UIKit.UIWindow)
-  @objc @_Concurrency.MainActor(unsafe) dynamic open func shopliveHideKeyboard()
-  @_Concurrency.MainActor(unsafe) public func hideKeyboard()
-  @_Concurrency.MainActor(unsafe) public func showShareSheet(url: Swift.String?)
-  @_Concurrency.MainActor(unsafe) public func didChangeOrientation() -> UIKit.UIInterfaceOrientationMask
+  @_Concurrency.MainActor(unsafe) public func transition_SL(with window: UIKit.UIWindow)
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func shopliveHideKeyboard_SL()
+  @_Concurrency.MainActor(unsafe) public func hideKeyboard_SL()
+  @_Concurrency.MainActor(unsafe) public func showShareSheet_SL(url: Swift.String?)
+  @_Concurrency.MainActor(unsafe) public func didChangeOrientation_SL() -> UIKit.UIInterfaceOrientationMask
 }
 public enum SLToastDuration {
   case short
@@ -161,10 +161,10 @@ extension UIKit.UIWindow {
   @_Concurrency.MainActor(unsafe) public func showToast(message: Swift.String, duration: ShopliveSDKCommon.SLToastDuration = .middle)
 }
 extension UIKit.UIInterfaceOrientation {
-  public var angle: CoreFoundation.CGFloat {
+  public var angl_SLe: CoreFoundation.CGFloat {
     get
   }
-  public var deviceOrientation: UIKit.UIDeviceOrientation {
+  public var deviceOrientation_SL: UIKit.UIDeviceOrientation {
     get
   }
 }
@@ -214,13 +214,13 @@ public enum ShopliveErrorType : Swift.Int, Swift.CaseIterable {
   }
 }
 extension UIKit.UIImage {
-  public func resizeWithWidth(width: CoreFoundation.CGFloat) -> UIKit.UIImage?
-  public func imageWithTint(_ color: UIKit.UIColor, alpha: CoreFoundation.CGFloat = 1.0) -> UIKit.UIImage
-  public func resizeImageTo(size: CoreFoundation.CGSize) -> UIKit.UIImage?
-  public func scalePreservingAspectRatio(targetSize: CoreFoundation.CGSize) -> UIKit.UIImage
-  public func changeScale(to: CoreFoundation.CGFloat) -> UIKit.UIImage?
-  public func resizeWith(width: CoreFoundation.CGFloat) -> UIKit.UIImage?
-  public func toBlackAndWhite() -> UIKit.UIImage?
+  public func resizeWithWidth_SL(width: CoreFoundation.CGFloat) -> UIKit.UIImage?
+  public func imageWithTint_SL(_ color: UIKit.UIColor, alpha: CoreFoundation.CGFloat = 1.0) -> UIKit.UIImage
+  public func resizeImageTo_SL(size: CoreFoundation.CGSize) -> UIKit.UIImage?
+  public func scalePreservingAspectRatio_SL(targetSize: CoreFoundation.CGSize) -> UIKit.UIImage
+  public func changeScale_SL(to: CoreFoundation.CGFloat) -> UIKit.UIImage?
+  public func resizeWith_SL(width: CoreFoundation.CGFloat) -> UIKit.UIImage?
+  public func toBlackAndWhite_SL() -> UIKit.UIImage?
   public enum Quality {
     case uncompressed
     case highest
@@ -234,87 +234,87 @@ extension UIKit.UIImage {
       get
     }
   }
-  public var uncompressedPNGData: Foundation.Data? {
+  public var uncompressedPNGData_SL: Foundation.Data? {
     get
   }
-  public var highestQualityJPEGNSData: Foundation.Data? {
+  public var highestQualityJPEGNSData_SL: Foundation.Data? {
     get
   }
-  public var highQualityJPEGNSData: Foundation.Data? {
+  public var highQualityJPEGNSData_SL: Foundation.Data? {
     get
   }
-  public var mediumQualityJPEGNSData: Foundation.Data? {
+  public var mediumQualityJPEGNSData_SL: Foundation.Data? {
     get
   }
-  public var lowQualityJPEGNSData: Foundation.Data? {
+  public var lowQualityJPEGNSData_SL: Foundation.Data? {
     get
   }
-  public var lowestQualityJPEGNSData: Foundation.Data? {
+  public var lowestQualityJPEGNSData_SL: Foundation.Data? {
     get
   }
-  public func toNSTextAttachment(_ width: CoreFoundation.CGFloat? = nil, _ height: CoreFoundation.CGFloat? = nil, _ yPos: CoreFoundation.CGFloat = -8) -> UIKit.NSTextAttachment
-  public func toNSTextAttachment(yPos: CoreFoundation.CGFloat = -8) -> UIKit.NSTextAttachment
+  public func toNSTextAttachment_SL(_ width: CoreFoundation.CGFloat? = nil, _ height: CoreFoundation.CGFloat? = nil, _ yPos: CoreFoundation.CGFloat = -8) -> UIKit.NSTextAttachment
+  public func toNSTextAttachment_SL(yPos: CoreFoundation.CGFloat = -8) -> UIKit.NSTextAttachment
   convenience public init?(color: UIKit.UIColor, size: CoreFoundation.CGSize = CGSize(width: 1, height: 1))
-  public func saveThumbnail()
+  public func saveThumbnail_SL()
 }
 extension Swift.Dictionary {
-  public func toJson() -> Swift.String?
-  public var jsonData: Foundation.Data? {
+  public func toJson_SL() -> Swift.String?
+  public var jsonData_SL: Foundation.Data? {
     get
   }
-  public func toJSONString() -> Swift.String?
+  public func toJSONString_SL() -> Swift.String?
 }
 extension Foundation.URL {
-  public func withScheme(_ scheme: Swift.String) -> Foundation.URL?
+  public func withScheme_SL(_ scheme: Swift.String) -> Foundation.URL?
 }
 extension UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public func fit()
-  @_Concurrency.MainActor(unsafe) public func fitTop30()
-  @_Concurrency.MainActor(unsafe) public func animateSizeChange(from: CoreFoundation.CGSize, to: CoreFoundation.CGSize, duration: Swift.Double)
-  @_Concurrency.MainActor(unsafe) public func changeScale(to: CoreFoundation.CGFloat)
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var cornerRadiusV: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public func fit_SL()
+  @_Concurrency.MainActor(unsafe) public func fitTop30_SL()
+  @_Concurrency.MainActor(unsafe) public func animateSizeChange_SL(from: CoreFoundation.CGSize, to: CoreFoundation.CGSize, duration: Swift.Double)
+  @_Concurrency.MainActor(unsafe) public func changeScale_SL(to: CoreFoundation.CGFloat)
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var cornerRadiusV_SL: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var borderWidthV: CoreFoundation.CGFloat {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var borderWidthV_SL: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var borderColorV: UIKit.UIColor? {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var borderColorV_SL: UIKit.UIColor? {
     @objc get
     @objc set
   }
-  @_Concurrency.MainActor(unsafe) public var ratio: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public var ratio_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public var showsUp: Swift.Bool {
+  @_Concurrency.MainActor(unsafe) public var showsUp_SL: Swift.Bool {
     get
   }
-  @_Concurrency.MainActor(unsafe) public var parentViewController: UIKit.UIViewController? {
+  @_Concurrency.MainActor(unsafe) public var parentViewController_SL: UIKit.UIViewController? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public func addAndFitToParent(view: UIKit.UIView, belowSubview: UIKit.UIView)
-  @_Concurrency.MainActor(unsafe) public func fitToParent()
-  @_Concurrency.MainActor(unsafe) public func clearConstraints()
-  @_Concurrency.MainActor(unsafe) public func roundCorners(corners: UIKit.UIRectCorner, radius: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) public func asImage() -> UIKit.UIImage
-  @_Concurrency.MainActor(unsafe) public class func fromNib<T>() -> T where T : UIKit.UIView
-  @_Concurrency.MainActor(unsafe) public func makeDashedBorderLine(lineDashWidth: CoreFoundation.CGFloat, pattern: [Foundation.NSNumber])
+  @_Concurrency.MainActor(unsafe) public func addAndFitToParent_SL(view: UIKit.UIView, belowSubview: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func fitToParent_SL()
+  @_Concurrency.MainActor(unsafe) public func clearConstraints_SL()
+  @_Concurrency.MainActor(unsafe) public func roundCorners_SL(corners: UIKit.UIRectCorner, radius: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func asImage_SL() -> UIKit.UIImage
+  @_Concurrency.MainActor(unsafe) public class func fromNib_SL<T>() -> T where T : UIKit.UIView
+  @_Concurrency.MainActor(unsafe) public func makeDashedBorderLine_SL(lineDashWidth: CoreFoundation.CGFloat, pattern: [Foundation.NSNumber])
   @discardableResult
-  @_Concurrency.MainActor(unsafe) public func setGradientBackground(bottom: UIKit.UIColor = UIColor.black.withAlphaComponent(0.5), top: UIKit.UIColor = UIColor.clear) -> QuartzCore.CAGradientLayer
-  @_Concurrency.MainActor(unsafe) public func removeGradientBackground()
-  @_Concurrency.MainActor(unsafe) public func constrainCentered(_ subview: UIKit.UIView)
-  @_Concurrency.MainActor(unsafe) public func constrainToEdges(_ subview: UIKit.UIView)
-  @_Concurrency.MainActor(unsafe) public func addBlurEffect()
-  @_Concurrency.MainActor(unsafe) public func addSubviews(_ views: UIKit.UIView...)
-  @_Concurrency.MainActor(unsafe) public var globalPoint: CoreFoundation.CGPoint? {
+  @_Concurrency.MainActor(unsafe) public func setGradientBackground_SL(bottom: UIKit.UIColor = UIColor.black.withAlphaComponent(0.5), top: UIKit.UIColor = UIColor.clear) -> QuartzCore.CAGradientLayer
+  @_Concurrency.MainActor(unsafe) public func removeGradientBackground_SL()
+  @_Concurrency.MainActor(unsafe) public func constrainCentered_SL(_ subview: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func constrainToEdges_SL(_ subview: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func addBlurEffect_SL()
+  @_Concurrency.MainActor(unsafe) public func addSubviews_SL(_ views: UIKit.UIView...)
+  @_Concurrency.MainActor(unsafe) public var globalPoint_SL: CoreFoundation.CGPoint? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public var globalFrame: CoreFoundation.CGRect? {
+  @_Concurrency.MainActor(unsafe) public var globalFrame_SL: CoreFoundation.CGRect? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public func snapshot(afterScreenUpdates: Swift.Bool = false, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) public func fitToSuperView()
+  @_Concurrency.MainActor(unsafe) public func snapshot_SL(afterScreenUpdates: Swift.Bool = false, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) public func fitToSuperView_SL()
   public enum ViewSide {
     case Left, Right, Top, Bottom
     public static func == (a: UIKit.UIView.ViewSide, b: UIKit.UIView.ViewSide) -> Swift.Bool
@@ -323,7 +323,7 @@ extension UIKit.UIView {
       get
     }
   }
-  @_Concurrency.MainActor(unsafe) public func addBorder(toSide side: UIKit.UIView.ViewSide, withColor color: CoreGraphics.CGColor, andThickness thickness: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func addBorder_SL(toSide side: UIKit.UIView.ViewSide, withColor color: CoreGraphics.CGColor, andThickness thickness: CoreFoundation.CGFloat)
 }
 public protocol ShopLiveCommonDelegate : ObjectiveC.NSObject {
   var identifier: Swift.String { get }
@@ -426,7 +426,7 @@ extension ShopliveSDKCommon.SLSLNVActivityIndicatorViewable where Self : UIKit.U
   public static func resetKeychain()
   @objc deinit
 }
-public enum Strings {
+public enum Strings_SL {
   public enum Error {
     public enum Msg {
       public static let base: Swift.String
@@ -441,26 +441,26 @@ public enum Strings {
   }
 }
 extension Swift.Double {
-  public var seconds: Swift.Double {
+  public var seconds_SL: Swift.Double {
     get
   }
-  public var isValid: Swift.Bool {
+  public var isValid_SL: Swift.Bool {
     get
   }
-  public var timeHourMinuteSeconds: Swift.String {
+  public var timeHourMinuteSeconds_SL: Swift.String {
     get
   }
 }
 extension UIKit.NSLayoutConstraint {
-  @_Concurrency.MainActor(unsafe) public func updateConstraint(value: UIKit.NSLayoutConstraint?)
-  @_Concurrency.MainActor(unsafe) public func setMultiplier(multiplier: CoreFoundation.CGFloat) -> UIKit.NSLayoutConstraint
+  @_Concurrency.MainActor(unsafe) public func updateConstraint_SL(value: UIKit.NSLayoutConstraint?)
+  @_Concurrency.MainActor(unsafe) public func setMultiplier_SL(multiplier: CoreFoundation.CGFloat) -> UIKit.NSLayoutConstraint
 }
 extension Swift.Error {
-  public var errorCode: Swift.Int {
+  public var errorCode_SL: Swift.Int {
     get
   }
-  public func getErrorMsg() -> Swift.String
-  public var userInfoString: Swift.String {
+  public func getErrorMsg_SL() -> Swift.String
+  public var userInfoString_SL: Swift.String {
     get
   }
 }
@@ -623,7 +623,7 @@ public struct HexEncodingOptions : Swift.OptionSet {
 }
 extension Foundation.Data {
   public func hexEncodedString(options: ShopliveSDKCommon.HexEncodingOptions = []) -> Swift.String
-  public func convert<T>(to type: T.Type) -> T? where T : Swift.Decodable, T : Swift.Encodable
+  public func convert_SL<T>(to type: T.Type) -> T? where T : Swift.Decodable, T : Swift.Encodable
 }
 final public class NetworkMonitor : ShopliveSDKCommon.SLResultObservable {
   public enum ConnectionType {
@@ -659,10 +659,10 @@ public class ShopLiveThrottle {
   @objc deinit
 }
 extension Photos.PHAsset {
-  public func getURL(completionHandler: @escaping ((_ responseURL: Foundation.URL?) -> Swift.Void))
+  public func getURL_SL(completionHandler: @escaping ((_ responseURL: Foundation.URL?) -> Swift.Void))
 }
 extension AVFAudio.AVAudioSession {
-  public func safeRemoveObserver(_ observer: Any, forKeyPath keyPath: Swift.String, observeInfo: Swift.UnsafeMutableRawPointer?, completion: @escaping (Swift.Bool) -> Swift.Void)
+  public func safeRemoveObserver_SL(_ observer: Any, forKeyPath keyPath: Swift.String, observeInfo: Swift.UnsafeMutableRawPointer?, completion: @escaping (Swift.Bool) -> Swift.Void)
 }
 public struct BaseError : Swift.Codable {
   public let status: Swift.Int
@@ -680,11 +680,11 @@ public struct BaseError : Swift.Codable {
   @objc deinit
 }
 extension Foundation.UserDefaults {
-  public func set(_ value: UIKit.UIEdgeInsets, forKey key: Swift.String)
-  public func cgRect(forKey key: Swift.String) -> UIKit.UIEdgeInsets?
+  public func set_SL(_ value: UIKit.UIEdgeInsets, forKey key: Swift.String)
+  public func cgRect_SL(forKey key: Swift.String) -> UIKit.UIEdgeInsets?
 }
 extension QuartzCore.CALayer {
-  public func fitToSuperView(superview: UIKit.UIView)
+  public func fitToSuperView_SL(superview: UIKit.UIView)
 }
 @_hasMissingDesignatedInitializers final public class ShopLiveViewLogger {
   public static var shared: ShopliveSDKCommon.ShopLiveViewLogger
@@ -730,48 +730,48 @@ extension UIKit.UIPanGestureRecognizer {
   }
 }
 extension Swift.String {
-  public func versionCompare(_ otherVersion: Swift.String) -> Foundation.ComparisonResult
-  public var trimmed: Swift.String {
+  public func versionCompare_SL(_ otherVersion: Swift.String) -> Foundation.ComparisonResult
+  public var trimmed_SL: Swift.String {
     get
   }
-  public var isEmptyText: Swift.Bool {
+  public var isEmptyText_SL: Swift.Bool {
     get
   }
-  public var isSingleWordEmptyText: Swift.Bool {
+  public var isSingleWordEmptyText_SL: Swift.Bool {
     get
   }
-  public var trimWhiteSpacing: Swift.String {
+  public var trimWhiteSpacing_SL: Swift.String {
     get
   }
-  public var boolValue: Swift.Bool? {
+  public var boolValue_SL: Swift.Bool? {
     get
   }
-  public func removeJWTPadding() -> Swift.String
-  public var urlEncodedString: Swift.String? {
+  public func removeJWTPadding_SL() -> Swift.String
+  public var urlEncodedString_SL: Swift.String? {
     get
   }
-  public var urlEncodedStringRFC3986: Swift.String? {
+  public var urlEncodedStringRFC3986_SL: Swift.String? {
     get
   }
-  public var dictionary: [Swift.AnyHashable : Any]? {
+  public var dictionary_SL: [Swift.AnyHashable : Any]? {
     get
   }
-  public func localizedString(from: Swift.String = "Localizable", bundle: Foundation.Bundle = Bundle.main, comment: Swift.String = "") -> Swift.String
-  public func fotmattedString() -> Swift.String
-  public func CGFloatValue() -> CoreFoundation.CGFloat?
-  public var cgfloatValue: CoreFoundation.CGFloat? {
+  public func localizedString_SL(from: Swift.String = "Localizable", bundle: Foundation.Bundle = Bundle.main, comment: Swift.String = "") -> Swift.String
+  public func fotmattedString_SL() -> Swift.String
+  public func CGFloatValue_SL() -> CoreFoundation.CGFloat?
+  public var cgfloatValue_SL: CoreFoundation.CGFloat? {
     get
   }
-  public var toJsonValue: Swift.String {
+  public var toJsonValue_SL: Swift.String {
     get
   }
-  public var base64Decoded: Swift.String? {
+  public var base64Decoded_SL: Swift.String? {
     get
   }
-  public var base64Encoded: Swift.String? {
+  public var base64Encoded_SL: Swift.String? {
     get
   }
-  public func convert<T>(to type: T.Type) -> T? where T : Swift.Decodable, T : Swift.Encodable
+  public func convert_SL<T>(to type: T.Type) -> T? where T : Swift.Decodable, T : Swift.Encodable
 }
 @_hasMissingDesignatedInitializers final public class AudioSessionManager {
   public static var shared: ShopliveSDKCommon.AudioSessionManager
@@ -783,16 +783,16 @@ extension Swift.String {
   @objc deinit
 }
 extension Swift.Encodable {
-  public func toDictionary(_ encoder: Foundation.JSONEncoder = JSONEncoder()) throws -> [Swift.String : Any]
-  public var dictionary: [Swift.String : Any]? {
+  public func toDictionary_SL(_ encoder: Foundation.JSONEncoder = JSONEncoder()) throws -> [Swift.String : Any]
+  public var dictionary_SL: [Swift.String : Any]? {
     get
   }
 }
 extension Swift.Decodable {
-  public static func decode<T>(dictionary: [Swift.String : Any]) throws -> T where T : Swift.Decodable
+  public static func decode_SL<T>(dictionary: [Swift.String : Any]) throws -> T where T : Swift.Decodable
 }
 extension ObjectiveC.NSObject {
-  public func safeRemoveObserver(_ observer: Any, forKeyPath keyPath: Swift.String)
+  public func safeRemoveObserver_SL(_ observer: Any, forKeyPath keyPath: Swift.String)
 }
 public protocol AnyNameable {
   static func className() -> Swift.String
@@ -824,12 +824,12 @@ extension Swift.Collection {
   public subscript(safe index: Self.Index) -> Self.Element? {
     get
   }
-  public var isNotEmpty: Swift.Bool {
+  public var isNotEmpty_SL: Swift.Bool {
     get
   }
 }
 extension UIKit.UIEdgeInsets {
-  public static var leastMargin: UIKit.UIEdgeInsets {
+  public static var leastMargin_SL: UIKit.UIEdgeInsets {
     get
   }
 }
@@ -846,35 +846,35 @@ public struct KeychainData : Swift.Equatable {
   @objc deinit
 }
 extension WebKit.WKWebView {
-  @_Concurrency.MainActor(unsafe) public static let progressKeypath: Swift.String
-  @_Concurrency.MainActor(unsafe) public static var urlErrors: [Swift.Int] {
+  @_Concurrency.MainActor(unsafe) public static let progressKeypath_SL: Swift.String
+  @_Concurrency.MainActor(unsafe) public static var urlErrors_SL: [Swift.Int] {
     get
   }
 }
 extension UIKit.UITextField {
-  @_Concurrency.MainActor(unsafe) public func setPlaceholderColor(_ placeholderColor: UIKit.UIColor)
-  @_Concurrency.MainActor(unsafe) public func addUnderLine()
+  @_Concurrency.MainActor(unsafe) public func setPlaceholderColor_SL(_ placeholderColor: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) public func addUnderLine_SL()
 }
 extension CoreMedia.CMTime {
-  public var timeSeconds: Swift.Float64? {
+  public var timeSeconds_SL: Swift.Float64? {
     get
   }
-  public var isValid: Swift.Bool {
+  public var isValid_SL: Swift.Bool {
     get
   }
-  public var roundedSeconds: Foundation.TimeInterval {
+  public var roundedSeconds_SL: Foundation.TimeInterval {
     get
   }
-  public var hours: Swift.Int {
+  public var hours_SL: Swift.Int {
     get
   }
-  public var minute: Swift.Int {
+  public var minute_SL: Swift.Int {
     get
   }
-  public var second: Swift.Int {
+  public var second_SL: Swift.Int {
     get
   }
-  public var positionalTime: Swift.String {
+  public var positionalTime_SL: Swift.String {
     get
   }
 }
@@ -882,8 +882,8 @@ extension CoreMedia.CMTime {
   @objc optional func application(_ application: UIKit.UIApplication, _ window: UIKit.UIWindow?, _ orientation: UIKit.UIInterfaceOrientationMask)
 }
 extension UIKit.UIFont {
-  public func findAvailableFont() -> UIKit.UIFont
-  public func lineHeightMultiple(_ lineHeight: CoreFoundation.CGFloat = 20) -> CoreFoundation.CGFloat
+  public func findAvailableFont_SL() -> UIKit.UIFont
+  public func lineHeightMultiple_SL(_ lineHeight: CoreFoundation.CGFloat = 20) -> CoreFoundation.CGFloat
 }
 public enum ShopLiveNetworkError : Swift.Error {
   case urlComponentError(Swift.String)
@@ -977,22 +977,22 @@ extension ShopliveSDKCommon.APIDefinition {
   public func createBody(boundary: Swift.String) -> Foundation.Data
 }
 extension UIKit.UIApplication {
-  @_Concurrency.MainActor(unsafe) public static var isLandscape: Swift.Bool {
+  @_Concurrency.MainActor(unsafe) public static var isLandscape_SL: Swift.Bool {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static func openSettings()
-  @_Concurrency.MainActor(unsafe) public static func openBrowser(url: Swift.String)
-  @_Concurrency.MainActor(unsafe) public static func openAppstore(appId: Swift.String)
-  @_Concurrency.MainActor(unsafe) public class func appVersion() -> Swift.String
-  @_Concurrency.MainActor(unsafe) public class func appBuild() -> Swift.String
-  @_Concurrency.MainActor(unsafe) public class func versionBuild() -> Swift.String
-  @_Concurrency.MainActor(unsafe) public static var topWindow: UIKit.UIWindow? {
+  @_Concurrency.MainActor(unsafe) public static func openSettings_SL()
+  @_Concurrency.MainActor(unsafe) public static func openBrowser_SL(url: Swift.String)
+  @_Concurrency.MainActor(unsafe) public static func openAppstore_SL(appId: Swift.String)
+  @_Concurrency.MainActor(unsafe) public class func appVersion_SL() -> Swift.String
+  @_Concurrency.MainActor(unsafe) public class func appBuild_SL() -> Swift.String
+  @_Concurrency.MainActor(unsafe) public class func versionBuild_SL() -> Swift.String
+  @_Concurrency.MainActor(unsafe) public static var topWindow_SL: UIKit.UIWindow? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var firstWindow: UIKit.UIWindow? {
+  @_Concurrency.MainActor(unsafe) public static var firstWindow_SL: UIKit.UIWindow? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var windowList: [UIKit.UIWindow]? {
+  @_Concurrency.MainActor(unsafe) public static var windowList_SL: [UIKit.UIWindow]? {
     get
   }
 }
@@ -1018,51 +1018,51 @@ public enum KeychainItemAccessibility {
   }
 }
 extension UIKit.UIScreen {
-  @_Concurrency.MainActor(unsafe) public static var currentOrientation: UIKit.UIInterfaceOrientation {
+  @_Concurrency.MainActor(unsafe) public static var currentOrientation_SL: UIKit.UIInterfaceOrientation {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var isLandscape: Swift.Bool {
+  @_Concurrency.MainActor(unsafe) public static var isLandscape_SL: Swift.Bool {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var concreteWidth: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public static var concreteWidth_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var concreteHeight: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public static var concreteHeight_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var landscapeWidth: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public static var landscapeWidth_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var landscapeHeight: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public static var landscapeHeight_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var screenWidth: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public static var screenWidth_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var screenHeight: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public static var screenHeight_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var concreteTopSafeArea: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public static var concreteTopSafeArea_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var topSafeArea: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public static var topSafeArea_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var leftSafeArea: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public static var leftSafeArea_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var rightSafeArea: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public static var rightSafeArea_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var bottomSafeArea: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor(unsafe) public static var bottomSafeArea_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var safeArea: UIKit.UIEdgeInsets {
+  @_Concurrency.MainActor(unsafe) public static var safeArea_SL: UIKit.UIEdgeInsets {
     get
   }
 }
 extension UIKit.UITextView {
-  @_Concurrency.MainActor(unsafe) public func numberOfLines(lineHeight: CoreFoundation.CGFloat = 20) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) public func numberOfLines_SL(lineHeight: CoreFoundation.CGFloat = 20) -> Swift.Int
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SLBaseViewController : UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) public var useOrientationLock: Swift.Bool
@@ -1094,20 +1094,20 @@ extension Swift.Array {
   public subscript(safe range: Swift.Range<Swift.Array<Element>.Index>) -> Swift.ArraySlice<Element> {
     get
   }
-  public func chunked(into size: Swift.Int) -> [[Element]]
-  public func chunks(size chunksize: Swift.Int) -> Swift.Array<Swift.Array<Element>>
+  public func chunked_SL(into size: Swift.Int) -> [[Element]]
+  public func chunks_SL(size chunksize: Swift.Int) -> Swift.Array<Swift.Array<Element>>
 }
 extension Swift.Array where Element == Swift.String {
-  public func reducedWithComma() -> Swift.String
+  public func reducedWithComma_SL() -> Swift.String
 }
 extension Swift.Double {
-  public func formattedString(by format: Swift.String) -> Swift.String
-  public var validDateFromTimestamp: Swift.Bool {
+  public func formattedString_SL(by format: Swift.String) -> Swift.String
+  public var validDateFromTimestamp_SL: Swift.Bool {
     get
   }
-  public func elapsedTimeString() -> Swift.String
-  public func elapsedTimeString(with date: Foundation.Date) -> Swift.String
-  public var numberOfDigit: Swift.Int {
+  public func elapsedTimeString_SL() -> Swift.String
+  public func elapsedTimeString_SL(with date: Foundation.Date) -> Swift.String
+  public var numberOfDigit_SL: Swift.Int {
     get
   }
 }
@@ -1133,13 +1133,13 @@ public protocol SLRequestable {
   func request(_ request: Self.Request)
 }
 extension AVFoundation.AVCaptureDevice {
-  public var baseZoomFactor: CoreFoundation.CGFloat {
+  public var baseZoomFactor_SL: CoreFoundation.CGFloat {
     get
   }
-  public func getInitZoomFactor(forDevice camera: AVFoundation.AVCaptureDevice) -> CoreFoundation.CGFloat
+  public func getInitZoomFactor_SL(forDevice camera: AVFoundation.AVCaptureDevice) -> CoreFoundation.CGFloat
 }
 extension CoreFoundation.CGRect {
-  public var center: CoreFoundation.CGPoint {
+  public var center_SL: CoreFoundation.CGPoint {
     get
   }
 }
@@ -1156,7 +1156,7 @@ extension UIKit.UIColor {
   @objc deinit
 }
 extension Foundation.NotificationCenter {
-  public func safeRemoveObserver(_ observer: Any, name aName: Foundation.NSNotification.Name?, object anObject: Any?)
+  public func safeRemoveObserver_SL(_ observer: Any, name aName: Foundation.NSNotification.Name?, object anObject: Any?)
 }
 public class ShopLiveDebouncer {
   public typealias Handler = () -> Swift.Void
@@ -1166,12 +1166,12 @@ public class ShopLiveDebouncer {
   @objc deinit
 }
 extension AVFoundation.AVPlayer.TimeControlStatus {
-  public var name: Swift.String {
+  public var name_SL: Swift.String {
     get
   }
 }
 extension UIKit.UIDevice {
-  @_Concurrency.MainActor(unsafe) public static var isIpad: Swift.Bool {
+  @_Concurrency.MainActor(unsafe) public static var isIpad_SL: Swift.Bool {
     get
   }
 }
@@ -1182,7 +1182,7 @@ extension ShopliveSDKCommon.ShopLiveCommon {
   public static func setShopLiveAppDelegateHandler(handler: (any ShopliveSDKCommon.ShopLiveAppDelegateHandler)?)
 }
 extension MediaPlayer.MPVolumeView {
-  @_Concurrency.MainActor(unsafe) public static func setVolume(_ volume: Swift.Float)
+  @_Concurrency.MainActor(unsafe) public static func setVolume_SL(_ volume: Swift.Float)
 }
 public struct ShopLiveCommonAuth {
 }
@@ -1247,27 +1247,27 @@ final public class PermissionManager : ShopliveSDKCommon.SLRequestable, Shoplive
   @objc deinit
 }
 extension UIKit.UIButton {
-  @_Concurrency.MainActor(unsafe) public func setBackgroundColor(_ color: UIKit.UIColor, for state: UIKit.UIControl.State)
+  @_Concurrency.MainActor(unsafe) public func setBackgroundColor_SL(_ color: UIKit.UIColor, for state: UIKit.UIControl.State)
 }
-@_hasMissingDesignatedInitializers final public class URLUtil {
+@_hasMissingDesignatedInitializers final public class URLUtil_SL {
   public static func query(_ params: [Foundation.URLQueryItem]?) -> Swift.String?
   @objc deinit
 }
 extension Foundation.Date {
-  public static var expiredTime: Swift.Int {
+  public static var expiredTime_SL: Swift.Int {
     get
   }
-  public static var createdTime: Swift.Int {
+  public static var createdTime_SL: Swift.Int {
     get
   }
 }
 extension CoreFoundation.CGSize {
-  public var transpolate: CoreFoundation.CGSize {
+  public var transpolate_SL: CoreFoundation.CGSize {
     get
   }
 }
 extension Foundation.NSAttributedString {
-  public var fullRange: Foundation.NSRange {
+  public var fullRange_SL: Foundation.NSRange {
     get
   }
 }
@@ -1426,10 +1426,10 @@ public typealias FadeOutAnimation = (UIKit.UIView, @escaping () -> Swift.Void) -
   @objc deinit
 }
 extension Foundation.NSMutableDictionary {
-  public func toJson() -> Swift.String?
+  public func toJson_SL() -> Swift.String?
 }
 extension CoreFoundation.CGFloat {
-  public var toInt: Swift.Int {
+  public var toInt_SL: Swift.Int {
     get
   }
 }
@@ -1438,20 +1438,20 @@ extension CoreFoundation.CGFloat {
   @objc deinit
 }
 extension UIKit.UIDeviceOrientation {
-  public var interfaceOrientation: UIKit.UIInterfaceOrientation {
+  public var interfaceOrientation_SL: UIKit.UIInterfaceOrientation {
     get
   }
-  public var orientationMask: UIKit.UIInterfaceOrientationMask {
+  public var orientationMask_SL: UIKit.UIInterfaceOrientationMask {
     get
   }
 }
 extension CoreFoundation.CGPoint {
-  public var transpolate: CoreFoundation.CGPoint {
+  public var transpolate_SL: CoreFoundation.CGPoint {
     get
   }
 }
 extension UIKit.UIWindow {
-  @_Concurrency.MainActor(unsafe) public static var mainWindowFrame: UIKit.UIWindow {
+  @_Concurrency.MainActor(unsafe) public static var mainWindowFrame_SL: UIKit.UIWindow {
     get
   }
 }
