@@ -474,6 +474,7 @@ public struct CommonKeys {
   public static let x_sl_studio_sdk_version: Swift.String
   public static let x_sl_player_app_version: Swift.String
   public static let x_sl_player_sdk_version: Swift.String
+  public static let x_sl_player_device: Swift.String
   public static let x_sl_guest_uid: Swift.String
   public static let x_sl_ad_identifier: Swift.String
   public static let x_sl_utm_source: Swift.String
@@ -1172,6 +1173,9 @@ extension AVFoundation.AVPlayer.TimeControlStatus {
 }
 extension UIKit.UIDevice {
   @_Concurrency.MainActor(unsafe) public static var isIpad_SL: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public static var deviceIdentifier_sl: Swift.String {
     get
   }
 }
