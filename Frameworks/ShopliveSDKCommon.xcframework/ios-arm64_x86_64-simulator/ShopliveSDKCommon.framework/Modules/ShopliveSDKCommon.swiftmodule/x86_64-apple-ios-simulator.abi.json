@@ -47149,7 +47149,7 @@
       "kind": "StringLiteral",
       "offset": 4124,
       "length": 7,
-      "value": "\"1.5.1\""
+      "value": "\"1.5.2\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/matrix-common-ios\/sources\/thirdparty\/NVActivityIndicatorView\/Extended\/SLNVActivityIndicatorPresenter.swift",
