@@ -362,6 +362,9 @@ extension ShopliveSDKCommon.ShopLiveCommon {
   public static func isLoggedIn() -> Swift.Bool
 }
 extension ShopliveSDKCommon.ShopLiveCommon {
+  public static func makeShopLiveSessionId() -> Swift.String
+}
+extension ShopliveSDKCommon.ShopLiveCommon {
   public static var sdkVersion: Swift.String {
     get
   }
@@ -474,6 +477,8 @@ public struct CommonKeys {
   public static let x_sl_studio_sdk_version: Swift.String
   public static let x_sl_player_app_version: Swift.String
   public static let x_sl_player_sdk_version: Swift.String
+  public static let x_sl_player_os_version: Swift.String
+  public static let x_sl_player_os_type: Swift.String
   public static let x_sl_player_device: Swift.String
   public static let x_sl_guest_uid: Swift.String
   public static let x_sl_ad_identifier: Swift.String
