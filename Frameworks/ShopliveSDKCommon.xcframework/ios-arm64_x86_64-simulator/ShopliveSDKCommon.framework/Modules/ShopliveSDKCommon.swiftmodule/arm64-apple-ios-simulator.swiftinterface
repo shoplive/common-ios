@@ -370,7 +370,7 @@ extension ShopliveSDKCommon.ShopLiveCommon {
   }
 }
 extension UIKit.UINavigationController {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var childForStatusBarStyle: UIKit.UIViewController? {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var childForStatusBarStyle: UIKit.UIViewController? {
     @objc get
   }
 }
