@@ -372,8 +372,8 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon24SLLoadingAlertController")
 
 SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon32SLLoadingAlertControllerDelegate_")
 @protocol SLLoadingAlertControllerDelegate
-- (void)cancelLoading;
-- (void)finishLoading;
+- (void)didCancelLoading;
+- (void)didFinishLoading;
 @end
 
 @class UIColor;
@@ -419,15 +419,15 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon9SLWebView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+@interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
+@end
+
 @class UIScrollView;
 
 @interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
-@end
-
-
-@interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <WKScriptMessageHandler>
-- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 @end
 
 
@@ -455,18 +455,69 @@ SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon26ShopLiveAppDelegateHandler_")
 @end
 
 
+SWIFT_CLASS("_TtC17ShopliveSDKCommon14ShopLiveCommon")
+@interface ShopLiveCommon : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface ShopLiveCommon (SWIFT_EXTENSION(ShopliveSDKCommon))
++ (NSString * _Nonnull)makeShopLiveSessionId SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+@interface ShopLiveCommon (SWIFT_EXTENSION(ShopliveSDKCommon))
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull sdkVersion;)
++ (NSString * _Nonnull)sdkVersion SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+@class ShopLiveCommonUser;
+
+@interface ShopLiveCommon (SWIFT_EXTENSION(ShopliveSDKCommon))
++ (void)setAuthToken:(NSString * _Nullable)authToken;
++ (NSString * _Nullable)getAuthToken SWIFT_WARN_UNUSED_RESULT;
++ (ShopLiveCommonUser * _Nullable)getUser SWIFT_WARN_UNUSED_RESULT;
++ (void)setUser:(ShopLiveCommonUser * _Nullable)user;
++ (void)setAdIdWithAdId:(NSString * _Nullable)adId SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Enable AppTrackingTransparency instead");
++ (NSString * _Nullable)getAdId SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="nable AppTrackingTransparency instead");
++ (NSString * _Nullable)getAdIdentifier SWIFT_WARN_UNUSED_RESULT;
++ (void)setUtmSource:(NSString * _Nullable)utmSource;
++ (void)setUtmMedium:(NSString * _Nullable)utmMedium;
++ (void)setUtmCampaign:(NSString * _Nullable)utmCampaign;
++ (void)setUtmContent:(NSString * _Nullable)utmContent;
++ (NSString * _Nullable)getUtmSource SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)getUtmMedium SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)getUtmCampaign SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)getUtmContent SWIFT_WARN_UNUSED_RESULT;
++ (void)setAccessKey:(NSString * _Nullable)accessKey;
++ (NSString * _Nullable)getAccessKey SWIFT_WARN_UNUSED_RESULT;
++ (void)setGuestUid:(NSString * _Nullable)guestUid;
++ (NSString * _Nullable)getGuestUid SWIFT_WARN_UNUSED_RESULT;
++ (void)clearAuth;
++ (BOOL)isLoggedIn SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
 SWIFT_CLASS("_TtC17ShopliveSDKCommon18ShopLiveCommonUser")
 @interface ShopLiveCommonUser : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class NSNumber;
 
-SWIFT_CLASS("_TtC17ShopliveSDKCommon13ShopLiveError")
-@interface ShopLiveError : NSError
-- (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain code:(NSInteger)code userInfo:(NSDictionary<NSString *, id> * _Nullable)dict OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+SWIFT_CLASS("_TtC17ShopliveSDKCommon22ShopLiveCommonUserObjc")
+@interface ShopLiveCommonUserObjc : ShopLiveCommonUser
+@property (nonatomic, copy) NSString * _Nonnull _userId;
+@property (nonatomic, copy) NSString * _Nonnull _name;
+@property (nonatomic, strong) NSNumber * _Nonnull _age;
+@property (nonatomic, copy) NSString * _Nonnull _gender;
+@property (nonatomic, strong) NSNumber * _Nonnull _userScore;
+@property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable _custom;
+- (nonnull instancetype)initWithUserId:(NSString * _Nonnull)userId name:(NSString * _Nullable)name age:(NSNumber * _Nullable)age gender:(NSString * _Nullable)gender userScore:(NSNumber * _Nullable)userScore custom:(NSDictionary<NSString *, id> * _Nullable)custom OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon25ShopLivePermissionHandler_")

@@ -168,51 +168,6 @@ extension UIKit.UIInterfaceOrientation {
     get
   }
 }
-public enum ShopliveErrorType : Swift.Int, Swift.CaseIterable {
-  case NO_IDLE_STREAM_SERVER
-  case BAD_GATEWAY
-  case UNAUTHORIZED
-  case EXCEPTION
-  case MODULE_ERROR
-  case TIMEOUT
-  case NO_INTERNET_CONNECTION
-  case NO_NETWORK_CONNECTION
-  case NO_DATA_NETWORK
-  case BAD_RESPONSE
-  case UPDATE_PASSWORD
-  case LIMIT_TRY_CHECK_PASSWORD
-  case WRONG_PASSWORD
-  case NOT_EXIST_ACCOUNT
-  case NOT_VALID_ID_PASSWORD
-  case FORCE_UPDATE
-  case UPGRADE_REQUIRED
-  case UNSUPPORTED_VERSION
-  case STREAM_SERVER_NO_RESPONSE
-  case DUPLICATE_STREAM_KEY
-  case CAMPAIGN_NOT_FOUND
-  case CAMPAIGN_CLOSED
-  case CLIENT_IP_BLOCK
-  case STREAM_REMAINED
-  case DUPLICATE_STREAM_KEY_MANUAL
-  public var convertedToError: any Swift.Error {
-    get
-  }
-  public var code: Swift.Int {
-    get
-  }
-  public var domain: Swift.String {
-    get
-  }
-  public init?(rawValue: Swift.Int)
-  public typealias AllCases = [ShopliveSDKCommon.ShopliveErrorType]
-  public typealias RawValue = Swift.Int
-  public static var allCases: [ShopliveSDKCommon.ShopliveErrorType] {
-    get
-  }
-  public var rawValue: Swift.Int {
-    get
-  }
-}
 extension UIKit.UIImage {
   public func resizeWithWidth_SL(width: CoreFoundation.CGFloat) -> UIKit.UIImage?
   public func imageWithTint_SL(_ color: UIKit.UIColor, alpha: CoreFoundation.CGFloat = 1.0) -> UIKit.UIImage
@@ -330,43 +285,43 @@ public protocol ShopLiveCommonDelegate : ObjectiveC.NSObject {
   func onChangedShopLiveUserJWT(to: Swift.String?)
   func onChangeShopLiveUser(to: ShopliveSDKCommon.ShopLiveCommonUser?)
 }
-@_hasMissingDesignatedInitializers final public class ShopLiveCommon {
+@_inheritsConvenienceInitializers @objc final public class ShopLiveCommon : ObjectiveC.NSObject {
   public static func setDelegate(delegate: any ShopliveSDKCommon.ShopLiveCommonDelegate)
   public static func removeDelegate(delegate: any ShopliveSDKCommon.ShopLiveCommonDelegate)
+  @objc override dynamic public init()
   @objc deinit
 }
 extension ShopliveSDKCommon.ShopLiveCommon {
-  public static func setUserJWT(userJWT: Swift.String?)
-  public static func setUserJWT(accessKey: Swift.String, user: ShopliveSDKCommon.ShopLiveCommonUser)
-  public static func getUserJWT() -> Swift.String?
-  public static func getUser() -> ShopliveSDKCommon.ShopLiveCommonUser?
-  public static func setUser(user: ShopliveSDKCommon.ShopLiveCommonUser?)
+  @objc(setAuthToken:) public static func setAuthToken(authToken: Swift.String?)
+  @objc public static func getAuthToken() -> Swift.String?
+  @objc public static func getUser() -> ShopliveSDKCommon.ShopLiveCommonUser?
+  @objc(setUser:) public static func setUser(user: ShopliveSDKCommon.ShopLiveCommonUser?)
   @available(iOS, deprecated, message: "Enable AppTrackingTransparency instead")
-  public static func setAdId(adId: Swift.String?)
+  @objc public static func setAdId(adId: Swift.String?)
   @available(iOS, deprecated, message: "nable AppTrackingTransparency instead")
-  public static func getAdId() -> Swift.String?
-  public static func getAdIdentifier() -> Swift.String?
-  public static func setUtmSource(utmSource: Swift.String?)
-  public static func setUtmMedium(utmMedium: Swift.String?)
-  public static func setUtmCampaign(utmCampaign: Swift.String?)
-  public static func setUtmContent(utmContent: Swift.String?)
-  public static func getUtmSource() -> Swift.String?
-  public static func getUtmMedium() -> Swift.String?
-  public static func getUtmCampaign() -> Swift.String?
-  public static func getUtmContent() -> Swift.String?
-  public static func setAccessKey(accessKey: Swift.String?)
-  public static func getAccessKey() -> Swift.String?
-  public static func setGuestUid(guestUid: Swift.String?)
-  public static func getGuestUid() -> Swift.String?
-  public static func clearAuth()
-  public static func isLoggedIn() -> Swift.Bool
+  @objc public static func getAdId() -> Swift.String?
+  @objc public static func getAdIdentifier() -> Swift.String?
+  @objc(setUtmSource:) public static func setUtmSource(utmSource: Swift.String?)
+  @objc(setUtmMedium:) public static func setUtmMedium(utmMedium: Swift.String?)
+  @objc(setUtmCampaign:) public static func setUtmCampaign(utmCampaign: Swift.String?)
+  @objc(setUtmContent:) public static func setUtmContent(utmContent: Swift.String?)
+  @objc public static func getUtmSource() -> Swift.String?
+  @objc public static func getUtmMedium() -> Swift.String?
+  @objc public static func getUtmCampaign() -> Swift.String?
+  @objc public static func getUtmContent() -> Swift.String?
+  @objc(setAccessKey:) public static func setAccessKey(accessKey: Swift.String?)
+  @objc public static func getAccessKey() -> Swift.String?
+  @objc(setGuestUid:) public static func setGuestUid(guestUid: Swift.String?)
+  @objc public static func getGuestUid() -> Swift.String?
+  @objc public static func clearAuth()
+  @objc public static func isLoggedIn() -> Swift.Bool
 }
 extension ShopliveSDKCommon.ShopLiveCommon {
-  public static func makeShopLiveSessionId() -> Swift.String
+  @objc public static func makeShopLiveSessionId() -> Swift.String
 }
 extension ShopliveSDKCommon.ShopLiveCommon {
-  public static var sdkVersion: Swift.String {
-    get
+  @objc public static var sdkVersion: Swift.String {
+    @objc get
   }
 }
 extension UIKit.UINavigationController {
@@ -402,8 +357,8 @@ extension ShopliveSDKCommon.SLSLNVActivityIndicatorViewable where Self : UIKit.U
   public func stopAnimating(_ fadeOutAnimation: ShopliveSDKCommon.FadeOutAnimation? = SLSLNVActivityIndicatorView.DEFAULT_FADE_OUT_ANIMATION)
 }
 @objc public protocol SLLoadingAlertControllerDelegate {
-  @objc func cancelLoading()
-  @objc func finishLoading()
+  @objc func didCancelLoading()
+  @objc func didFinishLoading()
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLLoadingAlertController : UIKit.UIViewController, UIKit.UIGestureRecognizerDelegate {
   @_Concurrency.MainActor(unsafe) weak public var delegate: (any ShopliveSDKCommon.SLLoadingAlertControllerDelegate)?
@@ -415,6 +370,7 @@ extension ShopliveSDKCommon.SLSLNVActivityIndicatorViewable where Self : UIKit.U
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) public func setProgress(_ progress: CoreFoundation.CGFloat)
   @_Concurrency.MainActor(unsafe) public func finishLoading()
+  @_Concurrency.MainActor(unsafe) public func finishLoadingWithOutDelegateEvent()
   @_Concurrency.MainActor(unsafe) public func cancal()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
@@ -664,26 +620,50 @@ public class ShopLiveThrottle {
   public func callAsFunction(action: @escaping () -> Swift.Void, onCancel: @escaping () -> Swift.Void)
   @objc deinit
 }
+public enum ShopLiveErrorCases {
+  case AuthenticationFailed
+  case GuestLoginNotAllowed
+  case CustomAccountNotFound
+  case CustomAccountExpired
+  case InvalidSignature
+  case ExpiredSession
+  case ServerError
+  case CampaignNotFound
+  case CampaignNotOnAir
+  case DuplicateSession
+  case NotInitializedAccessKey
+  case NotInitializedShareURL
+  case NotInitializedShortformConfig
+  case FailedEncoding
+  case RemovedVideo
+  case UnsupportedMedia
+  case UnsupportedOSpipMode
+  case FailedNetwork
+  case FailedJSONParsing
+  case UnexpectedError
+  public static func == (a: ShopliveSDKCommon.ShopLiveErrorCases, b: ShopliveSDKCommon.ShopLiveErrorCases) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class ShopLiveCommonError : Swift.Error {
+  public var code: Swift.Int
+  public var message: Swift.String?
+  public var error: (any Swift.Error)?
+  public init(code: Swift.Int, message: Swift.String?, error: (any Swift.Error)?)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ShopLiveCommonErrorGenerator {
+  public class func generateError(errorCase: ShopliveSDKCommon.ShopLiveErrorCases, error: (any Swift.Error)?, message: Swift.String?) -> ShopliveSDKCommon.ShopLiveCommonError
+  public class func generateErrorFromNetwork(statusCode: Swift.Int, error: (any Swift.Error)?, responseData: Foundation.Data?) -> ShopliveSDKCommon.ShopLiveCommonError?
+  @objc deinit
+}
 extension Photos.PHAsset {
   public func getURL_SL(completionHandler: @escaping ((_ responseURL: Foundation.URL?) -> Swift.Void))
 }
 extension AVFAudio.AVAudioSession {
   public func safeRemoveObserver_SL(_ observer: Any, forKeyPath keyPath: Swift.String, observeInfo: Swift.UnsafeMutableRawPointer?, completion: @escaping (Swift.Bool) -> Swift.Void)
-}
-public struct BaseError : Swift.Codable {
-  public let status: Swift.Int
-  public let error: Swift.String, message: Swift.String
-  public let timestamp: Swift.Int?
-  public let path: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-@objc @_inheritsConvenienceInitializers public class ShopLiveError : Foundation.NSError {
-  public var message: Swift.String
-  public var isSilence: Swift.Bool
-  @objc override dynamic public init(domain: Swift.String, code: Swift.Int, userInfo dict: [Swift.String : Any]? = nil)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
 }
 extension Foundation.UserDefaults {
   public func set_SL(_ value: UIKit.UIEdgeInsets, forKey key: Swift.String)
@@ -808,6 +788,11 @@ extension ShopliveSDKCommon.AnyNameable {
 }
 extension ObjectiveC.NSObject : ShopliveSDKCommon.AnyNameable {
 }
+public class ShopLiveCommonNetworkBaseErrorResponse : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
 public class JSONNull : Swift.Codable, Swift.Hashable {
   public static func == (lhs: ShopliveSDKCommon.JSONNull, rhs: ShopliveSDKCommon.JSONNull) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
@@ -848,7 +833,7 @@ public struct KeychainData : Swift.Equatable {
 }
 @_hasMissingDesignatedInitializers public class ImageDownLoaderManager {
   public static let shared: ShopliveSDKCommon.ImageDownLoaderManager
-  public func download(imageUrl: Foundation.URL, completion: @escaping ((Swift.Result<Foundation.Data, any Swift.Error>) -> ()))
+  public func download(imageUrl: Foundation.URL, completion: @escaping ((Swift.Result<Foundation.Data, ShopliveSDKCommon.ShopLiveCommonError>) -> ()))
   @objc deinit
 }
 extension WebKit.WKWebView {
@@ -890,13 +875,6 @@ extension CoreMedia.CMTime {
 extension UIKit.UIFont {
   public func findAvailableFont_SL() -> UIKit.UIFont
   public func lineHeightMultiple_SL(_ lineHeight: CoreFoundation.CGFloat = 20) -> CoreFoundation.CGFloat
-}
-public enum ShopLiveNetworkError : Swift.Error {
-  case urlComponentError(Swift.String)
-  case validateFailedError(Swift.Int)
-  case jsonDecodeFailed
-  case invalidUrl
-  public func getDescription() -> Swift.String
 }
 public protocol BaseResponsable : Swift.Decodable, Swift.Encodable {
   var _s: Swift.Int? { get set }
@@ -978,8 +956,8 @@ extension ShopliveSDKCommon.APIDefinition {
   @objc deinit
 }
 extension ShopliveSDKCommon.APIDefinition {
-  public func request(handler: ((Swift.Result<Self.ResultType, any Swift.Error>) -> ())? = nil)
-  public func upload(handler: ((Swift.Result<Self.ResultType, any Swift.Error>) -> ())? = nil)
+  public func request(handler: ((Swift.Result<Self.ResultType, ShopliveSDKCommon.ShopLiveCommonError>) -> ())? = nil)
+  public func upload(handler: ((Swift.Result<Self.ResultType, ShopliveSDKCommon.ShopLiveCommonError>) -> ())? = nil)
   public func createBody(boundary: Swift.String) -> Foundation.Data
 }
 extension UIKit.UIApplication {
@@ -1138,11 +1116,43 @@ public protocol SLRequestable {
   associatedtype Request
   func request(_ request: Self.Request)
 }
+@objc public class ShopLiveCommonUserObjc : ShopliveSDKCommon.ShopLiveCommonUser {
+  @objc public var _userId: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc public var _name: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc public var _age: Foundation.NSNumber {
+    @objc get
+    @objc set
+  }
+  @objc public var _gender: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc public var _userScore: Foundation.NSNumber {
+    @objc get
+    @objc set
+  }
+  @objc public var _custom: [Swift.String : Any]? {
+    @objc get
+    @objc set
+  }
+  @objc override public init(userId: Swift.String, name: Swift.String?, age: Foundation.NSNumber?, gender: Swift.String?, userScore: Foundation.NSNumber?, custom: Swift.Dictionary<Swift.String, Any>?)
+  @objc deinit
+}
 extension AVFoundation.AVCaptureDevice {
   public var baseZoomFactor_SL: CoreFoundation.CGFloat {
     get
   }
   public func getInitZoomFactor_SL(forDevice camera: AVFoundation.AVCaptureDevice) -> CoreFoundation.CGFloat
+}
+public struct SLFlexibleParser<K> where K : Swift.CodingKey {
+  public init(container: Swift.KeyedDecodingContainer<K>)
+  public func parse<T>(targetType: T.Type, key: any Swift.CodingKey) throws -> T?
 }
 extension CoreFoundation.CGRect {
   public var center_SL: CoreFoundation.CGPoint {
@@ -1334,6 +1344,7 @@ open class KeychainWrapper {
   public var userScore: Swift.Int?
   public var custom: [Swift.String : Any]?
   public init(userId: Swift.String, name: Swift.String? = nil, age: Swift.Int? = nil, gender: ShopliveSDKCommon.ShopliveCommonUserGender? = nil, userScore: Swift.Int? = nil, custom: [Swift.String : Any]? = nil)
+  public init(userId: Swift.String, name: Swift.String?, age: Foundation.NSNumber?, gender: Swift.String?, userScore: Foundation.NSNumber?, custom: Swift.Dictionary<Swift.String, Any>?)
   @objc deinit
 }
 public enum ShopliveCommonUserGender : Swift.String, Swift.CaseIterable {
@@ -1480,15 +1491,14 @@ extension ShopliveSDKCommon.SLReachability.Connection : Swift.Equatable {}
 extension ShopliveSDKCommon.SLReachability.Connection : Swift.Hashable {}
 extension ShopliveSDKCommon.SLToastDuration : Swift.Equatable {}
 extension ShopliveSDKCommon.SLToastDuration : Swift.Hashable {}
-extension ShopliveSDKCommon.ShopliveErrorType : Swift.Equatable {}
-extension ShopliveSDKCommon.ShopliveErrorType : Swift.Hashable {}
-extension ShopliveSDKCommon.ShopliveErrorType : Swift.RawRepresentable {}
 extension UIKit.UIImage.Quality : Swift.Equatable {}
 extension UIKit.UIImage.Quality : Swift.Hashable {}
 extension UIKit.UIView.ViewSide : Swift.Equatable {}
 extension UIKit.UIView.ViewSide : Swift.Hashable {}
 extension ShopliveSDKCommon.NetworkMonitor.ConnectionType : Swift.Equatable {}
 extension ShopliveSDKCommon.NetworkMonitor.ConnectionType : Swift.Hashable {}
+extension ShopliveSDKCommon.ShopLiveErrorCases : Swift.Equatable {}
+extension ShopliveSDKCommon.ShopLiveErrorCases : Swift.Hashable {}
 extension ShopliveSDKCommon.ShopLiveViewLog.LogType : Swift.Equatable {}
 extension ShopliveSDKCommon.ShopLiveViewLog.LogType : Swift.Hashable {}
 extension ShopliveSDKCommon.PanDirection : Swift.Equatable {}
