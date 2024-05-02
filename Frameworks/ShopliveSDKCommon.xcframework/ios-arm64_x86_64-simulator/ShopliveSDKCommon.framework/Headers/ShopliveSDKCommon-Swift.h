@@ -260,6 +260,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import AVFoundation;
 @import CoreFoundation;
 @import Foundation;
 @import ObjectiveC;
@@ -420,15 +421,15 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon9SLWebView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-@interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <WKScriptMessageHandler>
-- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
-@end
-
 @class UIScrollView;
 
 @interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+@end
+
+
+@interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 @end
 
 
@@ -486,6 +487,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 + (NSString * _Nullable)getAuthToken SWIFT_WARN_UNUSED_RESULT;
 + (ShopLiveCommonUser * _Nullable)getUser SWIFT_WARN_UNUSED_RESULT;
 + (void)setUser:(ShopLiveCommonUser * _Nullable)user accessKey:(NSString * _Nullable)accessKey;
++ (void)setUser:(ShopLiveCommonUser * _Nullable)user;
 + (void)setAdIdWithAdId:(NSString * _Nullable)adId SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Enable AppTrackingTransparency instead");
 + (NSString * _Nullable)getAdId SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Enable AppTrackingTransparency instead");
 + (NSString * _Nullable)getAdIdentifier SWIFT_WARN_UNUSED_RESULT;
@@ -545,6 +547,24 @@ SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon25ShopLivePermissionHandler_")
 - (void)handleMediaLibraryUsagePermissionWithStatus:(enum PermissionStatus)status;
 - (void)handlePhotoLibraryUsagePermissionWithStatus:(enum PermissionStatus)status;
 @end
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon24ShopliveAppStateObserver")
+@interface ShopliveAppStateObserver : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon25ShopliveMP4CachingManager")
+@interface ShopliveMP4CachingManager : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+@interface ShopliveMP4CachingManager (SWIFT_EXTENSION(ShopliveSDKCommon)) <AVAssetResourceLoaderDelegate>
+@end
+
 
 
 SWIFT_CLASS("_TtC17ShopliveSDKCommon26ShopliveSDKCommonResources")
@@ -858,6 +878,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import AVFoundation;
 @import CoreFoundation;
 @import Foundation;
 @import ObjectiveC;
@@ -1018,15 +1039,15 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon9SLWebView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-@interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <WKScriptMessageHandler>
-- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
-@end
-
 @class UIScrollView;
 
 @interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+@end
+
+
+@interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 @end
 
 
@@ -1084,6 +1105,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 + (NSString * _Nullable)getAuthToken SWIFT_WARN_UNUSED_RESULT;
 + (ShopLiveCommonUser * _Nullable)getUser SWIFT_WARN_UNUSED_RESULT;
 + (void)setUser:(ShopLiveCommonUser * _Nullable)user accessKey:(NSString * _Nullable)accessKey;
++ (void)setUser:(ShopLiveCommonUser * _Nullable)user;
 + (void)setAdIdWithAdId:(NSString * _Nullable)adId SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Enable AppTrackingTransparency instead");
 + (NSString * _Nullable)getAdId SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,deprecated=0.0.1,message="Enable AppTrackingTransparency instead");
 + (NSString * _Nullable)getAdIdentifier SWIFT_WARN_UNUSED_RESULT;
@@ -1143,6 +1165,24 @@ SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon25ShopLivePermissionHandler_")
 - (void)handleMediaLibraryUsagePermissionWithStatus:(enum PermissionStatus)status;
 - (void)handlePhotoLibraryUsagePermissionWithStatus:(enum PermissionStatus)status;
 @end
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon24ShopliveAppStateObserver")
+@interface ShopliveAppStateObserver : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon25ShopliveMP4CachingManager")
+@interface ShopliveMP4CachingManager : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+@interface ShopliveMP4CachingManager (SWIFT_EXTENSION(ShopliveSDKCommon)) <AVAssetResourceLoaderDelegate>
+@end
+
 
 
 SWIFT_CLASS("_TtC17ShopliveSDKCommon26ShopliveSDKCommonResources")

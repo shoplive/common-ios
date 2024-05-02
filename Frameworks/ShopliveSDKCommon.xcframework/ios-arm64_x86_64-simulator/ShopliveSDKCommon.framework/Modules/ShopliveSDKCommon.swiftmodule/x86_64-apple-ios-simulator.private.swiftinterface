@@ -153,6 +153,63 @@ public struct CommonKeys {
   public static let source: Swift.String
   public static let duration: Swift.String
 }
+@_hasMissingDesignatedInitializers public class ShopLiveCommonConfigurationManager {
+  public static let shared: ShopliveSDKCommon.ShopLiveCommonConfigurationManager
+  public func getShortformEventTraceHostUrl() -> Swift.String
+  public func clearHostConfigModel()
+  public func callHostConfigAPI(completion: @escaping ((Swift.Result<Swift.Void, ShopliveSDKCommon.ShopLiveCommonError>) -> ()))
+  @objc deinit
+}
+public struct ShopLiveConversionData {
+  public var type: Swift.String?
+  public var products: [ShopliveSDKCommon.ShopLiveConversionProductData]?
+  public var orderId: Swift.String?
+  public var referrer: Swift.String?
+  public var custom: [Swift.String : Any?]?
+  public init(type: Swift.String? = nil, products: [ShopliveSDKCommon.ShopLiveConversionProductData]? = nil, orderId: Swift.String? = nil, referrer: Swift.String? = nil, custom: [Swift.String : Any?]? = nil)
+}
+public struct ShopLiveConversionProductData {
+  public var productId: Swift.String?
+  public var customerProductId: Swift.String?
+  public var sku: Swift.String?
+  public var url: Swift.String?
+  public var purchaseQuantity: Swift.Int?
+  public var purchaseUnitPrice: Swift.Double?
+  public init(productId: Swift.String? = nil, customerProductId: Swift.String? = nil, sku: Swift.String? = nil, url: Swift.String? = nil, purchaseQuantity: Swift.Int? = nil, purchaseUnitPrice: Swift.Double? = nil)
+}
+public struct ShopLiveEvent {
+  public static func sendConversionEvent(data: ShopliveSDKCommon.ShopLiveConversionData)
+}
+public struct ShopLiveEventProduct : Swift.Codable {
+  public var productId: Swift.String?
+  public var customerProductId: Swift.String?
+  public var sku: Swift.String?
+  public var url: Swift.String?
+  public var purchaseQuantity: Swift.Int?
+  public var purchaseUnitPrice: Swift.Double?
+  public init(from decoder: any Swift.Decoder) throws
+  public init(productId: Swift.String?, customerProductId: Swift.String?, sku: Swift.String?, url: Swift.String?, purchaseQuantity: Swift.Int?, purchaseUnitPrice: Swift.Double?)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct ShopLiveEventRequest : ShopliveSDKCommon.BaseResponsable {
+  public var _e: Swift.String?
+  public var _s: Swift.Int?
+  public var anonId: Swift.String?
+  public var custom: Swift.String?
+  public var env: Swift.String?
+  public var ceId: Swift.String?
+  public var idfv: Swift.String?
+  public var idfa: Swift.String?
+  public var osType: Swift.String?
+  public var products: [ShopliveSDKCommon.ShopLiveEventProduct]?
+  public var referrer: Swift.String?
+  public var type: Swift.String?
+  public var userId: Swift.String?
+  public var orderId: Swift.String?
+  public var createdAt: Swift.Int?
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
 @_hasMissingDesignatedInitializers public class ShopLiveHapticManager {
   public static func impact(style: UIKit.UIImpactFeedbackGenerator.FeedbackStyle)
   @objc deinit
@@ -290,6 +347,7 @@ extension ShopliveSDKCommon.ShopLiveCommon {
   @objc public static func getAuthToken() -> Swift.String?
   @objc public static func getUser() -> ShopliveSDKCommon.ShopLiveCommonUser?
   @objc(setUser:accessKey:) public static func setUser(user: ShopliveSDKCommon.ShopLiveCommonUser?, accessKey: Swift.String?)
+  @objc(setUser:) public static func setUser(user: ShopliveSDKCommon.ShopLiveCommonUser?)
   @available(iOS, deprecated, message: "Enable AppTrackingTransparency instead")
   @objc public static func setAdId(adId: Swift.String?)
   @available(iOS, deprecated, message: "Enable AppTrackingTransparency instead")
@@ -329,6 +387,29 @@ extension ShopliveSDKCommon.ShopLiveCommon {
   @objc public static var videoEditorSdkversion: Swift.String {
     @objc get
   }
+}
+public protocol ShopliveAppStateObserverDelegate : AnyObject {
+  func handleAppStateNotification(appState: ShopliveSDKCommon.SLAppState)
+}
+public enum SLAppState {
+  case none
+  case orientationDidChange
+  case enterLockScreen
+  case leaveLockScreen
+  case didEnterForeground
+  case willEnterForeground
+  case didEnterBackground
+  case willEnterBackground
+  public static func == (a: ShopliveSDKCommon.SLAppState, b: ShopliveSDKCommon.SLAppState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers final public class ShopliveAppStateObserver : ObjectiveC.NSObject {
+  weak final public var delegate: (any ShopliveSDKCommon.ShopliveAppStateObserverDelegate)?
+  @objc override dynamic public init()
+  @objc deinit
 }
 @propertyWrapper public struct SLDynamicColor {
   public var wrappedValue: UIKit.UIColor {
@@ -1206,6 +1287,28 @@ extension ShopliveSDKCommon.APIDefinition {
   public func preDownloadImage(imageUrl: Foundation.URL)
   @objc deinit
 }
+public enum ShopliveCacheType {
+  case memory
+  case disk
+  public static func == (a: ShopliveSDKCommon.ShopliveCacheType, b: ShopliveSDKCommon.ShopliveCacheType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ShopliveMP4CachingManager : ObjectiveC.NSObject {
+  public static let shared: ShopliveSDKCommon.ShopliveMP4CachingManager
+  public func getCurrentCacheType() -> ShopliveSDKCommon.ShopliveCacheType
+  public func isVideoMP4(url: Foundation.URL) -> Swift.Bool
+  public func setCacheType(type: ShopliveSDKCommon.ShopliveCacheType = .memory)
+  public func setMaxCacheSize(maxSize: Swift.UInt64 = 1024 * 1024 * 1024)
+  public func getCachedSize() -> Swift.String?
+  public func removeCaches()
+  public func downloadVideo(url: Foundation.URL, completion: @escaping (AVFoundation.AVPlayerItem) -> ())
+  @objc deinit
+}
+extension ShopliveSDKCommon.ShopliveMP4CachingManager : AVFoundation.AVAssetResourceLoaderDelegate {
+}
 final public class NetworkMonitor : ShopliveSDKCommon.SLResultObservable {
   public enum ConnectionType {
     case wifi
@@ -1516,6 +1619,8 @@ extension ShopliveSDKCommon.UIScreenDirection : Swift.Equatable {}
 extension ShopliveSDKCommon.UIScreenDirection : Swift.Hashable {}
 extension ShopliveSDKCommon.ShopLiveErrorCases : Swift.Equatable {}
 extension ShopliveSDKCommon.ShopLiveErrorCases : Swift.Hashable {}
+extension ShopliveSDKCommon.SLAppState : Swift.Equatable {}
+extension ShopliveSDKCommon.SLAppState : Swift.Hashable {}
 extension ShopliveSDKCommon.SLToastDuration : Swift.Equatable {}
 extension ShopliveSDKCommon.SLToastDuration : Swift.Hashable {}
 extension UIKit.UIImage.Quality : Swift.Equatable {}
@@ -1532,6 +1637,8 @@ extension ShopliveSDKCommon.HTTPVersion : Swift.Hashable {}
 extension ShopliveSDKCommon.HTTPVersion : Swift.RawRepresentable {}
 extension ShopliveSDKCommon.SLHTTPMethod : Swift.Equatable {}
 extension ShopliveSDKCommon.SLHTTPMethod : Swift.Hashable {}
+extension ShopliveSDKCommon.ShopliveCacheType : Swift.Equatable {}
+extension ShopliveSDKCommon.ShopliveCacheType : Swift.Hashable {}
 extension ShopliveSDKCommon.NetworkMonitor.ConnectionType : Swift.Equatable {}
 extension ShopliveSDKCommon.NetworkMonitor.ConnectionType : Swift.Hashable {}
 @available(*, unavailable, renamed: "Connection")
