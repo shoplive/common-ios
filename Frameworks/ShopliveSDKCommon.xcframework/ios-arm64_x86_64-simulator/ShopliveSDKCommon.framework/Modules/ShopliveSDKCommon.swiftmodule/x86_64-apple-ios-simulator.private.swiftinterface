@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopliveSDKCommon
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
@@ -188,9 +188,9 @@ public struct ShopLiveEventProduct : Swift.Codable {
   public var url: Swift.String?
   public var purchaseQuantity: Swift.Int?
   public var purchaseUnitPrice: Swift.Double?
-  public init(from decoder: any Swift.Decoder) throws
+  public init(from decoder: Swift.Decoder) throws
   public init(productId: Swift.String?, customerProductId: Swift.String?, sku: Swift.String?, url: Swift.String?, purchaseQuantity: Swift.Int?, purchaseUnitPrice: Swift.Double?)
-  public func encode(to encoder: any Swift.Encoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
 }
 public struct ShopLiveEventRequest : ShopliveSDKCommon.BaseResponsable {
   public var _e: Swift.String?
@@ -208,8 +208,8 @@ public struct ShopLiveEventRequest : ShopliveSDKCommon.BaseResponsable {
   public var userId: Swift.String?
   public var orderId: Swift.String?
   public var createdAt: Swift.Int?
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
 }
 @_hasMissingDesignatedInitializers public class ShopLiveHapticManager {
   public static func impact(style: UIKit.UIImpactFeedbackGenerator.FeedbackStyle)
@@ -269,23 +269,23 @@ public enum ShopLiveErrorCases {
 @_hasMissingDesignatedInitializers @objc public class ShopLiveCommonError : Foundation.NSError {
   public var codes: Swift.Int
   public var message: Swift.String?
-  public var error: (any Swift.Error)?
-  public init(code: Swift.Int, message: Swift.String?, error: (any Swift.Error)?)
+  public var error: Swift.Error?
+  public init(code: Swift.Int, message: Swift.String?, error: Swift.Error?)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class ShopLiveCommonErrorGenerator {
-  public class func generateError(errorCase: ShopliveSDKCommon.ShopLiveErrorCases, error: (any Swift.Error)?, message: Swift.String?) -> ShopliveSDKCommon.ShopLiveCommonError
-  public class func generateErrorFromNetwork(statusCode: Swift.Int, error: (any Swift.Error)?, responseData: Foundation.Data?) -> ShopliveSDKCommon.ShopLiveCommonError?
+  public class func generateError(errorCase: ShopliveSDKCommon.ShopLiveErrorCases, error: Swift.Error?, message: Swift.String?) -> ShopliveSDKCommon.ShopLiveCommonError
+  public class func generateErrorFromNetwork(statusCode: Swift.Int, error: Swift.Error?, responseData: Foundation.Data?) -> ShopliveSDKCommon.ShopLiveCommonError?
   @objc deinit
 }
 public class ShopLiveCommonNetworkBaseErrorResponse : Swift.Codable {
   @objc deinit
-  public func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 public struct SLFlexibleParser<K> where K : Swift.CodingKey {
   public init(container: Swift.KeyedDecodingContainer<K>)
-  public func parse<T>(targetType: T.Type, key: any Swift.CodingKey) throws -> T?
+  public func parse<T>(targetType: T.Type, key: Swift.CodingKey) throws -> T?
 }
 @_hasMissingDesignatedInitializers public class ShopLiveLogger {
   public static func debugLog(_ log: Swift.String)
@@ -332,7 +332,7 @@ extension ShopliveSDKCommon.ShopLiveCommon {
   public static func setShopLiveOrientation(orientation: UIKit.UIInterfaceOrientationMask)
   public static func setEnabledShopLiveOrientationLock(enable: Swift.Bool)
   public static func getEnabledShopLiveOrientationLock() -> Swift.Bool
-  public static func setShopLiveAppDelegateHandler(handler: (any ShopliveSDKCommon.ShopLiveAppDelegateHandler)?)
+  public static func setShopLiveAppDelegateHandler(handler: ShopliveSDKCommon.ShopLiveAppDelegateHandler?)
 }
 public protocol ShopLiveCommonDelegate : ObjectiveC.NSObject {
   var identifier: Swift.String { get }
@@ -340,8 +340,8 @@ public protocol ShopLiveCommonDelegate : ObjectiveC.NSObject {
   func onChangeShopLiveUser(to: ShopliveSDKCommon.ShopLiveCommonUser?)
 }
 @_inheritsConvenienceInitializers @objc final public class ShopLiveCommon : ObjectiveC.NSObject {
-  public static func setDelegate(delegate: any ShopliveSDKCommon.ShopLiveCommonDelegate)
-  public static func removeDelegate(delegate: any ShopliveSDKCommon.ShopLiveCommonDelegate)
+  public static func setDelegate(delegate: ShopliveSDKCommon.ShopLiveCommonDelegate)
+  public static func removeDelegate(delegate: ShopliveSDKCommon.ShopLiveCommonDelegate)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -410,7 +410,7 @@ public enum SLAppState {
   }
 }
 @objc @_inheritsConvenienceInitializers final public class ShopliveAppStateObserver : ObjectiveC.NSObject {
-  weak final public var delegate: (any ShopliveSDKCommon.ShopliveAppStateObserverDelegate)?
+  weak final public var delegate: ShopliveSDKCommon.ShopliveAppStateObserverDelegate?
   @objc override dynamic public init()
   @objc deinit
 }
@@ -420,7 +420,7 @@ public enum SLAppState {
   }
 }
 public struct SLJSONUtil {
-  public static func toJsonString(_ value: any Swift.Encodable) -> Swift.String?
+  public static func toJsonString(_ value: Swift.Encodable) -> Swift.String?
 }
 @_hasMissingDesignatedInitializers final public class URLUtil_SL {
   public static func query(_ params: [Foundation.URLQueryItem]?) -> Swift.String?
@@ -456,7 +456,7 @@ public struct SLJSONUtil {
   @objc func didFinishLoading()
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLLoadingAlertController : UIKit.UIViewController, UIKit.UIGestureRecognizerDelegate {
-  @_Concurrency.MainActor(unsafe) weak public var delegate: (any ShopliveSDKCommon.SLLoadingAlertControllerDelegate)?
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ShopliveSDKCommon.SLLoadingAlertControllerDelegate?
   @_Concurrency.MainActor(unsafe) public var cancelLoading: Swift.Bool
   @_Concurrency.MainActor(unsafe) public func setLoadingText(_ text: Swift.String)
   @_Concurrency.MainActor(unsafe) public var useProgress: Swift.Bool
@@ -502,9 +502,9 @@ extension UIKit.UIWindow {
   @objc optional func handleEventMessage(message: WebKit.WKScriptMessage)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class SLWebView : ShopliveSDKCommon.SLBaseView {
-  @_Concurrency.MainActor(unsafe) weak final public var slWebResponseDelegate: (any ShopliveSDKCommon.SLWebviewResponseDelegate)?
-  @_Concurrency.MainActor(unsafe) weak final public var slWebScrollDelegate: (any ShopliveSDKCommon.SLWebviewScrollDelegate)?
-  @_Concurrency.MainActor(unsafe) weak final public var webViewNavigationDelegate: (any WebKit.WKNavigationDelegate)? {
+  @_Concurrency.MainActor(unsafe) weak final public var slWebResponseDelegate: ShopliveSDKCommon.SLWebviewResponseDelegate?
+  @_Concurrency.MainActor(unsafe) weak final public var slWebScrollDelegate: ShopliveSDKCommon.SLWebviewScrollDelegate?
+  @_Concurrency.MainActor(unsafe) weak final public var webViewNavigationDelegate: WebKit.WKNavigationDelegate? {
     get
     set
   }
@@ -533,7 +533,7 @@ extension ShopliveSDKCommon.SLWebView : UIKit.UIScrollViewDelegate {
   @_Concurrency.MainActor(unsafe) @objc final public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
 }
 @objc public class LeakAvoider : ObjectiveC.NSObject, WebKit.WKScriptMessageHandler {
-  public init(delegate: any WebKit.WKScriptMessageHandler)
+  public init(delegate: WebKit.WKScriptMessageHandler)
   @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
   @objc deinit
 }
@@ -1113,7 +1113,7 @@ open class KeychainWrapper {
   @discardableResult
   open func set(_ value: Swift.String, forKey key: Swift.String, withAccessibility accessibility: ShopliveSDKCommon.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
   @discardableResult
-  open func set(_ value: any Foundation.NSCoding, forKey key: Swift.String, withAccessibility accessibility: ShopliveSDKCommon.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
+  open func set(_ value: Foundation.NSCoding, forKey key: Swift.String, withAccessibility accessibility: ShopliveSDKCommon.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
   @discardableResult
   open func set(_ value: Foundation.Data, forKey key: Swift.String, withAccessibility accessibility: ShopliveSDKCommon.KeychainItemAccessibility? = nil, isSynchronizable: Swift.Bool = false) -> Swift.Bool
   @available(*, deprecated, message: "remove is deprecated since version 2.2.1, use removeObject instead")
@@ -1186,8 +1186,8 @@ public class JSONNull : Swift.Codable, Swift.Hashable {
     get
   }
   public init()
-  required public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
   @objc deinit
 }
 public protocol RawDataRepresantable {
@@ -1209,14 +1209,14 @@ extension ShopliveSDKCommon.BaseResponsable {
 public struct BaseResponse : ShopliveSDKCommon.BaseResponsable {
   public var _s: Swift.Int?
   public var _e: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 public struct EmptyResponse : ShopliveSDKCommon.BaseResponsable {
   public var _s: Swift.Int?
   public var _e: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 public enum HTTPVersion : Swift.String {
   case v1, v2
