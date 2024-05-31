@@ -54677,28 +54677,28 @@
       "kind": "StringLiteral",
       "offset": 5760,
       "length": 8,
-      "value": "\"1.5.10\""
+      "value": "\"1.5.11\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 5844,
       "length": 8,
-      "value": "\"1.5.10\""
+      "value": "\"1.5.11\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 5931,
       "length": 8,
-      "value": "\"1.5.10\""
+      "value": "\"1.5.11\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6020,
       "length": 8,
-      "value": "\"1.5.10\""
+      "value": "\"1.5.11\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/Utils\/ShopLiveFileSizeConverter.swift",
