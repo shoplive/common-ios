@@ -502,6 +502,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 @interface ShopLiveCommon (SWIFT_EXTENSION(ShopliveSDKCommon))
 + (void)setAuthToken:(NSString * _Nullable)authToken;
 + (NSString * _Nullable)getAuthToken SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)getAuthTokenForPlayer SWIFT_WARN_UNUSED_RESULT;
 + (ShopLiveCommonUser * _Nullable)getUser SWIFT_WARN_UNUSED_RESULT;
 + (void)setUser:(ShopLiveCommonUser * _Nullable)user accessKey:(NSString * _Nullable)accessKey;
 + (void)setUser:(ShopLiveCommonUser * _Nullable)user;

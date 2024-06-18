@@ -358,6 +358,7 @@ public protocol ShopLiveCommonDelegate : ObjectiveC.NSObject {
 extension ShopliveSDKCommon.ShopLiveCommon {
   @objc(setAuthToken:) public static func setAuthToken(authToken: Swift.String?)
   @objc public static func getAuthToken() -> Swift.String?
+  @objc public static func getAuthTokenForPlayer() -> Swift.String?
   @objc public static func getUser() -> ShopliveSDKCommon.ShopLiveCommonUser?
   @objc(setUser:accessKey:) public static func setUser(user: ShopliveSDKCommon.ShopLiveCommonUser?, accessKey: Swift.String?)
   @objc(setUser:) public static func setUser(user: ShopliveSDKCommon.ShopLiveCommonUser?)

@@ -14023,6 +14023,40 @@
           },
           {
             "kind": "Function",
+            "name": "getAuthTokenForPlayer",
+            "printedName": "getAuthTokenForPlayer()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ShopliveSDKCommon@objc(cs)ShopLiveCommon(cm)getAuthTokenForPlayer",
+            "mangledName": "$s17ShopliveSDKCommon14ShopLiveCommonC21getAuthTokenForPlayerSSSgyFZ",
+            "moduleName": "ShopliveSDKCommon",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getUser",
             "printedName": "getUser()",
             "children": [
@@ -54633,72 +54667,72 @@
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "BooleanLiteral",
-      "offset": 1163,
+      "offset": 1168,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1570,
+      "offset": 1588,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
-      "offset": 2161,
+      "offset": 2562,
       "length": 72,
       "value": "\"[Shoplive] failed to create authToken because accessKey is not defined\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "BooleanLiteral",
-      "offset": 5352,
+      "offset": 5769,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "BooleanLiteral",
-      "offset": 5431,
+      "offset": 5848,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "BooleanLiteral",
-      "offset": 5480,
+      "offset": 5897,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
-      "offset": 5760,
+      "offset": 6177,
       "length": 8,
-      "value": "\"1.5.12\""
+      "value": "\"1.5.13\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
-      "offset": 5844,
+      "offset": 6261,
       "length": 8,
-      "value": "\"1.5.12\""
+      "value": "\"1.5.13\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
-      "offset": 5931,
+      "offset": 6348,
       "length": 8,
-      "value": "\"1.5.12\""
+      "value": "\"1.5.13\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
-      "offset": 6020,
+      "offset": 6437,
       "length": 8,
-      "value": "\"1.5.12\""
+      "value": "\"1.5.13\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/Utils\/ShopLiveFileSizeConverter.swift",
