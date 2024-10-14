@@ -819,10 +819,10 @@ extension UIKit.UIButton {
   @_Concurrency.MainActor(unsafe) public func setBackgroundColor_SL(_ color: UIKit.UIColor, for state: UIKit.UIControl.State)
 }
 extension UIKit.UIColor {
-  convenience public init(red: Swift.Int, green: Swift.Int, blue: Swift.Int, a: Swift.Int = 0xFF)
-  convenience public init(rgb: Swift.Int)
-  convenience public init(argb: Swift.Int)
-  convenience public init(_ hex: Swift.String, alpha: CoreFoundation.CGFloat = 1.0)
+  convenience public init(sl_red: Swift.Int, green: Swift.Int, blue: Swift.Int, a: Swift.Int = 0xFF)
+  convenience public init(sl_rgb: Swift.Int)
+  convenience public init(sl_argb: Swift.Int)
+  convenience public init(sl_hex: Swift.String, alpha: CoreFoundation.CGFloat = 1.0)
 }
 extension UIKit.UIDevice {
   @_Concurrency.MainActor(unsafe) public static var isIpad_SL: Swift.Bool {

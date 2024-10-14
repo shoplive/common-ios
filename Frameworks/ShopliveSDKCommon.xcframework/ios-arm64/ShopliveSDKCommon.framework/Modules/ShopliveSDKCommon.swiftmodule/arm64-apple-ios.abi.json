@@ -47854,7 +47854,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(red:green:blue:a:)",
+            "printedName": "init(sl_red:green:blue:a:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -47889,8 +47889,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:So7UIColorC17ShopliveSDKCommonE3red5green4blue1aABSi_S3itcfc",
-            "mangledName": "$sSo7UIColorC17ShopliveSDKCommonE3red5green4blue1aABSi_S3itcfc",
+            "usr": "s:So7UIColorC17ShopliveSDKCommonE6sl_red5green4blue1aABSi_S3itcfc",
+            "mangledName": "$sSo7UIColorC17ShopliveSDKCommonE6sl_red5green4blue1aABSi_S3itcfc",
             "moduleName": "ShopliveSDKCommon",
             "declAttributes": [
               "Convenience"
@@ -47901,7 +47901,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(rgb:)",
+            "printedName": "init(sl_rgb:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -47917,8 +47917,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:So7UIColorC17ShopliveSDKCommonE3rgbABSi_tcfc",
-            "mangledName": "$sSo7UIColorC17ShopliveSDKCommonE3rgbABSi_tcfc",
+            "usr": "s:So7UIColorC17ShopliveSDKCommonE6sl_rgbABSi_tcfc",
+            "mangledName": "$sSo7UIColorC17ShopliveSDKCommonE6sl_rgbABSi_tcfc",
             "moduleName": "ShopliveSDKCommon",
             "declAttributes": [
               "Convenience"
@@ -47929,7 +47929,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(argb:)",
+            "printedName": "init(sl_argb:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -47945,8 +47945,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:So7UIColorC17ShopliveSDKCommonE4argbABSi_tcfc",
-            "mangledName": "$sSo7UIColorC17ShopliveSDKCommonE4argbABSi_tcfc",
+            "usr": "s:So7UIColorC17ShopliveSDKCommonE7sl_argbABSi_tcfc",
+            "mangledName": "$sSo7UIColorC17ShopliveSDKCommonE7sl_argbABSi_tcfc",
             "moduleName": "ShopliveSDKCommon",
             "declAttributes": [
               "Convenience"
@@ -47957,7 +47957,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(_:alpha:)",
+            "printedName": "init(sl_hex:alpha:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -47980,8 +47980,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:So7UIColorC17ShopliveSDKCommonE_5alphaABSS_14CoreFoundation7CGFloatVtcfc",
-            "mangledName": "$sSo7UIColorC17ShopliveSDKCommonE_5alphaABSS_12CoreGraphics7CGFloatVtcfc",
+            "usr": "s:So7UIColorC17ShopliveSDKCommonE6sl_hex5alphaABSS_14CoreFoundation7CGFloatVtcfc",
+            "mangledName": "$sSo7UIColorC17ShopliveSDKCommonE6sl_hex5alphaABSS_12CoreGraphics7CGFloatVtcfc",
             "moduleName": "ShopliveSDKCommon",
             "declAttributes": [
               "Convenience"
@@ -54711,28 +54711,28 @@
       "kind": "StringLiteral",
       "offset": 6177,
       "length": 8,
-      "value": "\"1.5.15\""
+      "value": "\"1.5.16\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6261,
       "length": 8,
-      "value": "\"1.5.15\""
+      "value": "\"1.5.16\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6348,
       "length": 8,
-      "value": "\"1.5.15\""
+      "value": "\"1.5.16\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6437,
       "length": 8,
-      "value": "\"1.5.15\""
+      "value": "\"1.5.16\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/Utils\/ShopLiveFileSizeConverter.swift",
@@ -57565,114 +57565,100 @@
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 204,
+      "offset": 207,
       "length": 4,
       "value": "0xFF"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "FloatLiteral",
-      "offset": 263,
+      "offset": 269,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "FloatLiteral",
-      "offset": 306,
+      "offset": 312,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "FloatLiteral",
-      "offset": 347,
+      "offset": 353,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "FloatLiteral",
-      "offset": 386,
+      "offset": 392,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 490,
+      "offset": 505,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 496,
+      "offset": 511,
       "length": 4,
       "value": "0xFF"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 529,
+      "offset": 547,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 534,
+      "offset": 552,
       "length": 4,
       "value": "0xFF"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 564,
+      "offset": 585,
       "length": 4,
       "value": "0xFF"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 669,
+      "offset": 699,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 675,
+      "offset": 705,
       "length": 4,
       "value": "0xFF"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 709,
+      "offset": 742,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 714,
+      "offset": 747,
       "length": 4,
       "value": "0xFF"
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
-      "kind": "IntegerLiteral",
-      "offset": 745,
-      "length": 4,
-      "value": "0xFF"
-    },
-    {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
-      "kind": "IntegerLiteral",
-      "offset": 775,
-      "length": 2,
-      "value": "24"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
@@ -57683,92 +57669,106 @@
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
+      "kind": "IntegerLiteral",
+      "offset": 814,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
+      "kind": "IntegerLiteral",
+      "offset": 820,
+      "length": 4,
+      "value": "0xFF"
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "FloatLiteral",
-      "offset": 860,
+      "offset": 900,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "StringLiteral",
-      "offset": 992,
+      "offset": 1035,
       "length": 3,
       "value": "\"#\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 1060,
+      "offset": 1103,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "StringLiteral",
-      "offset": 1086,
+      "offset": 1137,
       "length": 8,
       "value": "\"ff0000\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 1205,
+      "offset": 1256,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 1316,
+      "offset": 1367,
       "length": 8,
       "value": "0xFF0000"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 1329,
+      "offset": 1380,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "FloatLiteral",
-      "offset": 1335,
+      "offset": 1386,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 1387,
+      "offset": 1438,
       "length": 8,
       "value": "0x00FF00"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 1400,
+      "offset": 1451,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "FloatLiteral",
-      "offset": 1405,
+      "offset": 1456,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 1455,
+      "offset": 1506,
       "length": 8,
       "value": "0x0000FF"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "FloatLiteral",
-      "offset": 1467,
+      "offset": 1518,
       "length": 5,
       "value": "255.0"
     },
