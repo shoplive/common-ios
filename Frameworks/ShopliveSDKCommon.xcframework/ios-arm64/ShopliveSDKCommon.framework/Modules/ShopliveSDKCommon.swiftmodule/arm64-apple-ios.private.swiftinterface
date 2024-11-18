@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopliveSDKCommon
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
@@ -293,6 +293,22 @@ public class ShopLiveCommonNetworkBaseErrorResponse : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
+@_hasMissingDesignatedInitializers public class SLFileManager {
+  public static var shortformDirectoryPath: Foundation.URL {
+    get
+  }
+  public static var editorDirectoryPath: Foundation.URL {
+    get
+  }
+  public static var ffmpegDirectorypath: Foundation.URL {
+    get
+  }
+  public static func createShopLiveDirectory(with path: Foundation.URL)
+  public static func deleteShortformDirectoryFiles()
+  public static func deleteEditorDirectoryFiles()
+  public static func deleteFFMpegDirectoryFiles()
+  @objc deinit
+}
 public struct SLFlexibleParser<K> where K : Swift.CodingKey {
   public init(container: Swift.KeyedDecodingContainer<K>)
   public func parse<T>(targetType: T.Type, key: any Swift.CodingKey) throws -> T?
@@ -301,6 +317,8 @@ public struct SLFlexibleParser<K> where K : Swift.CodingKey {
   public static func debugLog(_ log: Swift.String)
   public static func memoryLog(_ log: Swift.String)
   public static func tempLog(_ log: Swift.String)
+  public static func publicLog(_ log: Swift.String)
+  public static var showLog: Swift.Bool
   @objc deinit
 }
 public class ShopLiveDebouncer {
@@ -785,7 +803,7 @@ extension MediaPlayer.MPVolumeView {
   @_Concurrency.MainActor(unsafe) public static func setVolume_SL(_ volume: Swift.Float)
 }
 extension Photos.PHAsset {
-  public func getURL_SL(completionHandler: @escaping ((_ responseURL: Foundation.URL?) -> Swift.Void))
+  public func getURL_SL(completionHandler: @escaping ((_ absoluteUrl: Foundation.URL?, _ relativeUrl: Foundation.URL?) -> Swift.Void))
 }
 extension QuartzCore.CALayer {
   public func fitToSuperView_SL(superview: UIKit.UIView)
