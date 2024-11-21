@@ -307,6 +307,7 @@ public class ShopLiveCommonNetworkBaseErrorResponse : Swift.Codable {
   public static func deleteShortformDirectoryFiles()
   public static func deleteEditorDirectoryFiles()
   public static func deleteFFMpegDirectoryFiles()
+  public static func getShortformDirectorySize() -> Swift.String?
   @objc deinit
 }
 public struct SLFlexibleParser<K> where K : Swift.CodingKey {

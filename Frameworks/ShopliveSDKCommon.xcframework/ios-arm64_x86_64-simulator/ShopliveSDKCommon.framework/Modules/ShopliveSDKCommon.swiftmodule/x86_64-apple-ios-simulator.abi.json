@@ -12760,6 +12760,37 @@
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getShortformDirectorySize",
+            "printedName": "getShortformDirectorySize()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ShopliveSDKCommon13SLFileManagerC25getShortformDirectorySizeSSSgyFZ",
+            "mangledName": "$s17ShopliveSDKCommon13SLFileManagerC25getShortformDirectorySizeSSSgyFZ",
+            "moduleName": "ShopliveSDKCommon",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -55046,6 +55077,27 @@
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/FileManger\/SLFileManager.swift",
       "kind": "StringLiteral",
       "offset": 4204,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/FileManger\/SLFileManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4439,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/FileManger\/SLFileManager.swift",
+      "kind": "StringLiteral",
+      "offset": 4968,
+      "length": 80,
+      "value": "\"[SLFILEMANAGER] shortform totalSize failed error \""
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/FileManger\/SLFileManager.swift",
+      "kind": "StringLiteral",
+      "offset": 5047,
       "length": 2,
       "value": "\"\""
     },
