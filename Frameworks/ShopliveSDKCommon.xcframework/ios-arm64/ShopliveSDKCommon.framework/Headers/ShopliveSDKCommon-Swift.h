@@ -306,6 +306,13 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+SWIFT_CLASS("_TtC17ShopliveSDKCommon9BrandData")
+@interface BrandData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 
 @class NSNotification;
 
@@ -357,6 +364,20 @@ typedef SWIFT_ENUM(NSInteger, PermissionType, open) {
   PermissionTypeMicrophone = 1,
   PermissionTypeIdfa = 2,
 };
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon17ProductBannerData")
+@interface ProductBannerData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon11ProductData")
+@interface ProductData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 @class UITouch;
 @class UIEvent;
@@ -438,15 +459,15 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon9SLWebView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+@interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
+@end
+
 @class UIScrollView;
 
 @interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
-@end
-
-
-@interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <WKScriptMessageHandler>
-- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 @end
 
 
@@ -570,6 +591,48 @@ typedef SWIFT_ENUM(NSInteger, ShopLiveResizeMode, open) {
   ShopLiveResizeModeCENTER_CROP = 0,
   ShopLiveResizeModeFIT = 1,
 };
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon29ShopLiveShortformActivityData")
+@interface ShopLiveShortformActivityData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon25ShopLiveShortformCardData")
+@interface ShopLiveShortformCardData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon25ShopLiveShortformClipData")
+@interface ShopLiveShortformClipData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon21ShopLiveShortformData")
+@interface ShopLiveShortformData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon27ShopLiveShortformDetailData")
+@interface ShopLiveShortformDetailData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon33ShopLiveShortformTimeOnlyClipData")
+@interface ShopLiveShortformTimeOnlyClipData : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 
 SWIFT_CLASS("_TtC17ShopliveSDKCommon24ShopliveAppStateObserver")

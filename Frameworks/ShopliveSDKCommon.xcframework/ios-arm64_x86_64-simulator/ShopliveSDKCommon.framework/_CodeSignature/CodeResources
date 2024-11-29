@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ShopliveSDKCommon-Swift.h</key>
 		<data>
-		AQaEMblbtgC7vQi0QNxkz6X5t28=
+		N3venexilsZeBJL3GNMLQ8uKif8=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -14,11 +14,11 @@
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		7Ze3Fw/UR0N/VyWltvgRNz0qrz0=
+		6THDZC3JM6kWIXj3Bk5IoUBOyu8=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ExEqmoVzZ/2FvohNLo/B2dtYWI0=
+		OFkTU2015iizQBtjPV+jJgCSG0I=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,19 +26,19 @@
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ExEqmoVzZ/2FvohNLo/B2dtYWI0=
+		OFkTU2015iizQBtjPV+jJgCSG0I=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		vkiCYr/PN8RarQHSTx5CJNxYR1s=
+		tJn6vYbsUNZvj21+unZgXB8xGXo=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		7Ze3Fw/UR0N/VyWltvgRNz0qrz0=
+		6THDZC3JM6kWIXj3Bk5IoUBOyu8=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		WJqtmQJiK+IzcvNDfPWDtOj0+Ds=
+		tqVcKPGUXNR31ZNYu8e7tv/2knA=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		WJqtmQJiK+IzcvNDfPWDtOj0+Ds=
+		tqVcKPGUXNR31ZNYu8e7tv/2knA=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		7W8wHotgkSjEupA5VawShUOz64s=
+		UV/jIO/74o2Buwx0RWCV7lGyjHE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -75,21 +75,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ewg+AcDZ6Ro2OedcshbUsWtFC+REc1OrPSokRfPhGuo=
+			5NTT4G7J1fflVbgGdkbVbQOmEjO3K/5GixZFiByajvE=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jFaQifcPrfzfVe3I3uMgB/BIfEZUftcO8Rq1T+XjLDk=
+			YRRcCg7xEYwa09042l/GSP5Sjp4FZv2TCubaN9GR6OM=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ovPulWxdP9uKcJczUoa6aGv0DF/G6anVhujb4aYSTDc=
+			jRuh/QwgAC7mUwcZlC/eBOxhZipJcGRiUJWoGZYpMbY=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -103,28 +103,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ovPulWxdP9uKcJczUoa6aGv0DF/G6anVhujb4aYSTDc=
+			jRuh/QwgAC7mUwcZlC/eBOxhZipJcGRiUJWoGZYpMbY=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tIRC9bJnrlLvsgw8mZA6LC6SD3wbqqcq6SmmvCuXJF0=
+			J+eplTbPQ8u+z4kC2U3GwZUbzAsArsy1ZkRM0ykrSFI=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jFaQifcPrfzfVe3I3uMgB/BIfEZUftcO8Rq1T+XjLDk=
+			YRRcCg7xEYwa09042l/GSP5Sjp4FZv2TCubaN9GR6OM=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JQ1hLo6MXZ7HVTf1AjVK930fHkTCJ4QadGcqzDSNLUw=
+			rE0wMF4Djg8Ml7IPM69O0zXA6CHYx2WaVoAW3ocUY6U=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -138,14 +138,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JQ1hLo6MXZ7HVTf1AjVK930fHkTCJ4QadGcqzDSNLUw=
+			rE0wMF4Djg8Ml7IPM69O0zXA6CHYx2WaVoAW3ocUY6U=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TyofPOJbm9JOLnBUwJrltHV7iXTUXB08Zq3fmFP6cl4=
+			QGCKl0of0P1siWb8pFBYj9PpVGOWm1HcNppNzDFnlMY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

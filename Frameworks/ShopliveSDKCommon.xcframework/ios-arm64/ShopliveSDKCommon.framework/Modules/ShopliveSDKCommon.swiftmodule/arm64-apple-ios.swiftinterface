@@ -421,6 +421,283 @@ extension ShopliveSDKCommon.ShopLiveCommon {
     @objc get
   }
 }
+public struct SLActivity : Swift.Codable {
+  public let viewCount: Swift.Int?, likeCount: Swift.Int?, commentCount: Swift.Int?, bookmarkCount: Swift.Int?
+  public let like: Swift.Bool?, bookmark: Swift.Bool?
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+@objc final public class ShopLiveShortformActivityData : ObjectiveC.NSObject {
+  final public var viewCount: Swift.Int?
+  final public var likeCount: Swift.Int?
+  final public var commentCount: Swift.Int?
+  final public var bookmarkCount: Swift.Int?
+  final public var like: Swift.Bool?
+  final public var bookmark: Swift.Bool?
+  public init(viewCount: Swift.Int? = nil, likeCount: Swift.Int? = nil, commentCount: Swift.Int? = nil, bookmarkCount: Swift.Int? = nil, like: Swift.Bool? = nil, bookmark: Swift.Bool? = nil)
+  @objc deinit
+}
+public struct SLBrandModel : Swift.Codable {
+  public let id: Swift.Int?
+  public let identifier: Swift.String?
+  public let imageUrl: Swift.String?
+  public let name: Swift.String?
+  public let traceId: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+  public func toBrandData() -> ShopliveSDKCommon.BrandData
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class BrandData : ObjectiveC.NSObject {
+  public var id: Swift.Int?
+  public var identifier: Swift.String?
+  public var imageUrl: Swift.String?
+  public var name: Swift.String?
+  public var traceId: Swift.String?
+  @objc deinit
+}
+public enum SLShortformConvertStatus : Swift.Codable {
+  case READY
+  case IN_PROGRESS
+  case COMPLETE
+  case FAILED
+  case CANCELLED
+  public static func == (a: ShopliveSDKCommon.SLShortformConvertStatus, b: ShopliveSDKCommon.SLShortformConvertStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SLCardModel : Swift.Codable {
+  public let duration: Swift.Int?, playCount: Swift.Int?, playDuration: Swift.Int?
+  public let source: Swift.String?
+  public let videoId: Swift.String?
+  public let campaignId: Swift.String?
+  public let clips: [ShopliveSDKCommon.Clip]?
+  public let videoUrl: Swift.String?, previewVideoUrl: Swift.String?
+  public let originVideoUrl: Swift.String?
+  public let convertStatus: ShopliveSDKCommon.SLShortformConvertStatus?
+  public let screenshotUrl: Swift.String?
+  public let specifiedScreenShotUrl: Swift.String?
+  public let cardType: Swift.String?
+  public let srn: Swift.String?
+  public let playerType: Swift.String?
+  public let timeOnlyClips: [ShopliveSDKCommon.TimeOnlyClip]?
+  public let width: CoreFoundation.CGFloat?
+  public let height: CoreFoundation.CGFloat?
+  public let externalVideoType: Swift.String?
+  public let externalVideoUrl: Swift.String?
+  public let externalVideoId: Swift.String?
+  public let externalVideoThumbnail: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+  public var validate: Swift.Bool {
+    get
+  }
+  public func toShopLiveShortformCardData() -> ShopliveSDKCommon.ShopLiveShortformCardData
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct Clip : Swift.Codable {
+  public let title: Swift.String?, ClipTitle: Swift.String?
+  public let from: Swift.Int?, to: Swift.Int?
+  public init(from decoder: any Swift.Decoder) throws
+  public func toShopLiveShortformClipData() -> ShopliveSDKCommon.ShopLiveShortformClipData
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct TimeOnlyClip : Swift.Codable {
+  public let title: Swift.String?
+  public let from: Swift.Double?
+  public let to: Swift.Double?
+  public let subtitles: [Swift.String]?
+  public init(from decoder: any Swift.Decoder) throws
+  public func toShopLiveShortformTimeOnlyClipData() -> ShopliveSDKCommon.ShopLiveShortformTimeOnlyClipData
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+@objc final public class ShopLiveShortformCardData : ObjectiveC.NSObject {
+  final public var duration: Swift.Int?
+  final public var playCount: Swift.Int?
+  final public var playDuration: Swift.Int?
+  final public var source: Swift.String?
+  final public var videoId: Swift.String?
+  final public var campaignId: Swift.String?
+  final public var clips: [ShopliveSDKCommon.ShopLiveShortformClipData]?
+  final public var videoUrl: Swift.String?
+  final public var previewVideoUrl: Swift.String?
+  final public let originVideoUrl: Swift.String?
+  final public let convertStatus: ShopliveSDKCommon.SLShortformConvertStatus?
+  final public var screenShotUrl: Swift.String?
+  final public var specifiedScreenShotUrl: Swift.String?
+  final public var cardType: Swift.String?
+  final public var srn: Swift.String?
+  final public var playerType: Swift.String?
+  final public var timeOnlyClips: [ShopliveSDKCommon.ShopLiveShortformTimeOnlyClipData]?
+  final public var width: CoreFoundation.CGFloat?
+  final public var heigh: CoreFoundation.CGFloat?
+  final public var externalVideoType: Swift.String?
+  final public var externalVideoUrl: Swift.String?
+  final public var externalVideoId: Swift.String?
+  final public var externalVideoThumbnail: Swift.String?
+  public init(duration: Swift.Int? = nil, playCount: Swift.Int? = nil, playDuration: Swift.Int? = nil, source: Swift.String? = nil, videoId: Swift.String? = nil, campaignId: Swift.String? = nil, clips: [ShopliveSDKCommon.ShopLiveShortformClipData]? = nil, videoUrl: Swift.String? = nil, previewVideoUrl: Swift.String? = nil, originVideoUrl: Swift.String? = nil, convertStatus: ShopliveSDKCommon.SLShortformConvertStatus? = nil, screenShotUrl: Swift.String? = nil, specifiedScreenShotUrl: Swift.String? = nil, cardType: Swift.String? = nil, srn: Swift.String? = nil, playerType: Swift.String? = nil, timeOnlyClips: [ShopliveSDKCommon.ShopLiveShortformTimeOnlyClipData]? = nil, width: CoreFoundation.CGFloat? = nil, heigh: CoreFoundation.CGFloat? = nil, externalVideoType: Swift.String? = nil, externalVideoUrl: Swift.String? = nil, externalVideoId: Swift.String? = nil, externalVideoThumbnail: Swift.String? = nil)
+  @objc deinit
+}
+@objc final public class ShopLiveShortformClipData : ObjectiveC.NSObject {
+  final public var title: Swift.String?
+  final public var clipTitle: Swift.String?
+  final public var from: Swift.Int?
+  final public var to: Swift.Int?
+  public init(title: Swift.String? = nil, clipTitle: Swift.String? = nil, from: Swift.Int? = nil, to: Swift.Int? = nil)
+  @objc deinit
+}
+@objc final public class ShopLiveShortformTimeOnlyClipData : ObjectiveC.NSObject {
+  final public var title: Swift.String?
+  final public var from: Swift.Double?
+  final public var to: Swift.Double?
+  final public var subTitles: [Swift.String]?
+  public init(title: Swift.String? = nil, from: Swift.Double? = nil, to: Swift.Double? = nil, subTitles: [Swift.String]? = nil)
+  @objc deinit
+}
+public struct SLCreator : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct SLLinkButton : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct SLProduct : Swift.Codable {
+  public let brand: Swift.String?
+  public let productId: Swift.String?
+  public let customerProductId: Swift.String?
+  public let name: Swift.String?
+  public let description: Swift.String?
+  public let url: Swift.String?
+  public let sku: Swift.String?
+  public let imageUrl: Swift.String?
+  public let currency: Swift.String?
+  public let showPrice: Swift.Bool?
+  public let originalPrice: Swift.Double?
+  public let discountPrice: Swift.Double?
+  public let discountRate: Swift.Double?
+  public let stockStatus: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+  public func toProductData() -> ShopliveSDKCommon.ProductData
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class ProductData : ObjectiveC.NSObject {
+  public var brand: Swift.String?
+  public var productId: Swift.String?
+  public var customerProductId: Swift.String?
+  public var name: Swift.String?
+  public var descriptions: Swift.String?
+  public var url: Swift.String?
+  public var sku: Swift.String?
+  public var imageUrl: Swift.String?
+  public var currency: Swift.String?
+  public var showPrice: Swift.Bool?
+  public var originalPrice: Swift.Double?
+  public var discountPrice: Swift.Double?
+  public var discountRate: Swift.Double?
+  public var stockStatus: Swift.String?
+  @objc deinit
+}
+public struct SLProductBanner : Swift.Codable {
+  public let title: Swift.String?
+  public let imageUrl: Swift.String?
+  public let scheme: Swift.String?, traceId: Swift.String?, type: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class ProductBannerData : ObjectiveC.NSObject {
+  public var title: Swift.String?
+  public var imageUrl: Swift.String?
+  public var scheme: Swift.String?, traceId: Swift.String?, type: Swift.String?
+  @objc deinit
+}
+public struct ReferenceByType : ShopliveSDKCommon.BaseResponsable, ShopliveSDKCommon.RawDataRepresantable {
+  public var _s: Swift.Int?
+  public var _e: Swift.String?
+  public let generalShortformReference: Swift.String?
+  public let promotionShortformReference: Swift.String?
+  public let externalShortformReference: Swift.String?
+  public var rawData: Foundation.Data?
+  public init(from decoder: any Swift.Decoder) throws
+  public func getRawDataDict() -> [Swift.String : Any]?
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct SLShortsCollectionModel : ShopliveSDKCommon.BaseResponsable, ShopliveSDKCommon.RawDataRepresantable {
+  public var _s: Swift.Int?
+  public var _e: Swift.String?
+  public let srn: Swift.String?, title: Swift.String?
+  public let shortsList: [ShopliveSDKCommon.SLShortsModel]?
+  public let reference: Swift.String?
+  public let referenceByType: ShopliveSDKCommon.ReferenceByType?
+  public let hasMore: Swift.Bool?
+  public var rawData: Foundation.Data?
+  public init(from decoder: any Swift.Decoder) throws
+  public func getRawDataDict() -> [Swift.String : Any]?
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct SLShortsDetail : Swift.Codable {
+  public let title: Swift.String?
+  public let description: Swift.String?
+  public let tags: [Swift.String]?
+  public let productCount: Swift.Int?
+  public let productBanner: ShopliveSDKCommon.SLProductBanner?
+  public let products: [ShopliveSDKCommon.SLProduct]?
+  public let brand: ShopliveSDKCommon.SLBrandModel?
+  public let creator: ShopliveSDKCommon.SLCreator?
+  public let linkButton: ShopliveSDKCommon.SLLinkButton?
+  public init(from decoder: any Swift.Decoder) throws
+  public func toShortsDetailData() -> ShopliveSDKCommon.ShopLiveShortformDetailData
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class ShopLiveShortformDetailData : ObjectiveC.NSObject {
+  public var title: Swift.String?
+  public var descriptions: Swift.String?
+  public var tags: [Swift.String]?
+  public var productCount: Swift.Int?
+  public var productBanner: ShopliveSDKCommon.ProductBannerData?
+  public var products: [ShopliveSDKCommon.ProductData]?
+  public var brand: ShopliveSDKCommon.BrandData?
+  @objc deinit
+}
+public struct SLShortsModel : ShopliveSDKCommon.BaseResponsable, ShopliveSDKCommon.RawDataRepresantable, Swift.Equatable {
+  public var _s: Swift.Int?
+  public var _e: Swift.String?
+  public var _d: Swift.String?
+  public let shortsId: Swift.String?
+  public let srn: Swift.String?
+  public let startAt: Swift.Int?, endAt: Swift.Int?
+  public let reference: Swift.String?
+  public let shortsDetail: ShopliveSDKCommon.SLShortsDetail?
+  public let activity: ShopliveSDKCommon.SLActivity?
+  public let action: Swift.String?, payload: Swift.String?
+  public let cards: [ShopliveSDKCommon.SLCardModel]?
+  public let shortsType: Swift.String?
+  public let traceId: Swift.String?
+  public let url: Swift.String?
+  public let reasonKey: Swift.String?
+  public var rawData: Foundation.Data?
+  public init(from decoder: any Swift.Decoder) throws
+  public static func == (lhs: ShopliveSDKCommon.SLShortsModel, rhs: ShopliveSDKCommon.SLShortsModel) -> Swift.Bool
+  public var validate: Swift.Bool {
+    get
+  }
+  public func getRawDataDict() -> [Swift.String : Any]?
+  public func toShopLiveShortformData() -> ShopliveSDKCommon.ShopLiveShortformData
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+@objc final public class ShopLiveShortformData : ObjectiveC.NSObject {
+  final public var shortsId: Swift.String?
+  final public var srn: Swift.String?
+  final public var activity: ShopliveSDKCommon.ShopLiveShortformActivityData?
+  final public var cards: [ShopliveSDKCommon.ShopLiveShortformCardData]?
+  final public var shortsDetail: ShopliveSDKCommon.ShopLiveShortformDetailData?
+  final public var shortsType: Swift.String?
+  final public var rawDictionary: [Swift.String : Any]?
+  public init(shortsId: Swift.String? = nil, srn: Swift.String? = nil, activity: ShopliveSDKCommon.ShopLiveShortformActivityData? = nil, cards: [ShopliveSDKCommon.ShopLiveShortformCardData]? = nil, shortsDetail: ShopliveSDKCommon.ShopLiveShortformDetailData? = nil, shortsType: Swift.String? = nil, rawDictionary: [Swift.String : Any]? = nil)
+  @objc deinit
+}
 public protocol ShopliveAppStateObserverDelegate : AnyObject {
   func handleAppStateNotification(appState: ShopliveSDKCommon.SLAppState)
 }
@@ -1666,6 +1943,8 @@ extension ShopliveSDKCommon.UIScreenDirection : Swift.Equatable {}
 extension ShopliveSDKCommon.UIScreenDirection : Swift.Hashable {}
 extension ShopliveSDKCommon.ShopLiveErrorCases : Swift.Equatable {}
 extension ShopliveSDKCommon.ShopLiveErrorCases : Swift.Hashable {}
+extension ShopliveSDKCommon.SLShortformConvertStatus : Swift.Equatable {}
+extension ShopliveSDKCommon.SLShortformConvertStatus : Swift.Hashable {}
 extension ShopliveSDKCommon.SLAppState : Swift.Equatable {}
 extension ShopliveSDKCommon.SLAppState : Swift.Hashable {}
 extension ShopliveSDKCommon.SLToastDuration : Swift.Equatable {}
