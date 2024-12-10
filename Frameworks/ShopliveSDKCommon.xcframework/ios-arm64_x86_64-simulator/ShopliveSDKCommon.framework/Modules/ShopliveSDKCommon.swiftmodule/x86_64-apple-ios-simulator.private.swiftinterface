@@ -421,6 +421,17 @@ extension ShopliveSDKCommon.ShopLiveCommon {
     @objc get
   }
 }
+public struct ReferenceByType : ShopliveSDKCommon.BaseResponsable, ShopliveSDKCommon.RawDataRepresantable {
+  public var _s: Swift.Int?
+  public var _e: Swift.String?
+  public let generalShortformReference: Swift.String?
+  public let promotionShortformReference: Swift.String?
+  public let externalShortformReference: Swift.String?
+  public var rawData: Foundation.Data?
+  public init(from decoder: any Swift.Decoder) throws
+  public func getRawDataDict() -> [Swift.String : Any]?
+  public func encode(to encoder: any Swift.Encoder) throws
+}
 public struct SLActivity : Swift.Codable {
   public let viewCount: Swift.Int?, likeCount: Swift.Int?, commentCount: Swift.Int?, bookmarkCount: Swift.Int?
   public let like: Swift.Bool?, bookmark: Swift.Bool?
@@ -613,17 +624,6 @@ public struct SLProductBanner : Swift.Codable {
   public var scheme: Swift.String?, traceId: Swift.String?, type: Swift.String?
   @objc deinit
 }
-public struct ReferenceByType : ShopliveSDKCommon.BaseResponsable, ShopliveSDKCommon.RawDataRepresantable {
-  public var _s: Swift.Int?
-  public var _e: Swift.String?
-  public let generalShortformReference: Swift.String?
-  public let promotionShortformReference: Swift.String?
-  public let externalShortformReference: Swift.String?
-  public var rawData: Foundation.Data?
-  public init(from decoder: any Swift.Decoder) throws
-  public func getRawDataDict() -> [Swift.String : Any]?
-  public func encode(to encoder: any Swift.Encoder) throws
-}
 public struct SLShortsCollectionModel : ShopliveSDKCommon.BaseResponsable, ShopliveSDKCommon.RawDataRepresantable {
   public var _s: Swift.Int?
   public var _e: Swift.String?
@@ -774,6 +774,23 @@ public struct SLJSONUtil {
   @_Concurrency.MainActor(unsafe) public func finishLoading()
   @_Concurrency.MainActor(unsafe) public func finishLoadingWithOutDelegateEvent()
   @_Concurrency.MainActor(unsafe) public func cancal()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public protocol SLLoadingAlertControllerDelegate2 {
+  @objc func didFinishLoading()
+  @objc func didTapBackground()
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLLoadingAlertController2 : UIKit.UIViewController, UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any ShopliveSDKCommon.SLLoadingAlertControllerDelegate2)?
+  @_Concurrency.MainActor(unsafe) public func setLoadingText(_ text: Swift.String)
+  @_Concurrency.MainActor(unsafe) public var useProgress: Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func resetProgress()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) public func setProgress(_ progress: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func cancelLoading()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit

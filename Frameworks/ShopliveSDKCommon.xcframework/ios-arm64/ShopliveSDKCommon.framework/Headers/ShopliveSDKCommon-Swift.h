@@ -410,10 +410,26 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon24SLLoadingAlertController")
 @end
 
 
+SWIFT_CLASS("_TtC17ShopliveSDKCommon25SLLoadingAlertController2")
+@interface SLLoadingAlertController2 : UIViewController <UIGestureRecognizerDelegate>
+- (void)viewDidAppear:(BOOL)animated;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon32SLLoadingAlertControllerDelegate_")
 @protocol SLLoadingAlertControllerDelegate
 - (void)didCancelLoading;
 - (void)didFinishLoading;
+@end
+
+
+SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon33SLLoadingAlertControllerDelegate2_")
+@protocol SLLoadingAlertControllerDelegate2
+- (void)didFinishLoading;
+- (void)didTapBackground;
 @end
 
 @class UIColor;
@@ -459,15 +475,15 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon9SLWebView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-@interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <WKScriptMessageHandler>
-- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
-@end
-
 @class UIScrollView;
 
 @interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+@end
+
+
+@interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 @end
 
 
