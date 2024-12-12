@@ -75340,28 +75340,28 @@
       "kind": "StringLiteral",
       "offset": 6156,
       "length": 7,
-      "value": "\"1.6.2\""
+      "value": "\"1.6.3\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6239,
       "length": 7,
-      "value": "\"1.6.2\""
+      "value": "\"1.6.3\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6325,
       "length": 7,
-      "value": "\"1.6.2\""
+      "value": "\"1.6.3\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6413,
       "length": 7,
-      "value": "\"1.6.2\""
+      "value": "\"1.6.3\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShortformEntity\/ReferenceByType.swift",
@@ -77340,168 +77340,175 @@
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "BooleanLiteral",
-      "offset": 2796,
+      "offset": 2271,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "BooleanLiteral",
-      "offset": 2904,
+      "offset": 2884,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2992,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "BooleanLiteral",
-      "offset": 2959,
+      "offset": 3047,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "BooleanLiteral",
-      "offset": 3015,
+      "offset": 3103,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "BooleanLiteral",
-      "offset": 3058,
+      "offset": 3146,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "BooleanLiteral",
-      "offset": 3102,
+      "offset": 3190,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 3403,
+      "offset": 3491,
       "length": 24,
       "value": "\"shopliveShortFormEvent\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 3681,
+      "offset": 3769,
       "length": 24,
       "value": "\"shopliveShortFormEvent\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 3972,
+      "offset": 4060,
       "length": 24,
       "value": "\"shopliveShortFormEvent\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "BooleanLiteral",
-      "offset": 4622,
+      "offset": 4710,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 4688,
+      "offset": 4776,
       "length": 39,
       "value": "\"window.__receiveAppEvent('\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 4723,
+      "offset": 4811,
       "length": 6,
       "value": "\"');\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 4738,
+      "offset": 4826,
       "length": 39,
       "value": "\"window.__receiveAppEvent('\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 4773,
+      "offset": 4861,
       "length": 6,
       "value": "\"', \""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 4809,
+      "offset": 4897,
       "length": 39,
       "value": "\"'\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 4844,
+      "offset": 4932,
       "length": 6,
       "value": "\"');\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 4863,
+      "offset": 4951,
       "length": 37,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 4897,
+      "offset": 4985,
       "length": 1,
       "value": "\");\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 5135,
+      "offset": 5223,
       "length": 62,
       "value": "\"window.cloud.shoplive.ExternalMessageManager.send('\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 5195,
+      "offset": 5283,
       "length": 2,
       "value": "\"'\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 5297,
+      "offset": 5385,
       "length": 17,
       "value": "\",\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 5313,
+      "offset": 5401,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 5353,
+      "offset": 5441,
       "length": 4,
       "value": "\");\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
-      "offset": 5944,
+      "offset": 6032,
       "length": 11,
       "value": "\"ShopliveSDKCommon.LeakAvoider\""
     },
