@@ -606,6 +606,7 @@ SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon25ShopLivePermissionHandler_")
 typedef SWIFT_ENUM(NSInteger, ShopLiveResizeMode, open) {
   ShopLiveResizeModeCENTER_CROP = 0,
   ShopLiveResizeModeFIT = 1,
+  ShopLiveResizeModeAUTO = 2,
 };
 
 
