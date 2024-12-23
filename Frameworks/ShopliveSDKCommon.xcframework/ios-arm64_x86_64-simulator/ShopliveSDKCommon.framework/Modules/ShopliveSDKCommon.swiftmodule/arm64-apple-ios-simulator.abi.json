@@ -10315,6 +10315,61 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "SLDeviceLogicalCoreCount",
+        "printedName": "SLDeviceLogicalCoreCount",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "currentDeviceCoreCount",
+            "printedName": "currentDeviceCoreCount()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ShopliveSDKCommon24SLDeviceLogicalCoreCountV013currentDeviceeF0SiSgyFZ",
+            "mangledName": "$s17ShopliveSDKCommon24SLDeviceLogicalCoreCountV013currentDeviceeF0SiSgyFZ",
+            "moduleName": "ShopliveSDKCommon",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17ShopliveSDKCommon24SLDeviceLogicalCoreCountV",
+        "mangledName": "$s17ShopliveSDKCommon24SLDeviceLogicalCoreCountV",
+        "moduleName": "ShopliveSDKCommon",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ShopliveSDKCommon",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -10929,61 +10984,6 @@
             "usr": "s:SH",
             "mangledName": "$sSH"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ShopliveSDKCommon",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "SLDeviceLogicalCoreCount",
-        "printedName": "SLDeviceLogicalCoreCount",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "currentDeviceCoreCount",
-            "printedName": "currentDeviceCoreCount()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.Int?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17ShopliveSDKCommon24SLDeviceLogicalCoreCountV013currentDeviceeF0SiSgyFZ",
-            "mangledName": "$s17ShopliveSDKCommon24SLDeviceLogicalCoreCountV013currentDeviceeF0SiSgyFZ",
-            "moduleName": "ShopliveSDKCommon",
-            "static": true,
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:17ShopliveSDKCommon24SLDeviceLogicalCoreCountV",
-        "mangledName": "$s17ShopliveSDKCommon24SLDeviceLogicalCoreCountV",
-        "moduleName": "ShopliveSDKCommon",
-        "declAttributes": [
-          "AccessControl"
         ]
       },
       {
@@ -74837,13 +74837,6 @@
       "value": "\"i\""
     },
     {
-      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/DevicePhysics\/ShopLiveHapticManager.swift",
-      "kind": "FloatLiteral",
-      "offset": 437,
-      "length": 3,
-      "value": "1.0"
-    },
-    {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/DevicePhysics\/SLDeviceLogicalCoreCount.swift",
       "kind": "Dictionary",
       "offset": 306,
@@ -74940,6 +74933,13 @@
       "offset": 2160,
       "length": 16,
       "value": "\"Unknown Device\""
+    },
+    {
+      "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/DevicePhysics\/ShopLiveHapticManager.swift",
+      "kind": "FloatLiteral",
+      "offset": 437,
+      "length": 3,
+      "value": "1.0"
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/Error\/ShopLiveCommonError.swift",
@@ -75548,28 +75548,28 @@
       "kind": "StringLiteral",
       "offset": 6156,
       "length": 9,
-      "value": "\"1.6.4.2\""
+      "value": "\"1.6.4.3\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6241,
       "length": 9,
-      "value": "\"1.6.4.2\""
+      "value": "\"1.6.4.3\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6329,
       "length": 9,
-      "value": "\"1.6.4.2\""
+      "value": "\"1.6.4.3\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6419,
       "length": 9,
-      "value": "\"1.6.4.2\""
+      "value": "\"1.6.4.3\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShortformEntity\/ReferenceByType.swift",

@@ -222,6 +222,9 @@ public struct ShopLiveEventRequest : ShopliveSDKCommon.BaseResponsable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
+public struct SLDeviceLogicalCoreCount {
+  public static func currentDeviceCoreCount() -> Swift.Int?
+}
 @_hasMissingDesignatedInitializers public class ShopLiveHapticManager {
   public static func impact(style: UIKit.UIImpactFeedbackGenerator.FeedbackStyle)
   @objc deinit
@@ -249,9 +252,6 @@ public enum UIScreenDirection {
   public var hashValue: Swift.Int {
     get
   }
-}
-public struct SLDeviceLogicalCoreCount {
-  public static func currentDeviceCoreCount() -> Swift.Int?
 }
 public enum ShopLiveErrorCases {
   case AuthenticationFailed
