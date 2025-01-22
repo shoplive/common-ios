@@ -333,16 +333,6 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon11LeakAvoider")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class NSCoder;
-
-SWIFT_CLASS("_TtC17ShopliveSDKCommon20LoadingIndicatorView")
-@interface LoadingIndicatorView : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
 
 
 
@@ -379,6 +369,7 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon11ProductData")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class NSCoder;
 @class UITouch;
 @class UIEvent;
 
@@ -401,17 +392,23 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon20SLBaseViewController")
 @end
 
 
-SWIFT_CLASS("_TtC17ShopliveSDKCommon24SLLoadingAlertController")
-@interface SLLoadingAlertController : UIViewController <UIGestureRecognizerDelegate>
-- (void)viewDidAppear:(BOOL)animated;
-- (void)viewDidLoad;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+SWIFT_CLASS("_TtC17ShopliveSDKCommon31SLCircularProgressIndicatorView")
+@interface SLCircularProgressIndicatorView : UIView <UIGestureRecognizerDelegate>
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (UIView * _Nullable)hitTest:(CGPoint)point withEvent:(UIEvent * _Nullable)event SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
-SWIFT_CLASS("_TtC17ShopliveSDKCommon25SLLoadingAlertController2")
-@interface SLLoadingAlertController2 : UIViewController <UIGestureRecognizerDelegate>
+
+SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon39SLCircularProgressIndicatorViewDelegate_")
+@protocol SLCircularProgressIndicatorViewDelegate
+- (void)didTapLoadingView:(SLCircularProgressIndicatorView * _Nonnull)alertController;
+@end
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon24SLLoadingAlertController")
+@interface SLLoadingAlertController : UIViewController <UIGestureRecognizerDelegate>
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -426,10 +423,12 @@ SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon32SLLoadingAlertControllerDelegate_")
 @end
 
 
-SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon33SLLoadingAlertControllerDelegate2_")
-@protocol SLLoadingAlertControllerDelegate2
-- (void)didFinishLoading;
-- (void)didTapBackground;
+SWIFT_CLASS("_TtC17ShopliveSDKCommon22SLLoadingIndicatorView")
+@interface SLLoadingIndicatorView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 @class UIColor;

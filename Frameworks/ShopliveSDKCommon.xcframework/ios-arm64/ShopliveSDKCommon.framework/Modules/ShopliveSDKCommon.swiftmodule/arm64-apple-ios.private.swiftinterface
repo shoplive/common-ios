@@ -99,6 +99,13 @@ public enum ShopliveCommonUserGender : Swift.String, Swift.CaseIterable {
   @objc override public init(userId: Swift.String, userName: Swift.String?, age: Foundation.NSNumber?, gender: Swift.String?, userScore: Foundation.NSNumber?, custom: Swift.Dictionary<Swift.String, Any>?)
   @objc deinit
 }
+@_hasMissingDesignatedInitializers final public class ShopLiveUserDefaults {
+  public static var shortFormGuideOpen: Swift.Bool {
+    get
+    set
+  }
+  @objc deinit
+}
 public struct CommonKeys {
   public static let Authorization: Swift.String
   public static let Content_Type: Swift.String
@@ -154,6 +161,8 @@ public struct CommonKeys {
   public static let streamApp: Swift.String
   public static let source: Swift.String
   public static let duration: Swift.String
+  public static let ShopLiveUserDefaultID: Swift.String
+  public static let shortFormGuideOpen: Swift.String
 }
 @objc public enum ShopLiveResizeMode : Swift.Int {
   case CENTER_CROP = 0
@@ -268,7 +277,6 @@ public enum ShopLiveErrorCases {
   case NotInitializedShareURL
   case NotInitializedShortformConfig
   case FailedEncoding
-  case EncodingCancled
   case RemovedVideo
   case UnsupportedMedia
   case UnsupportedOSpipMode
@@ -758,7 +766,18 @@ public struct SLJSONUtil {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class LoadingIndicatorView : UIKit.UIView {
+@objc public protocol SLCircularProgressIndicatorViewDelegate {
+  @objc func didTapLoadingView(_ alertController: ShopliveSDKCommon.SLCircularProgressIndicatorView)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SLCircularProgressIndicatorView : UIKit.UIView, UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any ShopliveSDKCommon.SLCircularProgressIndicatorViewDelegate)?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) public func setLoadingText(_ text: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func cancelLoading()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class SLLoadingIndicatorView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public static func show(isDimmed: Swift.Bool = true, key: Swift.String = "general", delay: Foundation.TimeInterval = 0)
   @_Concurrency.MainActor(unsafe) public static func hide(key: Swift.String = "general")
   @objc deinit
@@ -779,23 +798,6 @@ public struct SLJSONUtil {
   @_Concurrency.MainActor(unsafe) public func finishLoading()
   @_Concurrency.MainActor(unsafe) public func finishLoadingWithOutDelegateEvent()
   @_Concurrency.MainActor(unsafe) public func cancal()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-@objc public protocol SLLoadingAlertControllerDelegate2 {
-  @objc func didFinishLoading()
-  @objc func didTapBackground()
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLLoadingAlertController2 : UIKit.UIViewController, UIKit.UIGestureRecognizerDelegate {
-  @_Concurrency.MainActor(unsafe) weak public var delegate: (any ShopliveSDKCommon.SLLoadingAlertControllerDelegate2)?
-  @_Concurrency.MainActor(unsafe) public func setLoadingText(_ text: Swift.String)
-  @_Concurrency.MainActor(unsafe) public var useProgress: Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public func resetProgress()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) public func setProgress(_ progress: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) public func cancelLoading()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
@@ -821,6 +823,11 @@ extension UIKit.UIWindow {
   @_Concurrency.MainActor(unsafe) public init(textPadding: UIKit.UIEdgeInsets)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func textRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func editingRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class SLWebViewStore {
+  public static let shared: ShopliveSDKCommon.SLWebViewStore
+  public func updateState()
   @objc deinit
 }
 @objc public protocol SLWebviewScrollDelegate {
@@ -850,6 +857,7 @@ extension UIKit.UIWindow {
   @_Concurrency.MainActor(unsafe) final public func setScrollable(_ scrollable: Swift.Bool)
   @_Concurrency.MainActor(unsafe) final public func configure(url: Swift.String)
   @_Concurrency.MainActor(unsafe) final public func configure(html: Swift.String)
+  @_Concurrency.MainActor(unsafe) final public func reconnect()
   @_Concurrency.MainActor(unsafe) final public func sendEventToWeb(event: Swift.String, parameter: Any? = nil, wrapping: Swift.Bool = false)
   @_Concurrency.MainActor(unsafe) final public func sendShortsEvent(event: Swift.String, parameter: [Swift.String : Any]? = nil, completion: @escaping () -> Swift.Void)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
