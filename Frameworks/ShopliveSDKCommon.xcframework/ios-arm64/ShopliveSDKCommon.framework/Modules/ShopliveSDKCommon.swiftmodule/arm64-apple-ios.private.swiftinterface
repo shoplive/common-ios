@@ -328,7 +328,6 @@ public struct SLFlexibleParser<K> where K : Swift.CodingKey {
   public func parse<T>(targetType: T.Type, key: any Swift.CodingKey) throws -> T?
 }
 @_hasMissingDesignatedInitializers public class ShopLiveLogger {
-  public static func debugLog(_ log: Swift.String)
   public static func memoryLog(_ log: Swift.String)
   public static func tempLog(_ log: Swift.String)
   public static func publicLog(_ log: Swift.String)
