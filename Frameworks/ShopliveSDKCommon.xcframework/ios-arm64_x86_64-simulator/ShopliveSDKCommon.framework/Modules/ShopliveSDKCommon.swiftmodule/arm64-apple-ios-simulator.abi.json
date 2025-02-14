@@ -75677,29 +75677,29 @@
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6157,
-      "length": 7,
-      "value": "\"1.6.5\""
+      "length": 9,
+      "value": "\"1.6.5.1\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
-      "offset": 6240,
-      "length": 7,
-      "value": "\"1.6.5\""
+      "offset": 6242,
+      "length": 9,
+      "value": "\"1.6.5.1\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
-      "offset": 6326,
-      "length": 7,
-      "value": "\"1.6.5\""
+      "offset": 6330,
+      "length": 9,
+      "value": "\"1.6.5.1\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
-      "offset": 6414,
-      "length": 7,
-      "value": "\"1.6.5\""
+      "offset": 6420,
+      "length": 9,
+      "value": "\"1.6.5.1\""
     },
     {
       "filePath": "\/Users\/sangminhan\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShortformEntity\/ReferenceByType.swift",
