@@ -392,6 +392,14 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon20SLBaseViewController")
 @end
 
 
+SWIFT_CLASS("_TtC17ShopliveSDKCommon8SLButton")
+@interface SLButton : UIButton
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (UIView * _Nullable)hitTest:(CGPoint)point withEvent:(UIEvent * _Nullable)event SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
 SWIFT_CLASS("_TtC17ShopliveSDKCommon31SLCircularProgressIndicatorView")
 @interface SLCircularProgressIndicatorView : UIView <UIGestureRecognizerDelegate>
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
@@ -404,6 +412,13 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon31SLCircularProgressIndicatorView")
 SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon39SLCircularProgressIndicatorViewDelegate_")
 @protocol SLCircularProgressIndicatorViewDelegate
 - (void)didTapLoadingView:(SLCircularProgressIndicatorView * _Nonnull)alertController;
+@end
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon7SLLabel")
+@interface SLLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
 
@@ -468,21 +483,29 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon22SLTextFieldWithPadding")
 @end
 
 
+SWIFT_CLASS("_TtC17ShopliveSDKCommon11SLThumbView")
+@interface SLThumbView : UIView
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent * _Nullable)event SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC17ShopliveSDKCommon9SLWebView")
 @interface SLWebView : SLBaseView
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+@interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
+@end
+
 @class UIScrollView;
 
 @interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
-@end
-
-
-@interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <WKScriptMessageHandler>
-- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 @end
 
 
@@ -519,6 +542,7 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon14ShopLiveCommon")
 @interface ShopLiveCommon (SWIFT_EXTENSION(ShopliveSDKCommon))
 + (NSString * _Nonnull)makeShopLiveSessionId SWIFT_WARN_UNUSED_RESULT;
 @end
+
 
 
 
@@ -1111,6 +1135,14 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon20SLBaseViewController")
 @end
 
 
+SWIFT_CLASS("_TtC17ShopliveSDKCommon8SLButton")
+@interface SLButton : UIButton
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (UIView * _Nullable)hitTest:(CGPoint)point withEvent:(UIEvent * _Nullable)event SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
 SWIFT_CLASS("_TtC17ShopliveSDKCommon31SLCircularProgressIndicatorView")
 @interface SLCircularProgressIndicatorView : UIView <UIGestureRecognizerDelegate>
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
@@ -1123,6 +1155,13 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon31SLCircularProgressIndicatorView")
 SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon39SLCircularProgressIndicatorViewDelegate_")
 @protocol SLCircularProgressIndicatorViewDelegate
 - (void)didTapLoadingView:(SLCircularProgressIndicatorView * _Nonnull)alertController;
+@end
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon7SLLabel")
+@interface SLLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
 
@@ -1187,21 +1226,29 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon22SLTextFieldWithPadding")
 @end
 
 
+SWIFT_CLASS("_TtC17ShopliveSDKCommon11SLThumbView")
+@interface SLThumbView : UIView
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent * _Nullable)event SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC17ShopliveSDKCommon9SLWebView")
 @interface SLWebView : SLBaseView
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+@interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
+@end
+
 @class UIScrollView;
 
 @interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
-@end
-
-
-@interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <WKScriptMessageHandler>
-- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 @end
 
 
@@ -1238,6 +1285,7 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon14ShopLiveCommon")
 @interface ShopLiveCommon (SWIFT_EXTENSION(ShopliveSDKCommon))
 + (NSString * _Nonnull)makeShopLiveSessionId SWIFT_WARN_UNUSED_RESULT;
 @end
+
 
 
 
