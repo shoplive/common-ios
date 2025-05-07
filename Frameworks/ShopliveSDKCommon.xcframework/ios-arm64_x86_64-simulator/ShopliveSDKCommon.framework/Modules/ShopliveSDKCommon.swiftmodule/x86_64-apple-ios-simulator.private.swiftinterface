@@ -298,7 +298,7 @@ public enum ShopLiveErrorCases {
 }
 @_hasMissingDesignatedInitializers public class ShopLiveCommonErrorGenerator {
   public class func generateError(errorCase: ShopliveSDKCommon.ShopLiveErrorCases, error: (any Swift.Error)?, message: Swift.String?) -> ShopliveSDKCommon.ShopLiveCommonError
-  public class func generateErrorFromNetwork(statusCode: Swift.Int, error: (any Swift.Error)?, responseData: Foundation.Data?) -> ShopliveSDKCommon.ShopLiveCommonError?
+  public class func generateErrorFromNetwork(statusCode: Swift.Int?, error: (any Swift.Error)?, responseData: Foundation.Data?, endpoint: Swift.String) -> ShopliveSDKCommon.ShopLiveCommonError?
   @objc deinit
 }
 public class ShopLiveCommonNetworkBaseErrorResponse : Swift.Codable {
