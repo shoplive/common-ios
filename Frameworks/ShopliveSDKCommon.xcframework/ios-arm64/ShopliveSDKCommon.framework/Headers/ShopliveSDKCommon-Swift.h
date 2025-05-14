@@ -380,17 +380,6 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon10SLBaseView")
 - (void)touchesEnded:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 @end
 
-@class NSString;
-@class NSBundle;
-
-SWIFT_CLASS("_TtC17ShopliveSDKCommon20SLBaseViewController")
-@interface SLBaseViewController : UIViewController
-- (void)viewWillAppear:(BOOL)animated;
-- (void)viewWillDisappear:(BOOL)animated;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 
 SWIFT_CLASS("_TtC17ShopliveSDKCommon8SLButton")
 @interface SLButton : UIButton
@@ -421,6 +410,8 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon7SLLabel")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
+@class NSString;
+@class NSBundle;
 
 SWIFT_CLASS("_TtC17ShopliveSDKCommon24SLLoadingAlertController")
 @interface SLLoadingAlertController : UIViewController <UIGestureRecognizerDelegate>
@@ -497,15 +488,15 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon9SLWebView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-@interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <WKScriptMessageHandler>
-- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
-@end
-
 @class UIScrollView;
 
 @interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+@end
+
+
+@interface SLWebView (SWIFT_EXTENSION(ShopliveSDKCommon)) <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 @end
 
 
@@ -672,6 +663,19 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon33ShopLiveShortformTimeOnlyClipData")
 @interface ShopLiveShortformTimeOnlyClipData : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class NSURLSession;
+@class NSURLSessionDownloadTask;
+@class NSURL;
+@class NSURLSessionTask;
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon27ShopLiveWebViewCacheManager")
+@interface ShopLiveWebViewCacheManager : NSObject <NSURLSessionDownloadDelegate>
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite;
+- (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didFinishDownloadingToURL:(NSURL * _Nonnull)location;
+- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
 @end
 
 

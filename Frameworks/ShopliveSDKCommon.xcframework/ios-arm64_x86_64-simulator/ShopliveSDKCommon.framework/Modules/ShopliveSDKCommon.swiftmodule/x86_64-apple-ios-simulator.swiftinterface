@@ -283,6 +283,7 @@ public enum ShopLiveErrorCases {
   case FailedNetwork
   case FailedJSONParsing
   case UnexpectedError
+  case InValidURL
   public static func == (a: ShopliveSDKCommon.ShopLiveErrorCases, b: ShopliveSDKCommon.ShopLiveErrorCases) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -316,10 +317,14 @@ public class ShopLiveCommonNetworkBaseErrorResponse : Swift.Codable {
   public static var ffmpegDirectorypath: Foundation.URL {
     get
   }
+  public static var backgroundPosterDirectoryPath: Foundation.URL {
+    get
+  }
   public static func createShopLiveDirectory(with path: Foundation.URL)
   public static func deleteShortformDirectoryFiles()
   public static func deleteEditorDirectoryFiles()
   public static func deleteFFMpegDirectoryFiles()
+  public static func deleteBackgroundPosterDirectoryFiles()
   public static func getShortformDirectorySize() -> Swift.String?
   @objc deinit
 }
@@ -759,14 +764,6 @@ public struct SLJSONUtil {
   @_Concurrency.MainActor(unsafe) open func bindData()
   @_Concurrency.MainActor(unsafe) open var touchEventHandler: ((Swift.Set<UIKit.UITouch>, UIKit.UIEvent?) -> ())?
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SLBaseViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) public var useOrientationLock: Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SLButton : UIKit.UIButton {
@@ -1790,6 +1787,16 @@ extension ShopliveSDKCommon.SLReachability {
   public var description: Swift.String {
     get
   }
+}
+@objc @_inheritsConvenienceInitializers public class ShopLiveWebViewCacheManager : ObjectiveC.NSObject, Foundation.URLSessionDownloadDelegate {
+  public var completionHandler: ((Swift.String?) -> Swift.Void)?
+  public func getUrl() -> Swift.String
+  @objc override dynamic public init()
+  public func startDownload(url: Foundation.URL)
+  @objc public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didWriteData bytesWritten: Swift.Int64, totalBytesWritten: Swift.Int64, totalBytesExpectedToWrite: Swift.Int64)
+  @objc public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
+  @objc public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
+  @objc deinit
 }
 @objc public enum PermissionType : Swift.Int {
   case camera
