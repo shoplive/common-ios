@@ -76799,28 +76799,28 @@
       "kind": "StringLiteral",
       "offset": 6170,
       "length": 7,
-      "value": "\"1.7.0\""
+      "value": "\"1.7.1\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6253,
       "length": 7,
-      "value": "\"1.7.0\""
+      "value": "\"1.7.1\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6339,
       "length": 7,
-      "value": "\"1.7.0\""
+      "value": "\"1.7.1\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6427,
       "length": 7,
-      "value": "\"1.7.0\""
+      "value": "\"1.7.1\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
@@ -82042,656 +82042,649 @@
       "kind": "IntegerLiteral",
       "offset": 9998,
       "length": 3,
-      "value": "100"
-    },
-    {
-      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
-      "kind": "IntegerLiteral",
-      "offset": 10052,
-      "length": 3,
-      "value": "100"
+      "value": "999"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10120,
+      "offset": 10066,
       "length": 28,
       "value": "\"[HASSAN LOG] requestLog \n\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10168,
+      "offset": 10114,
       "length": 46,
       "value": "\"url : \""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10208,
+      "offset": 10154,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10211,
+      "offset": 10157,
       "length": 1,
       "value": "\"\n\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10234,
+      "offset": 10180,
       "length": 32,
       "value": "\"param : \""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "Dictionary",
-      "offset": 10259,
+      "offset": 10205,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10263,
+      "offset": 10209,
       "length": 1,
       "value": "\"\n\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10286,
+      "offset": 10232,
       "length": 28,
       "value": "\"header : \""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10311,
+      "offset": 10257,
       "length": 1,
       "value": "\"\n\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10334,
+      "offset": 10280,
       "length": 28,
       "value": "\"==========================\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10621,
-      "length": 71,
+      "offset": 10567,
+      "length": 80,
       "value": "\"[UPLOADRESPONSE] \""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10681,
+      "offset": 10636,
       "length": 9,
       "value": "\"no data\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10691,
+      "offset": 10646,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 10969,
+      "offset": 10924,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 11310,
+      "offset": 11265,
       "length": 16,
       "value": "\"empty response\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 11769,
+      "offset": 11724,
       "length": 67,
       "value": "\"[UPLOADRESPONSE] JsonDecoding Error \""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 11835,
+      "offset": 11790,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 12513,
+      "offset": 12468,
       "length": 6,
       "value": "\"\r\n\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 12549,
+      "offset": 12504,
       "length": 19,
       "value": "\"--\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 12563,
+      "offset": 12518,
       "length": 1,
       "value": "\"\r\n\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "Dictionary",
-      "offset": 12620,
+      "offset": 12575,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 12710,
+      "offset": 12665,
       "length": 73,
       "value": "\"Content-Disposition: form-data; name=\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 12756,
+      "offset": 12711,
       "length": 1,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 12782,
+      "offset": 12737,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 12829,
+      "offset": 12784,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 12838,
+      "offset": 12793,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 12850,
+      "offset": 12805,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 12945,
+      "offset": 12900,
       "length": 15,
       "value": "\"sessionSecret\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13059,
+      "offset": 13014,
       "length": 80,
       "value": "\"Content-Disposition: form-data; name=\"sessionSecret\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13138,
+      "offset": 13093,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13185,
+      "offset": 13140,
       "length": 30,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13202,
+      "offset": 13157,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13214,
+      "offset": 13169,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13306,
+      "offset": 13261,
       "length": 12,
       "value": "\"videoWidth\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13418,
+      "offset": 13373,
       "length": 77,
       "value": "\"Content-Disposition: form-data; name=\"videoWidth\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13494,
+      "offset": 13449,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13541,
+      "offset": 13496,
       "length": 34,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13562,
+      "offset": 13517,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13574,
+      "offset": 13529,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13667,
+      "offset": 13622,
       "length": 13,
       "value": "\"videoHeight\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13780,
+      "offset": 13735,
       "length": 78,
       "value": "\"Content-Disposition: form-data; name=\"videoHeight\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13857,
+      "offset": 13812,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13904,
+      "offset": 13859,
       "length": 35,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13926,
+      "offset": 13881,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 13938,
+      "offset": 13893,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 14033,
+      "offset": 13988,
       "length": 15,
       "value": "\"videoDuration\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 14147,
+      "offset": 14102,
       "length": 80,
       "value": "\"Content-Disposition: form-data; name=\"videoDuration\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 14226,
+      "offset": 14181,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 14273,
+      "offset": 14228,
       "length": 37,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 14297,
+      "offset": 14252,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 14309,
+      "offset": 14264,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 14405,
+      "offset": 14360,
       "length": 7,
       "value": "\"video\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 14620,
+      "offset": 14575,
       "length": 86,
       "value": "\"Content-Disposition: form-data; name=\"video\"; filename=\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 14691,
+      "offset": 14646,
       "length": 1,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 14705,
+      "offset": 14660,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 14752,
+      "offset": 14707,
       "length": 49,
       "value": "\"Content-Type: video\/mp4\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 14800,
+      "offset": 14755,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 15173,
+      "offset": 15128,
       "length": 7,
       "value": "\"image\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 15276,
+      "offset": 15231,
       "length": 83,
       "value": "\"Content-Disposition: form-data; name=\"image\"; filename=\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 15344,
+      "offset": 15299,
       "length": 1,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 15358,
+      "offset": 15313,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 15405,
+      "offset": 15360,
       "length": 50,
       "value": "\"Content-Type: image\/jpeg\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 15454,
+      "offset": 15409,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 15813,
+      "offset": 15768,
       "length": 11,
       "value": "\"imageData\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 15881,
+      "offset": 15836,
       "length": 15,
       "value": "\"imageFileName\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 15912,
+      "offset": 15867,
       "length": 7,
       "value": "\"image\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 16004,
+      "offset": 15959,
       "length": 101,
       "value": "\"Content-Disposition: form-data; name=\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 16055,
+      "offset": 16010,
       "length": 1,
       "value": "\"\"; filename=\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 16090,
+      "offset": 16045,
       "length": 1,
       "value": "\"\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 16104,
+      "offset": 16059,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 16151,
+      "offset": 16106,
       "length": 50,
       "value": "\"Content-Type: image\/jpeg\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 16200,
+      "offset": 16155,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 16352,
+      "offset": 16307,
       "length": 29,
       "value": "\"--\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 16366,
+      "offset": 16321,
       "length": 2,
       "value": "\"--\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 16380,
+      "offset": 16335,
       "length": 22,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "Dictionary",
-      "offset": 16553,
+      "offset": 16508,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 16670,
+      "offset": 16625,
       "length": 12,
       "value": "\"utm_source\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 16819,
+      "offset": 16774,
       "length": 12,
       "value": "\"utm_medium\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 16974,
+      "offset": 16929,
       "length": 14,
       "value": "\"utm_campaign\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 17130,
+      "offset": 17085,
       "length": 13,
       "value": "\"utm_content\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "Dictionary",
-      "offset": 17301,
+      "offset": 17256,
       "length": 58,
       "value": "[(\"Content-Type\", \"application\/json\")]"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 17493,
+      "offset": 17448,
       "length": 17,
       "value": "\"Bearer \""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 17509,
+      "offset": 17464,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 18559,
+      "offset": 18514,
       "length": 3,
       "value": "\"i\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "Dictionary",
-      "offset": 18706,
+      "offset": 18661,
       "length": 58,
       "value": "[(\"Content-Type\", \"application\/json\")]"
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 18898,
+      "offset": 18853,
       "length": 17,
       "value": "\"Bearer \""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 18914,
+      "offset": 18869,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 20116,
+      "offset": 20071,
       "length": 3,
       "value": "\"i\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 20329,
+      "offset": 20284,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 20422,
+      "offset": 20377,
       "length": 8,
       "value": "\"Bearer\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 20438,
+      "offset": 20393,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
-      "offset": 20564,
+      "offset": 20519,
       "length": 16,
       "value": "\"x-sl-guest-uid\""
     },
