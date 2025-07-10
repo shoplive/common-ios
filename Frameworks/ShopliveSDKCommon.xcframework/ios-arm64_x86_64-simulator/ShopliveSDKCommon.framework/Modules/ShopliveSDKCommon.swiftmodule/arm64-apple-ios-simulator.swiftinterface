@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
-// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ShopliveSDKCommon
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ShopliveSDKCommon
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFoundation
 import AVKit
 import AdSupport
@@ -178,7 +178,7 @@ public struct CommonKeys {
   public static let shared: ShopliveSDKCommon.ShopLiveCommonConfigurationManager
   public func getShortformEventTraceHostUrl() -> Swift.String
   public func clearHostConfigModel()
-  public func callHostConfigAPI(completion: @escaping (Swift.Result<Swift.Void, ShopliveSDKCommon.ShopLiveCommonError>) -> ())
+  public func callHostConfigAPI(completion: @escaping ((Swift.Result<Swift.Void, ShopliveSDKCommon.ShopLiveCommonError>) -> ()))
   @objc deinit
 }
 public struct ShopLiveConversionData {
@@ -494,8 +494,8 @@ public enum SLShortformConvertStatus : Swift.Codable {
   case FAILED
   case CANCELLED
   public static func == (a: ShopliveSDKCommon.SLShortformConvertStatus, b: ShopliveSDKCommon.SLShortformConvertStatus) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
   public func hash(into hasher: inout Swift.Hasher)
+  public func encode(to encoder: any Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
   }
@@ -1127,7 +1127,7 @@ extension MediaPlayer.MPVolumeView {
   @_Concurrency.MainActor @preconcurrency public static func setVolume_SL(_ volume: Swift.Float)
 }
 extension Photos.PHAsset {
-  public func getURL_SL(completionHandler: @escaping (_ absoluteUrl: Foundation.URL?, _ relativeUrl: Foundation.URL?) -> Swift.Void)
+  public func getURL_SL(completionHandler: @escaping ((_ absoluteUrl: Foundation.URL?, _ relativeUrl: Foundation.URL?) -> Swift.Void))
 }
 extension QuartzCore.CALayer {
   public func fitToSuperView_SL(superview: UIKit.UIView)
@@ -1653,7 +1653,7 @@ extension ShopliveSDKCommon.APIDefinition {
 }
 @_hasMissingDesignatedInitializers public class ImageDownLoaderManager {
   public static let shared: ShopliveSDKCommon.ImageDownLoaderManager
-  public func download(imageUrl: Foundation.URL, completion: @escaping (Swift.Result<Foundation.Data, ShopliveSDKCommon.ShopLiveCommonError>) -> ())
+  public func download(imageUrl: Foundation.URL, completion: @escaping ((Swift.Result<Foundation.Data, ShopliveSDKCommon.ShopLiveCommonError>) -> ()))
   public func preDownloadImage(imageUrl: Foundation.URL)
   @objc deinit
 }
@@ -1914,11 +1914,11 @@ public enum NVActivityIndicatorType : Swift.CaseIterable {
   case audioEqualizer
   case circleStrokeSpin
   public static func == (a: ShopliveSDKCommon.NVActivityIndicatorType, b: ShopliveSDKCommon.NVActivityIndicatorType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public typealias AllCases = [ShopliveSDKCommon.NVActivityIndicatorType]
   nonisolated public static var allCases: [ShopliveSDKCommon.NVActivityIndicatorType] {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
