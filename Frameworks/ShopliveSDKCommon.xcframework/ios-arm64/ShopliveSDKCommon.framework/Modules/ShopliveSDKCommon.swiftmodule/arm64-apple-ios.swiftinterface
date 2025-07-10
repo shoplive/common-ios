@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
-// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ShopliveSDKCommon
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ShopliveSDKCommon
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import AVFoundation
 import AVKit
 import AdSupport
@@ -64,7 +64,7 @@ public enum ShopliveCommonUserGender : Swift.String, Swift.CaseIterable {
   public init?(rawValue: Swift.String)
   public typealias AllCases = [ShopliveSDKCommon.ShopliveCommonUserGender]
   public typealias RawValue = Swift.String
-  public static var allCases: [ShopliveSDKCommon.ShopliveCommonUserGender] {
+  nonisolated public static var allCases: [ShopliveSDKCommon.ShopliveCommonUserGender] {
     get
   }
   public var rawValue: Swift.String {
@@ -178,7 +178,7 @@ public struct CommonKeys {
   public static let shared: ShopliveSDKCommon.ShopLiveCommonConfigurationManager
   public func getShortformEventTraceHostUrl() -> Swift.String
   public func clearHostConfigModel()
-  public func callHostConfigAPI(completion: @escaping ((Swift.Result<Swift.Void, ShopliveSDKCommon.ShopLiveCommonError>) -> ()))
+  public func callHostConfigAPI(completion: @escaping (Swift.Result<Swift.Void, ShopliveSDKCommon.ShopLiveCommonError>) -> ())
   @objc deinit
 }
 public struct ShopLiveConversionData {
@@ -494,8 +494,8 @@ public enum SLShortformConvertStatus : Swift.Codable {
   case FAILED
   case CANCELLED
   public static func == (a: ShopliveSDKCommon.SLShortformConvertStatus, b: ShopliveSDKCommon.SLShortformConvertStatus) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -755,67 +755,67 @@ public struct SLJSONUtil {
   public static func extractLastPathComponent_SL(from url: Foundation.URL) -> Swift.String?
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class SLBaseView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) open func layout()
-  @_Concurrency.MainActor(unsafe) open func attributes()
-  @_Concurrency.MainActor(unsafe) open func bindView()
-  @_Concurrency.MainActor(unsafe) open func bindData()
-  @_Concurrency.MainActor(unsafe) open var touchEventHandler: ((Swift.Set<UIKit.UITouch>, UIKit.UIEvent?) -> ())?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class SLBaseView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency open func layout()
+  @_Concurrency.MainActor @preconcurrency open func attributes()
+  @_Concurrency.MainActor @preconcurrency open func bindView()
+  @_Concurrency.MainActor @preconcurrency open func bindData()
+  @_Concurrency.MainActor @preconcurrency open var touchEventHandler: ((Swift.Set<UIKit.UITouch>, UIKit.UIEvent?) -> ())?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SLButton : UIKit.UIButton {
-  @_Concurrency.MainActor(unsafe) public func setFont(font: ShopliveSDKCommon.ShopLiveFont)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class SLButton : UIKit.UIButton {
+  @_Concurrency.MainActor @preconcurrency public func setFont(font: ShopliveSDKCommon.ShopLiveFont)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SLLabel : UIKit.UILabel {
-  @_Concurrency.MainActor(unsafe) public func setFont(font: ShopliveSDKCommon.ShopLiveFont)
-  @_Concurrency.MainActor(unsafe) public func setAttributedFont(font: ShopliveSDKCommon.ShopLiveFont)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class SLLabel : UIKit.UILabel {
+  @_Concurrency.MainActor @preconcurrency public func setFont(font: ShopliveSDKCommon.ShopLiveFont)
+  @_Concurrency.MainActor @preconcurrency public func setAttributedFont(font: ShopliveSDKCommon.ShopLiveFont)
   @objc deinit
 }
 @objc public protocol SLCircularProgressIndicatorViewDelegate {
   @objc func didTapLoadingView(_ alertController: ShopliveSDKCommon.SLCircularProgressIndicatorView)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SLCircularProgressIndicatorView : UIKit.UIView, UIKit.UIGestureRecognizerDelegate {
-  @_Concurrency.MainActor(unsafe) weak public var delegate: (any ShopliveSDKCommon.SLCircularProgressIndicatorViewDelegate)?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
-  @_Concurrency.MainActor(unsafe) public func setLoadingText(_ text: Swift.String)
-  @_Concurrency.MainActor(unsafe) public func cancelLoading()
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class SLCircularProgressIndicatorView : UIKit.UIView, UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any ShopliveSDKCommon.SLCircularProgressIndicatorViewDelegate)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency public func setLoadingText(_ text: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func cancelLoading()
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class SLLoadingIndicatorView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public static func show(isDimmed: Swift.Bool = true, key: Swift.String = "general", delay: Foundation.TimeInterval = 0)
-  @_Concurrency.MainActor(unsafe) public static func hide(key: Swift.String = "general")
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class SLLoadingIndicatorView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public static func show(isDimmed: Swift.Bool = true, key: Swift.String = "general", delay: Foundation.TimeInterval = 0)
+  @_Concurrency.MainActor @preconcurrency public static func hide(key: Swift.String = "general")
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLThumbView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func point(inside point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLThumbView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func point(inside point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 @objc public protocol SLLoadingAlertControllerDelegate {
   @objc func didCancelLoading()
   @objc func didFinishLoading()
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SLLoadingAlertController : UIKit.UIViewController, UIKit.UIGestureRecognizerDelegate {
-  @_Concurrency.MainActor(unsafe) weak public var delegate: (any ShopliveSDKCommon.SLLoadingAlertControllerDelegate)?
-  @_Concurrency.MainActor(unsafe) public var cancelLoading: Swift.Bool
-  @_Concurrency.MainActor(unsafe) public func setLoadingText(_ text: Swift.String)
-  @_Concurrency.MainActor(unsafe) public var useProgress: Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public func resetProgress()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) public func setProgress(_ progress: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) public func finishLoading()
-  @_Concurrency.MainActor(unsafe) public func finishLoadingWithOutDelegateEvent()
-  @_Concurrency.MainActor(unsafe) public func cancal()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class SLLoadingAlertController : UIKit.UIViewController, UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any ShopliveSDKCommon.SLLoadingAlertControllerDelegate)?
+  @_Concurrency.MainActor @preconcurrency public var cancelLoading: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func setLoadingText(_ text: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public var useProgress: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func resetProgress()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency public func setProgress(_ progress: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public func finishLoading()
+  @_Concurrency.MainActor @preconcurrency public func finishLoadingWithOutDelegateEvent()
+  @_Concurrency.MainActor @preconcurrency public func cancal()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 public enum SLToastDuration {
@@ -829,16 +829,16 @@ public enum SLToastDuration {
   }
 }
 extension UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) public func showToastAlert(messgae: Swift.String)
-  @_Concurrency.MainActor(unsafe) public func showToast(message: Swift.String, duration: ShopliveSDKCommon.SLToastDuration = .middle)
+  @_Concurrency.MainActor @preconcurrency public func showToastAlert(messgae: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func showToast(message: Swift.String, duration: ShopliveSDKCommon.SLToastDuration = .middle)
 }
 extension UIKit.UIWindow {
-  @_Concurrency.MainActor(unsafe) public func showToast(message: Swift.String, duration: ShopliveSDKCommon.SLToastDuration = .middle)
+  @_Concurrency.MainActor @preconcurrency public func showToast(message: Swift.String, duration: ShopliveSDKCommon.SLToastDuration = .middle)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SLTextFieldWithPadding : UIKit.UITextField {
-  @_Concurrency.MainActor(unsafe) public init(textPadding: UIKit.UIEdgeInsets)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func textRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func editingRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class SLTextFieldWithPadding : UIKit.UITextField {
+  @_Concurrency.MainActor @preconcurrency public init(textPadding: UIKit.UIEdgeInsets)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func textRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func editingRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class SLWebViewStore {
@@ -853,41 +853,41 @@ extension UIKit.UIWindow {
   @objc optional func handleShopliveEvent(_ command: Swift.String, with payload: [Swift.String : Any]?, userImplements: Swift.Bool)
   @objc optional func handleEventMessage(message: WebKit.WKScriptMessage)
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class SLWebView : ShopliveSDKCommon.SLBaseView {
-  @_Concurrency.MainActor(unsafe) weak final public var slWebResponseDelegate: (any ShopliveSDKCommon.SLWebviewResponseDelegate)?
-  @_Concurrency.MainActor(unsafe) weak final public var slWebScrollDelegate: (any ShopliveSDKCommon.SLWebviewScrollDelegate)?
-  @_Concurrency.MainActor(unsafe) weak final public var webViewNavigationDelegate: (any WebKit.WKNavigationDelegate)? {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency final public class SLWebView : ShopliveSDKCommon.SLBaseView {
+  @_Concurrency.MainActor @preconcurrency weak final public var slWebResponseDelegate: (any ShopliveSDKCommon.SLWebviewResponseDelegate)?
+  @_Concurrency.MainActor @preconcurrency weak final public var slWebScrollDelegate: (any ShopliveSDKCommon.SLWebviewScrollDelegate)?
+  @_Concurrency.MainActor @preconcurrency weak final public var webViewNavigationDelegate: (any WebKit.WKNavigationDelegate)? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) override final public func layout()
-  @_Concurrency.MainActor(unsafe) final public func load(_ request: Foundation.URLRequest)
-  @_Concurrency.MainActor(unsafe) final public func reload()
-  @_Concurrency.MainActor(unsafe) final public var url: Swift.String? {
+  @_Concurrency.MainActor @preconcurrency override final public func layout()
+  @_Concurrency.MainActor @preconcurrency final public func load(_ request: Foundation.URLRequest)
+  @_Concurrency.MainActor @preconcurrency final public func reload()
+  @_Concurrency.MainActor @preconcurrency final public var url: Swift.String? {
     get
   }
-  @_Concurrency.MainActor(unsafe) override final public func attributes()
-  @_Concurrency.MainActor(unsafe) override final public func bindView()
+  @_Concurrency.MainActor @preconcurrency override final public func attributes()
+  @_Concurrency.MainActor @preconcurrency override final public func bindView()
   @objc deinit
-  @_Concurrency.MainActor(unsafe) final public func close()
-  @_Concurrency.MainActor(unsafe) final public func setScrollable(_ scrollable: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) final public func configure(url: Swift.String)
-  @_Concurrency.MainActor(unsafe) final public func configure(html: Swift.String)
-  @_Concurrency.MainActor(unsafe) final public func reconnect()
-  @_Concurrency.MainActor(unsafe) final public func sendEventToWeb(event: Swift.String, parameter: Any? = nil, wrapping: Swift.Bool = false)
-  @_Concurrency.MainActor(unsafe) final public func sendShortsEvent(event: Swift.String, parameter: [Swift.String : Any]? = nil, completion: @escaping () -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency final public func close()
+  @_Concurrency.MainActor @preconcurrency final public func setScrollable(_ scrollable: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency final public func configure(url: Swift.String)
+  @_Concurrency.MainActor @preconcurrency final public func configure(html: Swift.String)
+  @_Concurrency.MainActor @preconcurrency final public func reconnect()
+  @_Concurrency.MainActor @preconcurrency final public func sendEventToWeb(event: Swift.String, parameter: Any? = nil, wrapping: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency final public func sendShortsEvent(event: Swift.String, parameter: [Swift.String : Any]? = nil, completion: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
 }
 extension ShopliveSDKCommon.SLWebView : WebKit.WKScriptMessageHandler {
-  @_Concurrency.MainActor(unsafe) @objc final public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  @_Concurrency.MainActor @preconcurrency @objc final public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
 }
 extension ShopliveSDKCommon.SLWebView : UIKit.UIScrollViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency @objc final public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
 }
-@objc public class LeakAvoider : ObjectiveC.NSObject, WebKit.WKScriptMessageHandler {
-  public init(delegate: any WebKit.WKScriptMessageHandler)
-  @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+@objc @_Concurrency.MainActor @preconcurrency public class LeakAvoider : ObjectiveC.NSObject, WebKit.WKScriptMessageHandler {
+  @_Concurrency.MainActor @preconcurrency public init(delegate: any WebKit.WKScriptMessageHandler)
+  @_Concurrency.MainActor @preconcurrency @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
   @objc deinit
 }
 extension AVFoundation.AVCaptureDevice {
@@ -928,7 +928,7 @@ extension CoreMedia.CMTime {
   }
 }
 extension UIKit.UIImageView {
-  @_Concurrency.MainActor(unsafe) public func loadImage_SL(from url: Foundation.URL?, placeHolderImage: UIKit.UIImage? = nil, completion: ((UIKit.UIImage?) -> ())? = nil)
+  @_Concurrency.MainActor @preconcurrency public func loadImage_SL(from url: Foundation.URL?, placeHolderImage: UIKit.UIImage? = nil, completion: ((UIKit.UIImage?) -> ())? = nil)
 }
 extension Swift.Array {
   public subscript(safe index: Swift.Int) -> Element? {
@@ -1124,41 +1124,41 @@ extension Foundation.UserDefaults {
   public func cgRect_SL(forKey key: Swift.String) -> UIKit.UIEdgeInsets?
 }
 extension MediaPlayer.MPVolumeView {
-  @_Concurrency.MainActor(unsafe) public static func setVolume_SL(_ volume: Swift.Float)
+  @_Concurrency.MainActor @preconcurrency public static func setVolume_SL(_ volume: Swift.Float)
 }
 extension Photos.PHAsset {
-  public func getURL_SL(completionHandler: @escaping ((_ absoluteUrl: Foundation.URL?, _ relativeUrl: Foundation.URL?) -> Swift.Void))
+  public func getURL_SL(completionHandler: @escaping (_ absoluteUrl: Foundation.URL?, _ relativeUrl: Foundation.URL?) -> Swift.Void)
 }
 extension QuartzCore.CALayer {
   public func fitToSuperView_SL(superview: UIKit.UIView)
 }
 extension UIKit.NSLayoutConstraint {
-  @_Concurrency.MainActor(unsafe) public func updateConstraint_SL(value: UIKit.NSLayoutConstraint?)
-  @_Concurrency.MainActor(unsafe) public func setMultiplier_SL(multiplier: CoreFoundation.CGFloat) -> UIKit.NSLayoutConstraint
+  @_Concurrency.MainActor @preconcurrency public func updateConstraint_SL(value: UIKit.NSLayoutConstraint?)
+  @_Concurrency.MainActor @preconcurrency public func setMultiplier_SL(multiplier: CoreFoundation.CGFloat) -> UIKit.NSLayoutConstraint
 }
 extension UIKit.UIApplication {
-  @_Concurrency.MainActor(unsafe) public class func appVersion() -> Swift.String
-  @_Concurrency.MainActor(unsafe) public static var isLandscape_SL: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency public class func appVersion() -> Swift.String
+  @_Concurrency.MainActor @preconcurrency public static var isLandscape_SL: Swift.Bool {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static func openSettings_SL()
-  @_Concurrency.MainActor(unsafe) public static func openBrowser_SL(url: Swift.String)
-  @_Concurrency.MainActor(unsafe) public static func openAppstore_SL(appId: Swift.String)
-  @_Concurrency.MainActor(unsafe) public class func appVersion_SL() -> Swift.String
-  @_Concurrency.MainActor(unsafe) public class func appBuild_SL() -> Swift.String
-  @_Concurrency.MainActor(unsafe) public class func versionBuild_SL() -> Swift.String
-  @_Concurrency.MainActor(unsafe) public static var topWindow_SL: UIKit.UIWindow? {
+  @_Concurrency.MainActor @preconcurrency public static func openSettings_SL()
+  @_Concurrency.MainActor @preconcurrency public static func openBrowser_SL(url: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public static func openAppstore_SL(appId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public class func appVersion_SL() -> Swift.String
+  @_Concurrency.MainActor @preconcurrency public class func appBuild_SL() -> Swift.String
+  @_Concurrency.MainActor @preconcurrency public class func versionBuild_SL() -> Swift.String
+  @_Concurrency.MainActor @preconcurrency public static var topWindow_SL: UIKit.UIWindow? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var firstWindow_SL: UIKit.UIWindow? {
+  @_Concurrency.MainActor @preconcurrency public static var firstWindow_SL: UIKit.UIWindow? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var windowList_SL: [UIKit.UIWindow]? {
+  @_Concurrency.MainActor @preconcurrency public static var windowList_SL: [UIKit.UIWindow]? {
     get
   }
 }
 extension UIKit.UIButton {
-  @_Concurrency.MainActor(unsafe) public func setBackgroundColor_SL(_ color: UIKit.UIColor, for state: UIKit.UIControl.State)
+  @_Concurrency.MainActor @preconcurrency public func setBackgroundColor_SL(_ color: UIKit.UIColor, for state: UIKit.UIControl.State)
 }
 extension UIKit.UIColor {
   convenience public init(sl_red: Swift.Int, green: Swift.Int, blue: Swift.Int, a: Swift.Int = 0xFF)
@@ -1167,13 +1167,13 @@ extension UIKit.UIColor {
   convenience public init(sl_hex: Swift.String, alpha: CoreFoundation.CGFloat = 1.0)
 }
 extension UIKit.UIDevice {
-  @_Concurrency.MainActor(unsafe) public static var isIpad_SL: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency public static var isIpad_SL: Swift.Bool {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var deviceIdentifier_sl: Swift.String {
+  @_Concurrency.MainActor @preconcurrency public static var deviceIdentifier_sl: Swift.String {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var idfv_sl: Swift.String? {
+  @_Concurrency.MainActor @preconcurrency public static var idfv_sl: Swift.String? {
     get
   }
 }
@@ -1247,7 +1247,7 @@ extension UIKit.UIInterfaceOrientation {
   }
 }
 extension UIKit.UINavigationController {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var childForStatusBarStyle: UIKit.UIViewController? {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var childForStatusBarStyle: UIKit.UIViewController? {
     @objc get
   }
 }
@@ -1266,112 +1266,112 @@ public enum PanDirection : Swift.Int {
   }
 }
 extension UIKit.UIPanGestureRecognizer {
-  @_Concurrency.MainActor(unsafe) public var direction: ShopliveSDKCommon.PanDirection? {
+  @_Concurrency.MainActor @preconcurrency public var direction: ShopliveSDKCommon.PanDirection? {
     get
   }
 }
 extension UIKit.UIScreen {
-  @_Concurrency.MainActor(unsafe) public static var currentOrientation_SL: UIKit.UIInterfaceOrientation {
+  @_Concurrency.MainActor @preconcurrency public static var currentOrientation_SL: UIKit.UIInterfaceOrientation {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var isLandscape_SL: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency public static var isLandscape_SL: Swift.Bool {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var concreteWidth_SL: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor @preconcurrency public static var concreteWidth_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var concreteHeight_SL: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor @preconcurrency public static var concreteHeight_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var landscapeWidth_SL: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor @preconcurrency public static var landscapeWidth_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var landscapeHeight_SL: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor @preconcurrency public static var landscapeHeight_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var screenWidth_SL: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor @preconcurrency public static var screenWidth_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var screenHeight_SL: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor @preconcurrency public static var screenHeight_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var concreteTopSafeArea_SL: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor @preconcurrency public static var concreteTopSafeArea_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var topSafeArea_SL: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor @preconcurrency public static var topSafeArea_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var leftSafeArea_SL: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor @preconcurrency public static var leftSafeArea_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var rightSafeArea_SL: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor @preconcurrency public static var rightSafeArea_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var bottomSafeArea_SL: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor @preconcurrency public static var bottomSafeArea_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static var safeArea_SL: UIKit.UIEdgeInsets {
+  @_Concurrency.MainActor @preconcurrency public static var safeArea_SL: UIKit.UIEdgeInsets {
     get
   }
 }
 extension UIKit.UIStackView {
-  @_Concurrency.MainActor(unsafe) public func addArrangedSubviews_SL(_ views: UIKit.UIView...)
+  @_Concurrency.MainActor @preconcurrency public func addArrangedSubviews_SL(_ views: UIKit.UIView...)
 }
 extension UIKit.UITextField {
-  @_Concurrency.MainActor(unsafe) public func setPlaceholderColor_SL(_ placeholderColor: UIKit.UIColor)
-  @_Concurrency.MainActor(unsafe) public func addUnderLine_SL()
+  @_Concurrency.MainActor @preconcurrency public func setPlaceholderColor_SL(_ placeholderColor: UIKit.UIColor)
+  @_Concurrency.MainActor @preconcurrency public func addUnderLine_SL()
 }
 extension UIKit.UITextView {
-  @_Concurrency.MainActor(unsafe) public func numberOfLines_SL(lineHeight: CoreFoundation.CGFloat = 20) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency public func numberOfLines_SL(lineHeight: CoreFoundation.CGFloat = 20) -> Swift.Int
 }
 extension UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public func fit_SL()
-  @_Concurrency.MainActor(unsafe) public func fitTop30_SL()
-  @_Concurrency.MainActor(unsafe) public func animateSizeChange_SL(from: CoreFoundation.CGSize, to: CoreFoundation.CGSize, duration: Swift.Double)
-  @_Concurrency.MainActor(unsafe) public func changeScale_SL(to: CoreFoundation.CGFloat)
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var cornerRadiusV_SL: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor @preconcurrency public func fit_SL()
+  @_Concurrency.MainActor @preconcurrency public func fitTop30_SL()
+  @_Concurrency.MainActor @preconcurrency public func animateSizeChange_SL(from: CoreFoundation.CGSize, to: CoreFoundation.CGSize, duration: Swift.Double)
+  @_Concurrency.MainActor @preconcurrency public func changeScale_SL(to: CoreFoundation.CGFloat)
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var cornerRadiusV_SL: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var borderWidthV_SL: CoreFoundation.CGFloat {
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var borderWidthV_SL: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var borderColorV_SL: UIKit.UIColor? {
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var borderColorV_SL: UIKit.UIColor? {
     @objc get
     @objc set
   }
-  @_Concurrency.MainActor(unsafe) public var ratio_SL: CoreFoundation.CGFloat {
+  @_Concurrency.MainActor @preconcurrency public var ratio_SL: CoreFoundation.CGFloat {
     get
   }
-  @_Concurrency.MainActor(unsafe) public var showsUp_SL: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency public var showsUp_SL: Swift.Bool {
     get
   }
-  @_Concurrency.MainActor(unsafe) public var parentViewController_SL: UIKit.UIViewController? {
+  @_Concurrency.MainActor @preconcurrency public var parentViewController_SL: UIKit.UIViewController? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public func addAndFitToParent_SL(view: UIKit.UIView, belowSubview: UIKit.UIView)
-  @_Concurrency.MainActor(unsafe) public func fitToParent_SL()
-  @_Concurrency.MainActor(unsafe) public func clearConstraints_SL()
-  @_Concurrency.MainActor(unsafe) public func roundCorners_SL(corners: UIKit.UIRectCorner, radius: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) public func asImage_SL() -> UIKit.UIImage
-  @_Concurrency.MainActor(unsafe) public class func fromNib_SL<T>() -> T where T : UIKit.UIView
-  @_Concurrency.MainActor(unsafe) public func makeDashedBorderLine_SL(lineDashWidth: CoreFoundation.CGFloat, pattern: [Foundation.NSNumber])
+  @_Concurrency.MainActor @preconcurrency public func addAndFitToParent_SL(view: UIKit.UIView, belowSubview: UIKit.UIView)
+  @_Concurrency.MainActor @preconcurrency public func fitToParent_SL()
+  @_Concurrency.MainActor @preconcurrency public func clearConstraints_SL()
+  @_Concurrency.MainActor @preconcurrency public func roundCorners_SL(corners: UIKit.UIRectCorner, radius: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public func asImage_SL() -> UIKit.UIImage
+  @_Concurrency.MainActor @preconcurrency public class func fromNib_SL<T>() -> T where T : UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency public func makeDashedBorderLine_SL(lineDashWidth: CoreFoundation.CGFloat, pattern: [Foundation.NSNumber])
   @discardableResult
-  @_Concurrency.MainActor(unsafe) public func setGradientBackground_SL(bottom: UIKit.UIColor = UIColor.black.withAlphaComponent(0.5), top: UIKit.UIColor = UIColor.clear) -> QuartzCore.CAGradientLayer
-  @_Concurrency.MainActor(unsafe) public func removeGradientBackground_SL()
-  @_Concurrency.MainActor(unsafe) public func constrainCentered_SL(_ subview: UIKit.UIView)
-  @_Concurrency.MainActor(unsafe) public func constrainToEdges_SL(_ subview: UIKit.UIView)
-  @_Concurrency.MainActor(unsafe) public func addBlurEffect_SL()
-  @_Concurrency.MainActor(unsafe) public func addSubviews_SL(_ views: UIKit.UIView...)
-  @_Concurrency.MainActor(unsafe) public var globalPoint_SL: CoreFoundation.CGPoint? {
+  @_Concurrency.MainActor @preconcurrency public func setGradientBackground_SL(bottom: UIKit.UIColor = UIColor.black.withAlphaComponent(0.5), top: UIKit.UIColor = UIColor.clear) -> QuartzCore.CAGradientLayer
+  @_Concurrency.MainActor @preconcurrency public func removeGradientBackground_SL()
+  @_Concurrency.MainActor @preconcurrency public func constrainCentered_SL(_ subview: UIKit.UIView)
+  @_Concurrency.MainActor @preconcurrency public func constrainToEdges_SL(_ subview: UIKit.UIView)
+  @_Concurrency.MainActor @preconcurrency public func addBlurEffect_SL()
+  @_Concurrency.MainActor @preconcurrency public func addSubviews_SL(_ views: UIKit.UIView...)
+  @_Concurrency.MainActor @preconcurrency public var globalPoint_SL: CoreFoundation.CGPoint? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public var globalFrame_SL: CoreFoundation.CGRect? {
+  @_Concurrency.MainActor @preconcurrency public var globalFrame_SL: CoreFoundation.CGRect? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public func snapshot_SL(afterScreenUpdates: Swift.Bool = false, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) public func fitToSuperView_SL()
+  @_Concurrency.MainActor @preconcurrency public func snapshot_SL(afterScreenUpdates: Swift.Bool = false, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func fitToSuperView_SL()
   public enum ViewSide {
     case Left, Right, Top, Bottom
     public static func == (a: UIKit.UIView.ViewSide, b: UIKit.UIView.ViewSide) -> Swift.Bool
@@ -1380,23 +1380,23 @@ extension UIKit.UIView {
       get
     }
   }
-  @_Concurrency.MainActor(unsafe) public func addBorder_SL(toSide side: UIKit.UIView.ViewSide, withColor color: CoreGraphics.CGColor, andThickness thickness: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public func addBorder_SL(toSide side: UIKit.UIView.ViewSide, withColor color: CoreGraphics.CGColor, andThickness thickness: CoreFoundation.CGFloat)
 }
 extension UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) public func transition_SL(with window: UIKit.UIWindow)
-  @objc @_Concurrency.MainActor(unsafe) dynamic open func shopliveHideKeyboard_SL()
-  @_Concurrency.MainActor(unsafe) public func hideKeyboard_SL()
-  @_Concurrency.MainActor(unsafe) public func showShareSheet_SL(url: Swift.String?)
-  @_Concurrency.MainActor(unsafe) public func didChangeOrientation_SL() -> UIKit.UIInterfaceOrientationMask
+  @_Concurrency.MainActor @preconcurrency public func transition_SL(with window: UIKit.UIWindow)
+  @objc @_Concurrency.MainActor @preconcurrency dynamic open func shopliveHideKeyboard_SL()
+  @_Concurrency.MainActor @preconcurrency public func hideKeyboard_SL()
+  @_Concurrency.MainActor @preconcurrency public func showShareSheet_SL(url: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency public func didChangeOrientation_SL() -> UIKit.UIInterfaceOrientationMask
 }
 extension UIKit.UIWindow {
-  @_Concurrency.MainActor(unsafe) public static var mainWindowFrame_SL: UIKit.UIWindow {
+  @_Concurrency.MainActor @preconcurrency public static var mainWindowFrame_SL: UIKit.UIWindow {
     get
   }
 }
 extension WebKit.WKWebView {
-  @_Concurrency.MainActor(unsafe) public static let progressKeypath_SL: Swift.String
-  @_Concurrency.MainActor(unsafe) public static var urlErrors_SL: [Swift.Int] {
+  @_Concurrency.MainActor @preconcurrency public static let progressKeypath_SL: Swift.String
+  @_Concurrency.MainActor @preconcurrency public static var urlErrors_SL: [Swift.Int] {
     get
   }
 }
@@ -1653,7 +1653,7 @@ extension ShopliveSDKCommon.APIDefinition {
 }
 @_hasMissingDesignatedInitializers public class ImageDownLoaderManager {
   public static let shared: ShopliveSDKCommon.ImageDownLoaderManager
-  public func download(imageUrl: Foundation.URL, completion: @escaping ((Swift.Result<Foundation.Data, ShopliveSDKCommon.ShopLiveCommonError>) -> ()))
+  public func download(imageUrl: Foundation.URL, completion: @escaping (Swift.Result<Foundation.Data, ShopliveSDKCommon.ShopLiveCommonError>) -> ())
   public func preDownloadImage(imageUrl: Foundation.URL)
   @objc deinit
 }
@@ -1914,52 +1914,52 @@ public enum NVActivityIndicatorType : Swift.CaseIterable {
   case audioEqualizer
   case circleStrokeSpin
   public static func == (a: ShopliveSDKCommon.NVActivityIndicatorType, b: ShopliveSDKCommon.NVActivityIndicatorType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public typealias AllCases = [ShopliveSDKCommon.NVActivityIndicatorType]
-  public static var allCases: [ShopliveSDKCommon.NVActivityIndicatorType] {
+  nonisolated public static var allCases: [ShopliveSDKCommon.NVActivityIndicatorType] {
     get
   }
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
 }
 public typealias FadeInAnimation = (UIKit.UIView) -> Swift.Void
 public typealias FadeOutAnimation = (UIKit.UIView, @escaping () -> Swift.Void) -> Swift.Void
-@objc @_Concurrency.MainActor(unsafe) final public class SLSLNVActivityIndicatorView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_TYPE: ShopliveSDKCommon.NVActivityIndicatorType
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_COLOR: UIKit.UIColor
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_TEXT_COLOR: UIKit.UIColor
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_PADDING: CoreFoundation.CGFloat
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_SIZE: CoreFoundation.CGSize
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_DISPLAY_TIME_THRESHOLD: Swift.Int
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MINIMUM_DISPLAY_TIME: Swift.Int
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE: Swift.String?
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_SPACING: CoreFoundation.CGFloat
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_FONT: UIKit.UIFont
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_BACKGROUND_COLOR: UIKit.UIColor
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_FADE_IN_ANIMATION: (_ view: UIKit.UIView) -> Swift.Void
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_FADE_OUT_ANIMATION: (_ view: UIKit.UIView, _ complete: @escaping () -> Swift.Void) -> Swift.Void
-  @_Concurrency.MainActor(unsafe) final public var type: ShopliveSDKCommon.NVActivityIndicatorType
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var color: UIKit.UIColor
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var padding: CoreFoundation.CGFloat
+@objc @_Concurrency.MainActor @preconcurrency final public class SLSLNVActivityIndicatorView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public static var DEFAULT_TYPE: ShopliveSDKCommon.NVActivityIndicatorType
+  @_Concurrency.MainActor @preconcurrency public static var DEFAULT_COLOR: UIKit.UIColor
+  @_Concurrency.MainActor @preconcurrency public static var DEFAULT_TEXT_COLOR: UIKit.UIColor
+  @_Concurrency.MainActor @preconcurrency public static var DEFAULT_PADDING: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public static var DEFAULT_BLOCKER_SIZE: CoreFoundation.CGSize
+  @_Concurrency.MainActor @preconcurrency public static var DEFAULT_BLOCKER_DISPLAY_TIME_THRESHOLD: Swift.Int
+  @_Concurrency.MainActor @preconcurrency public static var DEFAULT_BLOCKER_MINIMUM_DISPLAY_TIME: Swift.Int
+  @_Concurrency.MainActor @preconcurrency public static var DEFAULT_BLOCKER_MESSAGE: Swift.String?
+  @_Concurrency.MainActor @preconcurrency public static var DEFAULT_BLOCKER_MESSAGE_SPACING: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public static var DEFAULT_BLOCKER_MESSAGE_FONT: UIKit.UIFont
+  @_Concurrency.MainActor @preconcurrency public static var DEFAULT_BLOCKER_BACKGROUND_COLOR: UIKit.UIColor
+  @_Concurrency.MainActor @preconcurrency public static var DEFAULT_FADE_IN_ANIMATION: (_ view: UIKit.UIView) -> Swift.Void
+  @_Concurrency.MainActor @preconcurrency public static var DEFAULT_FADE_OUT_ANIMATION: (_ view: UIKit.UIView, _ complete: @escaping () -> Swift.Void) -> Swift.Void
+  @_Concurrency.MainActor @preconcurrency final public var type: ShopliveSDKCommon.NVActivityIndicatorType
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency final public var color: UIKit.UIColor
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency final public var padding: CoreFoundation.CGFloat
   @available(*, deprecated)
-  @_Concurrency.MainActor(unsafe) final public var animating: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency final public var animating: Swift.Bool {
     get
   }
-  @_Concurrency.MainActor(unsafe) final public var isAnimating: Swift.Bool {
+  @_Concurrency.MainActor @preconcurrency final public var isAnimating: Swift.Bool {
     get
   }
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect, type: ShopliveSDKCommon.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreFoundation.CGFloat? = nil)
-  @_Concurrency.MainActor(unsafe) @objc override final public var intrinsicContentSize: CoreFoundation.CGSize {
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency public init(frame: CoreFoundation.CGRect, type: ShopliveSDKCommon.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreFoundation.CGFloat? = nil)
+  @_Concurrency.MainActor @preconcurrency @objc override final public var intrinsicContentSize: CoreFoundation.CGSize {
     @objc get
   }
-  @_Concurrency.MainActor(unsafe) @objc override final public var bounds: CoreFoundation.CGRect {
+  @_Concurrency.MainActor @preconcurrency @objc override final public var bounds: CoreFoundation.CGRect {
     @objc get
     @objc set
   }
-  @_Concurrency.MainActor(unsafe) final public func startAnimating()
-  @_Concurrency.MainActor(unsafe) final public func stopAnimating()
+  @_Concurrency.MainActor @preconcurrency final public func startAnimating()
+  @_Concurrency.MainActor @preconcurrency final public func stopAnimating()
   @objc deinit
 }
 @available(*, deprecated)
@@ -2008,6 +2008,7 @@ extension ShopliveSDKCommon.SLAppState : Swift.Equatable {}
 extension ShopliveSDKCommon.SLAppState : Swift.Hashable {}
 extension ShopliveSDKCommon.SLToastDuration : Swift.Equatable {}
 extension ShopliveSDKCommon.SLToastDuration : Swift.Hashable {}
+extension ShopliveSDKCommon.LeakAvoider : Swift.Sendable {}
 extension UIKit.UIImage.Quality : Swift.Equatable {}
 extension UIKit.UIImage.Quality : Swift.Hashable {}
 extension ShopliveSDKCommon.PanDirection : Swift.Equatable {}
