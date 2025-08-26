@@ -14,7 +14,7 @@
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		Jxriw7CwDq3gQaWW7kOWnu9c254=
+		Ta4nfcXqRKgLgdLPAkS0OVC6fck=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		Jxriw7CwDq3gQaWW7kOWnu9c254=
+		Ta4nfcXqRKgLgdLPAkS0OVC6fck=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -82,7 +82,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LvM2cWP1DbfyZWLE3hhvHyi5V53uCQezMgOF2b/m72U=
+			h+uAStxn974SC41Ony/hQ7EHfG7ARgntxq9MkajWnj4=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -117,7 +117,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LvM2cWP1DbfyZWLE3hhvHyi5V53uCQezMgOF2b/m72U=
+			h+uAStxn974SC41Ony/hQ7EHfG7ARgntxq9MkajWnj4=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
