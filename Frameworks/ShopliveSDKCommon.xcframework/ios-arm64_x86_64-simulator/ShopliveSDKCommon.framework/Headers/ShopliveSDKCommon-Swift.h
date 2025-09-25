@@ -612,6 +612,12 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon22ShopLiveCommonUserObjc")
 
 
 
+SWIFT_CLASS("_TtC17ShopliveSDKCommon15ShopLiveDefines")
+@interface ShopLiveDefines : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon25ShopLivePermissionHandler_")
 @protocol ShopLivePermissionHandler
 @optional
@@ -1361,6 +1367,12 @@ SWIFT_CLASS("_TtC17ShopliveSDKCommon22ShopLiveCommonUserObjc")
 - (nonnull instancetype)initWithUserId:(NSString * _Nonnull)userId userName:(NSString * _Nullable)userName age:(NSNumber * _Nullable)age gender:(NSString * _Nullable)gender userScore:(NSNumber * _Nullable)userScore custom:(NSDictionary<NSString *, id> * _Nullable)custom OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+
+SWIFT_CLASS("_TtC17ShopliveSDKCommon15ShopLiveDefines")
+@interface ShopLiveDefines : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
 SWIFT_PROTOCOL("_TtP17ShopliveSDKCommon25ShopLivePermissionHandler_")

@@ -339,16 +339,16 @@ public struct SLFlexibleParser<K> where K : Swift.CodingKey {
   public static var showLog: Swift.Bool
   @objc deinit
 }
+public class SLThrottle {
+  public init(queue: Dispatch.DispatchQueue, delay: Swift.Double)
+  public func callAsFunction(action: @escaping () -> Swift.Void, onCancel: @escaping () -> Swift.Void)
+  @objc deinit
+}
 public class ShopLiveDebouncer {
   public typealias Handler = () -> Swift.Void
   public var handler: ShopliveSDKCommon.ShopLiveDebouncer.Handler?
   public init(timeInterval: Foundation.TimeInterval)
   public func renewInterval()
-  @objc deinit
-}
-public class ShopLiveThrottle {
-  public init(queue: Dispatch.DispatchQueue, delay: Swift.Double)
-  public func callAsFunction(action: @escaping () -> Swift.Void, onCancel: @escaping () -> Swift.Void)
   @objc deinit
 }
 @objc public protocol KeyboardNotificationProtocol {
@@ -750,11 +750,6 @@ public enum SLAppState {
 public struct SLJSONUtil {
   public static func toJsonString(_ value: any Swift.Encodable) -> Swift.String?
 }
-@_hasMissingDesignatedInitializers final public class URLUtil_SL {
-  public static func query(_ params: [Foundation.URLQueryItem]?) -> Swift.String?
-  public static func extractLastPathComponent_SL(from url: Foundation.URL) -> Swift.String?
-  @objc deinit
-}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class SLBaseView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
@@ -784,6 +779,7 @@ public struct SLJSONUtil {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func hitTest(_ point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> UIKit.UIView?
   @_Concurrency.MainActor @preconcurrency public func setLoadingText(_ text: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func setTitleText(_ text: Swift.String)
   @_Concurrency.MainActor @preconcurrency public func cancelLoading()
   @objc deinit
 }
@@ -942,6 +938,14 @@ extension Swift.Array {
 }
 extension Swift.Array where Element == Swift.String {
   public func reducedWithComma_SL() -> Swift.String
+}
+extension Swift.Array where Element == Foundation.URLQueryItem {
+  public var queryString: Swift.String {
+    get
+  }
+  public var queryStringRFC3986: Swift.String {
+    get
+  }
 }
 public protocol AssociatedObjectStore {
 }
@@ -1112,6 +1116,9 @@ extension Swift.String {
     get
   }
   public var base64Encoded_SL: Swift.String? {
+    get
+  }
+  public var urlEncodedRFC3986: Swift.String? {
     get
   }
   public func convert_SL<T>(to type: T.Type) -> T? where T : Swift.Decodable, T : Swift.Encodable
@@ -1645,7 +1652,7 @@ extension ShopliveSDKCommon.APIDefinition {
 }
 extension ShopliveSDKCommon.APIDefinition {
   public func request(handler: ((Swift.Result<Self.ResultType, ShopliveSDKCommon.ShopLiveCommonError>) -> ())? = nil)
-  public func upload(handler: ((Swift.Result<Self.ResultType, ShopliveSDKCommon.ShopLiveCommonError>) -> ())? = nil)
+  public func upload(handler: ((Swift.Result<Self.ResultType, ShopliveSDKCommon.ShopLiveCommonError>) -> ())? = nil, progressHandler: ((Swift.Double) -> ())? = nil) -> ShopliveSDKCommon.APIDefinitionCancellable
   public func createBody(boundary: Swift.String) -> Foundation.Data
   public static var defaultHeaders: [Swift.String : Swift.String] {
     get
@@ -1787,6 +1794,10 @@ extension ShopliveSDKCommon.SLReachability {
   public var description: Swift.String {
     get
   }
+}
+@objc @_inheritsConvenienceInitializers final public class ShopLiveDefines : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class ShopLiveWebViewCacheManager : ObjectiveC.NSObject, Foundation.URLSessionDownloadDelegate {
   public var completionHandler: ((Swift.String?) -> Swift.Void)?
