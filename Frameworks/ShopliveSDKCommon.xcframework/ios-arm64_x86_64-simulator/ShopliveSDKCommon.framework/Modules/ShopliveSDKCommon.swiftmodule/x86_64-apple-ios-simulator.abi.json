@@ -12950,6 +12950,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
@@ -37959,6 +37966,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -38144,6 +38158,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -38615,6 +38636,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -38860,6 +38888,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -39111,6 +39146,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -39894,6 +39936,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Sendable",
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
@@ -39901,10 +39950,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "UITraitChangeObservable",
-            "printedName": "UITraitChangeObservable",
-            "usr": "s:5UIKit23UITraitChangeObservableP",
-            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -40440,6 +40489,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -41826,6 +41882,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -52414,6 +52477,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -54417,6 +54487,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -55307,6 +55384,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -60923,6 +61007,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -62108,13 +62199,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "UITraitChangeObservable",
             "printedName": "UITraitChangeObservable",
             "usr": "s:5UIKit23UITraitChangeObservableP",
@@ -62600,6 +62684,13 @@
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -62767,6 +62858,13 @@
             "printedName": "AnyNameable",
             "usr": "s:17ShopliveSDKCommon11AnyNameableP",
             "mangledName": "$s17ShopliveSDKCommon11AnyNameableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -63339,6 +63437,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -63727,13 +63832,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -64193,6 +64291,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
@@ -64211,6 +64316,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -64235,32 +64347,48 @@
           },
           {
             "kind": "Conformance",
-            "name": "_ObjectiveCBridgeable",
-            "printedName": "_ObjectiveCBridgeable",
+            "name": "DataProtocol",
+            "printedName": "DataProtocol",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "_ObjectiveCType",
-                "printedName": "_ObjectiveCType",
+                "name": "Regions",
+                "printedName": "Regions",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "NSArray",
-                    "printedName": "Foundation.NSArray",
-                    "usr": "c:objc(cs)NSArray"
+                    "name": "CollectionOfOne",
+                    "printedName": "Swift.CollectionOfOne<[Swift.UInt8]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.UInt8]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UInt8",
+                            "printedName": "Swift.UInt8",
+                            "usr": "s:s5UInt8V"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:s15CollectionOfOneV"
                   }
                 ]
               }
             ],
-            "usr": "s:s21_ObjectiveCBridgeableP",
-            "mangledName": "$ss21_ObjectiveCBridgeableP"
+            "usr": "s:10Foundation12DataProtocolP",
+            "mangledName": "$s10Foundation12DataProtocolP"
           },
           {
             "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "MutableDataProtocol",
+            "printedName": "MutableDataProtocol",
+            "usr": "s:10Foundation19MutableDataProtocolP",
+            "mangledName": "$s10Foundation19MutableDataProtocolP"
           },
           {
             "kind": "Conformance",
@@ -64313,48 +64441,46 @@
           },
           {
             "kind": "Conformance",
-            "name": "DataProtocol",
-            "printedName": "DataProtocol",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "Regions",
-                "printedName": "Regions",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CollectionOfOne",
-                    "printedName": "Swift.CollectionOfOne<[Swift.UInt8]>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.UInt8]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UInt8",
-                            "printedName": "Swift.UInt8",
-                            "usr": "s:s5UInt8V"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:s15CollectionOfOneV"
+                    "name": "NSArray",
+                    "printedName": "Foundation.NSArray",
+                    "usr": "c:objc(cs)NSArray"
                   }
                 ]
               }
             ],
-            "usr": "s:10Foundation12DataProtocolP",
-            "mangledName": "$s10Foundation12DataProtocolP"
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
           },
           {
             "kind": "Conformance",
-            "name": "MutableDataProtocol",
-            "printedName": "MutableDataProtocol",
-            "usr": "s:10Foundation19MutableDataProtocolP",
-            "mangledName": "$s10Foundation19MutableDataProtocolP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Content",
+            "printedName": "Content",
+            "usr": "s:So17CMSampleBufferRefa9CoreMediaE7ContentP",
+            "mangledName": "$sSo17CMSampleBufferRefa9CoreMediaE7ContentP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ContentWithFormatDescription",
+            "printedName": "ContentWithFormatDescription",
+            "usr": "s:So17CMSampleBufferRefa9CoreMediaE28ContentWithFormatDescriptionP",
+            "mangledName": "$sSo17CMSampleBufferRefa9CoreMediaE28ContentWithFormatDescriptionP"
           }
         ]
       },
@@ -64675,6 +64801,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -65019,13 +65152,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
             "name": "_ObjectiveCBridgeable",
             "printedName": "_ObjectiveCBridgeable",
             "children": [
@@ -65066,6 +65192,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -65553,6 +65686,7 @@
         "intro_tvOS": "9.0",
         "intro_watchOS": "2.0",
         "declAttributes": [
+          "AddressableForDependencies",
           "Frozen",
           "Available",
           "Available",
@@ -65918,6 +66052,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Sequence",
             "printedName": "Sequence",
             "children": [
@@ -65967,6 +66108,41 @@
           },
           {
             "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
             "name": "ReferenceConvertible",
             "printedName": "ReferenceConvertible",
             "children": [
@@ -66008,41 +66184,6 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomReflectable",
-            "printedName": "CustomReflectable",
-            "usr": "s:s17CustomReflectableP",
-            "mangledName": "$ss17CustomReflectableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
           },
           {
             "kind": "Conformance",
@@ -66206,6 +66347,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -66744,6 +66892,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -67327,6 +67482,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Strideable",
             "printedName": "Strideable",
             "children": [
@@ -67555,6 +67717,28 @@
             ],
             "usr": "s:7SwiftUI10AnimatableP",
             "mangledName": "$s7SwiftUI10AnimatableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AtomicRepresentable",
+            "printedName": "AtomicRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AtomicRepresentation",
+                "printedName": "AtomicRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "_Atomic64BitStorage",
+                    "printedName": "Synchronization._Atomic64BitStorage",
+                    "usr": "s:15Synchronization19_Atomic64BitStorageV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15Synchronization19AtomicRepresentableP",
+            "mangledName": "$s15Synchronization19AtomicRepresentableP"
           }
         ]
       },
@@ -67917,6 +68101,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -68230,6 +68421,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "SIMDScalar",
             "printedName": "SIMDScalar",
             "children": [
@@ -68400,6 +68598,28 @@
             ],
             "usr": "s:7SwiftUI18_FormatSpecifiableP",
             "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AtomicRepresentable",
+            "printedName": "AtomicRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AtomicRepresentation",
+                "printedName": "AtomicRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "_Atomic64BitStorage",
+                    "printedName": "Synchronization._Atomic64BitStorage",
+                    "usr": "s:15Synchronization19_Atomic64BitStorageV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15Synchronization19AtomicRepresentableP",
+            "mangledName": "$s15Synchronization19AtomicRepresentableP"
           }
         ]
       },
@@ -69026,6 +69246,13 @@
             "printedName": "AnyNameable",
             "usr": "s:17ShopliveSDKCommon11AnyNameableP",
             "mangledName": "$s17ShopliveSDKCommon11AnyNameableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -69962,6 +70189,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_ExpressibleByBuiltinUnicodeScalarLiteral",
             "printedName": "_ExpressibleByBuiltinUnicodeScalarLiteral",
             "usr": "s:s41_ExpressibleByBuiltinUnicodeScalarLiteralP",
@@ -70518,6 +70752,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -70953,6 +71194,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -71124,6 +71372,13 @@
             "printedName": "AnyNameable",
             "usr": "s:17ShopliveSDKCommon11AnyNameableP",
             "mangledName": "$s17ShopliveSDKCommon11AnyNameableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -71252,6 +71507,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -72113,6 +72375,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -72357,6 +72626,13 @@
             "printedName": "AnyNameable",
             "usr": "s:17ShopliveSDKCommon11AnyNameableP",
             "mangledName": "$s17ShopliveSDKCommon11AnyNameableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -72784,6 +73060,13 @@
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -72864,6 +73147,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -73058,6 +73348,13 @@
             "printedName": "AnyNameable",
             "usr": "s:17ShopliveSDKCommon11AnyNameableP",
             "mangledName": "$s17ShopliveSDKCommon11AnyNameableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -74216,6 +74513,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_ExpressibleByImageLiteral",
             "printedName": "_ExpressibleByImageLiteral",
             "usr": "s:s26_ExpressibleByImageLiteralP",
@@ -74378,6 +74682,13 @@
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -74555,6 +74866,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Sendable",
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
@@ -74562,10 +74880,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "UITraitChangeObservable",
-            "printedName": "UITraitChangeObservable",
-            "usr": "s:5UIKit23UITraitChangeObservableP",
-            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -75668,6 +75986,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -75841,6 +76166,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -75994,6 +76326,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -77791,6 +78130,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -77955,6 +78301,13 @@
             "printedName": "_HasCustomAnyHashableRepresentation",
             "usr": "s:s35_HasCustomAnyHashableRepresentationP",
             "mangledName": "$ss35_HasCustomAnyHashableRepresentationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       }
@@ -77963,2037 +78316,2037 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/AppDelegate\/ShopLiveAppDelegate.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/AppDelegate\/ShopLiveAppDelegate.swift",
       "kind": "BooleanLiteral",
       "offset": 560,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/AudioSessionManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/AudioSessionManager.swift",
       "kind": "IntegerLiteral",
       "offset": 424,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/Auth\/ShopLiveCommonUser.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/Auth\/ShopLiveCommonUser.swift",
       "kind": "StringLiteral",
       "offset": 2085,
       "length": 3,
       "value": "\"m\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/Auth\/ShopLiveCommonUser.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/Auth\/ShopLiveCommonUser.swift",
       "kind": "StringLiteral",
       "offset": 2107,
       "length": 3,
       "value": "\"f\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/Auth\/ShopLiveCommonUser.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/Auth\/ShopLiveCommonUser.swift",
       "kind": "StringLiteral",
       "offset": 2130,
       "length": 3,
       "value": "\"n\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 172,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 225,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 298,
       "length": 35,
       "value": "\"application\/x-www-form-urlencoded\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 377,
       "length": 20,
       "value": "\"x-sl-ebay-username\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 445,
       "length": 24,
       "value": "\"x-sl-studio-os-version\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 518,
       "length": 25,
       "value": "\"x-sl-studio-app-version\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 592,
       "length": 25,
       "value": "\"x-sl-studio-sdk-version\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 666,
       "length": 25,
       "value": "\"x-sl-player-app-version\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 740,
       "length": 25,
       "value": "\"x-sl-player-sdk-version\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 813,
       "length": 24,
       "value": "\"x-sl-player-os-version\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 882,
       "length": 21,
       "value": "\"x-sl-player-os-type\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 947,
       "length": 20,
       "value": "\"x-sl-player-device\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1007,
       "length": 16,
       "value": "\"x-sl-guest-uid\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1067,
       "length": 20,
       "value": "\"x-sl-ad-identifier\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1128,
       "length": 17,
       "value": "\"x-sl-utm-source\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1187,
       "length": 18,
       "value": "\"x-sl-utm-content\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1248,
       "length": 19,
       "value": "\"x-sl-utm-campaign\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1308,
       "length": 17,
       "value": "\"x-sl-utm-medium\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1360,
       "length": 11,
       "value": "\"x-sl-idfa\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1406,
       "length": 11,
       "value": "\"x-sl-idfv\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1453,
       "length": 12,
       "value": "\"x-sl-ce-id\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1503,
       "length": 14,
       "value": "\"x-sl-anon-id\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1549,
       "length": 8,
       "value": "\"Bearer\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1587,
       "length": 6,
       "value": "\"code\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1644,
       "length": 27,
       "value": "\"ON_CHANGED_VIDEO_EXPANDED\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1715,
       "length": 20,
       "value": "\"SET_VIDEO_POSITION\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1774,
       "length": 15,
       "value": "\"videoExpanded\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1826,
       "length": 13,
       "value": "\"endCampaign\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1878,
       "length": 15,
       "value": "\"startCampaign\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1928,
       "length": 11,
       "value": "\"rehearsal\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 1972,
       "length": 9,
       "value": "\"keyword\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2017,
       "length": 12,
       "value": "\"deviceUuid\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2060,
       "length": 7,
       "value": "\"retry\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2103,
       "length": 12,
       "value": "\"resolution\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2148,
       "length": 9,
       "value": "\"bitRate\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2189,
       "length": 8,
       "value": "\"normal\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2234,
       "length": 13,
       "value": "\"description\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2283,
       "length": 12,
       "value": "\"currentFPS\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2331,
       "length": 12,
       "value": "\"customerId\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2373,
       "length": 6,
       "value": "\"page\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2410,
       "length": 7,
       "value": "\"count\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2449,
       "length": 8,
       "value": "\"height\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2488,
       "length": 7,
       "value": "\"width\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2531,
       "length": 12,
       "value": "\"centerCrop\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2570,
       "length": 3,
       "value": "\"x\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2600,
       "length": 3,
       "value": "\"y\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2637,
       "length": 10,
       "value": "\"pushType\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2683,
       "length": 12,
       "value": "\"campaignId\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2735,
       "length": 16,
       "value": "\"campaignStatus\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2779,
       "length": 4,
       "value": "\"id\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2817,
       "length": 10,
       "value": "\"password\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2862,
       "length": 12,
       "value": "\"STREAM_APP\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2906,
       "length": 8,
       "value": "\"source\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 2948,
       "length": 10,
       "value": "\"duration\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 3005,
       "length": 23,
       "value": "\"ShopLiveUserDefaultID\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonKeys\/CommonKeys.swift",
       "kind": "StringLiteral",
       "offset": 3072,
       "length": 20,
       "value": "\"shortFormGuideOpen\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonOption\/ShopLiveResizeMode.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonOption\/ShopLiveResizeMode.swift",
       "kind": "IntegerLiteral",
       "offset": 240,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonOption\/ShopLiveResizeMode.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonOption\/ShopLiveResizeMode.swift",
       "kind": "IntegerLiteral",
       "offset": 257,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonOption\/ShopLiveResizeMode.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/CommonOption\/ShopLiveResizeMode.swift",
       "kind": "IntegerLiteral",
       "offset": 275,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/ConversionTracking\/ShopLiveConversionEventAPI.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/ConversionTracking\/ShopLiveConversionEventAPI.swift",
       "kind": "StringLiteral",
       "offset": 317,
       "length": 33,
       "value": "\"https:\/\/dev-capi.shoplive.cloud\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/DevicePhysics\/SLDeviceLogicalCoreCount.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/DevicePhysics\/SLDeviceLogicalCoreCount.swift",
       "kind": "Dictionary",
       "offset": 306,
       "length": 619,
       "value": "[(\"iPhone SE (1st Gen)\", 2), (\"iPhone 7\", 2), (\"iPhone 7 Plus\", 4), (\"iPhone 8\", 6), (\"iPhone 8 Plus\", 6), (\"iPhone X\", 6), (\"iPhone 11\", 6), (\"iPhone 11 Pro\", 6), (\"iPhone 12\", 6), (\"iPhone 13\", 6), (\"iPhone 14\", 6), (\"iPhone 15\", 6), (\"iPad (7th Gen)\", 4), (\"iPad Air (3rd Gen)\", 6), (\"iPad Pro (2020, 11\")\", 8), (\"iPad Pro (2021, M1)\", 8), (\"iPad Pro (2022, M2)\", 8), (\"MacBook Air (M1)\", 8), (\"MacBook Pro (M1 Pro)\", 10), (\"MacBook Pro (M2 Pro)\", 10), (\"Mac Studio (M1 Ultra)\", 20)]"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/Logger\/ShopLiveLogger.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/Logger\/ShopLiveLogger.swift",
       "kind": "BooleanLiteral",
       "offset": 840,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/Operator\/SLThrottle.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/Operator\/SLThrottle.swift",
       "kind": "BooleanLiteral",
       "offset": 277,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "Array",
       "offset": 509,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6147,
       "length": 7,
-      "value": "\"1.7.9\""
+      "value": "\"1.8.0\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6230,
       "length": 7,
-      "value": "\"1.7.9\""
+      "value": "\"1.8.0\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6316,
       "length": 7,
-      "value": "\"1.7.9\""
+      "value": "\"1.8.0\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6404,
       "length": 7,
-      "value": "\"1.7.9\""
+      "value": "\"1.8.0\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/Button\/SLButton.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/Button\/SLButton.swift",
       "kind": "StringLiteral",
       "offset": 212,
       "length": 24,
       "value": "\"ShopLiveViewComponents\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/Label\/SLLabel.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/Label\/SLLabel.swift",
       "kind": "StringLiteral",
       "offset": 209,
       "length": 24,
       "value": "\"ShopLiveViewComponents\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "BooleanLiteral",
       "offset": 640,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 690,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 700,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 709,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "FloatLiteral",
       "offset": 719,
       "length": 3,
       "value": "0.6"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 756,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "BooleanLiteral",
       "offset": 1003,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "BooleanLiteral",
       "offset": 1049,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "BooleanLiteral",
       "offset": 1228,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 1272,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 1282,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 1291,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 1301,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 1343,
       "length": 2,
       "value": "15"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "FloatLiteral",
       "offset": 1470,
       "length": 3,
       "value": "0.5"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "BooleanLiteral",
       "offset": 1514,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "BooleanLiteral",
       "offset": 1696,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 1740,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 1750,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 1759,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 1769,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 1811,
       "length": 2,
       "value": "15"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLCircularProgressIndicatorView.swift",
       "kind": "BooleanLiteral",
       "offset": 1944,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLLoadingIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLLoadingIndicatorView.swift",
       "kind": "BooleanLiteral",
       "offset": 1660,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLLoadingIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLLoadingIndicatorView.swift",
       "kind": "StringLiteral",
       "offset": 1680,
       "length": 9,
       "value": "\"general\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLLoadingIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLLoadingIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 1713,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLLoadingIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/LoadingIndicator\/SLLoadingIndicatorView.swift",
       "kind": "StringLiteral",
       "offset": 2617,
       "length": 9,
       "value": "\"general\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/Thumb\/SLThumbView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/Thumb\/SLThumbView.swift",
       "kind": "IntegerLiteral",
       "offset": 225,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "BooleanLiteral",
       "offset": 444,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "BooleanLiteral",
       "offset": 585,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "IntegerLiteral",
       "offset": 635,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "IntegerLiteral",
       "offset": 645,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "IntegerLiteral",
       "offset": 654,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "FloatLiteral",
       "offset": 664,
       "length": 3,
       "value": "0.6"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "IntegerLiteral",
       "offset": 701,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "BooleanLiteral",
       "offset": 948,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "BooleanLiteral",
       "offset": 1162,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "BooleanLiteral",
       "offset": 1261,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "BooleanLiteral",
       "offset": 1434,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "IntegerLiteral",
       "offset": 1478,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "IntegerLiteral",
       "offset": 1488,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "IntegerLiteral",
       "offset": 1497,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "IntegerLiteral",
       "offset": 1507,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "IntegerLiteral",
       "offset": 1549,
       "length": 2,
       "value": "15"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/alertcontroller\/SLLoadingAlertController.swift",
       "kind": "BooleanLiteral",
       "offset": 1805,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "StringLiteral",
       "offset": 479,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "BooleanLiteral",
       "offset": 675,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 742,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "BooleanLiteral",
       "offset": 1200,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "BooleanLiteral",
       "offset": 1335,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 1388,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 1390,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 1402,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 1404,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 1415,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 1417,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "FloatLiteral",
       "offset": 1429,
       "length": 3,
       "value": "0.8"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 1469,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "BooleanLiteral",
       "offset": 1504,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 1815,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 1903,
       "length": 3,
       "value": "-10"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 1988,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 2077,
       "length": 2,
       "value": "-8"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "BooleanLiteral",
       "offset": 2211,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "BooleanLiteral",
       "offset": 2263,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "BooleanLiteral",
       "offset": 2309,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 2336,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 2370,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "BooleanLiteral",
       "offset": 2402,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "BooleanLiteral",
       "offset": 3236,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "BooleanLiteral",
       "offset": 3371,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 3424,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 3426,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 3438,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 3440,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 3451,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 3453,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "FloatLiteral",
       "offset": 3465,
       "length": 3,
       "value": "0.8"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 3505,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "BooleanLiteral",
       "offset": 3540,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 3776,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 3864,
       "length": 3,
       "value": "-20"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 3949,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 4038,
       "length": 2,
       "value": "-8"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "BooleanLiteral",
       "offset": 4172,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "BooleanLiteral",
       "offset": 4224,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "BooleanLiteral",
       "offset": 4270,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 4297,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "IntegerLiteral",
       "offset": 4331,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "BooleanLiteral",
       "offset": 4363,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "BooleanLiteral",
       "offset": 4533,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/toast\/SLToast.swift",
       "kind": "StringLiteral",
       "offset": 4643,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
       "offset": 544,
       "length": 22,
       "value": "\"ShopLiveAppInterface\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
       "offset": 614,
       "length": 26,
       "value": "\"USER_IMPLEMENTS_CALLBACK\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
       "offset": 663,
       "length": 6,
       "value": "\"name\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
       "offset": 692,
       "length": 6,
       "value": "\"type\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
       "offset": 725,
       "length": 10,
       "value": "\"metadata\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
       "offset": 761,
       "length": 9,
       "value": "\"payload\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "StringLiteral",
       "offset": 802,
       "length": 15,
       "value": "\"shopliveEvent\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "BooleanLiteral",
       "offset": 1708,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "BooleanLiteral",
       "offset": 1773,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "Array",
       "offset": 1844,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "BooleanLiteral",
       "offset": 1901,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "BooleanLiteral",
       "offset": 2129,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "BooleanLiteral",
       "offset": 2247,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "BooleanLiteral",
       "offset": 2326,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/webview\/SLWebview.swift",
       "kind": "BooleanLiteral",
       "offset": 5081,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/AVKit+extension\/CMTime+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/AVKit+extension\/CMTime+extension.swift",
       "kind": "IntegerLiteral",
       "offset": 724,
       "length": 4,
       "value": "3600"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/AVKit+extension\/CMTime+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/AVKit+extension\/CMTime+extension.swift",
       "kind": "IntegerLiteral",
       "offset": 818,
       "length": 4,
       "value": "3600"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/AVKit+extension\/CMTime+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/AVKit+extension\/CMTime+extension.swift",
       "kind": "IntegerLiteral",
       "offset": 826,
       "length": 2,
       "value": "60"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/Foundation+extension\/Data+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/Foundation+extension\/Data+extension.swift",
       "kind": "IntegerLiteral",
       "offset": 242,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/Foundation+extension\/Data+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/Foundation+extension\/Data+extension.swift",
       "kind": "IntegerLiteral",
       "offset": 247,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/Foundation+extension\/Data+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/Foundation+extension\/Data+extension.swift",
       "kind": "Array",
       "offset": 410,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/Foundation+extension\/String+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/Foundation+extension\/String+extension.swift",
       "kind": "StringLiteral",
       "offset": 1923,
       "length": 13,
       "value": "\"Localizable\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/Foundation+extension\/String+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/Foundation+extension\/String+extension.swift",
       "kind": "StringLiteral",
       "offset": 1986,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "IntegerLiteral",
       "offset": 207,
       "length": 4,
       "value": "0xFF"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIColor+extension.swift",
       "kind": "FloatLiteral",
       "offset": 900,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIFont+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIFont+extension.swift",
       "kind": "IntegerLiteral",
       "offset": 724,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIImage+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIImage+extension.swift",
       "kind": "FloatLiteral",
       "offset": 849,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIImage+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIImage+extension.swift",
       "kind": "IntegerLiteral",
       "offset": 5674,
       "length": 2,
       "value": "-8"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIImage+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIImage+extension.swift",
       "kind": "IntegerLiteral",
       "offset": 5995,
       "length": 2,
       "value": "-8"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIImage+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIImage+extension.swift",
       "kind": "IntegerLiteral",
       "offset": 6322,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIImage+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIImage+extension.swift",
       "kind": "IntegerLiteral",
       "offset": 6333,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIPanGestureRecognizer+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIPanGestureRecognizer+extension.swift",
       "kind": "IntegerLiteral",
       "offset": 192,
       "length": 4,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIPanGestureRecognizer+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIPanGestureRecognizer+extension.swift",
       "kind": "IntegerLiteral",
       "offset": 198,
       "length": 4,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIPanGestureRecognizer+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIPanGestureRecognizer+extension.swift",
       "kind": "IntegerLiteral",
       "offset": 204,
       "length": 5,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UITextView+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UITextView+extension.swift",
       "kind": "IntegerLiteral",
       "offset": 208,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIView+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIView+extension.swift",
       "kind": "FloatLiteral",
       "offset": 5884,
       "length": 3,
       "value": "0.5"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIView+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/UIKit+extension\/UIView+extension.swift",
       "kind": "BooleanLiteral",
       "offset": 10025,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/WebKit+extension\/WKWebView+extension.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/extension\/WebKit+extension\/WKWebView+extension.swift",
       "kind": "StringLiteral",
       "offset": 210,
       "length": 19,
       "value": "\"estimatedProgress\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/SLKeyChainUtil.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/SLKeyChainUtil.swift",
       "kind": "Array",
       "offset": 224,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/SLKeyChainUtil.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/SLKeyChainUtil.swift",
       "kind": "StringLiteral",
       "offset": 266,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "StringLiteral",
       "offset": 3340,
       "length": 22,
       "value": "\"SwiftKeychainWrapper\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 4700,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 7384,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 7775,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 8171,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 8567,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 9502,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 10492,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 11538,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 12843,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 13697,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 14016,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 14336,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 14654,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 15615,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 16687,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 17963,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 19256,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 20201,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 22942,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/keychain\/wrapper\/KeychainWrapper.swift",
       "kind": "BooleanLiteral",
       "offset": 24472,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "Dictionary",
       "offset": 193,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/APIDefinition.swift",
       "kind": "StringLiteral",
       "offset": 253,
       "length": 24,
       "value": "\"upload.delegates.queue\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
       "kind": "Array",
       "offset": 450,
       "length": 36,
       "value": "[\"playable\", \"hasProtectedContent\"]"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
       "kind": "IntegerLiteral",
       "offset": 524,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
       "kind": "IntegerLiteral",
       "offset": 608,
       "length": 4,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
       "kind": "IntegerLiteral",
       "offset": 615,
       "length": 4,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
       "kind": "IntegerLiteral",
       "offset": 622,
       "length": 4,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
       "kind": "Array",
       "offset": 723,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
       "kind": "IntegerLiteral",
       "offset": 1277,
       "length": 4,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
       "kind": "IntegerLiteral",
       "offset": 1284,
       "length": 4,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/Mp4CachingManager.swift",
       "kind": "IntegerLiteral",
       "offset": 1291,
       "length": 4,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/SLReachability.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/SLReachability.swift",
       "kind": "StringLiteral",
       "offset": 1741,
       "length": 33,
       "value": "\"ReachabilityChangedNotification\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/SLReachability.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/SLReachability.swift",
       "kind": "StringLiteral",
       "offset": 1869,
       "length": 21,
       "value": "\"reachabilityChanged\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/SLReachability.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/SLReachability.swift",
       "kind": "BooleanLiteral",
       "offset": 3148,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/SLReachability.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/SLReachability.swift",
       "kind": "BooleanLiteral",
       "offset": 4240,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/SLReachability.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/SLReachability.swift",
       "kind": "BooleanLiteral",
       "offset": 4351,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/ShopLiveDefines.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/ShopLiveDefines.swift",
       "kind": "StringLiteral",
       "offset": 239,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/ShopLiveDefines.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/ShopLiveDefines.swift",
       "kind": "StringLiteral",
       "offset": 284,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/ShopLiveDefines.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/ShopLiveDefines.swift",
       "kind": "StringLiteral",
       "offset": 405,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/ShopLiveDefines.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/ShopLiveDefines.swift",
       "kind": "StringLiteral",
       "offset": 499,
       "length": 3,
       "value": "\"i\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/ShopLiveWebViewCacheManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/ShopLiveWebViewCacheManager.swift",
       "kind": "StringLiteral",
       "offset": 458,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/UploadProgressDelegate.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/network\/UploadProgressDelegate.swift",
       "kind": "BooleanLiteral",
       "offset": 486,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/permission\/MicroPhonePermission.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/permission\/MicroPhonePermission.swift",
       "kind": "BooleanLiteral",
       "offset": 292,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/permission\/PermissionManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/permission\/PermissionManager.swift",
       "kind": "IntegerLiteral",
       "offset": 187,
       "length": 10,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/permission\/PermissionManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/permission\/PermissionManager.swift",
       "kind": "IntegerLiteral",
       "offset": 207,
       "length": 4,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/permission\/PermissionManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/permission\/PermissionManager.swift",
       "kind": "IntegerLiteral",
       "offset": 509,
       "length": 6,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/permission\/PermissionManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/permission\/PermissionManager.swift",
       "kind": "IntegerLiteral",
       "offset": 525,
       "length": 13,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/permission\/PermissionManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/permission\/PermissionManager.swift",
       "kind": "IntegerLiteral",
       "offset": 548,
       "length": 12,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/permission\/PermissionManager.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/permission\/PermissionManager.swift",
       "kind": "IntegerLiteral",
       "offset": 570,
       "length": 7,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/player\/SLVideoPlayer.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/player\/SLVideoPlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 485,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/player\/SLVideoPlayer.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/player\/SLVideoPlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 779,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/player\/SLVideoPlayer.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/player\/SLVideoPlayer.swift",
       "kind": "BooleanLiteral",
       "offset": 1012,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/resource\/CommonStrings.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/resource\/CommonStrings.swift",
       "kind": "StringLiteral",
       "offset": 252,
       "length": 25,
       "value": "\"Please try again later.\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/resource\/CommonStrings.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/resource\/CommonStrings.swift",
       "kind": "StringLiteral",
       "offset": 356,
       "length": 25,
       "value": "\"Please try again later.\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/resource\/CommonStrings.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/resource\/CommonStrings.swift",
       "kind": "StringLiteral",
       "offset": 450,
       "length": 15,
       "value": "\"Login failure\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/resource\/CommonStrings.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/resource\/CommonStrings.swift",
       "kind": "StringLiteral",
       "offset": 549,
       "length": 25,
       "value": "\"No internet connection.\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/resource\/CommonStrings.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/resource\/CommonStrings.swift",
       "kind": "StringLiteral",
       "offset": 738,
       "length": 49,
       "value": "\"Network response timed out. \nPlease try again.\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/resource\/CommonStrings.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/resource\/CommonStrings.swift",
       "kind": "StringLiteral",
       "offset": 881,
       "length": 30,
       "value": "\"A server error has occurred.\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/Animations\/SLNVActivityIndicatorAnimationOrbit.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/Animations\/SLNVActivityIndicatorAnimationOrbit.swift",
       "kind": "FloatLiteral",
       "offset": 1371,
       "length": 3,
       "value": "1.9"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/Animations\/SLNVActivityIndicatorAnimationOrbit.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/Animations\/SLNVActivityIndicatorAnimationOrbit.swift",
       "kind": "FloatLiteral",
       "offset": 1413,
       "length": 4,
       "value": "0.25"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/Animations\/SLNVActivityIndicatorAnimationOrbit.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/Animations\/SLNVActivityIndicatorAnimationOrbit.swift",
       "kind": "FloatLiteral",
       "offset": 1451,
       "length": 3,
       "value": "1.5"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/Animations\/SLNVActivityIndicatorAnimationOrbit.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/Animations\/SLNVActivityIndicatorAnimationOrbit.swift",
       "kind": "IntegerLiteral",
       "offset": 1508,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/Animations\/SLNVActivityIndicatorAnimationOrbit.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/Animations\/SLNVActivityIndicatorAnimationOrbit.swift",
       "kind": "IntegerLiteral",
       "offset": 1543,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 12189,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 12338,
       "length": 2,
       "value": "60"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 12350,
       "length": 2,
       "value": "60"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 12880,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 13304,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "FloatLiteral",
       "offset": 13592,
       "length": 3,
       "value": "8.0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 13782,
       "length": 2,
       "value": "20"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 13969,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 13979,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 13988,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "FloatLiteral",
       "offset": 13998,
       "length": 3,
       "value": "0.5"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 14137,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "FloatLiteral",
       "offset": 14176,
       "length": 4,
       "value": "0.25"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 14209,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "FloatLiteral",
       "offset": 14392,
       "length": 4,
       "value": "0.25"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "IntegerLiteral",
       "offset": 14472,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Base\/SLNVActivityIndicatorView.swift",
       "kind": "BooleanLiteral",
       "offset": 15586,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Extended\/SLNVActivityIndicatorPresenter.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Extended\/SLNVActivityIndicatorPresenter.swift",
       "kind": "StringLiteral",
       "offset": 8968,
       "length": 38,
       "value": "\"SLSLNVActivityIndicatorViewContainer\""
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Extended\/SLNVActivityIndicatorPresenter.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Extended\/SLNVActivityIndicatorPresenter.swift",
       "kind": "IntegerLiteral",
       "offset": 9148,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Extended\/SLNVActivityIndicatorPresenter.swift",
+      "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/thirdparty\/NVActivityIndicatorView\/Extended\/SLNVActivityIndicatorPresenter.swift",
       "kind": "BooleanLiteral",
       "offset": 9208,
       "length": 5,
