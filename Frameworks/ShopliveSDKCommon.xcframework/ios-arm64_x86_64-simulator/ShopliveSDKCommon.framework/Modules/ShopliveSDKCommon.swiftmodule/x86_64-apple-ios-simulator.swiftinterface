@@ -967,6 +967,8 @@ extension UIKit.UIWindow {
 }
 @_hasMissingDesignatedInitializers public class SLWebViewStore {
   public static let shared: ShopliveSDKCommon.SLWebViewStore
+  final public let dataStore: WebKit.WKWebsiteDataStore
+  final public let processPool: WebKit.WKProcessPool
   public func updateState()
   @objc deinit
 }
