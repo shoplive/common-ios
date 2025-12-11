@@ -861,6 +861,15 @@ public struct SLJSONUtil {
   #if compiler(>=5.3) && $NonescapableTypes
   public static func toJsonString(_ value: any Swift.Encodable) -> Swift.String?
   #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func parseCGFloat(from value: Any?) -> CoreFoundation.CGFloat?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func parseColor(from value: Any?) -> UIKit.UIColor?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func parseString(from value: Any?) -> Swift.String?
+  #endif
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class SLBaseView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
@@ -1374,6 +1383,10 @@ extension UIKit.UIColor {
   convenience public init(sl_rgb: Swift.Int)
   convenience public init(sl_argb: Swift.Int)
   convenience public init(sl_hex: Swift.String, alpha: CoreFoundation.CGFloat = 1.0)
+  public func toHexString() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  convenience public init?(hexString: Swift.String)
+  #endif
 }
 extension UIKit.UIDevice {
   @_Concurrency.MainActor @preconcurrency public static var isIpad_SL: Swift.Bool {
