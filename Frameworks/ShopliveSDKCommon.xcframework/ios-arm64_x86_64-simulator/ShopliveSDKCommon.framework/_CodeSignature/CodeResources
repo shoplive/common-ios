@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		vBCuxDPCUHzUfezTrqcAHnm+kYA=
+		7SIeAwWfLB+Jeo4A3fiF2l+NmYw=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		G9RTAFQoWjDtCsbu18OnIdN+/KI=
+		rCEBBYaXj31tNFdUxUwIV/rVRfY=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		sKZN7lD10ngw8xKrcO1t169JoLM=
+		qpAOb36bvrnk5xaus7S+fik5RWY=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		G9RTAFQoWjDtCsbu18OnIdN+/KI=
+		rCEBBYaXj31tNFdUxUwIV/rVRfY=
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		l0aLcjVoVUiL+DwPZne84XaKKfo=
+		S3hAfTiwbStxS1I5dkFUWnJxiHk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -82,7 +82,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qBmuKD3jPyD+bPufyQlYfuNr6oczI/njmm3Lx3kgFuY=
+			46VzPHvkYmOYvVzz5zCugQlUedkD6A64x5KQIc/60D8=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -110,14 +110,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3PTQqi0CiU6z/EVmoAgGGa0/sjjCT5+3RIiYbx3pK+U=
+			lknhjkYc10zxK34dQk8KDH01Qwyw/up08oW0z/ehuUI=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qBmuKD3jPyD+bPufyQlYfuNr6oczI/njmm3Lx3kgFuY=
+			46VzPHvkYmOYvVzz5zCugQlUedkD6A64x5KQIc/60D8=
 			</data>
 		</dict>
 		<key>Modules/ShopliveSDKCommon.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -145,7 +145,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lXpAkEk8EbWUTKS/R3Z6iHbdT+vHRvK/vkDUsi0g6ho=
+			UBljveelGEZvUREByT25EqCl83a+6eC9Mjo+O+q/85c=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
