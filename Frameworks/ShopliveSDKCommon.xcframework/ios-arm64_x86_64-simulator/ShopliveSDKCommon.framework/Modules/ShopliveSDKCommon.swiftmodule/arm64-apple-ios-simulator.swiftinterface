@@ -23,8 +23,8 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 import os.log
 import os
-@_inheritsConvenienceInitializers @objc public class ShopliveSDKCommonResources : ObjectiveC.NSObject {
-  @objc public class var bundle: Foundation.Bundle {
+@_inheritsConvenienceInitializers @objc final public class ShopliveSDKCommonResources : ObjectiveC.NSObject {
+  @objc final public class var bundle: Foundation.Bundle {
     @objc get
   }
   @objc override dynamic public init()
@@ -1324,6 +1324,7 @@ extension Foundation.URL {
   #if compiler(>=5.3) && $NonescapableTypes
   public func withScheme_SL(_ scheme: Swift.String) -> Foundation.URL?
   #endif
+  public func imageURLFromHTMLWrapper_SL() -> Foundation.URL
 }
 extension Foundation.UserDefaults {
   public func set_SL(_ value: UIKit.UIEdgeInsets, forKey key: Swift.String)
