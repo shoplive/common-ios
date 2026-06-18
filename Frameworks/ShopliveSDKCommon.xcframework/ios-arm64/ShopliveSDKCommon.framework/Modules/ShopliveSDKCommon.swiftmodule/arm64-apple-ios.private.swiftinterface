@@ -1324,7 +1324,6 @@ extension Foundation.URL {
   #if compiler(>=5.3) && $NonescapableTypes
   public func withScheme_SL(_ scheme: Swift.String) -> Foundation.URL?
   #endif
-  public func imageURLFromHTMLWrapper_SL() -> Foundation.URL
 }
 extension Foundation.UserDefaults {
   public func set_SL(_ value: UIKit.UIEdgeInsets, forKey key: Swift.String)
@@ -2166,6 +2165,7 @@ extension ShopliveSDKCommon.SLReachability {
 @objc @_inheritsConvenienceInitializers public class ShopLiveWebViewCacheManager : ObjectiveC.NSObject, Foundation.URLSessionDownloadDelegate {
   public var completionHandler: ((Swift.String?) -> Swift.Void)?
   public func getUrl() -> Swift.String
+  public func cancel()
   @objc override dynamic public init()
   public func startDownload(url: Foundation.URL)
   @objc public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didWriteData bytesWritten: Swift.Int64, totalBytesWritten: Swift.Int64, totalBytesExpectedToWrite: Swift.Int64)

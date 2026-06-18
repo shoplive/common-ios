@@ -54435,6 +54435,27 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "cancel",
+            "printedName": "cancel()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ShopliveSDKCommon27ShopLiveWebViewCacheManagerC6cancelyyF",
+            "mangledName": "$s17ShopliveSDKCommon27ShopLiveWebViewCacheManagerC6cancelyyF",
+            "moduleName": "ShopliveSDKCommon",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -63547,7 +63568,8 @@
             "moduleName": "ShopliveSDKCommon",
             "declAttributes": [
               "Preconcurrency",
-              "Custom"
+              "Custom",
+              "AccessControl"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -70938,28 +70960,6 @@
             "usr": "s:10Foundation3URLV17ShopliveSDKCommonE13withScheme_SLyACSgSSF",
             "mangledName": "$s10Foundation3URLV17ShopliveSDKCommonE13withScheme_SLyACSgSSF",
             "moduleName": "ShopliveSDKCommon",
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "imageURLFromHTMLWrapper_SL",
-            "printedName": "imageURLFromHTMLWrapper_SL()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "URL",
-                "printedName": "Foundation.URL",
-                "usr": "s:10Foundation3URLV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:10Foundation3URLV17ShopliveSDKCommonE26imageURLFromHTMLWrapper_SLACyF",
-            "mangledName": "$s10Foundation3URLV17ShopliveSDKCommonE26imageURLFromHTMLWrapper_SLACyF",
-            "moduleName": "ShopliveSDKCommon",
-            "declAttributes": [
-              "RawDocComment"
-            ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           }
@@ -79112,29 +79112,29 @@
       "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6147,
-      "length": 9,
-      "value": "\"1.8.7.2\""
+      "length": 7,
+      "value": "\"1.8.8\""
     },
     {
       "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
-      "offset": 6232,
-      "length": 9,
-      "value": "\"1.8.7.2\""
+      "offset": 6230,
+      "length": 7,
+      "value": "\"1.8.8\""
     },
     {
       "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
-      "offset": 6320,
-      "length": 9,
-      "value": "\"1.8.7.2\""
+      "offset": 6316,
+      "length": 7,
+      "value": "\"1.8.8\""
     },
     {
       "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
-      "offset": 6410,
-      "length": 9,
-      "value": "\"1.8.7.2\""
+      "offset": 6404,
+      "length": 7,
+      "value": "\"1.8.8\""
     },
     {
       "filePath": "\/Users\/baghyeonjun\/shoplive\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/Button\/SLButton.swift",
