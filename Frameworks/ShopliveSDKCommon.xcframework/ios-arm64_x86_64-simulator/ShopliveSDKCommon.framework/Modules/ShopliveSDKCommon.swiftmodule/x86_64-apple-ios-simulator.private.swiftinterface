@@ -304,6 +304,9 @@ public enum ShopLiveErrorCases {
   case NotInitializedShortformConfig
   case FailedEncoding
   case RemovedVideo
+  case NoVideoForPip
+  case NoPlayableStreamUrl
+  case LiveNotBroadcasting
   case UnsupportedMedia
   case UnsupportedOSpipMode
   case FailedNetwork
