@@ -12069,6 +12069,117 @@
           },
           {
             "kind": "Var",
+            "name": "NoVideoForPip",
+            "printedName": "NoVideoForPip",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ShopliveSDKCommon.ShopLiveErrorCases.Type) -> ShopliveSDKCommon.ShopLiveErrorCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ShopLiveErrorCases",
+                    "printedName": "ShopliveSDKCommon.ShopLiveErrorCases",
+                    "usr": "s:17ShopliveSDKCommon18ShopLiveErrorCasesO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ShopliveSDKCommon.ShopLiveErrorCases.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ShopLiveErrorCases",
+                        "printedName": "ShopliveSDKCommon.ShopLiveErrorCases",
+                        "usr": "s:17ShopliveSDKCommon18ShopLiveErrorCasesO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ShopliveSDKCommon18ShopLiveErrorCasesO13NoVideoForPipyA2CmF",
+            "mangledName": "$s17ShopliveSDKCommon18ShopLiveErrorCasesO13NoVideoForPipyA2CmF",
+            "moduleName": "ShopliveSDKCommon"
+          },
+          {
+            "kind": "Var",
+            "name": "NoPlayableStreamUrl",
+            "printedName": "NoPlayableStreamUrl",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ShopliveSDKCommon.ShopLiveErrorCases.Type) -> ShopliveSDKCommon.ShopLiveErrorCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ShopLiveErrorCases",
+                    "printedName": "ShopliveSDKCommon.ShopLiveErrorCases",
+                    "usr": "s:17ShopliveSDKCommon18ShopLiveErrorCasesO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ShopliveSDKCommon.ShopLiveErrorCases.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ShopLiveErrorCases",
+                        "printedName": "ShopliveSDKCommon.ShopLiveErrorCases",
+                        "usr": "s:17ShopliveSDKCommon18ShopLiveErrorCasesO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ShopliveSDKCommon18ShopLiveErrorCasesO19NoPlayableStreamUrlyA2CmF",
+            "mangledName": "$s17ShopliveSDKCommon18ShopLiveErrorCasesO19NoPlayableStreamUrlyA2CmF",
+            "moduleName": "ShopliveSDKCommon"
+          },
+          {
+            "kind": "Var",
+            "name": "LiveNotBroadcasting",
+            "printedName": "LiveNotBroadcasting",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ShopliveSDKCommon.ShopLiveErrorCases.Type) -> ShopliveSDKCommon.ShopLiveErrorCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ShopLiveErrorCases",
+                    "printedName": "ShopliveSDKCommon.ShopLiveErrorCases",
+                    "usr": "s:17ShopliveSDKCommon18ShopLiveErrorCasesO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ShopliveSDKCommon.ShopLiveErrorCases.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ShopLiveErrorCases",
+                        "printedName": "ShopliveSDKCommon.ShopLiveErrorCases",
+                        "usr": "s:17ShopliveSDKCommon18ShopLiveErrorCasesO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ShopliveSDKCommon18ShopLiveErrorCasesO0D15NotBroadcastingyA2CmF",
+            "mangledName": "$s17ShopliveSDKCommon18ShopLiveErrorCasesO0D15NotBroadcastingyA2CmF",
+            "moduleName": "ShopliveSDKCommon"
+          },
+          {
+            "kind": "Var",
             "name": "UnsupportedMedia",
             "printedName": "UnsupportedMedia",
             "children": [
@@ -79113,28 +79224,28 @@
       "kind": "StringLiteral",
       "offset": 6167,
       "length": 8,
-      "value": "\"1.8.10\""
+      "value": "\"1.8.11\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6251,
       "length": 8,
-      "value": "\"1.8.10\""
+      "value": "\"1.8.11\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6338,
       "length": 8,
-      "value": "\"1.8.10\""
+      "value": "\"1.8.11\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/ShopliveSDKCommon.swift",
       "kind": "StringLiteral",
       "offset": 6427,
       "length": 8,
-      "value": "\"1.8.10\""
+      "value": "\"1.8.11\""
     },
     {
       "filePath": "\/Users\/tabber\/Desktop\/github\/matrix-sdk-ios\/Modules\/Common\/Sources\/View\/Button\/SLButton.swift",
