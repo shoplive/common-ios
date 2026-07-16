@@ -1044,11 +1044,6 @@ extension AVFoundation.AVCaptureDevice {
   }
   public func getInitZoomFactor_SL(forDevice camera: AVFoundation.AVCaptureDevice) -> CoreFoundation.CGFloat
 }
-extension AVFoundation.AVPlayer.TimeControlStatus {
-  public var name_SL: Swift.String {
-    get
-  }
-}
 extension AVFAudio.AVAudioSession {
   #if compiler(>=5.3) && $NonescapableTypes
   public func safeRemoveObserver_SL(_ observer: Any, forKeyPath keyPath: Swift.String, observeInfo: Swift.UnsafeMutableRawPointer?, completion: @escaping (Swift.Bool) -> Swift.Void)
