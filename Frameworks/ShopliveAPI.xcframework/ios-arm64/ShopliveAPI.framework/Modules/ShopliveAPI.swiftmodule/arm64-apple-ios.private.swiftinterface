@@ -1,0 +1,274 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ShopliveAPI -package-name ShopLiveSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum ShopLiveErrorCases {
+  case AuthenticationFailed
+  case GuestLoginNotAllowed
+  case CustomAccountNotFound
+  case CustomAccountExpired
+  case InvalidSignature
+  case ExpiredSession
+  case ServerError
+  case CampaignNotFound
+  case CampaignNotOnAir
+  case DuplicateSession
+  case NotInitializedAccessKey
+  case NotInitializedShareURL
+  case NotInitializedShortformConfig
+  case FailedEncoding
+  case RemovedVideo
+  case NoVideoForPip
+  case NoPlayableStreamUrl
+  case LiveNotBroadcasting
+  case UnsupportedMedia
+  case UnsupportedOSpipMode
+  case FailedNetwork
+  case FailedJSONParsing
+  case UnexpectedError
+  case InValidURL
+  public static func == (a: ShopliveAPI.ShopLiveErrorCases, b: ShopliveAPI.ShopLiveErrorCases) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc public class ShopLiveCommonError : Foundation.NSError {
+  public var codes: Swift.Int
+  public var message: Swift.String?
+  public var error: (any Swift.Error)?
+  public init(code: Swift.Int, message: Swift.String?, error: (any Swift.Error)?)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ShopLiveCommonErrorGenerator {
+  public class func generateError(errorCase: ShopliveAPI.ShopLiveErrorCases, error: (any Swift.Error)?, message: Swift.String?) -> ShopliveAPI.ShopLiveCommonError
+  public class func generateErrorFromNetwork(statusCode: Swift.Int?, error: (any Swift.Error)?, responseData: Foundation.Data?, endpoint: Swift.String) -> ShopliveAPI.ShopLiveCommonError?
+  @objc deinit
+}
+public class ShopLiveCommonNetworkBaseErrorResponse : Swift.Codable {
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public struct ShopLiveCampaign : Swift.Equatable {
+  public enum Status : Swift.Equatable {
+    case reserved
+    case ready
+    case onair
+    case closed
+    case unknown(Swift.String)
+    public static func == (a: ShopliveAPI.ShopLiveCampaign.Status, b: ShopliveAPI.ShopLiveCampaign.Status) -> Swift.Bool
+  }
+  public struct Lifecycle : Swift.Equatable {
+    public let status: ShopliveAPI.ShopLiveCampaign.Status
+    public let rehearsal: Swift.Bool
+    public let startedAt: Foundation.Date?
+    public let closingAt: Foundation.Date?
+    public let endedAt: Foundation.Date?
+    public static func == (a: ShopliveAPI.ShopLiveCampaign.Lifecycle, b: ShopliveAPI.ShopLiveCampaign.Lifecycle) -> Swift.Bool
+  }
+  public struct Metrics : Swift.Equatable {
+    public let userCount: Swift.Int?
+    public let adoreCount: Swift.Int?
+    public let showUserCount: Swift.Bool
+    public static func == (a: ShopliveAPI.ShopLiveCampaign.Metrics, b: ShopliveAPI.ShopLiveCampaign.Metrics) -> Swift.Bool
+  }
+  public let campaignId: Swift.Int64
+  public let campaignKey: Swift.String
+  public let title: Swift.String?
+  public let description: Swift.String?
+  public let campaignUrl: Swift.String?
+  public let rerun: Swift.Bool
+  public let archiveStream: Swift.Bool
+  public let privateLive: Swift.Bool
+  public let scheduledAt: Foundation.Date?
+  public let scheduledEndAt: Foundation.Date?
+  public let posterUrl: Swift.String?
+  public let lifecycle: ShopliveAPI.ShopLiveCampaign.Lifecycle
+  public let metrics: ShopliveAPI.ShopLiveCampaign.Metrics?
+  public static func == (a: ShopliveAPI.ShopLiveCampaign, b: ShopliveAPI.ShopLiveCampaign) -> Swift.Bool
+}
+public struct ShopLiveCampaignListRequest : Swift.Equatable {
+  public enum Status : Swift.String {
+    case ready
+    case onair
+    case closed
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Order : Swift.String {
+    case ascending
+    case descending
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var page: Swift.Int?
+  public var size: Swift.Int?
+  public var statuses: [ShopliveAPI.ShopLiveCampaignListRequest.Status]
+  public var order: ShopliveAPI.ShopLiveCampaignListRequest.Order?
+  public init(page: Swift.Int? = nil, size: Swift.Int? = nil, statuses: [ShopliveAPI.ShopLiveCampaignListRequest.Status] = [], order: ShopliveAPI.ShopLiveCampaignListRequest.Order? = nil)
+  public static func == (a: ShopliveAPI.ShopLiveCampaignListRequest, b: ShopliveAPI.ShopLiveCampaignListRequest) -> Swift.Bool
+}
+public struct ShopLiveCampaignListResponse : Swift.Equatable {
+  public let campaigns: [ShopliveAPI.ShopLiveCampaign]
+  public let hasMore: Swift.Bool
+  public static func == (a: ShopliveAPI.ShopLiveCampaignListResponse, b: ShopliveAPI.ShopLiveCampaignListResponse) -> Swift.Bool
+}
+public struct ShopLiveEventProduct : Swift.Codable {
+  public var productId: Swift.String?
+  public var customerProductId: Swift.String?
+  public var sku: Swift.String?
+  public var url: Swift.String?
+  public var purchaseQuantity: Swift.Int?
+  public var purchaseUnitPrice: Swift.Double?
+  public init(from decoder: any Swift.Decoder) throws
+  public init(productId: Swift.String?, customerProductId: Swift.String?, sku: Swift.String?, url: Swift.String?, purchaseQuantity: Swift.Int?, purchaseUnitPrice: Swift.Double?)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct ShopLiveEventRequest : ShopliveAPI.BaseResponsable {
+  public var _e: Swift.String?
+  public var _s: Swift.Int?
+  public var anonId: Swift.String?
+  public var custom: Swift.String?
+  public var env: Swift.String?
+  public var ceId: Swift.String?
+  public var idfv: Swift.String?
+  public var idfa: Swift.String?
+  public var osType: Swift.String?
+  public var products: [ShopliveAPI.ShopLiveEventProduct]?
+  public var referrer: Swift.String?
+  public var type: Swift.String?
+  public var userId: Swift.String?
+  public var orderId: Swift.String?
+  public var createdAt: Swift.Int?
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct SLFlexibleParser<K> where K : Swift.CodingKey {
+  public init(container: Swift.KeyedDecodingContainer<K>)
+  public func parse<T>(targetType: T.Type, key: any Swift.CodingKey) throws -> T?
+}
+public protocol ShopLiveEndpoint {
+  var baseUrl: Swift.String { get }
+  var path: Swift.String { get }
+  var method: ShopliveAPI.SLHTTPMethod { get }
+  var queries: [Foundation.URLQueryItem] { get }
+  var body: [Swift.String : Any]? { get }
+  var headers: [Swift.String : Swift.String] { get }
+  var baseHeaders: [Swift.String : Swift.String] { get }
+}
+extension ShopliveAPI.ShopLiveEndpoint {
+  public var queries: [Foundation.URLQueryItem] {
+    get
+  }
+  public var body: [Swift.String : Any]? {
+    get
+  }
+  public var headers: [Swift.String : Swift.String] {
+    get
+  }
+}
+public enum ShopLiveAPIError : Swift.Error {
+  case invalidURL
+  case encoding(any Swift.Error)
+  case network(any Swift.Error)
+  case emptyResponse
+  case http(statusCode: Swift.Int, body: Foundation.Data?)
+  case decoding(any Swift.Error)
+}
+extension ShopliveAPI.ShopLiveAPIError {
+  public func toCommonError(endpoint: Swift.String) -> ShopliveAPI.ShopLiveCommonError
+}
+public enum ShopLiveAPI {
+  @discardableResult
+  public static func request(_ endpoint: any ShopliveAPI.ShopLiveEndpoint, completion: @escaping (Foundation.Data?, Foundation.HTTPURLResponse?, (any Swift.Error)?) -> Swift.Void) -> any ShopliveAPI.ShopLiveCancellable
+}
+@available(iOS 13.0, *)
+extension ShopliveAPI.ShopLiveAPI {
+  public static func withCancellableContinuation<T, E>(_ body: (@escaping (Swift.Result<T, E>) -> Swift.Void) -> any ShopliveAPI.ShopLiveCancellable) async throws -> T where E : Swift.Error
+}
+public protocol ShopLiveCancellable {
+  func cancel()
+}
+final public class ShopLiveAPITask : ShopliveAPI.ShopLiveCancellable {
+  public init(task: Foundation.URLSessionTask?)
+  final public func cancel()
+  @objc deinit
+}
+public protocol RawDataRepresantable {
+  var rawData: Foundation.Data? { get set }
+  func getRawDataDict() -> [Swift.String : Any]?
+}
+public protocol BaseResponsable : Swift.Decodable, Swift.Encodable {
+  var _s: Swift.Int? { get set }
+  var _e: Swift.String? { get set }
+}
+extension ShopliveAPI.BaseResponsable {
+  public var isBaseModel: Swift.Bool {
+    get
+  }
+  public var isSuccess: Swift.Bool {
+    get
+  }
+}
+public struct BaseResponse : ShopliveAPI.BaseResponsable {
+  public var _s: Swift.Int?
+  public var _e: Swift.String?
+  public init(_s: Swift.Int? = nil, _e: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EmptyResponse : ShopliveAPI.BaseResponsable {
+  public var _s: Swift.Int?
+  public var _e: Swift.String?
+  public init(_s: Swift.Int? = nil, _e: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum HTTPVersion : Swift.String {
+  case v1, v2
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SLHTTPMethod {
+  case get
+  case post
+  case put
+  case delete
+  public var converted: Swift.String {
+    get
+  }
+  public static func == (a: ShopliveAPI.SLHTTPMethod, b: ShopliveAPI.SLHTTPMethod) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ShopliveAPI.ShopLiveErrorCases : Swift.Equatable {}
+extension ShopliveAPI.ShopLiveErrorCases : Swift.Hashable {}
+extension ShopliveAPI.ShopLiveCampaignListRequest.Status : Swift.Equatable {}
+extension ShopliveAPI.ShopLiveCampaignListRequest.Status : Swift.Hashable {}
+extension ShopliveAPI.ShopLiveCampaignListRequest.Status : Swift.RawRepresentable {}
+extension ShopliveAPI.ShopLiveCampaignListRequest.Order : Swift.Equatable {}
+extension ShopliveAPI.ShopLiveCampaignListRequest.Order : Swift.Hashable {}
+extension ShopliveAPI.ShopLiveCampaignListRequest.Order : Swift.RawRepresentable {}
+extension ShopliveAPI.HTTPVersion : Swift.Equatable {}
+extension ShopliveAPI.HTTPVersion : Swift.Hashable {}
+extension ShopliveAPI.HTTPVersion : Swift.RawRepresentable {}
+extension ShopliveAPI.SLHTTPMethod : Swift.Equatable {}
+extension ShopliveAPI.SLHTTPMethod : Swift.Hashable {}
