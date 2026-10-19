@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
-// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ShopliveAPI -package-name ShopLiveSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ShopliveAPI -package-name ShopLiveSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import Foundation
 import Swift
 import UIKit
@@ -43,12 +43,18 @@ public enum ShopLiveErrorCases {
   public var codes: Swift.Int
   public var message: Swift.String?
   public var error: (any Swift.Error)?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(code: Swift.Int, message: Swift.String?, error: (any Swift.Error)?)
+  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class ShopLiveCommonErrorGenerator {
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func generateError(errorCase: ShopliveAPI.ShopLiveErrorCases, error: (any Swift.Error)?, message: Swift.String?) -> ShopliveAPI.ShopLiveCommonError
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func generateErrorFromNetwork(statusCode: Swift.Int?, error: (any Swift.Error)?, responseData: Foundation.Data?, endpoint: Swift.String) -> ShopliveAPI.ShopLiveCommonError?
+  #endif
   @objc deinit
 }
 public class ShopLiveCommonNetworkBaseErrorResponse : Swift.Codable {
@@ -99,7 +105,9 @@ public struct ShopLiveCampaignListRequest : Swift.Equatable {
     case ready
     case onair
     case closed
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -108,7 +116,9 @@ public struct ShopLiveCampaignListRequest : Swift.Equatable {
   public enum Order : Swift.String {
     case ascending
     case descending
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -118,7 +128,9 @@ public struct ShopLiveCampaignListRequest : Swift.Equatable {
   public var size: Swift.Int?
   public var statuses: [ShopliveAPI.ShopLiveCampaignListRequest.Status]
   public var order: ShopliveAPI.ShopLiveCampaignListRequest.Order?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(page: Swift.Int? = nil, size: Swift.Int? = nil, statuses: [ShopliveAPI.ShopLiveCampaignListRequest.Status] = [], order: ShopliveAPI.ShopLiveCampaignListRequest.Order? = nil)
+  #endif
   public static func == (a: ShopliveAPI.ShopLiveCampaignListRequest, b: ShopliveAPI.ShopLiveCampaignListRequest) -> Swift.Bool
 }
 public struct ShopLiveCampaignListResponse : Swift.Equatable {
@@ -134,7 +146,9 @@ public struct ShopLiveEventProduct : Swift.Codable {
   public var purchaseQuantity: Swift.Int?
   public var purchaseUnitPrice: Swift.Double?
   public init(from decoder: any Swift.Decoder) throws
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(productId: Swift.String?, customerProductId: Swift.String?, sku: Swift.String?, url: Swift.String?, purchaseQuantity: Swift.Int?, purchaseUnitPrice: Swift.Double?)
+  #endif
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct ShopLiveEventRequest : ShopliveAPI.BaseResponsable {
@@ -158,14 +172,18 @@ public struct ShopLiveEventRequest : ShopliveAPI.BaseResponsable {
 }
 public struct SLFlexibleParser<K> where K : Swift.CodingKey {
   public init(container: Swift.KeyedDecodingContainer<K>)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func parse<T>(targetType: T.Type, key: any Swift.CodingKey) throws -> T?
+  #endif
 }
 public protocol ShopLiveEndpoint {
   var baseUrl: Swift.String { get }
   var path: Swift.String { get }
   var method: ShopliveAPI.SLHTTPMethod { get }
   var queries: [Foundation.URLQueryItem] { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var body: [Swift.String : Any]? { get }
+  #endif
   var headers: [Swift.String : Swift.String] { get }
   var baseHeaders: [Swift.String : Swift.String] { get }
 }
@@ -173,9 +191,11 @@ extension ShopliveAPI.ShopLiveEndpoint {
   public var queries: [Foundation.URLQueryItem] {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var body: [Swift.String : Any]? {
     get
   }
+  #endif
   public var headers: [Swift.String : Swift.String] {
     get
   }
@@ -192,28 +212,42 @@ extension ShopliveAPI.ShopLiveAPIError {
   public func toCommonError(endpoint: Swift.String) -> ShopliveAPI.ShopLiveCommonError
 }
 public enum ShopLiveAPI {
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   public static func request(_ endpoint: any ShopliveAPI.ShopLiveEndpoint, completion: @escaping (Foundation.Data?, Foundation.HTTPURLResponse?, (any Swift.Error)?) -> Swift.Void) -> any ShopliveAPI.ShopLiveCancellable
+  #endif
 }
 @available(iOS 13.0, *)
 extension ShopliveAPI.ShopLiveAPI {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func withCancellableContinuation<T, E>(_ body: (@escaping (Swift.Result<T, E>) -> Swift.Void) -> any ShopliveAPI.ShopLiveCancellable) async throws -> T where E : Swift.Error
+  #endif
 }
 public protocol ShopLiveCancellable {
   func cancel()
 }
 final public class ShopLiveAPITask : ShopliveAPI.ShopLiveCancellable {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(task: Foundation.URLSessionTask?)
+  #endif
   final public func cancel()
   @objc deinit
 }
 public protocol RawDataRepresantable {
+  #if compiler(>=5.3) && $NonescapableTypes
   var rawData: Foundation.Data? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func getRawDataDict() -> [Swift.String : Any]?
+  #endif
 }
 public protocol BaseResponsable : Swift.Decodable, Swift.Encodable {
+  #if compiler(>=5.3) && $NonescapableTypes
   var _s: Swift.Int? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var _e: Swift.String? { get set }
+  #endif
 }
 extension ShopliveAPI.BaseResponsable {
   public var isBaseModel: Swift.Bool {
@@ -226,20 +260,26 @@ extension ShopliveAPI.BaseResponsable {
 public struct BaseResponse : ShopliveAPI.BaseResponsable {
   public var _s: Swift.Int?
   public var _e: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(_s: Swift.Int? = nil, _e: Swift.String? = nil)
+  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct EmptyResponse : ShopliveAPI.BaseResponsable {
   public var _s: Swift.Int?
   public var _e: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(_s: Swift.Int? = nil, _e: Swift.String? = nil)
+  #endif
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public enum HTTPVersion : Swift.String {
   case v1, v2
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
