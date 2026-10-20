@@ -1,3 +1,5 @@
+# Reference podspec. The spec that CocoaPods users resolve is published in the
+# shoplive/pod-specs repository; this file is kept for reference and is not pushed.
 Pod::Spec.new do |spec|
   spec.name         = "ShopliveSDKCommon"
   spec.version      = "1.9.0"

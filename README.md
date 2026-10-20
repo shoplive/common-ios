@@ -37,9 +37,15 @@ pod 'ShopliveSDKCommon', '1.9.0'
 
 ## Compatibility
 
-| Your app | Resolved packages |
-|---|---|
-| Live SDK 1.x + Shortform | `shoplive-sdk-ios` 1.x · `shortform-ios` · `common-ios` — one shared Common |
-| Live SDK 3.x + Shortform | `shoplive-sdk-ios` 3.x · `shortform-ios` · `common-ios` |
+Minimum versions that work with `common-ios` 1.9.0:
 
-Pin an exact version and keep Common, Shortform and Shortform Editor on the same version line.
+| Package | Swift Package Manager | CocoaPods |
+|---|---|---|
+| Live SDK 1.x (`shoplive-sdk-ios`) | 1.9.1 or later | 1.9.0 or later |
+| Live SDK 3.x (`shoplive-sdk-ios`) | 3.0.3 or later | 3.0.3 or later |
+| Shortform (`shortform-ios`) | 1.9.1 or later | 1.9.1 or later |
+| Shortform Editor (`shortform-editor-ios`) | 1.9.1 or later | 1.9.1 or later |
+
+With Swift Package Manager, live SDK 1.x 1.9.1 and later depend on this package, so a single
+copy of `ShopliveSDKCommon` is resolved alongside Shortform and Shortform Editor.
+Pin exact versions of each package.
