@@ -1,3 +1,4 @@
 framework module ShopliveAPI {
   header "ShopliveAPI-Swift.h"
+  requires objc
 }
